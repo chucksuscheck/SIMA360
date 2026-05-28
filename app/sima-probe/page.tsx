@@ -24,18 +24,18 @@ export default function SIMAProbe() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
+        <link rel="canonical" href="https://www.sima360.org/sima-probe" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">S</span>
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                SIMA360™
-              </span>
-            </Link>
+            <div>
+              <h1 className="text-xl font-bold text-slate-900">SIMA360™</h1>
+              <p className="text-sm text-slate-600">Structured AI Maturity Accelerator</p>
+            </div>
             <Navigation />
+            <Button asChild>
+              <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
+            </Button>
           </div>
         </div>
       </header>
@@ -76,8 +76,8 @@ export default function SIMAProbe() {
               SIMA-Probe is the diagnostic assessment tool within the SIMA360™ framework, designed to measure an
               organization's AI maturity across five AI Dimensions: <strong>Strategy</strong>,{" "}
               <strong>Governance</strong>,<strong> Data</strong>, <strong>People</strong>, and{" "}
-              <strong>Technology</strong>. Each AI Dimension is evaluated across the SIMA360 Maturity Model's five
-              capability levels: Exploring, Applying, Formalizing, Optimizing, and Leading.
+              <strong>Technology</strong>. Each AI Dimension is evaluated across the SIMA360 Maturity Model's six
+              capability levels: Initial, Exploring, Applying, Formalizing, Optimizing, and Leading.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
               SIMA-Probe serves as the guide for organizations within their AI maturity journey, providing the
@@ -205,10 +205,25 @@ export default function SIMAProbe() {
               accurately reflects current maturity.
             </p>
             <div className="space-y-4">
-              <Card className="border-l-4 border-l-blue-500">
+              <Card className="border-l-4 border-l-slate-400">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Badge variant="outline">Level 1</Badge>
+                    Initial
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-700">
+                    AI activity is uncoordinated and ad hoc. No formal strategy, governance, or infrastructure exists.
+                    Individual experiments may occur but are not tracked, shared, or built upon organizationally.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-blue-500">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Badge variant="outline">Level 2</Badge>
                     Exploring
                   </CardTitle>
                 </CardHeader>
@@ -223,7 +238,7 @@ export default function SIMAProbe() {
               <Card className="border-l-4 border-l-purple-500">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Badge variant="outline">Level 2</Badge>
+                    <Badge variant="outline">Level 3</Badge>
                     Applying
                   </CardTitle>
                 </CardHeader>
@@ -238,7 +253,7 @@ export default function SIMAProbe() {
               <Card className="border-l-4 border-l-green-500">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Badge variant="outline">Level 3</Badge>
+                    <Badge variant="outline">Level 4</Badge>
                     Formalizing
                   </CardTitle>
                 </CardHeader>
@@ -253,7 +268,7 @@ export default function SIMAProbe() {
               <Card className="border-l-4 border-l-orange-500">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Badge variant="outline">Level 4</Badge>
+                    <Badge variant="outline">Level 5</Badge>
                     Optimizing
                   </CardTitle>
                 </CardHeader>
@@ -268,7 +283,7 @@ export default function SIMAProbe() {
               <Card className="border-l-4 border-l-red-500">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Badge variant="outline">Level 5</Badge>
+                    <Badge variant="outline">Level 6</Badge>
                     Leading
                   </CardTitle>
                 </CardHeader>
@@ -750,7 +765,7 @@ export default function SIMAProbe() {
                 className="border-white text-white hover:bg-white/10 bg-transparent"
                 asChild
               >
-                <Link href="mailto:info@sima360.ai">Contact Sales</Link>
+                <Link href="mailto:info@sima360.org">Contact Sales</Link>
               </Button>
             </div>
           </div>
@@ -829,17 +844,17 @@ export default function SIMAProbe() {
               <ul className="space-y-2 text-sm">
                 <li>
                   <a
-                    href="https://www.sima360.ai"
+                    href="https://www.sima360.org"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors"
                   >
-                    www.sima360.ai
+                    www.sima360.org
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@sima360.ai" className="hover:text-white transition-colors">
-                    info@sima360.ai
+                  <a href="mailto:info@sima360.org" className="hover:text-white transition-colors">
+                    info@sima360.org
                   </a>
                 </li>
               </ul>

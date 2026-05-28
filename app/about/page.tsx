@@ -1,3 +1,11 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About SIMA360™ — Framework Origin & Research Foundation",
+  description:
+    "SIMA360 was built on two years of comparative research across nine leading AI maturity frameworks. Learn about the research foundation, the gaps it addressed, and the framework that resulted.",
+}
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -35,7 +43,7 @@ const AboutPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.ai/about" />
+        <link rel="canonical" href="https://www.sima360.org/about" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
@@ -46,7 +54,7 @@ const AboutPage = () => {
             </Link>
             <Navigation />
             <Button asChild>
-              <a href="mailto:info@sima360.ai?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
+              <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
             </Button>
           </div>
         </div>
@@ -787,26 +795,26 @@ const AboutPage = () => {
                   <div className="space-y-3">
                     <p className="text-slate-600">
                       <strong>General Information:</strong>{" "}
-                      <a href="mailto:info@sima360.ai" className="text-blue-600 hover:text-blue-800 underline">
-                        info@sima360.ai
+                      <a href="mailto:info@sima360.org" className="text-blue-600 hover:text-blue-800 underline">
+                        info@sima360.org
                       </a>
                     </p>
                     <p className="text-slate-600">
                       <strong>Dr. Charles Suscheck:</strong>{" "}
                       <a
-                        href="mailto:charles.suscheck@sima360.ai"
+                        href="mailto:charles.suscheck@sima360.org"
                         className="text-blue-600 hover:text-blue-800 underline"
                       >
-                        charles.suscheck@sima360.ai
+                        charles.suscheck@sima360.org
                       </a>
                     </p>
                     <p className="text-slate-600">
                       <strong>Schedule a Conversation:</strong>{" "}
                       <a
-                        href="mailto:info@sima360.ai?subject=Schedule%20a%20Conversation"
+                        href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation"
                         className="text-blue-600 hover:text-blue-800 underline"
                       >
-                        info@sima360.ai
+                        info@sima360.org
                       </a>
                     </p>
                   </div>
@@ -840,7 +848,7 @@ const AboutPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild className="bg-white text-blue-900 hover:bg-blue-50">
-              <a href="mailto:info@sima360.ai?subject=Early%20Adopter%20Program">Become an Early Adopter</a>
+              <a href="mailto:info@sima360.org?subject=Early%20Adopter%20Program">Become an Early Adopter</a>
             </Button>
             <Button
               size="lg"

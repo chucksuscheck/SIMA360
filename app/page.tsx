@@ -1,7 +1,15 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "SIMA360™ — Structured AI Maturity Framework",
+  description:
+    "SIMA360 is the operational framework for organizational AI maturity. Five integrated components: assessment, improvement cycles, implementation tools, and practitioner development.",
+}
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Brain, Zap, Target, Users, BookOpen, Lightbulb, CheckCircle } from "lucide-react"
+import { ArrowRight, Brain, Zap, Target, Users, BookOpen, Lightbulb, CheckCircle, BarChart3 } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import Image from "next/image"
@@ -11,7 +19,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.ai" />
+        <link rel="canonical" href="https://www.sima360.org" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>
@@ -20,7 +28,7 @@ export default function HomePage() {
             </div>
             <Navigation />
             <Button asChild>
-              <a href="mailto:info@sima360.ai?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
+              <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
             </Button>
           </div>
         </div>
@@ -30,25 +38,25 @@ export default function HomePage() {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <Badge variant="secondary" className="mb-4">
-            Controlled implementation of AI
+            AI Maturity Framework
           </Badge>
-          <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            Implement AI at the organizaitonal level while
-            <span className="text-blue-600 block">Contolling Risk and Maximizing Value</span>
+          <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight max-w-4xl mx-auto">
+            Most organizations have deployed AI. Few have developed the capability to produce reliable outcomes from it.
           </h1>
           <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-            SIMA360™ is a comprehensive framework for implementing AI across your entire organization with control and
-            safety
+            SIMA360 is the operational framework built for that gap. Five integrated components — assessment,
+            improvement cycles, implementation tools, and practitioner development — built on the diagnostic and
+            maturity architecture established in the book.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <Link href="/sima-core">
-                Explore Framework <ArrowRight className="ml-2 w-4 h-4" />
+              <Link href="/sima-probe">
+                Start with the Assessment <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
-                Download Guide
+                Download the Framework Guide
               </a>
             </Button>
           </div>
@@ -125,8 +133,8 @@ export default function HomePage() {
                   </div>
                   <p className="text-slate-700">
                     For more information, please contact us at{" "}
-                    <a href="mailto:info@sima360.ai" className="text-blue-600 hover:text-blue-800 underline">
-                      info@sima360.ai
+                    <a href="mailto:info@sima360.org" className="text-blue-600 hover:text-blue-800 underline">
+                      info@sima360.org
                     </a>
                   </p>
                 </div>
@@ -175,13 +183,43 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* How the Ecosystem Works */}
+      <section className="py-16 px-4 bg-slate-50">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Five Components. One Integrated System.</h2>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              SIMA360 is not a collection of independent tools. It is a structured ecosystem where each component plays
+              a specific role and connects to the others in a defined sequence.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed">
+              SIMA-Core defines the framework's vocabulary: the five AI dimensions, six capability levels, and tool
+              categories that every other component operates within. SIMA-Probe applies that vocabulary diagnostically,
+              measuring where the organization actually stands across all five dimensions. SIMA-Flow provides the
+              improvement cycle architecture — the structured process for moving from current state to target state
+              through disciplined, evidence-based iterations. SIMA-Kit supplies the templates, rubrics, playbooks, and
+              governance tools those cycles require at every capability level. SIMA-Ascend builds the practitioner
+              capability organizations need to run the system consistently and advance it over time.
+            </p>
+          </div>
+          <div className="text-center">
+            <Link
+              href="/start"
+              className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-1 transition-colors"
+            >
+              New to SIMA360? Start here. <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Framework Overview */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Complete AI Framework Suite</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">How the Ecosystem Works</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Four integrated components designed to accelerate your AI transformation journey
+              Five integrated components — each with a distinct role, connected in a logical sequence
             </p>
           </div>
 
@@ -198,15 +236,29 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="text-center mb-8">
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">Click below to learn more</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <Brain className="w-8 h-8 text-blue-600 mb-2" />
-                <CardTitle className="text-lg">SIMA Core™</CardTitle>
+                <BarChart3 className="w-8 h-8 text-blue-600 mb-2" />
+                <CardTitle className="text-lg">SIMA-Probe™</CardTitle>
+                <CardDescription>
+                  Diagnostic assessment tool that measures organizational AI maturity across all five dimensions and six
+                  capability levels. The assessment entry point for the ecosystem.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="ghost" asChild className="w-full">
+                  <Link href="/sima-probe">
+                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Brain className="w-8 h-8 text-indigo-600 mb-2" />
+                <CardTitle className="text-lg">SIMA-Core™</CardTitle>
                 <CardDescription>Foundational framework for strategic AI implementation</CardDescription>
               </CardHeader>
               <CardContent>
@@ -221,7 +273,7 @@ export default function HomePage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Zap className="w-8 h-8 text-green-600 mb-2" />
-                <CardTitle className="text-lg">SIMA Flow™</CardTitle>
+                <CardTitle className="text-lg">SIMA-Flow™</CardTitle>
                 <CardDescription>Streamlined processes for AI workflow optimization</CardDescription>
               </CardHeader>
               <CardContent>
@@ -236,7 +288,7 @@ export default function HomePage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Target className="w-8 h-8 text-purple-600 mb-2" />
-                <CardTitle className="text-lg">SIMA Kit™</CardTitle>
+                <CardTitle className="text-lg">SIMA-Kit™</CardTitle>
                 <CardDescription>Ready-to-use tools and templates for rapid deployment</CardDescription>
               </CardHeader>
               <CardContent>
@@ -251,7 +303,7 @@ export default function HomePage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <BookOpen className="w-8 h-8 text-orange-600 mb-2" />
-                <CardTitle className="text-lg">SIMA Ascend™</CardTitle>
+                <CardTitle className="text-lg">SIMA-Ascend™</CardTitle>
                 <CardDescription>Comprehensive training and certification programs</CardDescription>
               </CardHeader>
               <CardContent>
@@ -315,7 +367,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <a href="mailto:info@sima360.ai?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
+              <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
             </Button>
             <Button size="lg" variant="secondary" asChild>
               <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">

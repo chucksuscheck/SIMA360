@@ -1,3 +1,11 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "SIMA-Core — Framework Foundation | SIMA360™",
+  description:
+    "SIMA-Core defines the conceptual vocabulary of the SIMA360 framework: five AI dimensions, six capability levels, and five tool categories that every other component operates within.",
+}
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -23,7 +31,7 @@ export default function SimaCorePage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.ai/sima-core" />
+        <link rel="canonical" href="https://www.sima360.org/sima-core" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>
@@ -32,7 +40,7 @@ export default function SimaCorePage() {
             </div>
             <Navigation />
             <Button asChild>
-              <a href="mailto:info@sima360.ai?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
+              <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
             </Button>
           </div>
         </div>
@@ -585,7 +593,7 @@ export default function SimaCorePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild className="bg-white text-blue-900 hover:bg-blue-50">
-              <a href="mailto:info@sima360.ai?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
+              <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
             </Button>
             <Button
               size="lg"

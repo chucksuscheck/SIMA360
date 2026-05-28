@@ -1,3 +1,11 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "SIMA-Kit — Implementation Resource Library | SIMA360™",
+  description:
+    "SIMA-Kit provides the templates, rubrics, playbooks, and governance tools stratified by capability level and AI dimension that SIMA-Flow cycles require.",
+}
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -30,7 +38,7 @@ const SIMAKitPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-violet-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.ai/sima-kit" />
+        <link rel="canonical" href="https://www.sima360.org/sima-kit" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
@@ -41,7 +49,7 @@ const SIMAKitPage = () => {
             </Link>
             <Navigation />
             <Button asChild>
-              <a href="mailto:charles.suscheck@sima360.ai?subject=Schedule%20a%20Conversation">
+              <a href="mailto:charles.suscheck@sima360.org?subject=Schedule%20a%20Conversation">
                 Schedule a Conversation
               </a>
             </Button>
@@ -76,8 +84,8 @@ const SIMAKitPage = () => {
               SIMA Kit™ - Operational Heart
             </Badge>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              The Bridge Between
-              <span className="text-purple-600 block">Strategy and Execution</span>
+              The Resource Layer of
+              <span className="text-purple-600 block">the SIMA360 Framework</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8">
               SIMA Kit™ is the operational heart of SIMA360™'s execution model, providing practical tools, templates,
@@ -85,7 +93,7 @@ const SIMAKitPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-purple-600 hover:bg-purple-700">
-                <a href="mailto:info@sima360.ai?subject=SIMA%20Kit%20Access">
+                <a href="mailto:info@sima360.org?subject=SIMA%20Kit%20Access">
                   Request Access <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </Button>
@@ -110,8 +118,7 @@ const SIMAKitPage = () => {
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Complete Toolkit for AI Transformation</h2>
             <p className="text-lg text-slate-600">
-              SIMA Kit™ serves as the bridge between SIMA Core™ models and SIMA Flow™ cycles, ensuring organizations can
-              both plan strategically and execute tactically with precision.
+              SIMA-Kit supplies the templates, rubrics, playbooks, and governance tools that SIMA-Flow cycles require — stratified by capability level and AI dimension so every resource matches the organization's current state.
             </p>
           </div>
 
@@ -328,6 +335,9 @@ const SIMAKitPage = () => {
               By integrating both macro (capability-level) and micro (project-level) tooling, SIMA Kit™ becomes a
               catalyst for sustainable AI transformation
             </p>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto mt-4">
+              Kit does not direct the improvement cycle — Flow does. Kit ensures that when Flow requires a capability assessment, a project planning template, or a governance checklist, the right resource is available at the right level.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -400,7 +410,7 @@ const SIMAKitPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild className="bg-white text-purple-900 hover:bg-purple-50">
-              <a href="mailto:info@sima360.ai?subject=SIMA%20Kit%20License%20Information">
+              <a href="mailto:info@sima360.org?subject=SIMA%20Kit%20License%20Information">
                 Request License Information
               </a>
             </Button>
@@ -416,7 +426,7 @@ const SIMAKitPage = () => {
             </Button>
           </div>
           <p className="text-sm text-purple-200 mt-4">
-            SIMA Kit™ resources are available under license. Contact info@sima360.ai for details.
+            SIMA Kit™ resources are available under license. Contact info@sima360.org for details.
           </p>
         </div>
       </section>

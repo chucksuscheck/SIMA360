@@ -1,3 +1,11 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "SIMA-Ascend — Practitioner Development & Certification | SIMA360™",
+  description:
+    "SIMA-Ascend builds the organizational practitioner capability the SIMA360 framework requires, through structured training programs and three-level certification pathways.",
+}
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -35,7 +43,7 @@ export default function SimaAscendPage() {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-              <link rel="canonical" href="https://www.sima360.ai/sima-ascend" />
+              <link rel="canonical" href="https://www.sima360.org/sima-ascend" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
@@ -46,7 +54,7 @@ export default function SimaAscendPage() {
             </Link>
             <Navigation />
             <Button asChild>
-              <a href="mailto:charles.suscheck@sima360.ai?subject=Schedule%20a%20Conversation">
+              <a href="mailto:charles.suscheck@sima360.org?subject=Schedule%20a%20Conversation">
                 Schedule a Conversation
               </a>
             </Button>
@@ -578,7 +586,7 @@ export default function SimaAscendPage() {
                     asChild
                     className="w-full bg-transparent border-orange-600 text-orange-600 hover:bg-orange-50"
                   >
-                    <a href="mailto:info@sima360.ai?subject=Training%20Information%20Request">Become a trainer</a>
+                    <a href="mailto:info@sima360.org?subject=Training%20Information%20Request">Become a trainer</a>
                   </Button>
                 </div>
               </div>
@@ -606,7 +614,7 @@ export default function SimaAscendPage() {
               asChild
               className="border-orange-300 text-orange-100 hover:bg-orange-800 bg-transparent"
             >
-              <a href="mailto:charles.suscheck@sima360.ai?subject=Schedule%20a%20Conversation">
+              <a href="mailto:charles.suscheck@sima360.org?subject=Schedule%20a%20Conversation">
                 Schedule a Conversation
               </a>
             </Button>

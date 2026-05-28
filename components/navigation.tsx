@@ -57,6 +57,12 @@ export function Navigation() {
         SIMA Ascend™
       </Link>
       <Link
+        href="/the-book"
+        className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-300 hover:text-slate-900 transition-colors"
+      >
+        The Book
+      </Link>
+      <Link
         href="/SIMA360_Guide.pdf"
         target="_blank"
         rel="noopener noreferrer"
@@ -77,6 +83,12 @@ export function Navigation() {
         className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-300 hover:text-slate-900 transition-colors"
       >
         About
+      </Link>
+      <Link
+        href="/start"
+        className="block px-4 py-2 text-sm font-semibold text-white bg-slate-800 hover:bg-slate-700 rounded transition-colors"
+      >
+        Get Started
       </Link>
     </nav>
   )

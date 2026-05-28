@@ -1,3 +1,11 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "SIMA-Flow — Improvement Cycle Architecture | SIMA360™",
+  description:
+    "SIMA-Flow is the cycle architecture of SIMA360, connecting capability assessment to structured improvement through the Core Cycle and FLAI project execution methodology.",
+}
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -21,7 +29,7 @@ export default function SimaFlowPage() {
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.ai/sima-flow" />
+        <link rel="canonical" href="https://www.sima360.org/sima-flow" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>
@@ -30,7 +38,7 @@ export default function SimaFlowPage() {
             </div>
             <Navigation />
             <Button asChild>
-              <a href="mailto:info@sima360.ai?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
+              <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
             </Button>
           </div>
         </div>
@@ -417,9 +425,9 @@ export default function SimaFlowPage() {
           <div className="mt-12 text-center">
             <Card className="max-w-2xl mx-auto bg-gradient-to-r from-green-50 to-emerald-50 border-green-200">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Why FLAI vs. Plan-Do-Inspect-Adapt?</h3>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Why FLAI vs. Plan-Do-Check-Act (PDCA)?</h3>
                 <p className="text-slate-600">
-                  While PDIA is ideal for agile delivery, FLAI was designed for strategy, innovation, and
+                  While PDCA is ideal for agile delivery, FLAI was designed for strategy, innovation, and
                   hypothesis-driven work. Language shapes mindset - FLAI encourages reflection, discovery, and
                   intentional change.
                 </p>
@@ -436,6 +444,9 @@ export default function SimaFlowPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4">SIMA Flow™ Integration Benefits</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Connecting capability assessment with project execution through structured learning loops
+            </p>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto mt-4">
+              SIMA-Flow is the cycle architecture. SIMA-Kit is the resource library it draws from. Flow determines when and how resources are deployed; Kit ensures those resources exist at every capability level.
             </p>
           </div>
 
@@ -483,7 +494,7 @@ export default function SimaFlowPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild className="bg-white text-green-900 hover:bg-green-50">
-              <a href="mailto:info@sima360.ai?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
+              <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
             </Button>
             <Button
               size="lg"
