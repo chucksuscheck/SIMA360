@@ -65,8 +65,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <FrameworkMap />
-
       {/* SIMA360 Solution */}
       <section className="py-16 px-4 bg-slate-50">
         <div className="container mx-auto">
@@ -187,6 +185,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <FrameworkMap />
+
       {/* How the Ecosystem Works */}
       <section className="py-16 px-4 bg-slate-50">
         <div className="container mx-auto">
@@ -220,26 +220,6 @@ export default function HomePage() {
       {/* Framework Overview */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">How the Ecosystem Works</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Five integrated components — each with a distinct role, connected in a logical sequence
-            </p>
-          </div>
-
-          {/* SIMA Core Cycle Image */}
-          <div className="flex justify-center mb-12">
-            <div className="max-w-2xl">
-              <Image
-                src="/images/sima-core-cycle.svg"
-                alt="SIMA360 Core Cycle - Assess Capabilities, Set Groundwork, Execute with FLAI Project Cycle"
-                width={600}
-                height={400}
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
