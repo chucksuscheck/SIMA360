@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Brain, Zap, Target, Users, BookOpen, Lightbulb, CheckCircle, BarChart3 } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
+import { SiteFooter } from "@/components/site-footer"
 import Image from "next/image"
 
 export default function HomePage() {
@@ -378,16 +379,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-4 bg-slate-50 border-t">
-        <div className="container mx-auto text-center">
-          <div className="mb-4">
-            <span className="text-lg font-semibold text-slate-900">SIMA360™</span>
-          </div>
-          <p className="text-slate-600 mb-4">Structured AI Maturity Accelerator</p>
-          <p className="text-sm text-slate-500">© 2025 SIMA360™. All rights reserved.</p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }

@@ -32,6 +32,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
+import { SiteFooter } from "@/components/site-footer"
 
 const SIMAKitPage = () => {
   return (
@@ -431,16 +432,7 @@ const SIMAKitPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-4 bg-purple-50 border-t">
-        <div className="container mx-auto text-center">
-          <div className="mb-4">
-            <span className="text-lg font-semibold text-slate-900">SIMA360™</span>
-          </div>
-          <p className="text-slate-600 mb-4">Structured AI Maturity Accelerator</p>
-          <p className="text-sm text-slate-500">© 2025 SIMA360™. All rights reserved.</p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }
