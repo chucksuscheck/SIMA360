@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Technology Dimension — AI Domains | SIMA360™",
+  title: "Technology Domain — AI Domains | SIMA360™",
   description:
     "The Technology Domain covers the infrastructure, tools, lifecycle management, security, and innovation practices needed to deploy and scale AI reliably.",
 }
@@ -77,7 +77,7 @@ const numberColorMap: Record<string, string> = {
   lime: "bg-lime-100",
 }
 
-export default function TechnologyDimensionPage() {
+export default function TechnologyDomainPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
@@ -114,13 +114,13 @@ export default function TechnologyDimensionPage() {
               </div>
             </div>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Technology Dimension
+              Technology Domain
             </h1>
             <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              AI requires infrastructure — compute, storage, pipelines, security controls, and lifecycle management — that most organizations have not purpose-built for the demands AI actually places on them. The Technology dimension assesses whether those foundations are in place.
+              AI requires infrastructure — compute, storage, pipelines, security controls, and lifecycle management — that most organizations have not purpose-built for the demands AI actually places on them. The Technology domain assesses whether those foundations are in place.
             </p>
             <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
-              It is the dimension that asks: <em>can our technology infrastructure reliably support AI at the scale we need?</em>
+              It is the domain that asks: <em>can our technology infrastructure reliably support AI at the scale we need?</em>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-slate-700 hover:bg-slate-800">
@@ -255,7 +255,7 @@ export default function TechnologyDimensionPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the Technology dimension looks like at each of the six SIMA360 capability levels.
+              What the Technology domain looks like at each of the six SIMA360 capability levels.
             </p>
           </div>
 

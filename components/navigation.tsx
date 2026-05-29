@@ -12,24 +12,44 @@ const frameworkLinks = [
   { label: "SIMA-Ascend™", href: "/sima-ascend" },
 ]
 
+const domainLinks = [
+  { label: "Strategy", href: "/sima-core/strategy" },
+  { label: "Governance", href: "/sima-core/governance" },
+  { label: "Data", href: "/sima-core/data" },
+  { label: "People", href: "/sima-core/people" },
+  { label: "Technology", href: "/sima-core/technology" },
+]
+
 export function Navigation() {
   const [isFrameworkOpen, setIsFrameworkOpen] = useState(false)
+  const [isDomainsOpen, setIsDomainsOpen] = useState(false)
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const [isMobileFrameworkOpen, setIsMobileFrameworkOpen] = useState(false)
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const [isMobileDomainsOpen, setIsMobileDomainsOpen] = useState(false)
 
-  const openDropdown = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+  const frameworkTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const domainsTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const openFramework = () => {
+    if (frameworkTimeoutRef.current) clearTimeout(frameworkTimeoutRef.current)
     setIsFrameworkOpen(true)
   }
+  const closeFramework = () => {
+    frameworkTimeoutRef.current = setTimeout(() => setIsFrameworkOpen(false), 300)
+  }
 
-  const closeDropdown = () => {
-    timeoutRef.current = setTimeout(() => setIsFrameworkOpen(false), 300)
+  const openDomains = () => {
+    if (domainsTimeoutRef.current) clearTimeout(domainsTimeoutRef.current)
+    setIsDomainsOpen(true)
+  }
+  const closeDomains = () => {
+    domainsTimeoutRef.current = setTimeout(() => setIsDomainsOpen(false), 300)
   }
 
   const closeMobile = () => {
     setIsMobileOpen(false)
     setIsMobileFrameworkOpen(false)
+    setIsMobileDomainsOpen(false)
   }
 
   return (
@@ -43,7 +63,8 @@ export function Navigation() {
           Home
         </Link>
 
-        <div className="relative" onMouseEnter={openDropdown} onMouseLeave={closeDropdown}>
+        {/* The Framework dropdown */}
+        <div className="relative" onMouseEnter={openFramework} onMouseLeave={closeFramework}>
           <button
             className="flex items-center gap-1 px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
             aria-expanded={isFrameworkOpen}
@@ -59,6 +80,32 @@ export function Navigation() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsFrameworkOpen(false)}
+                  className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Domains dropdown */}
+        <div className="relative" onMouseEnter={openDomains} onMouseLeave={closeDomains}>
+          <button
+            className="flex items-center gap-1 px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
+            aria-expanded={isDomainsOpen}
+            aria-haspopup="true"
+          >
+            Domains
+            <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isDomainsOpen ? "rotate-180" : ""}`} />
+          </button>
+          {isDomainsOpen && (
+            <div className="absolute top-full left-0 mt-1 w-44 bg-white border border-slate-200 rounded-md shadow-lg z-50">
+              {domainLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsDomainsOpen(false)}
                   className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
                 >
                   {link.label}
@@ -111,6 +158,7 @@ export function Navigation() {
               Home
             </Link>
 
+            {/* The Framework mobile */}
             <div>
               <button
                 onClick={() => setIsMobileFrameworkOpen(!isMobileFrameworkOpen)}
@@ -122,6 +170,31 @@ export function Navigation() {
               {isMobileFrameworkOpen && (
                 <div className="bg-slate-50 border-t border-b border-slate-100">
                   {frameworkLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={closeMobile}
+                      className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Domains mobile */}
+            <div>
+              <button
+                onClick={() => setIsMobileDomainsOpen(!isMobileDomainsOpen)}
+                className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
+              >
+                Domains
+                <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileDomainsOpen ? "rotate-180" : ""}`} />
+              </button>
+              {isMobileDomainsOpen && (
+                <div className="bg-slate-50 border-t border-b border-slate-100">
+                  {domainLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}

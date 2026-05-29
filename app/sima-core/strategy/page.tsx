@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Strategy Dimension — AI Domains | SIMA360™",
+  title: "Strategy Domain — AI Domains | SIMA360™",
   description:
     "The Strategy Domain ensures AI initiatives align with broader business goals through vision alignment, prioritization, investment planning, and measurable evaluation.",
 }
@@ -75,7 +75,7 @@ const numberColorMap: Record<string, string> = {
   sky: "bg-sky-100",
 }
 
-export default function StrategyDimensionPage() {
+export default function StrategyDomainPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-sky-50">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
@@ -112,13 +112,13 @@ export default function StrategyDimensionPage() {
               </div>
             </div>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Strategy Dimension
+              Strategy Domain
             </h1>
             <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              AI without organizational direction is experimentation without purpose. The Strategy dimension ensures every AI initiative is anchored to a business outcome, evaluated on evidence, and resourced intentionally.
+              AI without organizational direction is experimentation without purpose. The Strategy domain ensures every AI initiative is anchored to a business outcome, evaluated on evidence, and resourced intentionally.
             </p>
             <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
-              It is the dimension that answers: <em>why are we doing this, and how will we know it worked?</em>
+              It is the domain that answers: <em>why are we doing this, and how will we know it worked?</em>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700">
@@ -140,7 +140,7 @@ export default function StrategyDimensionPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Five Focus Areas</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              The Strategy dimension is assessed across five interconnected focus areas that together determine whether an organization's AI investments are purposeful and sustainable.
+              The Strategy domain is assessed across five interconnected focus areas that together determine whether an organization's AI investments are purposeful and sustainable.
             </p>
           </div>
 
@@ -239,7 +239,7 @@ export default function StrategyDimensionPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-blue-800">
-                  Without strategic alignment, the other four dimensions produce capability without direction. Data quality, governance rigor, talent investment, and technology infrastructure are all wasted if the organization doesn't know what it's trying to accomplish with AI — and why.
+                  Without strategic alignment, the other four domains produce capability without direction. Data quality, governance rigor, talent investment, and technology infrastructure are all wasted if the organization doesn't know what it's trying to accomplish with AI — and why.
                 </p>
               </CardContent>
             </Card>
@@ -253,7 +253,7 @@ export default function StrategyDimensionPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the Strategy dimension looks like at each of the six SIMA360 capability levels.
+              What the Strategy domain looks like at each of the six SIMA360 capability levels.
             </p>
           </div>
 

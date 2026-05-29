@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Governance Dimension — AI Domains | SIMA360™",
+  title: "Governance Domain — AI Domains | SIMA360™",
   description:
     "The Governance Domain manages AI risks, ensures regulatory compliance, and upholds ethical standards through oversight, documentation, and accountability structures.",
 }
@@ -75,7 +75,7 @@ const numberColorMap: Record<string, string> = {
   blue: "bg-blue-100",
 }
 
-export default function GovernanceDimensionPage() {
+export default function GovernanceDomainPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
@@ -112,13 +112,13 @@ export default function GovernanceDimensionPage() {
               </div>
             </div>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Governance Dimension
+              Governance Domain
             </h1>
             <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              AI without accountability is liability. The Governance dimension ensures organizations can answer who approved this, who is responsible if it fails, and whether it was legal and ethical to deploy — before they need to answer those questions in a crisis.
+              AI without accountability is liability. The Governance domain ensures organizations can answer who approved this, who is responsible if it fails, and whether it was legal and ethical to deploy — before they need to answer those questions in a crisis.
             </p>
             <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
-              It is the dimension that asks: <em>what controls exist, and are they working?</em>
+              It is the domain that asks: <em>what controls exist, and are they working?</em>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-indigo-600 hover:bg-indigo-700">
@@ -253,7 +253,7 @@ export default function GovernanceDimensionPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the Governance dimension looks like at each of the six SIMA360 capability levels.
+              What the Governance domain looks like at each of the six SIMA360 capability levels.
             </p>
           </div>
 

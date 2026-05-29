@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "People Dimension — AI Domains | SIMA360™",
+  title: "People Domain — AI Domains | SIMA360™",
   description:
     "The People Domain focuses on workforce readiness, AI literacy, talent strategy, change management, and cultural adoption of responsible AI practices.",
 }
@@ -75,7 +75,7 @@ const numberColorMap: Record<string, string> = {
   purple: "bg-purple-100",
 }
 
-export default function PeopleDimensionPage() {
+export default function PeopleDomainPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 to-blue-50">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
@@ -112,13 +112,13 @@ export default function PeopleDimensionPage() {
               </div>
             </div>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              People Dimension
+              People Domain
             </h1>
             <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              AI systems don't implement themselves. The People dimension determines whether an organization's workforce has the literacy, skill, and cultural readiness to work with AI productively and responsibly — at every level, from the executive team to the frontline.
+              AI systems don't implement themselves. The People domain determines whether an organization's workforce has the literacy, skill, and cultural readiness to work with AI productively and responsibly — at every level, from the executive team to the frontline.
             </p>
             <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
-              It is the dimension that asks: <em>do our people know how to work with AI, and do they want to?</em>
+              It is the domain that asks: <em>do our people know how to work with AI, and do they want to?</em>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-sky-600 hover:bg-sky-700">
@@ -239,7 +239,7 @@ export default function PeopleDimensionPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-sky-800">
-                  Every AI system is designed, deployed, monitored, and interpreted by people. Organizations that invest heavily in AI technology but neglect the People dimension consistently underperform those that invest in both. The organizations that get the most from AI are the ones that have prepared their people to work with it.
+                  Every AI system is designed, deployed, monitored, and interpreted by people. Organizations that invest heavily in AI technology but neglect the People domain consistently underperform those that invest in both. The organizations that get the most from AI are the ones that have prepared their people to work with it.
                 </p>
               </CardContent>
             </Card>
@@ -253,7 +253,7 @@ export default function PeopleDimensionPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the People dimension looks like at each of the six SIMA360 capability levels.
+              What the People domain looks like at each of the six SIMA360 capability levels.
             </p>
           </div>
 
@@ -339,7 +339,7 @@ export default function PeopleDimensionPage() {
               {
                 component: "SIMA-Ascend™",
                 href: "/sima-ascend",
-                role: "Is the People dimension's primary delivery mechanism — structured training programs that build AI literacy, responsible AI competency, and practitioner capability at every level of the organization.",
+                role: "Is the People domain's primary delivery mechanism — structured training programs that build AI literacy, responsible AI competency, and practitioner capability at every level of the organization.",
               },
             ].map((item) => (
               <Card key={item.component} className="hover:shadow-md transition-shadow">

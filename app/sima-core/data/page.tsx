@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Data Dimension — AI Domains | SIMA360™",
+  title: "Data Domain — AI Domains | SIMA360™",
   description:
     "The Data Domain encompasses data quality, accessibility, governance, integration, and stewardship — the foundation that every AI system depends on.",
 }
@@ -75,7 +75,7 @@ const numberColorMap: Record<string, string> = {
   green: "bg-green-100",
 }
 
-export default function DataDimensionPage() {
+export default function DataDomainPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-teal-50">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
@@ -112,13 +112,13 @@ export default function DataDimensionPage() {
               </div>
             </div>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Data Dimension
+              Data Domain
             </h1>
             <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              Every AI system is only as reliable as the data it runs on. The Data dimension ensures the organization's information assets are accessible, trustworthy, governed, and structured in a way that AI can actually use.
+              Every AI system is only as reliable as the data it runs on. The Data domain ensures the organization's information assets are accessible, trustworthy, governed, and structured in a way that AI can actually use.
             </p>
             <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
-              It is the dimension that asks: <em>do we have the data AI needs, and can we trust it?</em>
+              It is the domain that asks: <em>do we have the data AI needs, and can we trust it?</em>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-cyan-600 hover:bg-cyan-700">
@@ -239,7 +239,7 @@ export default function DataDimensionPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-cyan-800">
-                  Most AI projects that fail to deliver results don't fail because of the model — they fail because of the data. Incomplete, inconsistent, or inaccessible data produces unreliable outputs regardless of how sophisticated the AI system is. The Data dimension is where most organizations underinvest and most AI projects stall.
+                  Most AI projects that fail to deliver results don't fail because of the model — they fail because of the data. Incomplete, inconsistent, or inaccessible data produces unreliable outputs regardless of how sophisticated the AI system is. The Data domain is where most organizations underinvest and most AI projects stall.
                 </p>
               </CardContent>
             </Card>
@@ -253,7 +253,7 @@ export default function DataDimensionPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the Data dimension looks like at each of the six SIMA360 capability levels.
+              What the Data domain looks like at each of the six SIMA360 capability levels.
             </p>
           </div>
 
