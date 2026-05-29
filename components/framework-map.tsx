@@ -26,11 +26,11 @@ const hotspots: Hotspot[] = [
   { id: "sima-ascend", label: "SIMA-Ascend™",          href: "/sima-ascend",          top: 65, left:  4, width: 44, height: 34, tip: "top"    },
   { id: "sima-probe",  label: "SIMA-Probe™",           href: "/sima-probe",           top: 17, left:  0, width: 25, height: 40, tip: "right"  },
   // ── Five Domains (middle ring) ────────────────────────────────────
-  { id: "strategy",    label: "Strategy",              href: "/sima-core#strategy",   top: 19, left: 37, width: 26, height: 15, tip: "bottom" },
-  { id: "governance",  label: "Governance",            href: "/sima-core#governance", top: 27, left: 58, width: 22, height: 18, tip: "left"   },
-  { id: "data",        label: "Data",                  href: "/sima-core#data",       top: 54, left: 57, width: 22, height: 18, tip: "left"   },
-  { id: "people",      label: "People",                href: "/sima-core#people",     top: 63, left: 25, width: 28, height: 14, tip: "top"    },
-  { id: "technology",  label: "Technology",            href: "/sima-core#technology", top: 37, left: 13, width: 22, height: 20, tip: "right"  },
+  { id: "strategy",    label: "Strategy",              href: "/sima-core/strategy",   top: 19, left: 37, width: 26, height: 15, tip: "bottom" },
+  { id: "governance",  label: "Governance",            href: "/sima-core/governance", top: 27, left: 58, width: 22, height: 18, tip: "left"   },
+  { id: "data",        label: "Data",                  href: "/sima-core/data",       top: 54, left: 57, width: 22, height: 18, tip: "left"   },
+  { id: "people",      label: "People",                href: "/sima-core/people",     top: 63, left: 25, width: 28, height: 14, tip: "top"    },
+  { id: "technology",  label: "Technology",            href: "/sima-core/technology", top: 37, left: 13, width: 22, height: 20, tip: "right"  },
   // ── Capability Levels (inner ring) ────────────────────────────────
   { id: "initial",     label: "Level 1 · Initial",     href: "/sima-core#initial",     top: 30, left: 44, width: 14, height: 12, tip: "bottom" },
   { id: "exploring",   label: "Level 2 · Exploring",   href: "/sima-core#exploring",   top: 37, left: 57, width: 15, height: 12, tip: "left"   },
@@ -64,11 +64,11 @@ const mobileNav = [
   {
     heading: "AI Domains",
     links: [
-      { label: "Strategy",    href: "/sima-core#strategy"    },
-      { label: "Governance",  href: "/sima-core#governance"  },
-      { label: "Data",        href: "/sima-core#data"        },
-      { label: "People",      href: "/sima-core#people"      },
-      { label: "Technology",  href: "/sima-core#technology"  },
+      { label: "Strategy",    href: "/sima-core/strategy"    },
+      { label: "Governance",  href: "/sima-core/governance"  },
+      { label: "Data",        href: "/sima-core/data"        },
+      { label: "People",      href: "/sima-core/people"      },
+      { label: "Technology",  href: "/sima-core/technology"  },
     ],
   },
   {

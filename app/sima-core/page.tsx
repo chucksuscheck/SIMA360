@@ -184,88 +184,103 @@ export default function SimaCorePage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card id="strategy" className="scroll-mt-20 hover:shadow-lg transition-shadow border-blue-200">
+            <Card className="hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Target className="w-8 h-8 text-blue-600 mb-2" />
                 <CardTitle>Strategy AI Dimension</CardTitle>
                 <CardDescription>Ensures AI initiatives align with broader business goals</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="text-sm text-slate-600 space-y-2">
+                <ul className="text-sm text-slate-600 space-y-2 mb-4">
                   <li>• Vision Alignment with strategic outcomes</li>
                   <li>• Prioritization based on impact and feasibility</li>
                   <li>• Investment Planning with long-term ROI</li>
                   <li>• Integration with digital transformation</li>
                   <li>• Evaluation with clear success metrics</li>
                 </ul>
+                <Link href="/sima-core/strategy" className="text-sm text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-1">
+                  Explore Strategy dimension <ArrowRight className="w-3 h-3" />
+                </Link>
               </CardContent>
             </Card>
 
-            <Card id="governance" className="scroll-mt-20 hover:shadow-lg transition-shadow border-blue-200">
+            <Card className="hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Shield className="w-8 h-8 text-indigo-600 mb-2" />
                 <CardTitle>Governance AI Dimension</CardTitle>
                 <CardDescription>Manages AI risks, ensures compliance, and upholds ethical standards</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="text-sm text-slate-600 space-y-2">
+                <ul className="text-sm text-slate-600 space-y-2 mb-4">
                   <li>• Ethical Oversight for fairness and bias</li>
                   <li>• Regulatory Compliance across geographies</li>
                   <li>• Risk Management with proactive mitigation</li>
                   <li>• Documentation for auditability</li>
                   <li>• Communication of AI usage and responsibilities</li>
                 </ul>
+                <Link href="/sima-core/governance" className="text-sm text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center gap-1">
+                  Explore Governance dimension <ArrowRight className="w-3 h-3" />
+                </Link>
               </CardContent>
             </Card>
 
-            <Card id="data" className="scroll-mt-20 hover:shadow-lg transition-shadow border-blue-200">
+            <Card className="hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Database className="w-8 h-8 text-cyan-600 mb-2" />
                 <CardTitle>Data AI Dimension</CardTitle>
                 <CardDescription>Encompasses data quality, access, governance, and strategy</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="text-sm text-slate-600 space-y-2">
+                <ul className="text-sm text-slate-600 space-y-2 mb-4">
                   <li>• Accessibility with well-organized data</li>
                   <li>• Quality through cleansing and validation</li>
                   <li>• Integration of siloed data sources</li>
                   <li>• Governance with formal policies</li>
                   <li>• Stewardship with defined roles</li>
                 </ul>
+                <Link href="/sima-core/data" className="text-sm text-cyan-600 hover:text-cyan-800 font-medium inline-flex items-center gap-1">
+                  Explore Data dimension <ArrowRight className="w-3 h-3" />
+                </Link>
               </CardContent>
             </Card>
 
-            <Card id="people" className="scroll-mt-20 hover:shadow-lg transition-shadow border-blue-200">
+            <Card className="hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Users className="w-8 h-8 text-sky-600 mb-2" />
                 <CardTitle>People AI Dimension</CardTitle>
                 <CardDescription>Focuses on workforce readiness and cultural adoption</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="text-sm text-slate-600 space-y-2">
+                <ul className="text-sm text-slate-600 space-y-2 mb-4">
                   <li>• AI Literacy across all employees</li>
                   <li>• Talent Strategy for hiring and training</li>
                   <li>• Cross-functional Teams collaboration</li>
                   <li>• Change Management support</li>
                   <li>• RAI Awareness and training</li>
                 </ul>
+                <Link href="/sima-core/people" className="text-sm text-sky-600 hover:text-sky-800 font-medium inline-flex items-center gap-1">
+                  Explore People dimension <ArrowRight className="w-3 h-3" />
+                </Link>
               </CardContent>
             </Card>
 
-            <Card id="technology" className="scroll-mt-20 hover:shadow-lg transition-shadow border-blue-200">
+            <Card className="hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Cog className="w-8 h-8 text-slate-600 mb-2" />
                 <CardTitle>Technology AI Dimension</CardTitle>
                 <CardDescription>Infrastructure, tools, and technical practices for scalable AI</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="text-sm text-slate-600 space-y-2">
+                <ul className="text-sm text-slate-600 space-y-2 mb-4">
                   <li>• Infrastructure for compute-intensive workloads</li>
                   <li>• Tools that are standardized and efficient</li>
                   <li>• Lifecycle Management with structured pipelines</li>
                   <li>• Security against threats and misuse</li>
                   <li>• Innovation supporting rapid experimentation</li>
                 </ul>
+                <Link href="/sima-core/technology" className="text-sm text-slate-600 hover:text-slate-900 font-medium inline-flex items-center gap-1">
+                  Explore Technology dimension <ArrowRight className="w-3 h-3" />
+                </Link>
               </CardContent>
             </Card>
           </div>
