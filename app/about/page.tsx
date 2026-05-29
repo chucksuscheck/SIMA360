@@ -54,7 +54,7 @@ const AboutPage = () => {
               </div>
             </Link>
             <Navigation />
-            <Button asChild>
+            <Button asChild className="hidden md:inline-flex">
               <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
             </Button>
           </div>

@@ -49,7 +49,7 @@ const SIMAKitPage = () => {
               </div>
             </Link>
             <Navigation />
-            <Button asChild>
+            <Button asChild className="hidden md:inline-flex">
               <a href="mailto:charles.suscheck@sima360.org?subject=Schedule%20a%20Conversation">
                 Schedule a Conversation
               </a>
