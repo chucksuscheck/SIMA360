@@ -10,6 +10,7 @@ const frameworkLinks = [
   { label: "SIMA-Flow™", href: "/sima-flow" },
   { label: "SIMA-Kit™", href: "/sima-kit" },
   { label: "SIMA-Ascend™", href: "/sima-ascend" },
+  { label: "Maturity Levels", href: "/maturity" },
 ]
 
 const domainLinks = [

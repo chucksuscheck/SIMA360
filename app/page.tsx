@@ -94,7 +94,10 @@ export default function HomePage() {
               <CardHeader>
                 <Brain className="w-8 h-8 text-indigo-600 mb-2" />
                 <CardTitle className="text-lg">SIMA-Core™</CardTitle>
-                <CardDescription>Foundational framework for strategic AI implementation</CardDescription>
+                <CardDescription>
+                  The vocabulary layer. Defines the five domains, six capability levels, and tool categories that every
+                  other component operates within. The architecture the whole framework rests on.
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <Button variant="ghost" asChild className="w-full">
@@ -109,7 +112,10 @@ export default function HomePage() {
               <CardHeader>
                 <Zap className="w-8 h-8 text-green-600 mb-2" />
                 <CardTitle className="text-lg">SIMA-Flow™</CardTitle>
-                <CardDescription>Streamlined processes for AI workflow optimization</CardDescription>
+                <CardDescription>
+                  The improvement cycle architecture. Provides the structured process — grounded in PDCA — for moving
+                  from current-state assessment to target-state advancement through disciplined iterations.
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <Button variant="ghost" asChild className="w-full">
@@ -124,7 +130,10 @@ export default function HomePage() {
               <CardHeader>
                 <Target className="w-8 h-8 text-purple-600 mb-2" />
                 <CardTitle className="text-lg">SIMA-Kit™</CardTitle>
-                <CardDescription>Ready-to-use tools and templates for rapid deployment</CardDescription>
+                <CardDescription>
+                  The resource library. Templates, rubrics, playbooks, and governance tools organized by capability
+                  level — the implementation resources SIMA-Flow cycles require at each stage.
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <Button variant="ghost" asChild className="w-full">
@@ -241,32 +250,49 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* The SIMA360 Solution */}
+      {/* Built on Research */}
       <section className="py-16 px-4 bg-slate-50">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">The SIMA360™ Solution</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              A clear, practical path for turning AI implementations into sustainable value
-            </p>
-          </div>
-
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="prose prose-slate max-w-none">
-                <p className="text-lg text-slate-700 leading-relaxed mb-4">
-                  SIMA360™ exists to provide organizations with a clear, practical path for turning AI implementations
-                  into sustainable value while reducing the risks inherent with this type of technology. In a world
-                  where artificial intelligence is evolving faster than most businesses can adapt, SIMA360™ serves as
-                  both a compass and a playbook—helping leaders, teams, and stakeholders navigate AI adoption with
-                  confidence, clarity, and governance.
-                </p>
-                <p className="text-slate-700 leading-relaxed">
-                  SIMA360™ is not tied to a single industry or technology stack. It is adaptable, scalable, and relevant
-                  whether you are deploying predictive analytics in healthcare, automating workflows in manufacturing,
-                  or experimenting with generative AI in creative fields. The Guide is intended for anyone approaching
-                  AI adoption—executives, innovators, compliance officers, technologists, and change leaders alike.
-                </p>
+              <div className="grid md:grid-cols-2 gap-10 items-start">
+                <div>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">Built on Research. Designed for Practice.</h2>
+                  <p className="text-slate-700 leading-relaxed mb-4">
+                    SIMA360 is grounded in the research and maturity architecture established in{" "}
+                    <Link href="/the-book" className="text-blue-600 hover:text-blue-800 underline">
+                      <em>The Structured AI Maturity Accelerator</em>
+                    </Link>{" "}
+                    by Dr. Charles Suscheck. The framework's five domains, six capability levels, and improvement cycle
+                    design come directly from that foundation — not from consulting convention.
+                  </p>
+                  <p className="text-slate-700 leading-relaxed">
+                    The distinction matters. Most AI adoption frameworks are prescriptive — they tell you what to do.
+                    SIMA360 is diagnostic first: it measures where you actually are, then structures how you advance.
+                    The result is a system that works regardless of industry, technology stack, or current maturity level.
+                  </p>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
+                  <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Who it's for</p>
+                  <ul className="space-y-3 text-sm text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
+                      Leaders who need to move from AI experimentation to organizational capability
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
+                      Governance and compliance teams navigating AI risk without adequate structure
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
+                      Practitioners tasked with building repeatable AI capability, not just running projects
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
+                      Organizations that have deployed AI but aren't producing reliable outcomes from it
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -276,18 +302,17 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-slate-900 text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your AI Strategy?</h2>
+          <h2 className="text-3xl font-bold mb-4">Know Where You Stand. Advance Deliberately.</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Join leading organizations using SIMA360™ to drive strategic AI transformation
+            Start with an assessment or explore the framework. Both paths lead to the same place: a clear picture of
+            your current AI maturity and a structured way to improve it.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
+              <Link href="/sima-probe">Start the Assessment</Link>
             </Button>
-            <Button size="lg" variant="secondary" asChild>
-              <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
-                Download Framework Guide
-              </a>
+            <Button size="lg" variant="outline" asChild className="border-slate-400 text-slate-200 hover:bg-slate-800 bg-transparent">
+              <Link href="/start">Find Your Entry Point</Link>
             </Button>
           </div>
         </div>
