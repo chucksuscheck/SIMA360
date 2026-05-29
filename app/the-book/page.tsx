@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, BookOpen, CheckCircle } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
 
@@ -41,36 +42,50 @@ export default function TheBookPage() {
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-slate-50 via-indigo-50 to-white">
         <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4 bg-indigo-100 text-indigo-800 border-indigo-200">
-              <BookOpen className="w-4 h-4 mr-2" />
-              The Intellectual Foundation
-            </Badge>
-            <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              The AI Rush —
-              <span className="text-indigo-600 block">Too Much. Too Soon.</span>
-            </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-              The five AI dimensions, six capability levels, FLAI methodology, and diagnostic principles that define
-              SIMA360 did not emerge in isolation. They are the intellectual foundation of this book — developed to
-              explain why organizations consistently fail to convert AI activity into organizational capability.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600" asChild>
-                <a href={BOOK_PURCHASE_URL} target="_blank" rel="noopener noreferrer">
-                  Get the Book <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-indigo-600 text-indigo-700 hover:bg-indigo-50 bg-transparent"
-                asChild
-              >
-                <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
-                  Download the Framework Guide
-                </a>
-              </Button>
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            {/* Text */}
+            <div className="flex-1 text-center md:text-left">
+              <Badge variant="secondary" className="mb-4 bg-indigo-100 text-indigo-800 border-indigo-200">
+                <BookOpen className="w-4 h-4 mr-2" />
+                The Intellectual Foundation
+              </Badge>
+              <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                The AI Rush —
+                <span className="text-indigo-600 block">Too Much. Too Soon.</span>
+              </h1>
+              <p className="text-xl text-slate-600 mb-8">
+                The five AI dimensions, six capability levels, FLAI methodology, and diagnostic principles that define
+                SIMA360 did not emerge in isolation. They are the intellectual foundation of this book — developed to
+                explain why organizations consistently fail to convert AI activity into organizational capability.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600" asChild>
+                  <a href={BOOK_PURCHASE_URL} target="_blank" rel="noopener noreferrer">
+                    Get the Book <ArrowRight className="ml-2 w-4 h-4" />
+                  </a>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-indigo-600 text-indigo-700 hover:bg-indigo-50 bg-transparent"
+                  asChild
+                >
+                  <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
+                    Download the Framework Guide
+                  </a>
+                </Button>
+              </div>
+            </div>
+            {/* Book cover */}
+            <div className="flex-shrink-0">
+              <Image
+                src="/images/book-cover.png"
+                alt="The AI Rush: Too Much. Too Soon. — book cover"
+                width={280}
+                height={380}
+                className="rounded-lg shadow-2xl"
+                priority
+              />
             </div>
           </div>
         </div>
