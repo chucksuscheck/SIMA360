@@ -57,167 +57,18 @@ export default function HomePage() {
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
-                Download the Framework Guide
-              </a>
+              <Link href="/the-book">
+                The Book
+              </Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* SIMA360 Solution */}
-      <section className="py-16 px-4 bg-slate-50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">The SIMA360™ Solution</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              A clear, practical path for turning AI implementations into sustainable value
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-              <div className="prose prose-slate max-w-none">
-                <p className="text-lg text-slate-700 leading-relaxed mb-6">
-                  SIMA360™ exists to provide organizations with a clear, practical path for turning AI implementations
-                  into sustainable value while reducing the risks inherent with this type of tchnology . In a world
-                  where artificial intelligence is evolving faster than most businesses can adapt, SIMA360™ serves as
-                  both a compass and a playbook—helping leaders, teams, and stakeholders navigate AI adoption with
-                  confidence, clarity, and governance.
-                </p>
-
-                <p className="text-slate-700 leading-relaxed mb-6">
-                  SIMA360™ framework: a structured, evidence-based approach to assessing AI maturity, uncovering gaps,
-                  and building the capabilities needed to achieve responsible, high-impact AI outcomes. Every approach
-                  described in the framework serves a specific role in guiding the application of SIMA360™ to real-world
-                  challenges.
-                </p>
-
-                <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
-                  <p className="text-slate-700 leading-relaxed">
-                    Following these approaches ensures that AI initiatives deliver measurable results, reduce risks, and
-                    align with strategic goals. Skipping components or altering the intended application weakens those
-                    results and can lead to wasted investment, compliance failures, or missed opportunities.
-                  </p>
-                </div>
-
-                <p className="text-slate-700 leading-relaxed mb-6">
-                  SIMA360™ is not tied to a single industry or technology stack. It is adaptable, scalable, and relevant
-                  whether you are deploying predictive analytics in healthcare, automating workflows in manufacturing,
-                  or experimenting with generative AI in creative fields. The Guide is intended for anyone approaching
-                  AI adoption—executives, innovators, compliance officers, technologists, and change leaders alike.
-                </p>
-
-                <p className="text-slate-700 leading-relaxed mb-8">
-                  While the framework provides the foundation, we recognize that every organization's AI journey is
-                  unique. New methods, tools, and adaptations will emerge as you apply SIMA360™. These context-specific
-                  applications may vary widely—but all can be anchored back to the approaches and practices described in
-                  this Guide.
-                </p>
-
-                <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-4 flex items-center">
-                    <BookOpen className="w-5 h-5 mr-2 text-green-600" />
-                    Training Programs Available
-                  </h3>
-                  <p className="text-slate-700 mb-4">
-                    Training programs from SIMA-Ascend™ can be explored and registered for at:
-                  </p>
-                  <div className="mb-4">
-                    <a
-                      href="https://SIMA360Classes.eventbee.com/boxoffice"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 underline font-medium"
-                    >
-                      https://SIMA360Classes.eventbee.com/boxoffice
-                    </a>
-                  </div>
-                  <p className="text-slate-700">
-                    For more information, please contact us at{" "}
-                    <a href="mailto:info@sima360.org" className="text-blue-600 hover:text-blue-800 underline">
-                      info@sima360.org
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Key Benefits */}
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="border-0 shadow-md">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">Evidence-Based</h3>
-                  <p className="text-slate-600 text-sm">
-                    Structured approach grounded in proven methodologies and best practices
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-0 shadow-md">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Target className="w-6 h-6 text-green-600" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">Industry Agnostic</h3>
-                  <p className="text-slate-600 text-sm">
-                    Adaptable framework that works across all industries and technology stacks
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-0 shadow-md">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">Comprehensive</h3>
-                  <p className="text-slate-600 text-sm">
-                    Designed for all stakeholders from executives to technologists
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* How the Ecosystem Works — interactive diagram */}
       <FrameworkMap />
 
-      {/* How the Ecosystem Works */}
-      <section className="py-16 px-4 bg-slate-50">
-        <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto text-center mb-10">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">Five Components. One Integrated System.</h2>
-            <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              SIMA360 is not a collection of independent tools. It is a structured ecosystem where each component plays
-              a specific role and connects to the others in a defined sequence.
-            </p>
-            <p className="text-lg text-slate-700 leading-relaxed">
-              SIMA-Core defines the framework's vocabulary: the five AI dimensions, six capability levels, and tool
-              categories that every other component operates within. SIMA-Probe applies that vocabulary diagnostically,
-              measuring where the organization actually stands across all five dimensions. SIMA-Flow provides the
-              improvement cycle architecture — the structured process for moving from current state to target state
-              through disciplined, evidence-based iterations. SIMA-Kit supplies the templates, rubrics, playbooks, and
-              governance tools those cycles require at every capability level. SIMA-Ascend builds the practitioner
-              capability organizations need to run the system consistently and advance it over time.
-            </p>
-          </div>
-          <div className="text-center">
-            <Link
-              href="/start"
-              className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-1 transition-colors"
-            >
-              New to SIMA360? Start here. <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Framework Overview */}
+      {/* How the Ecosystem Works — five component cards */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -291,6 +142,17 @@ export default function HomePage() {
                 <CardDescription>Comprehensive training and certification programs</CardDescription>
               </CardHeader>
               <CardContent>
+                <p className="text-xs text-slate-500 mb-3">
+                  Explore and register for training at{" "}
+                  <a
+                    href="https://SIMA360Classes.eventbee.com/boxoffice"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 underline"
+                  >
+                    SIMA360Classes.eventbee.com
+                  </a>
+                </p>
                 <Button variant="ghost" asChild className="w-full">
                   <Link href="/sima-ascend">
                     Learn More <ArrowRight className="ml-2 w-4 h-4" />
@@ -302,8 +164,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Key Benefits */}
+      {/* Five Components. One Integrated System. */}
       <section className="py-16 px-4 bg-slate-50">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Five Components. One Integrated System.</h2>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              SIMA360 is not a collection of independent tools. It is a structured ecosystem where each component plays
+              a specific role and connects to the others in a defined sequence.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed">
+              SIMA-Core defines the framework's vocabulary: the five AI dimensions, six capability levels, and tool
+              categories that every other component operates within. SIMA-Probe applies that vocabulary diagnostically,
+              measuring where the organization actually stands across all five dimensions. SIMA-Flow provides the
+              improvement cycle architecture — the structured process for moving from current state to target state
+              through disciplined, evidence-based iterations. SIMA-Kit supplies the templates, rubrics, playbooks, and
+              governance tools those cycles require at every capability level. SIMA-Ascend builds the practitioner
+              capability organizations need to run the system consistently and advance it over time.
+            </p>
+          </div>
+          <div className="text-center">
+            <Link
+              href="/start"
+              className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-1 transition-colors"
+            >
+              New to SIMA360? Start here. <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose SIMA360? */}
+      <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Choose SIMA360™?</h2>
@@ -315,19 +207,23 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-blue-600" />
+                <BarChart3 className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Strategic Alignment</h3>
-              <p className="text-slate-600">Align AI initiatives with business objectives for maximum impact and ROI</p>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Starts Where You Actually Are</h3>
+              <p className="text-slate-600">
+                Most frameworks tell you where to go. SIMA360 starts by measuring where you actually are — five
+                dimensions, six capability levels — so improvement cycles are grounded in evidence, not assumption.
+              </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lightbulb className="w-8 h-8 text-green-600" />
+                <CheckCircle className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Innovation Framework</h3>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Closes Every Gap</h3>
               <p className="text-slate-600">
-                Structured approach to AI innovation that reduces risk and accelerates adoption
+                Assessment, improvement cycles, governance tools, and practitioner development — in one integrated
+                system. Most organizations are missing two or three of those. SIMA360 closes all the gaps.
               </p>
             </div>
 
@@ -335,8 +231,43 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Measurable Results</h3>
-              <p className="text-slate-600">Clear metrics and KPIs to track progress and demonstrate value creation</p>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Works at Any Maturity Level</h3>
+              <p className="text-slate-600">
+                It's a structured operating system that works regardless of your stack, industry, or current maturity
+                level — and takes into consideration learning over time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The SIMA360 Solution */}
+      <section className="py-16 px-4 bg-slate-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">The SIMA360™ Solution</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              A clear, practical path for turning AI implementations into sustainable value
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="prose prose-slate max-w-none">
+                <p className="text-lg text-slate-700 leading-relaxed mb-4">
+                  SIMA360™ exists to provide organizations with a clear, practical path for turning AI implementations
+                  into sustainable value while reducing the risks inherent with this type of technology. In a world
+                  where artificial intelligence is evolving faster than most businesses can adapt, SIMA360™ serves as
+                  both a compass and a playbook—helping leaders, teams, and stakeholders navigate AI adoption with
+                  confidence, clarity, and governance.
+                </p>
+                <p className="text-slate-700 leading-relaxed">
+                  SIMA360™ is not tied to a single industry or technology stack. It is adaptable, scalable, and relevant
+                  whether you are deploying predictive analytics in healthcare, automating workflows in manufacturing,
+                  or experimenting with generative AI in creative fields. The Guide is intended for anyone approaching
+                  AI adoption—executives, innovators, compliance officers, technologists, and change leaders alike.
+                </p>
+              </div>
             </div>
           </div>
         </div>
