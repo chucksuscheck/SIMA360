@@ -201,9 +201,14 @@ export default function SIMAProbe() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">The SIMA360 Maturity Levels</h2>
-            <p className="text-lg text-slate-700 mb-12 text-center leading-relaxed">
+            <p className="text-lg text-slate-700 mb-4 text-center leading-relaxed">
               SIMA-Probe evaluates organizational readiness across all Domains to determine which maturity level
               accurately reflects current maturity.
+            </p>
+            <p className="text-center mb-12">
+              <Link href="/maturity" className="text-blue-600 hover:text-blue-800 underline text-sm font-medium">
+                View the full maturity guide — what each level means across all five domains →
+              </Link>
             </p>
             <div className="space-y-4">
               <Card className="border-l-4 border-l-slate-400">

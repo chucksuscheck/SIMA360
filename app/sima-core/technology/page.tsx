@@ -263,7 +263,7 @@ export default function TechnologyDomainPage() {
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${numberColorMap[lvl.color] ?? "bg-slate-100"}`}>
                     {lvl.level}
                   </div>
-                  <span className="font-semibold text-slate-900">{lvl.name}</span>
+                  <Link href={`/maturity#${lvl.name.toLowerCase()}`} className="font-semibold text-slate-900 hover:text-blue-600 hover:underline transition-colors">{lvl.name}</Link>
                 </div>
                 <p className="text-sm text-slate-700 leading-relaxed">{lvl.description}</p>
               </div>

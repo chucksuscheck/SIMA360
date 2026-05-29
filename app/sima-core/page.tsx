@@ -293,8 +293,10 @@ export default function SimaCorePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">AI Capability Levels Model</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Five progressive levels of increasing maturity and capability, each with increasing levels of AI control
-              and growth objectives
+              Six progressive levels of increasing maturity and capability. Select any level to see what it means across all five domains.{" "}
+              <Link href="/maturity" className="text-blue-600 hover:text-blue-800 underline">
+                View the full maturity guide →
+              </Link>
             </p>
           </div>
 
@@ -305,7 +307,7 @@ export default function SimaCorePage() {
                   <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-sm font-bold">
                     1
                   </div>
-                  <CardTitle className="text-lg">Initial</CardTitle>
+                  <CardTitle className="text-lg"><Link href="/maturity#initial" className="hover:text-blue-600 hover:underline transition-colors">Initial</Link></CardTitle>
                 </div>
                 <CardDescription>
                   All initiatives start here. AI is being considered with curious but unstructured application.
@@ -325,7 +327,7 @@ export default function SimaCorePage() {
                   <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-sm font-bold">
                     2
                   </div>
-                  <CardTitle className="text-lg">Exploring</CardTitle>
+                  <CardTitle className="text-lg"><Link href="/maturity#exploring" className="hover:text-blue-600 hover:underline transition-colors">Exploring</Link></CardTitle>
                 </div>
                 <CardDescription>
                   Structured experimentation and foundational skill development with isolated experiments.
@@ -344,7 +346,7 @@ export default function SimaCorePage() {
                   <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-sm font-bold">
                     3
                   </div>
-                  <CardTitle className="text-lg">Applying</CardTitle>
+                  <CardTitle className="text-lg"><Link href="/maturity#applying" className="hover:text-blue-600 hover:underline transition-colors">Applying</Link></CardTitle>
                 </div>
                 <CardDescription>
                   Piloting AI projects with limited scope and success, often opportunistic rather than strategic.
@@ -363,7 +365,7 @@ export default function SimaCorePage() {
                   <div className="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center text-sm font-bold">
                     4
                   </div>
-                  <CardTitle className="text-lg">Formalizing</CardTitle>
+                  <CardTitle className="text-lg"><Link href="/maturity#formalizing" className="hover:text-blue-600 hover:underline transition-colors">Formalizing</Link></CardTitle>
                 </div>
                 <CardDescription>
                   Standardizing governance, workflows, and initial AI applications with repeatable practices.
@@ -383,7 +385,7 @@ export default function SimaCorePage() {
                   <div className="w-8 h-8 bg-sky-100 rounded-full flex items-center justify-center text-sm font-bold">
                     5
                   </div>
-                  <CardTitle className="text-lg">Optimizing</CardTitle>
+                  <CardTitle className="text-lg"><Link href="/maturity#optimizing" className="hover:text-blue-600 hover:underline transition-colors">Optimizing</Link></CardTitle>
                 </div>
                 <CardDescription>
                   Refining systems with feedback loops, proactive governance, and operational AI.
@@ -402,7 +404,7 @@ export default function SimaCorePage() {
                   <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-sm font-bold">
                     6
                   </div>
-                  <CardTitle className="text-lg">Leading</CardTitle>
+                  <CardTitle className="text-lg"><Link href="/maturity#leading" className="hover:text-blue-600 hover:underline transition-colors">Leading</Link></CardTitle>
                 </div>
                 <CardDescription>
                   Continuous AI-driven innovation and enterprise-wide integration with industry leadership.
