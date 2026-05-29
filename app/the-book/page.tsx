@@ -11,7 +11,7 @@ import { SiteFooter } from "@/components/site-footer"
 export const metadata: Metadata = {
   title: "The AI Rush — The Book Behind SIMA360™",
   description:
-    "The AI Rush: Too Much. Too Soon. is the intellectual origin of the SIMA360 framework — the source of its five AI dimensions, six capability levels, and FLAI methodology.",
+    "The AI Rush: Too Much. Too Soon. is the intellectual origin of the SIMA360 framework — the source of its five domains, six capability levels, and FLAI methodology.",
 }
 
 // TODO: Replace with the actual purchase URL before launch
@@ -54,7 +54,7 @@ export default function TheBookPage() {
                 <span className="text-indigo-600 block">Too Much. Too Soon.</span>
               </h1>
               <p className="text-xl text-slate-600 mb-8">
-                The five AI dimensions, six capability levels, FLAI methodology, and diagnostic principles that define
+                The five domains, six capability levels, FLAI methodology, and diagnostic principles that define
                 SIMA360 did not emerge in isolation. They are the intellectual foundation of this book — developed to
                 explain why organizations consistently fail to convert AI activity into organizational capability.
               </p>

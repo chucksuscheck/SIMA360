@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Data Dimension — AI Domains | SIMA360™",
   description:
-    "The Data AI Dimension encompasses data quality, accessibility, governance, integration, and stewardship — the foundation that every AI system depends on.",
+    "The Data Domain encompasses data quality, accessibility, governance, integration, and stewardship — the foundation that every AI system depends on.",
 }
 
 import { Button } from "@/components/ui/button"
@@ -100,7 +100,7 @@ export default function DataDimensionPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 border-cyan-200">
-                AI Dimension
+                Domain
               </Badge>
               <Badge variant="outline" className="text-slate-600">
                 <Link href="/sima-core" className="hover:text-cyan-600 transition-colors">SIMA-Core™</Link>
@@ -362,7 +362,7 @@ export default function DataDimensionPage() {
               href="/sima-core"
               className="text-cyan-600 hover:text-cyan-800 font-medium inline-flex items-center gap-1 transition-colors"
             >
-              View all five AI dimensions <ArrowRight className="w-4 h-4" />
+              View all five domains <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

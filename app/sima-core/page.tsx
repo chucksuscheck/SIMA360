@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "SIMA-Core — Framework Foundation | SIMA360™",
   description:
-    "SIMA-Core defines the conceptual vocabulary of the SIMA360 framework: five AI dimensions, six capability levels, and five tool categories that every other component operates within.",
+    "SIMA-Core defines the conceptual vocabulary of the SIMA360 framework: five domains, six capability levels, and five tool categories that every other component operates within.",
 }
 
 import { Button } from "@/components/ui/button"
@@ -60,7 +60,7 @@ export default function SimaCorePage() {
               <span className="text-blue-600 block">of SIMA360</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              SIMA Core™ is the static structural foundation consisting of three core models: AI Dimensions, AI
+              SIMA Core™ is the static structural foundation consisting of three core models: Domains, AI
               Capability Levels, and AI Tool Categories. It provides the organizing principles for effective and
               responsible AI maturity.
             </p>
@@ -99,7 +99,7 @@ export default function SimaCorePage() {
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
               SIMA-Core answers one question: what are the conceptual structures this framework uses to describe AI
-              maturity? The answer is three interconnected models: the AI Dimensions model, the AI Capability Levels
+              maturity? The answer is three interconnected models: the Domains model, the AI Capability Levels
               model, and the AI Tool Categories model. Everything else in the SIMA360 ecosystem operates within the
               vocabulary these three models define.
             </p>
@@ -124,14 +124,14 @@ export default function SimaCorePage() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Building className="w-8 h-8 text-blue-600" />
                 </div>
-                <CardTitle className="text-xl">AI Dimensions</CardTitle>
+                <CardTitle className="text-xl">Domains</CardTitle>
                 <CardDescription>
-                  Five AI dimensions to categorize effective and responsible AI maturity
+                  Five domains to categorize effective and responsible AI maturity
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600 mb-4">
-                  Strategy, Governance, Data, People, and Technology AI dimensions serve as organizing principles for
+                  Strategy, Governance, Data, People, and Technology domains serve as organizing principles for
                   assessing organizational readiness.
                 </p>
               </CardContent>
@@ -172,13 +172,13 @@ export default function SimaCorePage() {
         </div>
       </section>
 
-      {/* AI Dimensions Model */}
+      {/* Domains Model */}
       <section id="dimensions" className="py-16 px-4 scroll-mt-20">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">AI Dimensions Model</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Domains Model</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Five AI dimensions that serve as organizing principles for assessing organizational readiness and
+              Five domains that serve as organizing principles for assessing organizational readiness and
               implementing AI in a scalable, ethical, and value-generating manner
             </p>
           </div>
@@ -187,7 +187,7 @@ export default function SimaCorePage() {
             <Card className="hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Target className="w-8 h-8 text-blue-600 mb-2" />
-                <CardTitle>Strategy AI Dimension</CardTitle>
+                <CardTitle>Strategy Domain</CardTitle>
                 <CardDescription>Ensures AI initiatives align with broader business goals</CardDescription>
               </CardHeader>
               <CardContent>
@@ -207,7 +207,7 @@ export default function SimaCorePage() {
             <Card className="hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Shield className="w-8 h-8 text-indigo-600 mb-2" />
-                <CardTitle>Governance AI Dimension</CardTitle>
+                <CardTitle>Governance Domain</CardTitle>
                 <CardDescription>Manages AI risks, ensures compliance, and upholds ethical standards</CardDescription>
               </CardHeader>
               <CardContent>
@@ -227,7 +227,7 @@ export default function SimaCorePage() {
             <Card className="hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Database className="w-8 h-8 text-cyan-600 mb-2" />
-                <CardTitle>Data AI Dimension</CardTitle>
+                <CardTitle>Data Domain</CardTitle>
                 <CardDescription>Encompasses data quality, access, governance, and strategy</CardDescription>
               </CardHeader>
               <CardContent>
@@ -247,7 +247,7 @@ export default function SimaCorePage() {
             <Card className="hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Users className="w-8 h-8 text-sky-600 mb-2" />
-                <CardTitle>People AI Dimension</CardTitle>
+                <CardTitle>People Domain</CardTitle>
                 <CardDescription>Focuses on workforce readiness and cultural adoption</CardDescription>
               </CardHeader>
               <CardContent>
@@ -267,7 +267,7 @@ export default function SimaCorePage() {
             <Card className="hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Cog className="w-8 h-8 text-slate-600 mb-2" />
-                <CardTitle>Technology AI Dimension</CardTitle>
+                <CardTitle>Technology Domain</CardTitle>
                 <CardDescription>Infrastructure, tools, and technical practices for scalable AI</CardDescription>
               </CardHeader>
               <CardContent>
@@ -613,7 +613,7 @@ export default function SimaCorePage() {
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">Holistic Integration</h3>
                 <p className="text-slate-600 text-sm mb-4">
-                  The AI Dimensions work together to provide a comprehensive approach to AI maturity, ensuring all
+                  The Domains work together to provide a comprehensive approach to AI maturity, ensuring all
                   aspects of the organization are considered and aligned.
                 </p>
               </CardContent>

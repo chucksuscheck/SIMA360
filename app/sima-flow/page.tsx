@@ -55,11 +55,11 @@ export default function SimaFlowPage() {
             </Badge>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
               The Execution Engine
-              <span className="text-green-600 block">Connecting AI Dimension to Results</span>
+              <span className="text-green-600 block">Connecting Domain to Results</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8">
               SIMA Flow™ serves as the execution engine, tying SIMA Core™ models to SIMA Kit™ resourced through two
-              powerful cycles: the Core Cycle for AI dimension development and the FLAI Cycle for project execution.
+              powerful cycles: the Core Cycle for domain development and the FLAI Cycle for project execution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-green-500 hover:bg-green-600">
@@ -88,7 +88,7 @@ export default function SimaFlowPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Two Interconnected Cycles</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              SIMA Flow™ operates through two complementary cycles that ensure both AI dimension alignment and tactical
+              SIMA Flow™ operates through two complementary cycles that ensure both domain alignment and tactical
               execution
             </p>
           </div>
@@ -98,7 +98,7 @@ export default function SimaFlowPage() {
               <CardHeader>
                 <Layers className="w-8 h-8 text-green-600 mb-2" />
                 <CardTitle>Core Cycle (Macro)</CardTitle>
-                <CardDescription>Enterprise-level AI dimension development and strategic alignment</CardDescription>
+                <CardDescription>Enterprise-level domain development and strategic alignment</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -107,8 +107,8 @@ export default function SimaFlowPage() {
                       <span className="text-green-600 font-semibold text-sm">1</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900">Assess AI Dimensions</h4>
-                      <p className="text-sm text-slate-600">Evaluate maturity across five AI dimensions</p>
+                      <h4 className="font-semibold text-slate-900">Assess Domains</h4>
+                      <p className="text-sm text-slate-600">Evaluate maturity across five domains</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -195,17 +195,17 @@ export default function SimaFlowPage() {
           </div>
 
           <div className="space-y-12">
-            {/* Assess AI Dimensions */}
+            {/* Assess Domains */}
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mr-4">
                     <Search className="w-6 h-6" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900">Assess AI Dimensions</h3>
+                  <h3 className="text-2xl font-bold text-slate-900">Assess Domains</h3>
                 </div>
                 <p className="text-slate-600 mb-4">
-                  The diagnostic entry point that contextualizes readiness across the five AI Dimensions: Strategy,
+                  The diagnostic entry point that contextualizes readiness across the five Domains: Strategy,
                   Governance, Data, People, and Technology.
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
@@ -240,7 +240,7 @@ export default function SimaFlowPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <Card className="bg-emerald-50 border-emerald-200 md:order-1">
                 <CardContent className="p-6">
-                  <h4 className="font-semibold text-slate-900 mb-3">AI Dimension Preparation</h4>
+                  <h4 className="font-semibold text-slate-900 mb-3">Domain Preparation</h4>
                   <div className="space-y-2">
                     <div className="flex items-center text-sm">
                       <Target className="w-4 h-4 text-emerald-600 mr-2" />
@@ -284,7 +284,7 @@ export default function SimaFlowPage() {
                 </div>
                 <p className="text-slate-600 mb-4">
                   Prepare the organization for execution using SIMA Kit™ tools and templates aligned to current
-                  capability levels and AI dimensions.
+                  capability levels and domains.
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
                   <li>• Dimension-specific preparation activities</li>
@@ -479,7 +479,7 @@ export default function SimaFlowPage() {
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-2">Ensures Alignment</h3>
               <p className="text-slate-600">
-                Groundwork phase ensures preparation efforts are tailored to capability levels and AI dimensions
+                Groundwork phase ensures preparation efforts are tailored to capability levels and domains
               </p>
             </div>
           </div>

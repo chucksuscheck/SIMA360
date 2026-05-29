@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Technology Dimension — AI Domains | SIMA360™",
   description:
-    "The Technology AI Dimension covers the infrastructure, tools, lifecycle management, security, and innovation practices needed to deploy and scale AI reliably.",
+    "The Technology Domain covers the infrastructure, tools, lifecycle management, security, and innovation practices needed to deploy and scale AI reliably.",
 }
 
 import { Button } from "@/components/ui/button"
@@ -102,7 +102,7 @@ export default function TechnologyDimensionPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Badge variant="secondary" className="bg-slate-200 text-slate-800 border-slate-300">
-                AI Dimension
+                Domain
               </Badge>
               <Badge variant="outline" className="text-slate-600">
                 <Link href="/sima-core" className="hover:text-slate-800 transition-colors">SIMA-Core™</Link>
@@ -364,7 +364,7 @@ export default function TechnologyDimensionPage() {
               href="/sima-core"
               className="text-slate-700 hover:text-slate-900 font-medium inline-flex items-center gap-1 transition-colors"
             >
-              View all five AI dimensions <ArrowRight className="w-4 h-4" />
+              View all five domains <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

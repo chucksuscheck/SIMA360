@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "SIMA-Kit — Implementation Resource Library | SIMA360™",
   description:
-    "SIMA-Kit provides the templates, rubrics, playbooks, and governance tools stratified by capability level and AI dimension that SIMA-Flow cycles require.",
+    "SIMA-Kit provides the templates, rubrics, playbooks, and governance tools stratified by capability level and domain that SIMA-Flow cycles require.",
 }
 
 import { Button } from "@/components/ui/button"
@@ -119,7 +119,7 @@ const SIMAKitPage = () => {
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Complete Toolkit for AI Transformation</h2>
             <p className="text-lg text-slate-600">
-              SIMA-Kit supplies the templates, rubrics, playbooks, and governance tools that SIMA-Flow cycles require — stratified by capability level and AI dimension so every resource matches the organization's current state.
+              SIMA-Kit supplies the templates, rubrics, playbooks, and governance tools that SIMA-Flow cycles require — stratified by capability level and domain so every resource matches the organization's current state.
             </p>
           </div>
 
@@ -132,7 +132,7 @@ const SIMAKitPage = () => {
                 <CardTitle className="text-lg">Gap Analysis Templates</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 text-sm">Identify specific capability gaps across all AI dimensions</p>
+                <p className="text-slate-600 text-sm">Identify specific capability gaps across all domains</p>
               </CardContent>
             </Card>
 
@@ -171,7 +171,7 @@ const SIMAKitPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Two Complementary Components</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Both components are mapped directly to the five SIMA AI dimensions and aligned with SIMA Capability Levels
+              Both components are mapped directly to the five SIMA domains and aligned with SIMA Capability Levels
             </p>
           </div>
 
@@ -297,9 +297,9 @@ const SIMAKitPage = () => {
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Integrated Across All AI Dimensions</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Integrated Across All Domains</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              All SIMA Kit™ guidance is stratified by the five AI dimensions, ensuring context-specific, relevant, and
+              All SIMA Kit™ guidance is stratified by the five domains, ensuring context-specific, relevant, and
               actionable recommendations
             </p>
           </div>

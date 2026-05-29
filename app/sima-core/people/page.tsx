@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "People Dimension — AI Domains | SIMA360™",
   description:
-    "The People AI Dimension focuses on workforce readiness, AI literacy, talent strategy, change management, and cultural adoption of responsible AI practices.",
+    "The People Domain focuses on workforce readiness, AI literacy, talent strategy, change management, and cultural adoption of responsible AI practices.",
 }
 
 import { Button } from "@/components/ui/button"
@@ -100,7 +100,7 @@ export default function PeopleDimensionPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Badge variant="secondary" className="bg-sky-100 text-sky-800 border-sky-200">
-                AI Dimension
+                Domain
               </Badge>
               <Badge variant="outline" className="text-slate-600">
                 <Link href="/sima-core" className="hover:text-sky-600 transition-colors">SIMA-Core™</Link>
@@ -362,7 +362,7 @@ export default function PeopleDimensionPage() {
               href="/sima-core"
               className="text-sky-600 hover:text-sky-800 font-medium inline-flex items-center gap-1 transition-colors"
             >
-              View all five AI dimensions <ArrowRight className="w-4 h-4" />
+              View all five domains <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

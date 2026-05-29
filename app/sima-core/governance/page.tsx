@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Governance Dimension — AI Domains | SIMA360™",
   description:
-    "The Governance AI Dimension manages AI risks, ensures regulatory compliance, and upholds ethical standards through oversight, documentation, and accountability structures.",
+    "The Governance Domain manages AI risks, ensures regulatory compliance, and upholds ethical standards through oversight, documentation, and accountability structures.",
 }
 
 import { Button } from "@/components/ui/button"
@@ -100,7 +100,7 @@ export default function GovernanceDimensionPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Badge variant="secondary" className="bg-indigo-100 text-indigo-800 border-indigo-200">
-                AI Dimension
+                Domain
               </Badge>
               <Badge variant="outline" className="text-slate-600">
                 <Link href="/sima-core" className="hover:text-indigo-600 transition-colors">SIMA-Core™</Link>
@@ -362,7 +362,7 @@ export default function GovernanceDimensionPage() {
               href="/sima-core"
               className="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center gap-1 transition-colors"
             >
-              View all five AI dimensions <ArrowRight className="w-4 h-4" />
+              View all five domains <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

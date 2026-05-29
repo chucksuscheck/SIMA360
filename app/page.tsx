@@ -174,7 +174,7 @@ export default function HomePage() {
               a specific role and connects to the others in a defined sequence.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              SIMA-Core defines the framework's vocabulary: the five AI dimensions, six capability levels, and tool
+              SIMA-Core defines the framework's vocabulary: the five domains, six capability levels, and tool
               categories that every other component operates within. SIMA-Probe applies that vocabulary diagnostically,
               measuring where the organization actually stands across all five dimensions. SIMA-Flow provides the
               improvement cycle architecture — the structured process for moving from current state to target state

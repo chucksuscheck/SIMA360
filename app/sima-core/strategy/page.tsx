@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Strategy Dimension — AI Domains | SIMA360™",
   description:
-    "The Strategy AI Dimension ensures AI initiatives align with broader business goals through vision alignment, prioritization, investment planning, and measurable evaluation.",
+    "The Strategy Domain ensures AI initiatives align with broader business goals through vision alignment, prioritization, investment planning, and measurable evaluation.",
 }
 
 import { Button } from "@/components/ui/button"
@@ -100,7 +100,7 @@ export default function StrategyDimensionPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Badge variant="secondary" className="bg-blue-100 text-blue-800 border-blue-200">
-                AI Dimension
+                Domain
               </Badge>
               <Badge variant="outline" className="text-slate-600">
                 <Link href="/sima-core" className="hover:text-blue-600 transition-colors">SIMA-Core™</Link>
@@ -362,7 +362,7 @@ export default function StrategyDimensionPage() {
               href="/sima-core"
               className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-1 transition-colors"
             >
-              View all five AI dimensions <ArrowRight className="w-4 h-4" />
+              View all five domains <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

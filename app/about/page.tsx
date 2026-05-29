@@ -337,7 +337,7 @@ const AboutPage = () => {
               <h2 className="text-3xl font-bold text-slate-900">The Intellectual Foundation</h2>
             </div>
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
-              The five AI dimensions, six capability levels, FLAI methodology, and diagnostic principles in SIMA360 are
+              The five domains, six capability levels, FLAI methodology, and diagnostic principles in SIMA360 are
               grounded in the book <em>The AI Rush: Too Much. Too Soon.</em> The book establishes the conceptual
               argument. SIMA360 operationalizes it. Organizations that want to understand why the framework is
               structured the way it is should start with the book.
@@ -523,7 +523,7 @@ const AboutPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  The vocabulary layer of the framework: three core models — AI Dimensions, AI Capability Levels, and
+                  The vocabulary layer of the framework: three core models — Domains, AI Capability Levels, and
                   AI Tool Categories — that every other component operates within.
                 </p>
                 <Button variant="ghost" asChild className="p-0 h-auto text-indigo-600 hover:text-indigo-800">
@@ -548,7 +548,7 @@ const AboutPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  The cycle architecture that structures improvement — the Core Cycle for AI dimension development and
+                  The cycle architecture that structures improvement — the Core Cycle for domain development and
                   the FLAI Cycle (Frame, Learn, Assess, Improve) for project-level execution.
                 </p>
                 <Button variant="ghost" asChild className="p-0 h-auto text-green-600 hover:text-green-800">
@@ -574,7 +574,7 @@ const AboutPage = () => {
               <CardContent>
                 <p className="text-slate-600 mb-4">
                   The resource layer — templates, rubrics, playbooks, and governance tools stratified by capability
-                  level and AI dimension that SIMA-Flow cycles require.
+                  level and domain that SIMA-Flow cycles require.
                 </p>
                 <Button variant="ghost" asChild className="p-0 h-auto text-purple-600 hover:text-purple-800">
                   <Link href="/sima-kit">

@@ -50,7 +50,7 @@ export default function SIMAProbe() {
               SIMA Probe™
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              Measure your organization's AI maturity across five AI Dimensions with actionable insights and
+              Measure your organization's AI maturity across five Domains with actionable insights and
               prescriptive guidance
             </p>
             <div className="flex gap-4 justify-center">
@@ -75,9 +75,9 @@ export default function SIMAProbe() {
             <h2 className="text-3xl font-bold mb-6 text-center">What is SIMA Probe?</h2>
             <p className="text-lg text-slate-700 mb-8 leading-relaxed">
               SIMA-Probe is the diagnostic assessment tool within the SIMA360™ framework, designed to measure an
-              organization's AI maturity across five AI Dimensions: <strong>Strategy</strong>,{" "}
+              organization's AI maturity across five Domains: <strong>Strategy</strong>,{" "}
               <strong>Governance</strong>,<strong> Data</strong>, <strong>People</strong>, and{" "}
-              <strong>Technology</strong>. Each AI Dimension is evaluated across the SIMA360 Maturity Model's six
+              <strong>Technology</strong>. Each Domain is evaluated across the SIMA360 Maturity Model's six
               capability levels: Initial, Exploring, Applying, Formalizing, Optimizing, and Leading.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
@@ -89,10 +89,10 @@ export default function SIMAProbe() {
         </div>
       </section>
 
-      {/* Five AI Dimensions */}
+      {/* Five Domains */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Five AI Dimensions</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Five Domains</h2>
           <div className="grid md:grid-cols-5 gap-6 max-w-6xl mx-auto">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -144,7 +144,7 @@ export default function SIMAProbe() {
                   <CardTitle className="text-lg">Maturity Level Identification</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-600">Establishes current maturity across all five AI Dimensions</p>
+                  <p className="text-slate-600">Establishes current maturity across all five Domains</p>
                 </CardContent>
               </Card>
               <Card>
@@ -202,7 +202,7 @@ export default function SIMAProbe() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">The SIMA360 Maturity Levels</h2>
             <p className="text-lg text-slate-700 mb-12 text-center leading-relaxed">
-              SIMA-Probe evaluates organizational readiness across all AI Dimensions to determine which maturity level
+              SIMA-Probe evaluates organizational readiness across all Domains to determine which maturity level
               accurately reflects current maturity.
             </p>
             <div className="space-y-4">
@@ -353,7 +353,7 @@ export default function SIMAProbe() {
                       <ul className="space-y-2 text-slate-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span>3-5 basic questions per AI Dimension (15-25 questions total)</span>
+                          <span>3-5 basic questions per Domain (15-25 questions total)</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
@@ -361,7 +361,7 @@ export default function SIMAProbe() {
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span>Single maturity level rating per AI Dimension</span>
+                          <span>Single maturity level rating per Domain</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
@@ -373,7 +373,7 @@ export default function SIMAProbe() {
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span>Basic improvement guidance per AI Dimension</span>
+                          <span>Basic improvement guidance per Domain</span>
                         </li>
                       </ul>
                     </div>
@@ -410,7 +410,7 @@ export default function SIMAProbe() {
                       <ul className="space-y-2 text-slate-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                          <span>20-30 expanded questions per AI Dimension (100-150 questions total)</span>
+                          <span>20-30 expanded questions per Domain (100-150 questions total)</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
@@ -425,12 +425,12 @@ export default function SIMAProbe() {
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                           <span>
-                            Radar chart visualizations displaying relative maturity across all five AI Dimensions
+                            Radar chart visualizations displaying relative maturity across all five Domains
                           </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                          <span>3-10 targeted guidance statements per AI Dimension</span>
+                          <span>3-10 targeted guidance statements per Domain</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
@@ -470,7 +470,7 @@ export default function SIMAProbe() {
                       <ul className="space-y-2 text-slate-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
-                          <span>Comprehensive 50+ questions per AI Dimension (250+ questions total)</span>
+                          <span>Comprehensive 50+ questions per Domain (250+ questions total)</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
