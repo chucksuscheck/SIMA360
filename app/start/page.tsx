@@ -106,7 +106,7 @@ const entryPoints = [
 
 export default function StartPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-sky-50">
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-emerald-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
         <link rel="canonical" href="https://www.sima360.org/start" />

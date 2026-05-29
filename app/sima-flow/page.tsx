@@ -62,7 +62,7 @@ export default function SimaFlowPage() {
               powerful cycles: the Core Cycle for AI dimension development and the FLAI Cycle for project execution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-green-600 hover:bg-green-700">
+              <Button size="lg" asChild className="bg-green-500 hover:bg-green-600">
                 <a href="https://SIMA360Classes.eventbee.com/boxoffice" target="_blank" rel="noopener noreferrer">
                   Register for Training <ArrowRight className="ml-2 w-4 h-4" />
                 </a>

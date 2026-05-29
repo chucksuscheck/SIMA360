@@ -18,7 +18,7 @@ const BOOK_PURCHASE_URL = "#"
 
 export default function TheBookPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-rose-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
         <link rel="canonical" href="https://www.sima360.org/the-book" />
@@ -56,7 +56,7 @@ export default function TheBookPage() {
               explain why organizations consistently fail to convert AI activity into organizational capability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700" asChild>
+              <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600" asChild>
                 <a href={BOOK_PURCHASE_URL} target="_blank" rel="noopener noreferrer">
                   Get the Book <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
@@ -180,7 +180,7 @@ export default function TheBookPage() {
               describing their maturity condition, and a basis for deciding which SIMA360 components address their most
               significant gaps.
             </p>
-            <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700" asChild>
+            <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600" asChild>
               <a href={BOOK_PURCHASE_URL} target="_blank" rel="noopener noreferrer">
                 Get the Book <ArrowRight className="ml-2 w-4 h-4" />
               </a>

@@ -65,7 +65,7 @@ export default function SimaCorePage() {
               responsible AI maturity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" asChild className="bg-blue-500 hover:bg-blue-600">
                 <a href="https://SIMA360Classes.eventbee.com/boxoffice" target="_blank" rel="noopener noreferrer">
                   Register for Training <ArrowRight className="ml-2 w-4 h-4" />
                 </a>

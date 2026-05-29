@@ -97,7 +97,7 @@ const AboutPage = () => {
               but none provides a structured path to achieving it. SIMA360 was built to fill that gap.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" asChild className="bg-blue-500 hover:bg-blue-600">
                 <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
                   Download the Framework Guide <ArrowRight className="ml-2 w-4 h-4" />
                 </a>

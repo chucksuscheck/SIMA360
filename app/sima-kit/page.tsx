@@ -93,7 +93,7 @@ const SIMAKitPage = () => {
               and guidance to turn strategic intent into real-world AI maturity gains.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-purple-600 hover:bg-purple-700">
+              <Button size="lg" asChild className="bg-purple-500 hover:bg-purple-600">
                 <a href="mailto:info@sima360.org?subject=SIMA%20Kit%20Access">
                   Request Access <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
