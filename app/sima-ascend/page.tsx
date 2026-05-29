@@ -88,14 +88,17 @@ export default function SimaAscendPage() {
               SIMA Ascend™ Training & Certification
             </Badge>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Professional Development
-              <span className="text-orange-600 block">& Certification Framework</span>
+              Building the Practitioner Capability
+              <span className="text-orange-600 block">the Framework Requires</span>
             </h1>
-            <p className="text-xl text-slate-600 mb-8">
-              SIMA-Ascend is the structured training and certification component of the SIMA360™ framework, designed to
-              equip individuals and organizations with the knowledge, skills, and credentials necessary to implement
-              artificial intelligence responsibly, effectively, and at scale. It supports progressive growth in AI
-              fluency and leadership, mapping learning pathways to real-world roles and organizational goals.
+            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
+              The book's central finding is that organizational AI capability requires deliberate human development —
+              not just tool deployment. Organizations can have sophisticated AI tools, mature data infrastructure, and
+              formal governance policies and still fail to produce reliable AI outcomes if the people running those
+              systems lack the capability to apply the framework consistently. SIMA-Ascend exists because of that
+              finding. It builds the practitioner capability the framework requires: the diagnostic skill to assess
+              maturity accurately, the execution skill to run structured improvement cycles, and the leadership
+              capability to develop those skills organizationally.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-orange-600 hover:bg-orange-700">

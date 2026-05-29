@@ -214,8 +214,10 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-700">
-                    AI activity is uncoordinated and ad hoc. No formal strategy, governance, or infrastructure exists.
-                    Individual experiments may occur but are not tracked, shared, or built upon organizationally.
+                    AI is under consideration but the organizational conditions for reliable AI outcomes do not yet
+                    exist. No formal governance. No defined strategy for AI investment or prioritization. Data access
+                    is unstructured. AI literacy is concentrated in isolated individuals rather than distributed across
+                    the organization. Technology infrastructure has not been evaluated for AI readiness.
                   </p>
                 </CardContent>
               </Card>
@@ -229,8 +231,10 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-700">
-                    Structured experimentation begins. Foundational skill development occurs through isolated pilots and
-                    proof-of-concept projects. Awareness is growing, but governance and infrastructure remain informal.
+                    Isolated experimentation is underway but governance, data, and people conditions remain informal.
+                    Individual projects reflect individual initiative rather than organizational strategy. Early AI
+                    awareness is growing but there is no shared vocabulary for evaluating AI readiness, no formal risk
+                    management, and no structured process for moving from experimentation to application.
                   </p>
                 </CardContent>
               </Card>
@@ -244,8 +248,11 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-700">
-                    Limited-scope AI projects are actively piloted. Early success is achieved in specific use cases.
-                    Investments in talent, data quality, and tooling begin to formalize.
+                    Specific AI use cases are producing results but the operational conditions that would make those
+                    results repeatable are not yet in place. Governance frameworks are beginning to emerge. Data quality
+                    investments have started. Some cross-functional coordination exists but is project-dependent rather
+                    than structural. Early momentum is real but fragile — dependent on specific people and specific
+                    projects rather than organizational systems.
                   </p>
                 </CardContent>
               </Card>
@@ -259,8 +266,11 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-700">
-                    Repeatable practices and governance frameworks are established. AI is prioritized by leadership and
-                    integrated into business processes. Cross-functional teams adopt standardized approaches.
+                    Repeatable operational conditions are being established. Governance is documented and beginning to
+                    function operationally rather than performatively. Data quality and access are managed through
+                    formal policies. AI strategy is aligned with business priorities and visible to leadership.
+                    Cross-functional teams apply standardized practices. The organization is transitioning from
+                    dependent on individual initiative to dependent on organizational systems.
                   </p>
                 </CardContent>
               </Card>
@@ -274,8 +284,10 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-700">
-                    AI is leveraged strategically across functions and business units. Governance is robust and
-                    proactive. Real-time analytics, feedback mechanisms, and ethical audits become standard practice.
+                    AI operates within robust governance structures that function under real operational conditions —
+                    not just in compliance reviews. Feedback loops produce continuous improvement across all five
+                    dimensions. Real-time analytics inform strategic decisions. The organization proactively manages AI
+                    risk rather than reactively responding to failures. Capability is organizational, not individual.
                   </p>
                 </CardContent>
               </Card>
@@ -289,9 +301,11 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-700">
-                    AI is core to strategic differentiation. Organizations drive industry innovation, shape standards,
-                    and generate new revenue streams through AI. Ethical design and societal impact are embedded
-                    throughout the development lifecycle.
+                    AI is embedded in the organization's strategic differentiation and operational identity.
+                    Governance, data, people, technology, and strategy conditions are mutually reinforcing and
+                    continuously improving. The organization contributes to industry standards rather than following
+                    them. New AI capabilities are absorbed by a mature organizational system — not deployed into an
+                    unprepared one.
                   </p>
                 </CardContent>
               </Card>
