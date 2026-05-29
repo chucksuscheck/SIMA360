@@ -84,6 +84,28 @@ export default function SimaCorePage() {
         </div>
       </section>
 
+      {/* What SIMA-Core Is and Is Not */}
+      <section className="py-12 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">What SIMA-Core Is and Is Not</h2>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              SIMA-Core is the vocabulary layer of the SIMA360 framework. It defines the terms, structures, and
+              categories that every other component operates within. It does not prescribe action — that is
+              SIMA-Flow's role. It does not supply implementation resources — that is SIMA-Kit's role. It does not
+              assess your organization — that is SIMA-Probe's role. It does not build practitioner capability — that
+              is SIMA-Ascend's role.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed">
+              SIMA-Core answers one question: what are the conceptual structures this framework uses to describe AI
+              maturity? The answer is three interconnected models: the AI Dimensions model, the AI Capability Levels
+              model, and the AI Tool Categories model. Everything else in the SIMA360 ecosystem operates within the
+              vocabulary these three models define.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Three Core Models Overview */}
       <section className="py-16 px-4 bg-blue-50">
         <div className="container mx-auto">
@@ -580,6 +602,27 @@ export default function SimaCorePage() {
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Ecosystem Position */}
+      <section className="py-12 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-8">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Where SIMA-Core Fits in the Ecosystem</h3>
+              <p className="text-lg text-slate-700 leading-relaxed mb-6">
+                Core defines the vocabulary → Probe applies it diagnostically → Flow structures the improvement cycle
+                → Kit supplies the cycle's resources → Ascend builds the practitioners who run the system.
+              </p>
+              <Link
+                href="/start"
+                className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-1 transition-colors"
+              >
+                See how the full ecosystem works <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
