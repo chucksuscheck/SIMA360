@@ -340,7 +340,7 @@ export default function SimaFlowPage() {
       </section>
 
       {/* FLAI Cycle Deep Dive */}
-      <section className="py-16 px-4 bg-green-50">
+      <section id="flai" className="py-16 px-4 bg-green-50 scroll-mt-20">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">FLAI Project Cycle</h2>

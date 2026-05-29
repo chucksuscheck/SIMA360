@@ -13,6 +13,7 @@ import { ArrowRight, Brain, Zap, Target, Users, BookOpen, Lightbulb, CheckCircle
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
+import { FrameworkMap } from "@/components/framework-map"
 import Image from "next/image"
 
 export default function HomePage() {
@@ -63,6 +64,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <FrameworkMap />
 
       {/* SIMA360 Solution */}
       <section className="py-16 px-4 bg-slate-50">

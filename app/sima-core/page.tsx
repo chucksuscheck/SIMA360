@@ -173,7 +173,7 @@ export default function SimaCorePage() {
       </section>
 
       {/* AI Dimensions Model */}
-      <section className="py-16 px-4">
+      <section id="dimensions" className="py-16 px-4 scroll-mt-20">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">AI Dimensions Model</h2>
@@ -184,7 +184,7 @@ export default function SimaCorePage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow border-blue-200">
+            <Card id="strategy" className="scroll-mt-20 hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Target className="w-8 h-8 text-blue-600 mb-2" />
                 <CardTitle>Strategy AI Dimension</CardTitle>
@@ -201,7 +201,7 @@ export default function SimaCorePage() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-blue-200">
+            <Card id="governance" className="scroll-mt-20 hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Shield className="w-8 h-8 text-indigo-600 mb-2" />
                 <CardTitle>Governance AI Dimension</CardTitle>
@@ -218,7 +218,7 @@ export default function SimaCorePage() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-blue-200">
+            <Card id="data" className="scroll-mt-20 hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Database className="w-8 h-8 text-cyan-600 mb-2" />
                 <CardTitle>Data AI Dimension</CardTitle>
@@ -235,7 +235,7 @@ export default function SimaCorePage() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-blue-200">
+            <Card id="people" className="scroll-mt-20 hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Users className="w-8 h-8 text-sky-600 mb-2" />
                 <CardTitle>People AI Dimension</CardTitle>
@@ -252,7 +252,7 @@ export default function SimaCorePage() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-blue-200">
+            <Card id="technology" className="scroll-mt-20 hover:shadow-lg transition-shadow border-blue-200">
               <CardHeader>
                 <Cog className="w-8 h-8 text-slate-600 mb-2" />
                 <CardTitle>Technology AI Dimension</CardTitle>
@@ -273,7 +273,7 @@ export default function SimaCorePage() {
       </section>
 
       {/* AI Capability Levels Model */}
-      <section className="py-16 px-4 bg-blue-50">
+      <section id="capability-levels" className="py-16 px-4 bg-blue-50 scroll-mt-20">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">AI Capability Levels Model</h2>
@@ -284,7 +284,7 @@ export default function SimaCorePage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="border-l-4 border-l-slate-400 bg-white">
+            <Card id="initial" className="scroll-mt-20 border-l-4 border-l-slate-400 bg-white">
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-sm font-bold">
@@ -304,7 +304,7 @@ export default function SimaCorePage() {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-blue-400 bg-white">
+            <Card id="exploring" className="scroll-mt-20 border-l-4 border-l-blue-400 bg-white">
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-sm font-bold">
@@ -323,7 +323,7 @@ export default function SimaCorePage() {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-indigo-400 bg-white">
+            <Card id="applying" className="scroll-mt-20 border-l-4 border-l-indigo-400 bg-white">
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-sm font-bold">
@@ -342,7 +342,7 @@ export default function SimaCorePage() {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-cyan-400 bg-white">
+            <Card id="formalizing" className="scroll-mt-20 border-l-4 border-l-cyan-400 bg-white">
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center text-sm font-bold">
@@ -362,7 +362,7 @@ export default function SimaCorePage() {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-sky-400 bg-white">
+            <Card id="optimizing" className="scroll-mt-20 border-l-4 border-l-sky-400 bg-white">
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-sky-100 rounded-full flex items-center justify-center text-sm font-bold">
@@ -381,7 +381,7 @@ export default function SimaCorePage() {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-blue-600 bg-white">
+            <Card id="leading" className="scroll-mt-20 border-l-4 border-l-blue-600 bg-white">
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-sm font-bold">
