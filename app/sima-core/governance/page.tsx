@@ -102,9 +102,6 @@ export default function GovernanceDomainPage() {
               <Badge variant="secondary" className="bg-indigo-100 text-indigo-800 border-indigo-200">
                 Domain
               </Badge>
-              <Badge variant="outline" className="text-slate-600">
-                <Link href="/sima-core" className="hover:text-indigo-600 transition-colors">SIMA-Core™</Link>
-              </Badge>
             </div>
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center">
@@ -127,9 +124,6 @@ export default function GovernanceDomainPage() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="/sima-core">Back to SIMA-Core™</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>

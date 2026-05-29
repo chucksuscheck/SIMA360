@@ -102,9 +102,6 @@ export default function PeopleDomainPage() {
               <Badge variant="secondary" className="bg-sky-100 text-sky-800 border-sky-200">
                 Domain
               </Badge>
-              <Badge variant="outline" className="text-slate-600">
-                <Link href="/sima-core" className="hover:text-sky-600 transition-colors">SIMA-Core™</Link>
-              </Badge>
             </div>
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center">
@@ -127,9 +124,6 @@ export default function PeopleDomainPage() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="/sima-core">Back to SIMA-Core™</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>

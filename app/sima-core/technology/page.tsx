@@ -104,9 +104,6 @@ export default function TechnologyDomainPage() {
               <Badge variant="secondary" className="bg-slate-200 text-slate-800 border-slate-300">
                 Domain
               </Badge>
-              <Badge variant="outline" className="text-slate-600">
-                <Link href="/sima-core" className="hover:text-slate-800 transition-colors">SIMA-Core™</Link>
-              </Badge>
             </div>
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center">
@@ -129,9 +126,6 @@ export default function TechnologyDomainPage() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="/sima-core">Back to SIMA-Core™</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
