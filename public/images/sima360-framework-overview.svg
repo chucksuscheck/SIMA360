@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254" role="img" aria-labelledby="title desc">
+<title id="title">SIMA360 Framework Overview</title>
+<desc id="desc">A vector version of the SIMA360 framework showing SIMA components, five domains, capability levels, and FLAI at the center.</desc>
+<defs>
+  <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0b2e74" flood-opacity=".12"/></filter>
+  <radialGradient id="centerGrad" cx="50%" cy="42%" r="60%"><stop offset="0" stop-color="#0b4ea2"/><stop offset="1" stop-color="#061f61"/></radialGradient>
+  <linearGradient id="coreGrad" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#dfe7ff"/><stop offset="1" stop-color="#c5c7ff"/></linearGradient>
+  <linearGradient id="probeGrad" x1="0" x2="1"><stop stop-color="#e5ecff"/><stop offset="1" stop-color="#aaa7ff"/></linearGradient>
+  <linearGradient id="flowGrad" x1="0" x2="1"><stop stop-color="#c7f2d1"/><stop offset="1" stop-color="#effaf2"/></linearGradient>
+  <linearGradient id="kitGrad" x1="0" x2="1"><stop stop-color="#ceb9ff"/><stop offset="1" stop-color="#eee8ff"/></linearGradient>
+  <linearGradient id="ascendGrad" x1="0" x2="1"><stop stop-color="#ffd97d"/><stop offset="1" stop-color="#fff2ce"/></linearGradient>
+  <linearGradient id="stratGrad" x1="0" x2="1"><stop stop-color="#003c92"/><stop offset="1" stop-color="#0065b4"/></linearGradient>
+  <linearGradient id="govGrad" x1="0" x2="1"><stop stop-color="#008f91"/><stop offset="1" stop-color="#0aa4a5"/></linearGradient>
+  <linearGradient id="dataGrad" x1="0" x2="1"><stop stop-color="#2e8b2c"/><stop offset="1" stop-color="#66b348"/></linearGradient>
+  <linearGradient id="peopleGrad" x1="0" x2="1"><stop stop-color="#4d31a3"/><stop offset="1" stop-color="#7351c8"/></linearGradient>
+  <linearGradient id="techGrad" x1="0" x2="1"><stop stop-color="#ff8b00"/><stop offset="1" stop-color="#ffb000"/></linearGradient>
+  <path id="arcFive" d="M350,250 A390,390 0 0 1 904,250" />
+  <path id="arcCap" d="M485,438 A160,160 0 0 1 769,438" />
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<circle cx="627.0" cy="627.0" r="584" fill="#fbfbff" opacity=".55"/>
+<g filter="url(#softShadow)">
+<path d="M347.86,112.89 A585,585 0 0 1 906.14,112.89 L820.25,271.08 A405,405 0 0 0 433.75,271.08 Z" fill="url(#coreGrad)" stroke="#ffffff" stroke-width="8"/>
+<path d="M932.66,128.21 A585,585 0 0 1 932.66,1125.79 L838.61,972.32 A405,405 0 0 0 838.61,281.68 Z" fill="url(#flowGrad)" stroke="#ffffff" stroke-width="8"/>
+<path d="M906.14,1141.11 A585,585 0 0 1 347.86,1141.11 L433.75,982.92 A405,405 0 0 0 820.25,982.92 Z" fill="url(#kitGrad)" stroke="#ffffff" stroke-width="8"/>
+<path d="M321.34,1125.79 A585,585 0 0 1 42.20,642.31 L222.14,637.60 A405,405 0 0 0 415.39,972.32 Z" fill="url(#ascendGrad)" stroke="#ffffff" stroke-width="8"/>
+<path d="M42.20,611.69 A585,585 0 0 1 321.34,128.21 L415.39,281.68 A405,405 0 0 0 222.14,616.40 Z" fill="url(#probeGrad)" stroke="#ffffff" stroke-width="8"/>
+<circle cx="627.0" cy="627.0" r="405" fill="none" stroke="#ffffff" stroke-width="28"/>
+<circle cx="627.0" cy="627.0" r="360" fill="#ffffff" opacity=".96"/>
+<path d="M437.25,350.92 A335,335 0 0 1 816.75,350.92 L743.11,458.05 A205,205 0 0 0 510.89,458.05 Z" fill="url(#stratGrad)" stroke="#ffffff" stroke-width="7"/>
+<path d="M830.94,361.23 A335,335 0 0 1 948.20,722.15 L823.56,685.22 A205,205 0 0 0 751.80,464.36 Z" fill="url(#govGrad)" stroke="#ffffff" stroke-width="7"/>
+<path d="M942.78,738.83 A335,335 0 0 1 635.77,961.89 L632.37,831.93 A205,205 0 0 0 820.24,695.43 Z" fill="url(#dataGrad)" stroke="#ffffff" stroke-width="7"/>
+<path d="M618.23,961.89 A335,335 0 0 1 311.22,738.83 L433.76,695.43 A205,205 0 0 0 621.63,831.93 Z" fill="url(#peopleGrad)" stroke="#ffffff" stroke-width="7"/>
+<path d="M305.80,722.15 A335,335 0 0 1 423.06,361.23 L502.20,464.36 A205,205 0 0 0 430.44,685.22 Z" fill="url(#techGrad)" stroke="#ffffff" stroke-width="7"/>
+<path d="M531.61,453.49 A198,198 0 0 1 722.39,453.49 L671.32,546.38 A92,92 0 0 0 582.68,546.38 Z" fill="#eaf1ff" stroke="#ffffff" stroke-width="5"/>
+<path d="M729.57,457.64 A198,198 0 0 1 824.96,622.85 L718.98,625.07 A92,92 0 0 0 674.66,548.31 Z" fill="#eaf1ff" stroke="#ffffff" stroke-width="5"/>
+<path d="M824.96,631.15 A198,198 0 0 1 729.57,796.36 L674.66,705.69 A92,92 0 0 0 718.98,628.93 Z" fill="#eaf1ff" stroke="#ffffff" stroke-width="5"/>
+<path d="M722.39,800.51 A198,198 0 0 1 531.61,800.51 L582.68,707.62 A92,92 0 0 0 671.32,707.62 Z" fill="#eaf1ff" stroke="#ffffff" stroke-width="5"/>
+<path d="M524.43,796.36 A198,198 0 0 1 429.04,631.15 L535.02,628.93 A92,92 0 0 0 579.34,705.69 Z" fill="#eaf1ff" stroke="#ffffff" stroke-width="5"/>
+<path d="M429.04,622.85 A198,198 0 0 1 524.43,457.64 L579.34,548.31 A92,92 0 0 0 535.02,625.07 Z" fill="#eaf1ff" stroke="#ffffff" stroke-width="5"/>
+<circle cx="627.0" cy="627.0" r="84" fill="url(#centerGrad)" stroke="#ffffff" stroke-width="8"/>
+</g>
+<text x="627.0" y="262.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="30" font-weight="700" fill="#0c2f7d">FIVE DOMAINS</text>
+<text x="627.0" y="445.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="21" font-weight="700" fill="#0c2f7d">CAPABILITY LEVELS</text>
+<text x="627.0" y="171.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="27" font-weight="700" fill="#0c2f7d">SIMA CORE™</text>
+<g stroke="#0b2d84" stroke-width="6" fill="none" stroke-linejoin="round"><path d="M626.9999999999999,45.0 l37,21 v43 l-37,22 l-37,-22 v-43 z"/><path d="M589.9999999999999,66.0 l37,22 l37,-22 M626.9999999999999,88.0 v43"/></g>
+<text x="1127.0" y="671.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="27" font-weight="700" fill="#078768">SIMA FLOW™</text>
+<g stroke="#078768" stroke-width="8" fill="none"><path d="M1091.0,589.0 A42,42 0 0 1 1156.0,565.0"/><path d="M1161.0,567.0 l-2,28 l-24,-14"/><path d="M1162.0,609.0 A42,42 0 0 1 1098.0,633.0"/><path d="M1093.0,631.0 l2,-28 l24,14"/></g>
+<text x="781.5" y="1146.5" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="27" font-weight="700" fill="#0c2f7d">SIMA KIT™</text>
+<g stroke="#5519b6" stroke-width="8" fill="none" stroke-linejoin="round"><rect x="739.5084971874737" y="1056.5282581475767" width="84" height="58" rx="6"/><path d="M759.5084971874737,1056.5282581475767 v-18 h44 v18"/><path d="M767.5084971874737,1096.5282581475767 l28,-28 M795.5084971874737,1096.5282581475767 l-28,-28"/></g>
+<text x="255.4" y="1005.6" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="27" font-weight="700" fill="#0c2f7d">SIMA ASCEND™</text>
+<g fill="#f26c00"><path d="M207.42758726130296,973.5653031794292 L241.42758726130296,913.5653031794292 L271.42758726130296,973.5653031794292 Z"/><path d="M239.42758726130296,973.5653031794292 L271.42758726130296,923.5653031794292 L304.42758726130296,973.5653031794292 Z"/><rect x="247.42758726130296" y="875.5653031794292" width="6" height="44"/><path d="M253.42758726130296,875.5653031794292 h40 l-10,12 l10,12 h-40z"/></g>
+<text x="173.8" y="459.7" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="27" font-weight="700" fill="#0c2f7d">SIMA PROBE™</text>
+<g stroke="#0b2d84" stroke-width="8" fill="none" stroke-linecap="round"><circle cx="173.84610648167495" cy="387.69086912965037" r="39"/><line x1="201.84610648167495" y1="415.69086912965037" x2="240.84610648167495" y2="454.69086912965037"/><line x1="155.84610648167495" y1="405.69086912965037" x2="155.84610648167495" y2="387.69086912965037"/><line x1="173.84610648167495" y1="405.69086912965037" x2="173.84610648167495" y2="375.69086912965037"/><line x1="191.84610648167495" y1="405.69086912965037" x2="191.84610648167495" y2="360.69086912965037"/></g>
+<text x="627.0" y="400.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">STRATEGY</text>
+<g stroke="#fff" stroke-width="7" fill="none"><circle cx="627.0" cy="337.0" r="31"/><circle cx="627.0" cy="337.0" r="17"/><line x1="627.0" y1="337.0" x2="663.0" y2="301.0"/><path d="M661.0,293.0 l8,16 l-18,-2"/></g>
+<text x="879.0" y="583.1" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">GOVERNANCE</text>
+<g stroke="#fff" stroke-width="7" fill="none"><path d="M879.0299768182157,480.110496490639 C899.0299768182157,494.110496490639 914.0299768182157,493.110496490639 914.0299768182157,493.110496490639 v30 c0,24 -18,40 -35,48 c-17,-8 -35,-24 -35,-48 v-30 c0,0 15,-1 35,-13z"/><path d="M863.0299768182157,520.110496490639 l13,14 l23,-30"/></g>
+<text x="782.8" y="879.4" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">DATA</text>
+<g stroke="#fff" stroke-width="7" fill="none"><ellipse cx="782.7630918575054" cy="794.389503509361" rx="31" ry="13"/><path d="M751.7630918575054,794.389503509361 v58 c0,7 14,13 31,13 s31,-6 31,-13 v-58"/><path d="M751.7630918575054,821.389503509361 c0,7 14,13 31,13 s31,-6 31,-13"/><path d="M751.7630918575054,847.389503509361 c0,7 14,13 31,13 s31,-6 31,-13"/></g>
+<text x="471.2" y="879.4" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">PEOPLE</text>
+<g fill="#fff"><circle cx="453.23690814249466" cy="804.389503509361" r="12"/><circle cx="489.23690814249466" cy="804.389503509361" r="12"/><circle cx="471.23690814249466" cy="786.389503509361" r="13"/><path d="M426.23690814249466,856.389503509361 c2,-34 19,-45 34,-45 c15,0 24,12 26,45z"/><path d="M476.23690814249466,856.389503509361 c2,-34 19,-45 34,-45 c15,0 24,12 26,45z"/></g>
+<text x="375.0" y="583.1" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">TECHNOLOGY</text>
+<g stroke="#fff" stroke-width="7" fill="none"><rect x="344.9700231817843" y="490.110496490639" width="60" height="60" rx="4"/><rect x="357.9700231817843" y="503.110496490639" width="34" height="34"/><path d="M324.9700231817843,502.110496490639 h18 M324.9700231817843,520.110496490639 h18 M324.9700231817843,538.110496490639 h18 M406.9700231817843,502.110496490639 h18 M406.9700231817843,520.110496490639 h18 M406.9700231817843,538.110496490639 h18 M356.9700231817843,470.110496490639 v18 M374.9700231817843,470.110496490639 v18 M392.9700231817843,470.110496490639 v18 M356.9700231817843,552.110496490639 v18 M374.9700231817843,552.110496490639 v18 M392.9700231817843,552.110496490639 v18"/><path d="M366.9700231817843,520.110496490639 l8,8 l16,-18"/></g>
+<circle cx="627.0" cy="471.0" r="20" fill="#0c2f7d"/>
+<text x="627.0" y="479.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">1</text>
+<text x="627.0" y="518.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="18" font-weight="700" fill="#0c2f7d">INITIAL</text>
+<circle cx="750.8" cy="542.5" r="20" fill="#0c2f7d"/>
+<text x="750.8" y="550.5" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">2</text>
+<text x="750.8" y="589.5" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="18" font-weight="700" fill="#0c2f7d">EXPLORING</text>
+<circle cx="750.8" cy="685.5" r="20" fill="#0c2f7d"/>
+<text x="750.8" y="693.5" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">3</text>
+<text x="750.8" y="732.5" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="18" font-weight="700" fill="#0c2f7d">APPLYING</text>
+<circle cx="627.0" cy="757.0" r="20" fill="#0c2f7d"/>
+<text x="627.0" y="765.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">4</text>
+<text x="627.0" y="804.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="18" font-weight="700" fill="#0c2f7d">FORMALIZING</text>
+<circle cx="503.2" cy="685.5" r="20" fill="#0c2f7d"/>
+<text x="503.2" y="693.5" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">5</text>
+<text x="503.2" y="732.5" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="18" font-weight="700" fill="#0c2f7d">OPTIMIZING</text>
+<circle cx="503.2" cy="542.5" r="20" fill="#0c2f7d"/>
+<text x="503.2" y="550.5" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">6</text>
+<text x="503.2" y="589.5" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="18" font-weight="700" fill="#0c2f7d">LEADING</text>
+<g stroke="#fff" stroke-width="6" fill="#fff"><circle cx="627.0" cy="597.0" r="11"/><circle cx="627.0" cy="657.0" r="11"/><circle cx="597.0" cy="627.0" r="11"/><circle cx="657.0" cy="627.0" r="11"/><circle cx="606.0" cy="606.0" r="9"/><circle cx="648.0" cy="606.0" r="9"/><circle cx="606.0" cy="648.0" r="9"/><circle cx="648.0" cy="648.0" r="9"/><line x1="627.0" y1="627.0" x2="627.0" y2="597.0"/><line x1="627.0" y1="627.0" x2="627.0" y2="657.0"/><line x1="627.0" y1="627.0" x2="597.0" y2="627.0"/><line x1="627.0" y1="627.0" x2="657.0" y2="627.0"/><line x1="627.0" y1="627.0" x2="606.0" y2="606.0"/><line x1="627.0" y1="627.0" x2="648.0" y2="606.0"/><line x1="627.0" y1="627.0" x2="606.0" y2="648.0"/><line x1="627.0" y1="627.0" x2="648.0" y2="648.0"/></g>
+<text x="627.0" y="709.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="35" font-weight="700" fill="#ffffff">FLAI</text>
+</svg>
