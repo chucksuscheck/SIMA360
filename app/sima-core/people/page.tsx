@@ -123,7 +123,7 @@ export default function PeopleDomainPage() {
                   Assess Your People Maturity <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+            </div>
           </div>
         </div>
       </section>

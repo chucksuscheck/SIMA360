@@ -123,7 +123,7 @@ export default function StrategyDomainPage() {
                   Assess Your Strategy Maturity <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+            </div>
           </div>
         </div>
       </section>
