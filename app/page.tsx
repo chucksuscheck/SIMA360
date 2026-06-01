@@ -52,7 +52,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <Link href="/sima-probe">
+              <Link href="/sima-probe/assessment">
                 Start with the Assessment <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
@@ -309,7 +309,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <Link href="/sima-probe">Start the Assessment</Link>
+              <Link href="/sima-probe/assessment">Start the Assessment</Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="border-slate-400 text-slate-200 hover:bg-slate-800 bg-transparent">
               <Link href="/start">Find Your Entry Point</Link>

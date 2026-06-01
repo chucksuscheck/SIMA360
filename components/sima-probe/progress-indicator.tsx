@@ -1,0 +1,96 @@
+'use client'
+
+import type { Domain } from '@/lib/sima-probe/types'
+import { DOMAIN_ORDER, DOMAIN_META } from '@/lib/sima-probe/questions'
+import { cn } from '@/lib/utils'
+
+interface ProgressIndicatorProps {
+  currentIndex: number        // 0–29
+  totalQuestions: number      // 30
+  answeredCount: number
+}
+
+export function ProgressIndicator({
+  currentIndex,
+  totalQuestions,
+  answeredCount,
+}: ProgressIndicatorProps) {
+  const progressPct = Math.round((answeredCount / totalQuestions) * 100)
+  const currentDomain = domainForIndex(currentIndex)
+  const domainIndex = DOMAIN_ORDER.indexOf(currentDomain)
+  const questionInDomain = (currentIndex % 6) + 1
+
+  return (
+    <div className="w-full">
+      {/* Domain tabs */}
+      <div className="flex items-center gap-1 mb-3 overflow-x-auto pb-1">
+        {DOMAIN_ORDER.map((domain, i) => {
+          const meta = DOMAIN_META[domain]
+          const isActive = domain === currentDomain
+          const isDone = i < domainIndex
+          const questionsAnsweredInDomain = Math.min(
+            Math.max(0, answeredCount - i * 6),
+            6
+          )
+
+          return (
+            <div
+              key={domain}
+              className={cn(
+                'flex-1 min-w-[80px] flex flex-col items-center px-2 py-1.5 rounded text-center transition-colors',
+                isActive ? cn('bg-white border border-slate-200 shadow-sm') : '',
+                isDone ? 'opacity-60' : '',
+              )}
+            >
+              <span
+                className={cn(
+                  'text-xs font-semibold whitespace-nowrap',
+                  isActive ? meta.color : 'text-slate-400'
+                )}
+              >
+                {meta.label}
+              </span>
+              <div className="flex gap-0.5 mt-1">
+                {[0, 1, 2, 3, 4, 5].map(j => (
+                  <div
+                    key={j}
+                    className={cn(
+                      'w-1 h-1 rounded-full',
+                      isDone || (isActive && j < questionInDomain)
+                        ? isActive
+                          ? 'bg-slate-700'
+                          : 'bg-slate-400'
+                        : 'bg-slate-200'
+                    )}
+                  />
+                ))}
+              </div>
+            </div>
+          )
+        })}
+      </div>
+
+      {/* Progress bar */}
+      <div className="w-full bg-slate-100 rounded-full h-1.5 mb-1">
+        <div
+          className="bg-slate-800 h-1.5 rounded-full transition-all duration-300"
+          style={{ width: `${progressPct}%` }}
+        />
+      </div>
+
+      {/* Label */}
+      <div className="flex justify-between items-center">
+        <span className="text-xs text-slate-400">
+          {DOMAIN_META[currentDomain].label} · question {questionInDomain} of 6
+        </span>
+        <span className="text-xs text-slate-400">
+          {answeredCount} / {totalQuestions} answered
+        </span>
+      </div>
+    </div>
+  )
+}
+
+function domainForIndex(index: number): Domain {
+  return DOMAIN_ORDER[Math.floor(index / 6)] ?? DOMAIN_ORDER[0]
+}

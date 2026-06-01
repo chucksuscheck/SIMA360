@@ -224,7 +224,7 @@ export default function TheBookPage() {
               className="border-slate-400 text-slate-200 hover:bg-slate-800 bg-transparent"
               asChild
             >
-              <Link href="/sima-probe">Assess Your Organization</Link>
+              <Link href="/sima-probe/assessment">Assess Your Organization</Link>
             </Button>
           </div>
         </div>

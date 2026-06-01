@@ -48,7 +48,7 @@ const entryPoints = [
     heading: "Assess Your Organization",
     body: "If you want to understand your organization's current AI maturity across all five dimensions, start with SIMA-Probe. The Foundation tier is free.",
     primaryLabel: "Start Free Assessment",
-    primaryHref: "/sima-probe",
+    primaryHref: "/sima-probe/assessment",
     primaryExternal: false,
     secondaryLabel: "View Assessment Tiers",
     secondaryHref: "/sima-probe#subscription-levels",

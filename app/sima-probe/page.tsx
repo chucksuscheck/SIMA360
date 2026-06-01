@@ -56,12 +56,13 @@ export default function SIMAProbe() {
             <div className="flex gap-4 justify-center">
               <Button
                 size="lg"
+                asChild
                 className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
               >
-                Start Assessment
+                <Link href="/sima-probe/assessment">Begin Free Assessment</Link>
               </Button>
-              <Button size="lg" variant="outline">
-                View Demo
+              <Button size="lg" variant="outline" asChild>
+                <Link href="#what-you-get">See What You Get</Link>
               </Button>
             </div>
           </div>
@@ -321,7 +322,7 @@ export default function SIMAProbe() {
       </section>
 
       {/* Subscription Levels */}
-      <section className="py-16 bg-white">
+      <section id="subscription-levels" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">Subscription Levels</h2>
@@ -337,7 +338,7 @@ export default function SIMAProbe() {
                 <TabsTrigger value="consulting">Consulting</TabsTrigger>
               </TabsList>
 
-              <TabsContent value="foundation" className="mt-6">
+              <TabsContent id="what-you-get" value="foundation" className="mt-6">
                 <Card>
                   <CardHeader>
                     <div className="flex items-center justify-between">
@@ -358,27 +359,35 @@ export default function SIMAProbe() {
                       <ul className="space-y-2 text-slate-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span>3-5 basic questions per Domain (15-25 questions total)</span>
+                          <span>30 diagnostic questions — 6 per domain, covering anchor and core capabilities</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span>Simple yes/no assessment interface</span>
+                          <span>6-point operational response scale (not yes/no) — calibrated to actual practices</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span>Single maturity level rating per Domain</span>
+                          <span>Domain orientation scores (0–5) with maturity level labels per domain</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span>Text-based results summary</span>
+                          <span>Enterprise score — harmonic mean of domain scores weighted by strategic importance</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span>Overall organizational maturity level determination</span>
+                          <span>Top 3 risk flags with severity ratings (Critical / High / Medium)</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span>Basic improvement guidance per Domain</span>
+                          <span>Top 3 next investigation priorities — ranked by weighted uplift potential</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                          <span>Confidence band (±1.0) on all scores — honest about free-tier uncertainty</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                          <span>~15–20 minutes · No account required · Runs entirely in-browser</span>
                         </li>
                       </ul>
                     </div>
@@ -712,9 +721,10 @@ export default function SIMAProbe() {
             <div className="text-center">
               <Button
                 size="lg"
+                asChild
                 className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
               >
-                Start Your Assessment
+                <Link href="/sima-probe/assessment">Begin Free Assessment</Link>
               </Button>
             </div>
           </div>
@@ -776,8 +786,8 @@ export default function SIMAProbe() {
               Start your SIMA-Probe assessment today and get actionable insights to guide your AI journey
             </p>
             <div className="flex gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
-                Start Free Assessment
+              <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100" asChild>
+                <Link href="/sima-probe/assessment">Begin Free Assessment</Link>
               </Button>
               <Button
                 size="lg"

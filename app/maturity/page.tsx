@@ -296,7 +296,7 @@ export default function MaturityPage() {
             {/* Assess CTA for each level */}
             <div className="flex items-center gap-4 pt-4 border-t border-slate-200">
               <Link
-                href="/sima-probe"
+                href="/sima-probe/assessment"
                 className="text-sm font-medium text-blue-600 hover:text-blue-800 inline-flex items-center gap-1 transition-colors"
               >
                 Measure your level with SIMA-Probe™ <ArrowRight className="w-3 h-3" />
@@ -348,7 +348,7 @@ export default function MaturityPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <Link href="/sima-probe">
+              <Link href="/sima-probe/assessment">
                 Start the Assessment <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>

@@ -119,7 +119,7 @@ export default function DataDomainPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-cyan-600 hover:bg-cyan-700">
-                <Link href="/sima-probe">
+                <Link href="/sima-probe/assessment">
                   Assess Your Data Maturity <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
@@ -371,7 +371,7 @@ export default function DataDomainPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <Link href="/sima-probe">
+              <Link href="/sima-probe/assessment">
                 Start the Assessment <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
