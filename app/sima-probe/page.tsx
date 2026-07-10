@@ -1,5 +1,4 @@
-"use client"
-
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -21,12 +20,20 @@ import {
   Lock,
 } from "lucide-react"
 
+export const metadata: Metadata = {
+  title: "SIMA-Probe — AI Maturity Assessment | SIMA360™",
+  description:
+    "SIMA-Probe is the diagnostic component of SIMA360, applying the framework's five perspectives to assess organizational AI maturity — from a free self-assessment to full advisory engagements.",
+  alternates: {
+    canonical: "https://www.sima360.org/sima-probe",
+  },
+}
+
 export default function SIMAProbe() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.org/sima-probe" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>

@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Governance Perspective — AI Perspectives | SIMA360™",
   description:
     "The Governance Perspective determines whether AI-influenced decisions stay inside their constraints once the system is running — watched continuously, not reviewed on a schedule. Six components, each answered for both the people and the AI system.",
+  alternates: {
+    canonical: "https://www.sima360.org/sima-core/governance",
+  },
 }
 
 import { Button } from "@/components/ui/button"
@@ -79,7 +82,6 @@ export default function GovernancePerspectivePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.org/sima-core/governance" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>

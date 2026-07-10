@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "People Perspective — AI Perspectives | SIMA360™",
   description:
     "The People Perspective determines how AI outputs get interpreted, trusted, challenged, or waved through — and whether the organization is building calibrated judgment or just moving fast. Five components, each answered for both the people and the AI system.",
+  alternates: {
+    canonical: "https://www.sima360.org/sima-core/people",
+  },
 }
 
 import { Button } from "@/components/ui/button"
@@ -79,7 +82,6 @@ export default function PeoplePerspectivePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 to-blue-50">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.org/sima-core/people" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>

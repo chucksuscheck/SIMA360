@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Data Perspective — AI Perspectives | SIMA360™",
   description:
     "The Data Perspective determines whether the organization keeps learning from the world or starts learning from itself — and whether data can still be trusted once it's in motion, not just on arrival. Eight components, each answered for both the people and the AI system.",
+  alternates: {
+    canonical: "https://www.sima360.org/sima-core/data",
+  },
 }
 
 import { Button } from "@/components/ui/button"
@@ -79,7 +82,6 @@ export default function DataPerspectivePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-teal-50">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.org/sima-core/data" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>

@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "SIMA-Flow — Improvement Cycle Architecture | SIMA360™",
   description:
     "SIMA-Flow is the cycle architecture of SIMA360, connecting capability assessment to structured improvement through the Core Cycle and FLAI project execution methodology.",
+  alternates: {
+    canonical: "https://www.sima360.org/sima-flow",
+  },
 }
 
 import { Button } from "@/components/ui/button"
@@ -30,7 +33,6 @@ export default function SimaFlowPage() {
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.org/sima-flow" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>

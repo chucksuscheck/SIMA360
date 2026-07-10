@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Technology Perspective — AI Perspectives | SIMA360™",
   description:
     "The Technology Perspective determines whether the organization can change the model, the environment, or the data underneath it without renegotiating everything built around it. Six components, each answered for both the people and the AI system.",
+  alternates: {
+    canonical: "https://www.sima360.org/sima-core/technology",
+  },
 }
 
 import { Button } from "@/components/ui/button"
@@ -81,7 +84,6 @@ export default function TechnologyPerspectivePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.org/sima-core/technology" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>

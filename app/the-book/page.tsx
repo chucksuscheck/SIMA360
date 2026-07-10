@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "The AI Rush — The Book Behind SIMA360™",
   description:
     "The AI Rush: Too Much. Too Soon. is the intellectual origin of the SIMA360 framework — the source of its five perspectives, six maturity levels, and FLAI methodology.",
+  alternates: {
+    canonical: "https://www.sima360.org/the-book",
+  },
 }
 
 // TODO: Replace with the actual purchase URL before launch
@@ -22,7 +25,6 @@ export default function TheBookPage() {
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-rose-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.org/the-book" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">

@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "AI Maturity Levels — SIMA360™",
   description:
     "The six SIMA360 maturity levels — Initial through Leading — and what each level looks like across the five organizational perspectives: Strategy, Governance, Data, People, and Technology.",
+  alternates: {
+    canonical: "https://www.sima360.org/maturity",
+  },
 }
 
 import { Badge } from "@/components/ui/badge"
@@ -172,7 +175,6 @@ export default function MaturityPage() {
   return (
     <div className="min-h-screen bg-white">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.org/maturity" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>

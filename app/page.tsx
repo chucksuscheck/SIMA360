@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "SIMA360™ — Structured AI Maturity Framework",
   description:
     "SIMA360 is the operational framework for organizational AI maturity. Five integrated components: assessment, improvement cycles, implementation tools, and practitioner development.",
+  alternates: {
+    canonical: "https://www.sima360.org",
+  },
 }
 
 import { Button } from "@/components/ui/button"
@@ -21,7 +24,6 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-sky-50 to-cyan-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.org" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>

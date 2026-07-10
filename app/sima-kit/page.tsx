@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "SIMA-Kit — Implementation Resource Library | SIMA360™",
   description:
     "SIMA-Kit provides the templates, rubrics, playbooks, and governance tools stratified by maturity level and perspective that SIMA-Flow cycles require.",
+  alternates: {
+    canonical: "https://www.sima360.org/sima-kit",
+  },
 }
 
 import { Button } from "@/components/ui/button"
@@ -39,7 +42,6 @@ const SIMAKitPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-violet-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.org/sima-kit" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">

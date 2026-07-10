@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "SIMA-Core — Framework Foundation | SIMA360™",
   description:
     "SIMA-Core defines the conceptual vocabulary of the SIMA360 framework: five strategic perspectives, six maturity levels, and five AI tool categories that every other component operates within.",
+  alternates: {
+    canonical: "https://www.sima360.org/sima-core",
+  },
 }
 
 import { Button } from "@/components/ui/button"
@@ -32,7 +35,6 @@ export default function SimaCorePage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.org/sima-core" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>

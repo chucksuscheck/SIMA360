@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "SIMA-Ascend — Practitioner Development & Certification | SIMA360™",
   description:
     "SIMA-Ascend builds the organizational practitioner capability the SIMA360 framework requires, through structured training programs and three-level certification pathways.",
+  alternates: {
+    canonical: "https://www.sima360.org/sima-ascend",
+  },
 }
 
 import { Button } from "@/components/ui/button"
@@ -44,7 +47,6 @@ export default function SimaAscendPage() {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-              <link rel="canonical" href="https://www.sima360.org/sima-ascend" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">

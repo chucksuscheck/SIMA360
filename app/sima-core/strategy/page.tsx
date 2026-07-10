@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Strategy Perspective — AI Perspectives | SIMA360™",
   description:
     "The Strategy Perspective determines which decisions AI is actually supposed to improve — and what the organization holds constant while it finds out. Eight components, each answered for both the people and the AI system.",
+  alternates: {
+    canonical: "https://www.sima360.org/sima-core/strategy",
+  },
 }
 
 import { Button } from "@/components/ui/button"
@@ -79,7 +82,6 @@ export default function StrategyPerspectivePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-sky-50">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.org/sima-core/strategy" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>

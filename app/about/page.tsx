@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "About SIMA360™ — Framework Origin & Research Foundation",
   description:
     "SIMA360 was built on two years of comparative research across nine AI maturity frameworks — Element AI, Accenture, IBM, Metascient, Ovum, BCG/MIT Sloan, Microsoft, Gartner, and Deloitte. Learn about the research foundation, the gaps it addressed, and the framework that resulted.",
+  alternates: {
+    canonical: "https://www.sima360.org/about",
+  },
 }
 
 import { Button } from "@/components/ui/button"
@@ -44,7 +47,6 @@ const AboutPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <link rel="canonical" href="https://www.sima360.org/about" />
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
