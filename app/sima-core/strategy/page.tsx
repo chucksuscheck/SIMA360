@@ -451,7 +451,9 @@ export default function StrategyPerspectivePage() {
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="border-slate-400 text-slate-200 hover:bg-slate-800 bg-transparent">
-              <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">Schedule a Conversation</a>
+              <Link href="/sima-kit">
+                Explore SIMA-Kit™ Resources <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
             </Button>
           </div>
         </div>
