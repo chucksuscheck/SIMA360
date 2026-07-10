@@ -164,7 +164,7 @@ export default function AssessmentPage() {
         </div>
       </div>
 
-      {/* Domain transition banner */}
+      {/* Perspective transition banner */}
       {isNewDomain && (
         <div className={cn('py-3 border-b', meta.bgColor)}>
           <div className="max-w-3xl mx-auto px-4">

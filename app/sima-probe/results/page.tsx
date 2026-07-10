@@ -110,7 +110,7 @@ export default function ResultsPage() {
           </p>
           <h1 className="text-3xl font-bold text-slate-900">AI Operational Maturity Assessment</h1>
           <p className="text-slate-500 mt-2 text-sm max-w-2xl">
-            Scores reflect orientation-level findings based on 30 questions across 5 domains.
+            Scores reflect orientation-level findings based on 30 questions across 5 perspectives.
             All scores carry a ±1.0 confidence band — this is expected at the free tier.
             Use these results to identify where to focus deeper investigation.
           </p>
@@ -126,10 +126,10 @@ export default function ResultsPage() {
           />
         </section>
 
-        {/* Domain scores */}
+        {/* Perspective scores */}
         <section className="mb-10">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4">
-            Domain Scores
+            Perspective Scores
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {DOMAIN_ORDER.map(domain => (
@@ -188,11 +188,11 @@ export default function ResultsPage() {
         <section className="mb-10 text-xs text-slate-400 border-t border-slate-100 pt-6 space-y-1">
           <p className="font-semibold text-slate-500">Scoring methodology</p>
           <p>
-            Domain scores are weighted averages of capability scores within each domain, using
+            Perspective scores are weighted averages of capability scores within each perspective, using
             the relative weights defined in the SIMA360™ framework. Anchor capabilities below
-            Applying (2.0) cap the domain at Applying. Domains with fewer than 3 evidence
+            Applying (2.0) cap the perspective at Applying. Perspectives with fewer than 3 evidence
             responses are also capped at Applying. The enterprise score is the weighted harmonic
-            mean of domain scores, weighted by strategic importance: Governance 25%,
+            mean of perspective scores, weighted by strategic importance: Governance 25%,
             Technology 22%, Data 20%, Strategy 18%, People 15%.
           </p>
           <p>

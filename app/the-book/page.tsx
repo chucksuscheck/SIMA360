@@ -11,7 +11,7 @@ import { SiteFooter } from "@/components/site-footer"
 export const metadata: Metadata = {
   title: "The AI Rush — The Book Behind SIMA360™",
   description:
-    "The AI Rush: Too Much. Too Soon. is the intellectual origin of the SIMA360 framework — the source of its five domains, six capability levels, and FLAI methodology.",
+    "The AI Rush: Too Much. Too Soon. is the intellectual origin of the SIMA360 framework — the source of its five perspectives, six maturity levels, and FLAI methodology.",
 }
 
 // TODO: Replace with the actual purchase URL before launch
@@ -54,9 +54,9 @@ export default function TheBookPage() {
                 <span className="text-indigo-600 block">Too Much. Too Soon.</span>
               </h1>
               <p className="text-xl text-slate-600 mb-8">
-                The five domains, six capability levels, FLAI methodology, and diagnostic principles that define
+                The five perspectives, six maturity levels, FLAI methodology, and diagnostic principles that define
                 SIMA360 did not emerge in isolation. They are the intellectual foundation of this book — developed to
-                explain why organizations consistently fail to convert AI activity into organizational capability.
+                explain why organizations consistently fail to convert AI activity into organizational maturity.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600" asChild>
@@ -105,7 +105,7 @@ export default function TheBookPage() {
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
               The book names this the maturity gap. It explains why it exists, how to diagnose it across five
-              organizational domains, and how to close it through disciplined improvement cycles. SIMA360 is the
+              organizational perspectives, and how to close it through disciplined improvement cycles. SIMA360 is the
               operational system built to apply those ideas.
             </p>
           </div>
@@ -118,9 +118,10 @@ export default function TheBookPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">How the Book Became SIMA360</h2>
             <p className="text-lg text-slate-700 mb-10 text-center leading-relaxed max-w-3xl mx-auto">
-              The book's five domains — Strategy, Governance, Data, People, and Technology — are the SIMA360 AI
-              Dimensions. The book's six capability levels are the SIMA360 Capability Levels. The book's improvement
-              methodology is FLAI. The book's diagnostic logic is SIMA-Probe. The book is not a companion to SIMA360.
+              The book's five perspectives — Strategy, Governance, Data, People, and Technology — are SIMA-Core's
+              Strategic Perspectives model. The book's six maturity levels are SIMA-Core's AI Maturity Levels model.
+              The book's improvement methodology is FLAI. The book's diagnostic questions are what SIMA-Probe
+              operationalizes into a formal assessment instrument. The book is not a companion to SIMA360.
               It is its origin.
             </p>
 
@@ -139,7 +140,7 @@ export default function TheBookPage() {
                       {[
                         "Conceptual framework",
                         "Maturity gap argument",
-                        "Five domains",
+                        "Five perspectives",
                         "Six capability levels",
                         "FLAI methodology",
                         "Diagnostic principles",

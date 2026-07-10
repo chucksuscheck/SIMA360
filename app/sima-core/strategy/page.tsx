@@ -1,15 +1,15 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Strategy Domain — AI Domains | SIMA360™",
+  title: "Strategy Perspective — AI Perspectives | SIMA360™",
   description:
-    "The Strategy Domain ensures AI initiatives align with broader business goals through vision alignment, prioritization, investment planning, and measurable evaluation.",
+    "The Strategy Perspective determines which decisions AI is actually supposed to improve — and what the organization holds constant while it finds out. Eight components, each answered for both the people and the AI system.",
 }
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Target, CheckCircle, AlertCircle, BarChart3, Lightbulb, TrendingUp, DollarSign, ClipboardList } from "lucide-react"
+import { ArrowRight, Target, CheckCircle, AlertCircle, BarChart3, Compass, Eye, Award, Layers, GitBranch, RefreshCw, ClipboardList } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
@@ -75,7 +75,7 @@ const numberColorMap: Record<string, string> = {
   sky: "bg-sky-100",
 }
 
-export default function StrategyDomainPage() {
+export default function StrategyPerspectivePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-sky-50">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
@@ -100,7 +100,7 @@ export default function StrategyDomainPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Badge variant="secondary" className="bg-blue-100 text-blue-800 border-blue-200">
-                Domain
+                Perspective
               </Badge>
             </div>
             <div className="flex justify-center mb-6">
@@ -109,13 +109,15 @@ export default function StrategyDomainPage() {
               </div>
             </div>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Strategy Domain
+              Strategy Perspective
             </h1>
             <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              AI without organizational direction is experimentation without purpose. The Strategy domain ensures every AI initiative is anchored to a business outcome, evaluated on evidence, and resourced intentionally.
+              Strategy determines which decisions AI is actually supposed to improve, and what the organization holds
+              constant while it finds out. It runs on two tracks at once — a Human-Direction System for aligning
+              people, and an AI-Application System for applying, watching, and growing the AI itself.
             </p>
             <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
-              It is the domain that answers: <em>why are we doing this, and how will we know it worked?</em>
+              It is the perspective that answers: <em>which decisions is AI supposed to change, and how would we know if it stopped?</em>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700">
@@ -128,13 +130,15 @@ export default function StrategyDomainPage() {
         </div>
       </section>
 
-      {/* Five Focus Areas */}
+      {/* Eight Components, Answered Twice */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Five Focus Areas</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Eight Components, Answered Twice</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              The Strategy domain is assessed across five interconnected focus areas that together determine whether an organization's AI investments are purposeful and sustainable.
+              Every AI strategy runs on two tracks at once: a Human-Direction System for aligning people, and an
+              AI-Application System for applying, watching, and growing the AI itself. Eight components do the real
+              work — and each one has to be answered for both.
             </p>
           </div>
 
@@ -142,16 +146,56 @@ export default function StrategyDomainPage() {
             <Card className="hover:shadow-lg transition-shadow border-blue-100">
               <CardHeader>
                 <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                  <Lightbulb className="w-5 h-5 text-blue-600" />
+                  <Compass className="w-5 h-5 text-blue-600" />
                 </div>
-                <CardTitle className="text-base">Vision Alignment</CardTitle>
+                <CardTitle className="text-base">Current Situation</CardTitle>
                 <CardDescription>
-                  AI initiatives are tied to strategic outcomes, not pursued for their own sake.
+                  Where judgment actually holds up today — for people, and for the AI system.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Leaders have articulated where AI fits in the organization's future. Individual projects can be traced back to that vision. AI strategy is not separate from business strategy — it is embedded within it.
+                  For people: where is judgment strong right now, and where does escalation already fall apart? For
+                  the AI system: what can it be trusted to do on the decisions that matter most if they go wrong —
+                  and what does its confidence-versus-accuracy record actually say?
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-blue-100">
+              <CardHeader>
+                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
+                  <Eye className="w-5 h-5 text-blue-600" />
+                </div>
+                <CardTitle className="text-base">Vision</CardTitle>
+                <CardDescription>
+                  What changes for people, not just what the technology will eventually be allowed to do.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-slate-600">
+                  For people: who's still supposed to step in, and when? For the AI system: what will it eventually
+                  be trusted to do, and what monitored evidence — not one successful pilot — gets it there? Leave the
+                  people half unanswered and the AI half fills the vacuum by default.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-blue-100">
+              <CardHeader>
+                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
+                  <Award className="w-5 h-5 text-blue-600" />
+                </div>
+                <CardTitle className="text-base">Competitive Advantage</CardTitle>
+                <CardDescription>
+                  What a competitor licensing the same model still can't reproduce.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-slate-600">
+                  For people: judgment, escalation discipline, and earned trust — slow to copy because it doesn't
+                  transfer with a vendor contract. For the AI system: your data, model quality, and how deep it's
+                  wired into operations — fragile unless something proprietary keeps it differentiated.
                 </p>
               </CardContent>
             </Card>
@@ -161,14 +205,16 @@ export default function StrategyDomainPage() {
                 <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
                   <ClipboardList className="w-5 h-5 text-blue-600" />
                 </div>
-                <CardTitle className="text-base">Prioritization</CardTitle>
+                <CardTitle className="text-base">Strategic Choices Roadmap</CardTitle>
                 <CardDescription>
-                  AI opportunities are evaluated on impact and feasibility before resources are committed.
+                  A set of choices about restraint — what stays out, not just what's expanding.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  A defined framework exists for deciding which AI initiatives to pursue, which to defer, and which to abandon. Prioritization is explicit, documented, and revisited as conditions change.
+                  For people: what will they keep deciding, and what will they stop deciding — said out loud, not
+                  left to default. For the AI system: where does it deliberately stay out for now, and what evidence
+                  has to accumulate before that boundary moves?
                 </p>
               </CardContent>
             </Card>
@@ -176,16 +222,18 @@ export default function StrategyDomainPage() {
             <Card className="hover:shadow-lg transition-shadow border-blue-100">
               <CardHeader>
                 <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                  <DollarSign className="w-5 h-5 text-blue-600" />
+                  <Layers className="w-5 h-5 text-blue-600" />
                 </div>
-                <CardTitle className="text-base">Investment Planning</CardTitle>
+                <CardTitle className="text-base">Required Capabilities</CardTitle>
                 <CardDescription>
-                  AI spending is planned with long-term ROI in view, not just near-term cost or novelty.
+                  Capability requirements run on two different clocks.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Budgets for AI account for data infrastructure, talent, governance, and ongoing iteration — not just tool licenses. Investment decisions are made with an understanding of what AI actually costs to do well.
+                  For people: training and escalation instinct built up gradually, through repetition. For the AI
+                  system: clean data pipelines, drift monitoring, and a disciplined retraining cadence — built before
+                  it's asked to carry weight, not bolted on after something breaks.
                 </p>
               </CardContent>
             </Card>
@@ -193,16 +241,18 @@ export default function StrategyDomainPage() {
             <Card className="hover:shadow-lg transition-shadow border-blue-100">
               <CardHeader>
                 <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                  <TrendingUp className="w-5 h-5 text-blue-600" />
+                  <GitBranch className="w-5 h-5 text-blue-600" />
                 </div>
-                <CardTitle className="text-base">Digital Integration</CardTitle>
+                <CardTitle className="text-base">Execution Model</CardTitle>
                 <CardDescription>
-                  AI strategy is coordinated with broader digital transformation efforts.
+                  Who acts when something goes wrong.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  AI is not treated as a separate track. It is integrated into existing technology roadmaps, process improvement initiatives, and organizational change programs so that investments reinforce each other.
+                  For people: who owns escalation, who resources overrides, who's on the hook when a decision goes
+                  sideways? For the AI system: who owns the decision to retrain it, and what drift threshold triggers
+                  an automatic rollback rather than waiting for someone to notice?
                 </p>
               </CardContent>
             </Card>
@@ -212,14 +262,35 @@ export default function StrategyDomainPage() {
                 <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
                   <BarChart3 className="w-5 h-5 text-blue-600" />
                 </div>
-                <CardTitle className="text-base">Evaluation</CardTitle>
+                <CardTitle className="text-base">Measures of Success</CardTitle>
                 <CardDescription>
-                  Clear success metrics exist and are tracked for each AI initiative.
+                  What gets measured is what gets managed.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  What success looks like is defined before a project begins. Results are measured against those definitions. Underperforming initiatives are adjusted or stopped. Learning from outcomes informs future decisions.
+                  For people: override frequency, escalation speed, whether two people reading the same input reach
+                  the same conclusion. For the AI system: drift, how well stated confidence matches actual accuracy,
+                  and performance on the decisions that matter most — not just the easy ones.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-blue-100">
+              <CardHeader>
+                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
+                  <RefreshCw className="w-5 h-5 text-blue-600" />
+                </div>
+                <CardTitle className="text-base">Learning and Adaptation</CardTitle>
+                <CardDescription>
+                  A strategy that can't change what it learned isn't disciplined — it's static.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-slate-600">
+                  For people: figure out why overrides happened and adjust who has authority to decide. For the AI
+                  system: figure out why performance shifted, then retrain against the corrected pattern, adjust what
+                  it's allowed to touch, or roll it back until the cause is understood.
                 </p>
               </CardContent>
             </Card>
@@ -233,7 +304,9 @@ export default function StrategyDomainPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-blue-800">
-                  Without strategic alignment, the other four domains produce capability without direction. Data quality, governance rigor, talent investment, and technology infrastructure are all wasted if the organization doesn't know what it's trying to accomplish with AI — and why.
+                  Strategy sets the target the other four perspectives have to hit — pull on any one perspective and
+                  the other four move. Governance rigor, clean data, calibrated judgment, and technology readiness are
+                  all wasted if the organization never named which decisions AI is actually supposed to improve.
                 </p>
               </CardContent>
             </Card>
@@ -247,7 +320,7 @@ export default function StrategyDomainPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the Strategy domain looks like at each of the six SIMA360 capability levels.
+              What the Strategy perspective looks like at each of the six SIMA360 maturity levels.
             </p>
           </div>
 
@@ -318,7 +391,7 @@ export default function StrategyDomainPage() {
               {
                 component: "SIMA-Probe™",
                 href: "/sima-probe",
-                role: "Measures your current Strategy maturity level across all five focus areas. Produces a scored assessment showing exactly where strategy gaps exist.",
+                role: "Measures your current Strategy maturity level across all eight components. Produces a scored assessment showing exactly where strategy gaps exist.",
               },
               {
                 component: "SIMA-Flow™",
@@ -356,7 +429,7 @@ export default function StrategyDomainPage() {
               href="/sima-core"
               className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-1 transition-colors"
             >
-              View all five domains <ArrowRight className="w-4 h-4" />
+              View all five perspectives <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

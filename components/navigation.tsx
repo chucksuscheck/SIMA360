@@ -13,7 +13,7 @@ const frameworkLinks = [
   { label: "Maturity Levels", href: "/maturity" },
 ]
 
-const domainLinks = [
+const perspectiveLinks = [
   { label: "Strategy", href: "/sima-core/strategy" },
   { label: "Governance", href: "/sima-core/governance" },
   { label: "Data", href: "/sima-core/data" },
@@ -23,13 +23,13 @@ const domainLinks = [
 
 export function Navigation() {
   const [isFrameworkOpen, setIsFrameworkOpen] = useState(false)
-  const [isDomainsOpen, setIsDomainsOpen] = useState(false)
+  const [isPerspectivesOpen, setIsPerspectivesOpen] = useState(false)
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const [isMobileFrameworkOpen, setIsMobileFrameworkOpen] = useState(false)
-  const [isMobileDomainsOpen, setIsMobileDomainsOpen] = useState(false)
+  const [isMobilePerspectivesOpen, setIsMobilePerspectivesOpen] = useState(false)
 
   const frameworkTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const domainsTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const perspectivesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const openFramework = () => {
     if (frameworkTimeoutRef.current) clearTimeout(frameworkTimeoutRef.current)
@@ -39,18 +39,18 @@ export function Navigation() {
     frameworkTimeoutRef.current = setTimeout(() => setIsFrameworkOpen(false), 300)
   }
 
-  const openDomains = () => {
-    if (domainsTimeoutRef.current) clearTimeout(domainsTimeoutRef.current)
-    setIsDomainsOpen(true)
+  const openPerspectives = () => {
+    if (perspectivesTimeoutRef.current) clearTimeout(perspectivesTimeoutRef.current)
+    setIsPerspectivesOpen(true)
   }
-  const closeDomains = () => {
-    domainsTimeoutRef.current = setTimeout(() => setIsDomainsOpen(false), 300)
+  const closePerspectives = () => {
+    perspectivesTimeoutRef.current = setTimeout(() => setIsPerspectivesOpen(false), 300)
   }
 
   const closeMobile = () => {
     setIsMobileOpen(false)
     setIsMobileFrameworkOpen(false)
-    setIsMobileDomainsOpen(false)
+    setIsMobilePerspectivesOpen(false)
   }
 
   return (
@@ -90,23 +90,23 @@ export function Navigation() {
           )}
         </div>
 
-        {/* Domains dropdown */}
-        <div className="relative" onMouseEnter={openDomains} onMouseLeave={closeDomains}>
+        {/* Perspectives dropdown */}
+        <div className="relative" onMouseEnter={openPerspectives} onMouseLeave={closePerspectives}>
           <button
             className="flex items-center gap-1 px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
-            aria-expanded={isDomainsOpen}
+            aria-expanded={isPerspectivesOpen}
             aria-haspopup="true"
           >
-            Domains
-            <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isDomainsOpen ? "rotate-180" : ""}`} />
+            Perspectives
+            <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isPerspectivesOpen ? "rotate-180" : ""}`} />
           </button>
-          {isDomainsOpen && (
+          {isPerspectivesOpen && (
             <div className="absolute top-full left-0 mt-1 w-44 bg-white border border-slate-200 rounded-md shadow-lg z-50">
-              {domainLinks.map((link) => (
+              {perspectiveLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={() => setIsDomainsOpen(false)}
+                  onClick={() => setIsPerspectivesOpen(false)}
                   className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
                 >
                   {link.label}
@@ -184,18 +184,18 @@ export function Navigation() {
               )}
             </div>
 
-            {/* Domains mobile */}
+            {/* Perspectives mobile */}
             <div>
               <button
-                onClick={() => setIsMobileDomainsOpen(!isMobileDomainsOpen)}
+                onClick={() => setIsMobilePerspectivesOpen(!isMobilePerspectivesOpen)}
                 className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
               >
-                Domains
-                <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileDomainsOpen ? "rotate-180" : ""}`} />
+                Perspectives
+                <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobilePerspectivesOpen ? "rotate-180" : ""}`} />
               </button>
-              {isMobileDomainsOpen && (
+              {isMobilePerspectivesOpen && (
                 <div className="bg-slate-50 border-t border-b border-slate-100">
-                  {domainLinks.map((link) => (
+                  {perspectiveLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}

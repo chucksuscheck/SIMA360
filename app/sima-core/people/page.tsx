@@ -1,15 +1,15 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "People Domain — AI Domains | SIMA360™",
+  title: "People Perspective — AI Perspectives | SIMA360™",
   description:
-    "The People Domain focuses on workforce readiness, AI literacy, talent strategy, change management, and cultural adoption of responsible AI practices.",
+    "The People Perspective determines how AI outputs get interpreted, trusted, challenged, or waved through — and whether the organization is building calibrated judgment or just moving fast. Five components, each answered for both the people and the AI system.",
 }
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Users, AlertCircle, BookOpen, Briefcase, HeartHandshake, RefreshCw, GraduationCap } from "lucide-react"
+import { ArrowRight, Users, AlertCircle, BookOpen, Eye, RefreshCw, GraduationCap, Shield } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
@@ -75,7 +75,7 @@ const numberColorMap: Record<string, string> = {
   purple: "bg-purple-100",
 }
 
-export default function PeopleDomainPage() {
+export default function PeoplePerspectivePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 to-blue-50">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
@@ -100,7 +100,7 @@ export default function PeopleDomainPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Badge variant="secondary" className="bg-sky-100 text-sky-800 border-sky-200">
-                Domain
+                Perspective
               </Badge>
             </div>
             <div className="flex justify-center mb-6">
@@ -109,13 +109,14 @@ export default function PeopleDomainPage() {
               </div>
             </div>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              People Domain
+              People Perspective
             </h1>
             <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              AI systems don't implement themselves. The People domain determines whether an organization's workforce has the literacy, skill, and cultural readiness to work with AI productively and responsibly — at every level, from the executive team to the frontline.
+              People determines how AI outputs get interpreted, trusted, challenged, or waved through. It's where the
+              Human-Direction System and the AI-Application System actually touch — and the contact runs both ways.
             </p>
             <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
-              It is the domain that asks: <em>do our people know how to work with AI, and do they want to?</em>
+              It is the perspective that asks: <em>would two experienced people reach the same conclusion from the same output, for the same reason?</em>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-sky-600 hover:bg-sky-700">
@@ -128,13 +129,14 @@ export default function PeopleDomainPage() {
         </div>
       </section>
 
-      {/* Five Focus Areas */}
+      {/* Five Components */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Five Focus Areas</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Five Components</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              People maturity is assessed across five focus areas that together determine whether the organization's workforce can support, advance, and responsibly govern AI adoption.
+              Five components build calibrated judgment across an organization — and they only work as one connected
+              system, not five separate activities.
             </p>
           </div>
 
@@ -144,14 +146,16 @@ export default function PeopleDomainPage() {
                 <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center mb-2">
                   <BookOpen className="w-5 h-5 text-sky-600" />
                 </div>
-                <CardTitle className="text-base">AI Literacy</CardTitle>
+                <CardTitle className="text-base">Interpretation Rules</CardTitle>
                 <CardDescription>
-                  Employees at all levels understand what AI is, what it can do, and what its limitations are.
+                  Shared guidance for when a recommendation gets acted on, verified, or escalated.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  AI literacy is not just for data scientists. Executives who commission AI projects, managers who oversee AI-assisted workflows, and frontline employees who interact with AI systems all need a foundational understanding suited to their role. Literacy programs are structured, role-specific, and updated as AI capabilities evolve.
+                  Not a rigid manual — just explicit enough that no team is left inventing its own rules. Can your
+                  organization say, in one sentence, why the same recommendation got followed by one team last week
+                  and ignored by another?
                 </p>
               </CardContent>
             </Card>
@@ -159,33 +163,17 @@ export default function PeopleDomainPage() {
             <Card className="hover:shadow-lg transition-shadow border-sky-100">
               <CardHeader>
                 <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center mb-2">
-                  <Briefcase className="w-5 h-5 text-sky-600" />
+                  <Eye className="w-5 h-5 text-sky-600" />
                 </div>
-                <CardTitle className="text-base">Talent Strategy</CardTitle>
+                <CardTitle className="text-base">Visibility</CardTitle>
                 <CardDescription>
-                  A defined approach to acquiring, developing, and retaining AI-capable talent.
+                  A way to see when outputs are followed, adjusted, ignored, or overridden — and why.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Talent strategy addresses both building and buying capability. It includes hiring for AI-adjacent roles, upskilling existing employees whose roles are being transformed by AI, and building retention structures that keep AI expertise in the organization rather than cycling through contract workers.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow border-sky-100">
-              <CardHeader>
-                <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center mb-2">
-                  <HeartHandshake className="w-5 h-5 text-sky-600" />
-                </div>
-                <CardTitle className="text-base">Cross-functional Collaboration</CardTitle>
-                <CardDescription>
-                  AI projects bring together the right mix of technical, business, and domain expertise.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-slate-600">
-                  Effective AI outcomes require collaboration between people who understand the technology and people who understand the business problem. Cross-functional team structures, shared language, and defined collaboration practices make that possible rather than accidental.
+                  Lightweight decision logs or exception tracking are usually enough. If an output got quietly
+                  overridden three times this week, would anyone know?
                 </p>
               </CardContent>
             </Card>
@@ -195,14 +183,16 @@ export default function PeopleDomainPage() {
                 <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center mb-2">
                   <RefreshCw className="w-5 h-5 text-sky-600" />
                 </div>
-                <CardTitle className="text-base">Change Management</CardTitle>
+                <CardTitle className="text-base">Training as an Evolving System</CardTitle>
                 <CardDescription>
-                  Structured support for the organizational transitions that AI adoption requires.
+                  Teaching gets revised on a real cadence, not installed once at rollout.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  AI changes how people work. Change management ensures those transitions are planned, communicated, and supported — not imposed. It addresses resistance, identifies the people most affected by AI-driven change, and provides tools for navigating the transition without losing productivity or trust.
+                  Teach the current rules, let people use the system under them for a real stretch of time, then
+                  revise the training based on what the AI actually did in that window — because the AI keeps
+                  changing after training day.
                 </p>
               </CardContent>
             </Card>
@@ -212,14 +202,35 @@ export default function PeopleDomainPage() {
                 <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center mb-2">
                   <GraduationCap className="w-5 h-5 text-sky-600" />
                 </div>
-                <CardTitle className="text-base">RAI Awareness</CardTitle>
+                <CardTitle className="text-base">Learning From Failure</CardTitle>
                 <CardDescription>
-                  Employees understand and apply responsible AI principles in their work.
+                  Mistakes get examined as evidence, not treated as a performance problem.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Responsible AI (RAI) is not the exclusive concern of the legal or ethics team. Everyone who works with AI — who uses its outputs, who designs its workflows, who approves its deployment — needs to understand what responsible use means in practice and what to do when something looks wrong.
+                  People need to be able to say "the recommendation looked right and the outcome wasn't" without it
+                  becoming a performance conversation. A mistake examined within days changes behavior before the
+                  pattern repeats.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-sky-100">
+              <CardHeader>
+                <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center mb-2">
+                  <Shield className="w-5 h-5 text-sky-600" />
+                </div>
+                <CardTitle className="text-base">Guarding Against Overtrust</CardTitle>
+                <CardDescription>
+                  Friction gets built in on purpose, so trust stays earned rather than assumed.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-slate-600">
+                  Trust in AI is earned the way trust in a new colleague is earned — incrementally, tied to a track
+                  record, and revocable the moment the evidence changes: mandatory second checks, spot audits, and
+                  explicit permission to say a recommendation looks wrong.
                 </p>
               </CardContent>
             </Card>
@@ -229,11 +240,13 @@ export default function PeopleDomainPage() {
                 <div className="w-10 h-10 bg-sky-200 rounded-lg flex items-center justify-center mb-2">
                   <Users className="w-5 h-5 text-sky-700" />
                 </div>
-                <CardTitle className="text-base text-sky-900">AI Is a Human System</CardTitle>
+                <CardTitle className="text-base text-sky-900">Assistant, Not Replacement</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-sky-800">
-                  Every AI system is designed, deployed, monitored, and interpreted by people. Organizations that invest heavily in AI technology but neglect the People domain consistently underperform those that invest in both. The organizations that get the most from AI are the ones that have prepared their people to work with it.
+                  The line isn't philosophical — it's a design choice visible in any workflow: does a human have to
+                  affirmatively act on a recommendation, or does it execute unless someone intervenes? The moment
+                  it's the second one, overtrust stops being occasional and becomes structural.
                 </p>
               </CardContent>
             </Card>
@@ -247,7 +260,7 @@ export default function PeopleDomainPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the People domain looks like at each of the six SIMA360 capability levels.
+              What the People perspective looks like at each of the six SIMA360 maturity levels.
             </p>
           </div>
 
@@ -333,7 +346,7 @@ export default function PeopleDomainPage() {
               {
                 component: "SIMA-Ascend™",
                 href: "/sima-ascend",
-                role: "Is the People domain's primary delivery mechanism — structured training programs that build AI literacy, responsible AI competency, and practitioner capability at every level of the organization.",
+                role: "Is the People perspective's primary delivery mechanism — structured training programs that build AI literacy, responsible AI competency, and practitioner capability at every level of the organization.",
               },
             ].map((item) => (
               <Card key={item.component} className="hover:shadow-md transition-shadow">
@@ -356,7 +369,7 @@ export default function PeopleDomainPage() {
               href="/sima-core"
               className="text-sky-600 hover:text-sky-800 font-medium inline-flex items-center gap-1 transition-colors"
             >
-              View all five domains <ArrowRight className="w-4 h-4" />
+              View all five perspectives <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

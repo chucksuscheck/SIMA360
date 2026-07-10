@@ -1,15 +1,15 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Governance Domain — AI Domains | SIMA360™",
+  title: "Governance Perspective — AI Perspectives | SIMA360™",
   description:
-    "The Governance Domain manages AI risks, ensures regulatory compliance, and upholds ethical standards through oversight, documentation, and accountability structures.",
+    "The Governance Perspective determines whether AI-influenced decisions stay inside their constraints once the system is running — watched continuously, not reviewed on a schedule. Six components, each answered for both the people and the AI system.",
 }
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Shield, AlertCircle, FileText, Scale, Eye, Bell, Users } from "lucide-react"
+import { ArrowRight, Shield, AlertCircle, FileText, Scale, Eye, RefreshCw, Users } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
@@ -75,7 +75,7 @@ const numberColorMap: Record<string, string> = {
   blue: "bg-blue-100",
 }
 
-export default function GovernanceDomainPage() {
+export default function GovernancePerspectivePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
@@ -100,7 +100,7 @@ export default function GovernanceDomainPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Badge variant="secondary" className="bg-indigo-100 text-indigo-800 border-indigo-200">
-                Domain
+                Perspective
               </Badge>
             </div>
             <div className="flex justify-center mb-6">
@@ -109,13 +109,14 @@ export default function GovernanceDomainPage() {
               </div>
             </div>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Governance Domain
+              Governance Perspective
             </h1>
             <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              AI without accountability is liability. The Governance domain ensures organizations can answer who approved this, who is responsible if it fails, and whether it was legal and ethical to deploy — before they need to answer those questions in a crisis.
+              Governance keeps AI-influenced decisions inside their constraints once the system is actually running —
+              watched continuously, not reviewed on a schedule, with the AI enforcing part of that control itself.
             </p>
             <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
-              It is the domain that asks: <em>what controls exist, and are they working?</em>
+              It is the perspective that asks: <em>does control hold when a decision is contested, urgent, or high-consequence — not just on paper?</em>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-indigo-600 hover:bg-indigo-700">
@@ -128,13 +129,14 @@ export default function GovernanceDomainPage() {
         </div>
       </section>
 
-      {/* Five Focus Areas */}
+      {/* Six Components, Answered Twice */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Five Focus Areas</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Six Components, Answered Twice</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Governance maturity is assessed across five focus areas that together determine whether an organization's AI is accountable, compliant, and trustworthy.
+              Governance is two jobs within one system: one aimed at people interpreting or overriding AI, one aimed
+              at keeping the AI itself inside its boundaries. Six components cover both.
             </p>
           </div>
 
@@ -144,14 +146,35 @@ export default function GovernanceDomainPage() {
                 <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-2">
                   <Scale className="w-5 h-5 text-indigo-600" />
                 </div>
-                <CardTitle className="text-base">Ethical Oversight</CardTitle>
+                <CardTitle className="text-base">Decision Rights</CardTitle>
                 <CardDescription>
-                  Ensuring AI systems are fair, unbiased, and aligned with organizational values.
+                  Which decisions are made by people, assisted by AI, or automated.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Formal processes exist to review AI systems for potential bias, discriminatory outcomes, and misalignment with stated values. Ethical review is not a one-time event — it is embedded in how AI systems are built, updated, and monitored.
+                  For people: where must a human sign off before a decision takes effect, and where is discretion
+                  allowed? For the AI system: what is it authorized to decide or execute entirely on its own — and
+                  where does that authority end?
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-indigo-100">
+              <CardHeader>
+                <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-2">
+                  <Users className="w-5 h-5 text-indigo-600" />
+                </div>
+                <CardTitle className="text-base">Roles and Accountability</CardTitle>
+                <CardDescription>
+                  Clear ownership for AI systems, models, data, and outcomes.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-slate-600">
+                  For people: who's accountable when a decision made with, around, or against an AI recommendation
+                  turns out wrong? For the AI system: who owns its behavior over time — who can retrain, constrain,
+                  or roll it back?
                 </p>
               </CardContent>
             </Card>
@@ -161,14 +184,16 @@ export default function GovernanceDomainPage() {
                 <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-2">
                   <FileText className="w-5 h-5 text-indigo-600" />
                 </div>
-                <CardTitle className="text-base">Regulatory Compliance</CardTitle>
+                <CardTitle className="text-base">Policies and Standards</CardTitle>
                 <CardDescription>
-                  Meeting legal obligations for AI across relevant geographies and industries.
+                  How AI-assisted decisions are supposed to be read.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  The organization has mapped its AI systems to applicable regulations. Compliance requirements are tracked, documented, and reviewed as regulations evolve. Legal and compliance teams are involved in AI decisions, not just informed after the fact.
+                  For people: does written policy say how a recommendation should be read — authoritative, one input
+                  among several, or requiring escalation? For the AI system: what confidence thresholds trigger an
+                  automatic hold or flag before a human sees the output?
                 </p>
               </CardContent>
             </Card>
@@ -178,14 +203,16 @@ export default function GovernanceDomainPage() {
                 <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-2">
                   <AlertCircle className="w-5 h-5 text-indigo-600" />
                 </div>
-                <CardTitle className="text-base">Risk Management</CardTitle>
+                <CardTitle className="text-base">Risk, Compliance, and Controls</CardTitle>
                 <CardDescription>
-                  Proactively identifying, assessing, and mitigating AI-specific risks.
+                  Continuously identified and mitigated — not certified once and forgotten.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  AI risk is treated as a distinct category from general IT risk. A defined process exists for identifying AI risks before deployment and managing them continuously. Risk ownership is assigned and reported to leadership.
+                  For people: do the people acting on AI-influenced outputs actually know which obligations attach to
+                  that decision? For the AI system: what risks does it get checked against continuously — and does
+                  that check actually stop anything, or just log it after the fact?
                 </p>
               </CardContent>
             </Card>
@@ -195,14 +222,16 @@ export default function GovernanceDomainPage() {
                 <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-2">
                   <Eye className="w-5 h-5 text-indigo-600" />
                 </div>
-                <CardTitle className="text-base">Documentation & Auditability</CardTitle>
+                <CardTitle className="text-base">Transparency and Traceability</CardTitle>
                 <CardDescription>
-                  Maintaining records that allow AI decisions to be reviewed, explained, and audited.
+                  A decision reconstructed end to end, not just a model dashboard.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  AI systems are documented: what they do, how they were trained, what data they use, who approved them, and how they perform over time. If an auditor or regulator asked tomorrow, the organization could answer.
+                  For people: are override and escalation patterns actually visible to leadership, or only known
+                  informally inside individual teams? For the AI system: can an output be traced back to the specific
+                  model version, data, and policy that produced it?
                 </p>
               </CardContent>
             </Card>
@@ -210,21 +239,23 @@ export default function GovernanceDomainPage() {
             <Card className="hover:shadow-lg transition-shadow border-indigo-100">
               <CardHeader>
                 <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-2">
-                  <Bell className="w-5 h-5 text-indigo-600" />
+                  <RefreshCw className="w-5 h-5 text-indigo-600" />
                 </div>
-                <CardTitle className="text-base">Communication & Accountability</CardTitle>
+                <CardTitle className="text-base">Continuous Monitoring and Improvement</CardTitle>
                 <CardDescription>
-                  Clear assignment of responsibility for AI outcomes across the organization.
+                  Checking whether the other five components still match how the system actually behaves.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Stakeholders know what AI systems are in use, what they do, and who is accountable for them. When something goes wrong, there is a clear escalation path and defined responsibility — not organizational finger-pointing.
+                  For people: is escalation guidance actually updated as teams learn where the system earns trust —
+                  or does it sit still until something breaks? For the AI system: is drift watched closely enough to
+                  trigger retraining or rollback before it strays too far?
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-indigo-50 border-indigo-200">
+            <Card className="bg-indigo-50 border-indigo-200 md:col-span-2 lg:col-span-3">
               <CardHeader>
                 <div className="w-10 h-10 bg-indigo-200 rounded-lg flex items-center justify-center mb-2">
                   <Shield className="w-5 h-5 text-indigo-700" />
@@ -233,7 +264,12 @@ export default function GovernanceDomainPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-indigo-800">
-                  Mature organizations don't govern AI after deployment — they build governance into how AI is designed, approved, monitored, and retired. The difference between a governance structure and a governance culture is the difference between compliance on paper and compliance that holds under pressure.
+                  Most governance gets built around checkpoints: review before it ships, escalate when something
+                  breaks, meet when the committee's already on the calendar. Agentic AI doesn't wait for the schedule
+                  — once a system is executing decisions on its own, it can act a thousand times before the committee
+                  opens its calendar invite. The critical question shifts from "was the process followed correctly?"
+                  to two questions: is the person still behaving the way the boundary intended, and is the AI still
+                  behaving the way its authorization intended?
                 </p>
               </CardContent>
             </Card>
@@ -247,7 +283,7 @@ export default function GovernanceDomainPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the Governance domain looks like at each of the six SIMA360 capability levels.
+              What the Governance perspective looks like at each of the six SIMA360 maturity levels.
             </p>
           </div>
 
@@ -356,7 +392,7 @@ export default function GovernanceDomainPage() {
               href="/sima-core"
               className="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center gap-1 transition-colors"
             >
-              View all five domains <ArrowRight className="w-4 h-4" />
+              View all five perspectives <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

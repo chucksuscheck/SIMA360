@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "AI Maturity Levels — SIMA360™",
   description:
-    "The six SIMA360 capability levels — Initial through Leading — and what each level looks like across the five organizational domains: Strategy, Governance, Data, People, and Technology.",
+    "The six SIMA360 maturity levels — Initial through Leading — and what each level looks like across the five organizational perspectives: Strategy, Governance, Data, People, and Technology.",
 }
 
 import { Badge } from "@/components/ui/badge"
@@ -25,7 +25,7 @@ const levels = [
     numClass: "bg-slate-200 text-slate-800",
     overview:
       "Organizations at the Initial level are at the starting point of every AI adoption journey. AI is being considered — driven by industry pressure, executive curiosity, or a specific use case that surfaced — but it has not yet been approached in a structured way. Initiatives, if any exist, are isolated experiments. There are no formal frameworks, no governance structures, and no shared understanding of what AI maturity means. This is not a failure state. Every organization begins here. The question is what it will take to advance.",
-    domains: {
+    perspectives: {
       Strategy:
         "No formal AI strategy exists. AI decisions are ad-hoc. The technology is viewed as a point solution — something IT evaluates — rather than a strategic capability that leadership owns. Individual departments may pursue AI independently of any organizational direction.",
       Governance:
@@ -49,7 +49,7 @@ const levels = [
     numClass: "bg-blue-100 text-blue-800",
     overview:
       "At the Exploring level, AI has moved from passive awareness to active investigation. Teams are experimenting — running pilots, evaluating tools, building foundational literacy. These efforts are real and valuable, but they remain largely disconnected from each other and from organizational strategy. Champions have emerged, but they are working without a shared system. The risk at this level is that exploration without structure leads to redundant work, inconsistent results, and eventual disillusionment when early experiments don't scale.",
-    domains: {
+    perspectives: {
       Strategy:
         "Strategic discussion is beginning. A few champions are advocating for AI. There is no shared prioritization framework and no formal process for evaluating which AI investments make sense. Strategy exists in conversations and presentations, not in documents that govern decisions.",
       Governance:
@@ -73,7 +73,7 @@ const levels = [
     numClass: "bg-indigo-100 text-indigo-800",
     overview:
       "The Applying level marks the first genuine operational use of AI within the organization. Specific use cases are in production and delivering value in at least some functions. The challenge is that this value is partial and fragile. Projects succeed where the right people and conditions came together, not because the organization has built a repeatable capability. Opportunism — not architecture — is driving outcomes. Progress depends on specific individuals rather than on organizational systems that would produce results consistently.",
-    domains: {
+    perspectives: {
       Strategy:
         "An informal AI roadmap exists. Some alignment to business goals is present for specific projects, but it is project-level, not organizational. Investment planning and ROI tracking are absent or inconsistent. Success is recognized when it happens but not designed for in advance.",
       Governance:
@@ -97,7 +97,7 @@ const levels = [
     numClass: "bg-cyan-100 text-cyan-800",
     overview:
       "At the Formalizing level, the organization makes the critical shift from individual AI successes to institutional AI capability. Governance frameworks are documented and enforced. Data management practices are intentional. Training programs are structured. Technology stacks are selected and governed. The hallmark of this level is repeatability — the ability to initiate an AI project and expect a predictable process, not just a hoped-for outcome. Leadership has committed to AI as an organizational priority, not just a departmental experiment.",
-    domains: {
+    perspectives: {
       Strategy:
         "A documented AI strategy exists and is aligned to organizational objectives. Prioritization criteria are defined. Initial investment tracking is in place. Leadership has formally endorsed the strategy and it is used — not just filed.",
       Governance:
@@ -121,7 +121,7 @@ const levels = [
     numClass: "bg-sky-100 text-sky-800",
     overview:
       "The Optimizing level organization has moved from building AI capability to actively improving it. Feedback loops are operating — AI performance is measured, governance is continuously evaluated, data quality is monitored in near-real-time, and people development is ongoing. The organization doesn't just run AI projects; it learns from them systematically and uses that learning to do the next one better. AI is integrated into strategic planning, not managed as a separate initiative. At this level, the framework is working and the organization is using it to advance.",
-    domains: {
+    perspectives: {
       Strategy:
         "The AI strategy is dynamic — reviewed and updated on a defined cadence. KPIs are measured and tied to business outcomes. AI planning is integrated into the broader organizational strategic planning cycle, not managed as a separate track.",
       Governance:
@@ -145,7 +145,7 @@ const levels = [
     numClass: "bg-emerald-100 text-emerald-800",
     overview:
       "Leading organizations have made AI a defining characteristic of how they operate and compete. AI is embedded in strategy, culture, governance, and operations. The organization doesn't just use the SIMA360 framework — it contributes to how AI maturity thinking evolves across its industry. It publishes practices, attracts talent by reputation, participates in regulatory and standards conversations, and operates AI systems that self-monitor within sophisticated governance boundaries. This is not the final destination. It is the beginning of stewardship.",
-    domains: {
+    perspectives: {
       Strategy:
         "AI is a core component of organizational strategy and competitive differentiation. The organization contributes to shaping industry direction. Strategic AI governance is sophisticated, self-reinforcing, and externally recognized.",
       Governance:
@@ -160,7 +160,7 @@ const levels = [
   },
 ]
 
-const domainMeta = [
+const perspectiveMeta = [
   { name: "Strategy", icon: Target, href: "/sima-core/strategy", color: "text-blue-600", bg: "bg-blue-50" },
   { name: "Governance", icon: Shield, href: "/sima-core/governance", color: "text-indigo-600", bg: "bg-indigo-50" },
   { name: "Data", icon: Database, href: "/sima-core/data", color: "text-cyan-600", bg: "bg-cyan-50" },
@@ -192,10 +192,10 @@ export default function MaturityPage() {
         <div className="container mx-auto text-center max-w-4xl">
           <Badge variant="secondary" className="mb-4">SIMA360™ Framework</Badge>
           <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            The Six Capability Levels
+            The Six Maturity Levels
           </h1>
           <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-            SIMA360 measures AI maturity across six progressive capability levels — from Initial through Leading. Each level describes where an organization stands across all five domains: Strategy, Governance, Data, People, and Technology.
+            SIMA360 measures AI maturity across six progressive maturity levels — from Initial through Leading. Each level describes where an organization stands across all five perspectives: Strategy, Governance, Data, People, and Technology.
           </p>
           <p className="text-lg text-slate-500 mb-10 max-w-2xl mx-auto">
             The goal is not to reach Level 6. The goal is to know where you are, understand what it means, and advance deliberately.
@@ -247,13 +247,13 @@ export default function MaturityPage() {
               {lvl.overview}
             </p>
 
-            {/* Domain breakdown */}
+            {/* Perspective breakdown */}
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-slate-900 mb-6">
-                Across the Five Domains at Level {lvl.number}
+                Across the Five Perspectives at Level {lvl.number}
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                {domainMeta.map((d) => {
+                {perspectiveMeta.map((d) => {
                   const Icon = d.icon
                   return (
                     <div key={d.name} className={`rounded-lg p-5 border border-slate-200 ${d.bg}`}>
@@ -267,7 +267,7 @@ export default function MaturityPage() {
                         </Link>
                       </div>
                       <p className="text-sm text-slate-700 leading-relaxed">
-                        {lvl.domains[d.name as keyof typeof lvl.domains]}
+                        {lvl.perspectives[d.name as keyof typeof lvl.perspectives]}
                       </p>
                     </div>
                   )
@@ -279,7 +279,7 @@ export default function MaturityPage() {
                     <div>
                       <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Moving Forward</p>
                       <p className="text-sm text-slate-600 leading-relaxed">
-                        Advancing from Level {lvl.number} to Level {lvl.number + 1} requires closing gaps across all five domains, not just the most visible ones. SIMA-Probe identifies where you stand; SIMA-Flow structures how you advance.
+                        Advancing from Level {lvl.number} to Level {lvl.number + 1} requires closing gaps across all five perspectives, not just the most visible ones. SIMA-Probe identifies where you stand; SIMA-Flow structures how you advance.
                       </p>
                     </div>
                     <Link
@@ -344,7 +344,7 @@ export default function MaturityPage() {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Find Out Where Your Organization Stands</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            SIMA-Probe measures your current capability level across all five domains and tells you exactly what to address next.
+            SIMA-Probe measures your current maturity level across all five perspectives and tells you exactly what to address next.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>

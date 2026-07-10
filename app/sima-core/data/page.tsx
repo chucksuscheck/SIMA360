@@ -1,15 +1,15 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Data Domain — AI Domains | SIMA360™",
+  title: "Data Perspective — AI Perspectives | SIMA360™",
   description:
-    "The Data Domain encompasses data quality, accessibility, governance, integration, and stewardship — the foundation that every AI system depends on.",
+    "The Data Perspective determines whether the organization keeps learning from the world or starts learning from itself — and whether data can still be trusted once it's in motion, not just on arrival. Eight components, each answered for both the people and the AI system.",
 }
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Database, AlertCircle, FolderOpen, CheckCircle, GitMerge, UserCheck, Lock } from "lucide-react"
+import { ArrowRight, Database, AlertCircle, CheckCircle, GitMerge, Lock, Target, Clock, GitBranch, Eye, RefreshCw } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
@@ -75,7 +75,7 @@ const numberColorMap: Record<string, string> = {
   green: "bg-green-100",
 }
 
-export default function DataDomainPage() {
+export default function DataPerspectivePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-teal-50">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
@@ -100,7 +100,7 @@ export default function DataDomainPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 border-cyan-200">
-                Domain
+                Perspective
               </Badge>
             </div>
             <div className="flex justify-center mb-6">
@@ -109,13 +109,14 @@ export default function DataDomainPage() {
               </div>
             </div>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Data Domain
+              Data Perspective
             </h1>
             <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              Every AI system is only as reliable as the data it runs on. The Data domain ensures the organization's information assets are accessible, trustworthy, governed, and structured in a way that AI can actually use.
+              Data determines whether the organization keeps learning from the world or starts learning from itself
+              — and whether data can still be trusted once it's in motion, not just on arrival.
             </p>
             <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
-              It is the domain that asks: <em>do we have the data AI needs, and can we trust it?</em>
+              It is the perspective that asks: <em>is this data still teaching the model something true?</em>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-cyan-600 hover:bg-cyan-700">
@@ -128,13 +129,14 @@ export default function DataDomainPage() {
         </div>
       </section>
 
-      {/* Five Focus Areas */}
+      {/* Eight Components, Answered Twice */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Five Focus Areas</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Eight Components, Answered Twice</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Data maturity is assessed across five focus areas that together determine whether the organization's data infrastructure can support reliable AI outcomes.
+              Data is two jobs wearing one name: making sure what feeds the AI is something it can learn the right
+              lessons from, and making sure what reaches people is something they can actually use.
             </p>
           </div>
 
@@ -142,16 +144,18 @@ export default function DataDomainPage() {
             <Card className="hover:shadow-lg transition-shadow border-cyan-100">
               <CardHeader>
                 <div className="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center mb-2">
-                  <FolderOpen className="w-5 h-5 text-cyan-600" />
+                  <CheckCircle className="w-5 h-5 text-cyan-600" />
                 </div>
-                <CardTitle className="text-base">Accessibility</CardTitle>
+                <CardTitle className="text-base">Accuracy and Completeness</CardTitle>
                 <CardDescription>
-                  Data that AI needs can be found, retrieved, and used by authorized teams.
+                  Correct, and covering the whole picture — not just the convenient slice.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Data is organized, cataloged, and retrievable. Access controls are defined and enforced. Teams working on AI projects don't spend weeks locating, extracting, and reformatting data before any modeling can begin.
+                  For people: are the numbers you're deciding on actually correct, and are you seeing the whole
+                  situation? For the AI system: is what's feeding the model verified as correct, and does it have the
+                  full picture or the slice that was easiest to collect?
                 </p>
               </CardContent>
             </Card>
@@ -159,16 +163,18 @@ export default function DataDomainPage() {
             <Card className="hover:shadow-lg transition-shadow border-cyan-100">
               <CardHeader>
                 <div className="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center mb-2">
-                  <CheckCircle className="w-5 h-5 text-cyan-600" />
+                  <Target className="w-5 h-5 text-cyan-600" />
                 </div>
-                <CardTitle className="text-base">Quality</CardTitle>
+                <CardTitle className="text-base">Relevance and Representativeness</CardTitle>
                 <CardDescription>
-                  Data is accurate, complete, consistent, and validated before AI systems consume it.
+                  Matches the problem and the real population — including the edge cases.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Quality standards are defined for critical datasets. Cleansing and validation processes exist. Quality is monitored continuously, not just checked at the start of a project and forgotten as the system runs in production.
+                  For people: does this data actually match the problem, or is it just what happened to be available?
+                  For the AI system: does training data reflect the real population it'll operate on, including rare
+                  cases, or only the common ones that were easy to collect?
                 </p>
               </CardContent>
             </Card>
@@ -178,14 +184,54 @@ export default function DataDomainPage() {
                 <div className="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center mb-2">
                   <GitMerge className="w-5 h-5 text-cyan-600" />
                 </div>
-                <CardTitle className="text-base">Integration</CardTitle>
+                <CardTitle className="text-base">Consistency and Definition</CardTitle>
                 <CardDescription>
-                  Data from different systems and sources flows together in ways that AI can use.
+                  A term means the same thing everywhere it shows up.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Siloed data sources are connected through integration pipelines, APIs, or data lakes. AI systems can access the full picture they need, not just the subset that happens to be in one easily accessible system.
+                  For people: do two teams looking at the same term actually mean the same thing? For the AI system:
+                  does a given term mean the same thing everywhere it shows up in the pipeline? "Customer" and
+                  "churn" shifting meaning isn't inconsistent data — it's several datasets wearing the same name.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-cyan-100">
+              <CardHeader>
+                <div className="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center mb-2">
+                  <Clock className="w-5 h-5 text-cyan-600" />
+                </div>
+                <CardTitle className="text-base">Accessibility and Timeliness</CardTitle>
+                <CardDescription>
+                  Reaches the point of decision when it's actually needed.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-slate-600">
+                  For people: can you get the data you need without filing a request and waiting a week? For the AI
+                  system: can it reach the data it needs at the moment a decision runs, or does it only show up in
+                  reporting after the fact?
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-cyan-100">
+              <CardHeader>
+                <div className="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center mb-2">
+                  <GitBranch className="w-5 h-5 text-cyan-600" />
+                </div>
+                <CardTitle className="text-base">Traceability and Lineage</CardTitle>
+                <CardDescription>
+                  Any number or output traced back to where it came from.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-slate-600">
+                  For people: can someone trace a number back to where it originated, and would you know if the
+                  dataset changed last week? For the AI system: can you trace what trained this model — every input,
+                  which version, where it came from?
                 </p>
               </CardContent>
             </Card>
@@ -195,14 +241,16 @@ export default function DataDomainPage() {
                 <div className="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center mb-2">
                   <Lock className="w-5 h-5 text-cyan-600" />
                 </div>
-                <CardTitle className="text-base">Governance</CardTitle>
+                <CardTitle className="text-base">Security and Ethics</CardTitle>
                 <CardDescription>
-                  Formal policies define how data is collected, retained, accessed, and protected.
+                  Sensitive data protected and bias actively monitored — not checked once.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Data governance is not just about privacy and compliance — it is about ensuring data can be trusted and used responsibly. Policies are documented, enforced, and reviewed as AI use cases evolve and regulations change.
+                  For people: do the people handling this data know what's sensitive and who's allowed to see it? For
+                  the AI system: is output actively monitored for bias and misuse of sensitive information, or was
+                  that only checked once, at launch?
                 </p>
               </CardContent>
             </Card>
@@ -210,16 +258,37 @@ export default function DataDomainPage() {
             <Card className="hover:shadow-lg transition-shadow border-cyan-100">
               <CardHeader>
                 <div className="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center mb-2">
-                  <UserCheck className="w-5 h-5 text-cyan-600" />
+                  <Eye className="w-5 h-5 text-cyan-600" />
                 </div>
-                <CardTitle className="text-base">Stewardship</CardTitle>
+                <CardTitle className="text-base">Interpretation and Application</CardTitle>
                 <CardDescription>
-                  Named individuals are accountable for data quality, access, and lifecycle management.
+                  Data gets understood, not just seen — and used consistently.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Data stewardship roles are defined: who owns which datasets, who is responsible for quality, who approves access. Accountability is not organizational — it is personal and tracked.
+                  For people: do decision-makers actually understand what a figure represents, or has each team
+                  quietly built its own translation? For the AI system: does the same input get treated the same way
+                  regardless of which part of the pipeline touches it?
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-cyan-100">
+              <CardHeader>
+                <div className="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center mb-2">
+                  <RefreshCw className="w-5 h-5 text-cyan-600" />
+                </div>
+                <CardTitle className="text-base">Continuous Monitoring and Correction</CardTitle>
+                <CardDescription>
+                  Performance and drift watched on an ongoing basis — and acted on.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-slate-600">
+                  For people: is there a real owner for each important dataset? For the AI system: is drift tracked
+                  closely enough to catch a bad pattern before it compounds, with an actual mechanism to roll back or
+                  retrain once one's found?
                 </p>
               </CardContent>
             </Card>
@@ -229,11 +298,14 @@ export default function DataDomainPage() {
                 <div className="w-10 h-10 bg-cyan-200 rounded-lg flex items-center justify-center mb-2">
                   <Database className="w-5 h-5 text-cyan-700" />
                 </div>
-                <CardTitle className="text-base text-cyan-900">Data Is the Limiting Factor</CardTitle>
+                <CardTitle className="text-base text-cyan-900">Data Evolves — Watching Has To Also</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-cyan-800">
-                  Most AI projects that fail to deliver results don't fail because of the model — they fail because of the data. Incomplete, inconsistent, or inaccessible data produces unreliable outputs regardless of how sophisticated the AI system is. The Data domain is where most organizations underinvest and most AI projects stall.
+                  The Boston Housing dataset passed every check anyone ran against it for decades and was still
+                  teaching something false the entire time, because nobody was watching after the day it got
+                  approved. Once a system starts generating its own data — recommendations, summaries, decisions —
+                  the organization's record of "what happened" starts turning into a record of what the system did.
                 </p>
               </CardContent>
             </Card>
@@ -247,7 +319,7 @@ export default function DataDomainPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the Data domain looks like at each of the six SIMA360 capability levels.
+              What the Data perspective looks like at each of the six SIMA360 maturity levels.
             </p>
           </div>
 
@@ -356,7 +428,7 @@ export default function DataDomainPage() {
               href="/sima-core"
               className="text-cyan-600 hover:text-cyan-800 font-medium inline-flex items-center gap-1 transition-colors"
             >
-              View all five domains <ArrowRight className="w-4 h-4" />
+              View all five perspectives <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

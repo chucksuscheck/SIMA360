@@ -50,7 +50,7 @@ export default function SIMAProbe() {
               SIMA Probe™
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              Measure your organization's AI maturity across five Domains with actionable insights and
+              Measure your organization's AI maturity across five Perspectives with actionable insights and
               prescriptive guidance
             </p>
             <div className="flex gap-4 justify-center">
@@ -76,9 +76,9 @@ export default function SIMAProbe() {
             <h2 className="text-3xl font-bold mb-6 text-center">What is SIMA Probe?</h2>
             <p className="text-lg text-slate-700 mb-8 leading-relaxed">
               SIMA-Probe is the diagnostic assessment tool within the SIMA360™ framework, designed to measure an
-              organization's AI maturity across five Domains: <strong>Strategy</strong>,{" "}
+              organization's AI maturity across five Perspectives: <strong>Strategy</strong>,{" "}
               <strong>Governance</strong>,<strong> Data</strong>, <strong>People</strong>, and{" "}
-              <strong>Technology</strong>. Each Domain is evaluated across the SIMA360 Maturity Model's six
+              <strong>Technology</strong>. Each Perspective is evaluated across the SIMA360 Maturity Model's six
               capability levels: Initial, Exploring, Applying, Formalizing, Optimizing, and Leading.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
@@ -90,10 +90,10 @@ export default function SIMAProbe() {
         </div>
       </section>
 
-      {/* Five Domains */}
+      {/* Five Perspectives */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Five Domains</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Five Perspectives</h2>
           <div className="grid md:grid-cols-5 gap-6 max-w-6xl mx-auto">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -145,7 +145,7 @@ export default function SIMAProbe() {
                   <CardTitle className="text-lg">Maturity Level Identification</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-600">Establishes current maturity across all five Domains</p>
+                  <p className="text-slate-600">Establishes current maturity across all five Perspectives</p>
                 </CardContent>
               </Card>
               <Card>
@@ -203,12 +203,12 @@ export default function SIMAProbe() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">The SIMA360 Maturity Levels</h2>
             <p className="text-lg text-slate-700 mb-4 text-center leading-relaxed">
-              SIMA-Probe evaluates organizational readiness across all Domains to determine which maturity level
+              SIMA-Probe evaluates organizational readiness across all Perspectives to determine which maturity level
               accurately reflects current maturity.
             </p>
             <p className="text-center mb-12">
               <Link href="/maturity" className="text-blue-600 hover:text-blue-800 underline text-sm font-medium">
-                View the full maturity guide — what each level means across all five domains →
+                View the full maturity guide — what each level means across all five perspectives →
               </Link>
             </p>
             <div className="space-y-4">
@@ -293,7 +293,7 @@ export default function SIMAProbe() {
                   <p className="text-slate-700">
                     AI operates within robust governance structures that function under real operational conditions —
                     not just in compliance reviews. Feedback loops produce continuous improvement across all five
-                    dimensions. Real-time analytics inform strategic decisions. The organization proactively manages AI
+                    perspectives. Real-time analytics inform strategic decisions. The organization proactively manages AI
                     risk rather than reactively responding to failures. Capability is organizational, not individual.
                   </p>
                 </CardContent>
@@ -359,7 +359,7 @@ export default function SIMAProbe() {
                       <ul className="space-y-2 text-slate-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span>30 diagnostic questions — 6 per domain, covering anchor and core capabilities</span>
+                          <span>30 diagnostic questions — 6 per perspective, covering anchor and core capabilities</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
@@ -367,11 +367,11 @@ export default function SIMAProbe() {
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span>Domain orientation scores (0–5) with maturity level labels per domain</span>
+                          <span>Perspective orientation scores (0–5) with maturity level labels per perspective</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span>Enterprise score — harmonic mean of domain scores weighted by strategic importance</span>
+                          <span>Enterprise score — harmonic mean of perspective scores weighted by strategic importance</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
@@ -424,7 +424,7 @@ export default function SIMAProbe() {
                       <ul className="space-y-2 text-slate-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                          <span>20-30 expanded questions per Domain (100-150 questions total)</span>
+                          <span>20-30 expanded questions per Perspective (100-150 questions total)</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
@@ -439,12 +439,12 @@ export default function SIMAProbe() {
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                           <span>
-                            Radar chart visualizations displaying relative maturity across all five Domains
+                            Radar chart visualizations displaying relative maturity across all five Perspectives
                           </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                          <span>3-10 targeted guidance statements per Domain</span>
+                          <span>3-10 targeted guidance statements per Perspective</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
@@ -484,7 +484,7 @@ export default function SIMAProbe() {
                       <ul className="space-y-2 text-slate-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
-                          <span>Comprehensive 50+ questions per Domain (250+ questions total)</span>
+                          <span>Comprehensive 50+ questions per Perspective (250+ questions total)</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />

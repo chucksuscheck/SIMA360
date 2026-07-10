@@ -1,15 +1,15 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Technology Domain — AI Domains | SIMA360™",
+  title: "Technology Perspective — AI Perspectives | SIMA360™",
   description:
-    "The Technology Domain covers the infrastructure, tools, lifecycle management, security, and innovation practices needed to deploy and scale AI reliably.",
+    "The Technology Perspective determines whether the organization can change the model, the environment, or the data underneath it without renegotiating everything built around it. Six components, each answered for both the people and the AI system.",
 }
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Cog, AlertCircle, Server, Wrench, GitBranch, Lock, Zap } from "lucide-react"
+import { ArrowRight, Cog, AlertCircle, Server, Wrench, GitBranch, Lock, Zap, Eye } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
@@ -77,7 +77,7 @@ const numberColorMap: Record<string, string> = {
   lime: "bg-lime-100",
 }
 
-export default function TechnologyDomainPage() {
+export default function TechnologyPerspectivePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
@@ -102,7 +102,7 @@ export default function TechnologyDomainPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Badge variant="secondary" className="bg-slate-200 text-slate-800 border-slate-300">
-                Domain
+                Perspective
               </Badge>
             </div>
             <div className="flex justify-center mb-6">
@@ -111,13 +111,15 @@ export default function TechnologyDomainPage() {
               </div>
             </div>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Technology Domain
+              Technology Perspective
             </h1>
             <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              AI requires infrastructure — compute, storage, pipelines, security controls, and lifecycle management — that most organizations have not purpose-built for the demands AI actually places on them. The Technology domain assesses whether those foundations are in place.
+              Technology determines whether the organization can change the model, the environment, or the data
+              underneath it — separately, and not always at the same pace — without renegotiating everything built
+              around it.
             </p>
             <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
-              It is the domain that asks: <em>can our technology infrastructure reliably support AI at the scale we need?</em>
+              It is the perspective that asks: <em>can this system sustain change without degrading decision quality?</em>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-slate-700 hover:bg-slate-800">
@@ -130,13 +132,14 @@ export default function TechnologyDomainPage() {
         </div>
       </section>
 
-      {/* Five Focus Areas */}
+      {/* Six Components, Answered Twice */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Five Focus Areas</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Six Components, Answered Twice</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Technology maturity is assessed across five focus areas that together determine whether the organization's technical foundation can support scalable, secure, and sustainable AI operations.
+              Six components, each answering its own version of "is this good enough to carry what we're about to
+              put on it." The weakest one sets the ceiling — readiness isn't an average, it's the lowest score.
             </p>
           </div>
 
@@ -146,14 +149,16 @@ export default function TechnologyDomainPage() {
                 <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center mb-2">
                   <Server className="w-5 h-5 text-slate-700" />
                 </div>
-                <CardTitle className="text-base">Infrastructure</CardTitle>
+                <CardTitle className="text-base">Architecture and Adaptability</CardTitle>
                 <CardDescription>
-                  Compute, storage, and network resources capable of supporting AI workloads at scale.
+                  A component gets replaced instead of the whole system rebuilt.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  AI workloads — particularly training and inference for large models — have resource requirements that differ significantly from traditional enterprise workloads. Infrastructure planning accounts for those requirements, whether on-premises, cloud-native, or hybrid, and scales with usage rather than being provisioned once and forgotten.
+                  For people: could your team swap a major vendor without a multi-quarter rebuild? For the AI system:
+                  is model access abstracted behind a service layer, so a model swap doesn't require rebuilding the
+                  workflows around it?
                 </p>
               </CardContent>
             </Card>
@@ -163,14 +168,15 @@ export default function TechnologyDomainPage() {
                 <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center mb-2">
                   <Wrench className="w-5 h-5 text-slate-700" />
                 </div>
-                <CardTitle className="text-base">Tools</CardTitle>
+                <CardTitle className="text-base">Integration</CardTitle>
                 <CardDescription>
-                  A standardized, evaluated set of AI platforms and tools that the organization has selected and governs.
+                  AI that doesn't connect to the rest of the organization stays a demo.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  AI tool selection is not ad-hoc. A defined evaluation and approval process exists. Standardized tools reduce the operational burden of supporting a fragmented toolscape and allow the organization to build shared expertise rather than re-learning across different platforms.
+                  For people: does AI fit into how work actually gets done? For the AI system: can it reach the data
+                  and tools it needs inside existing workflows, or does someone manually bridge the gap every time?
                 </p>
               </CardContent>
             </Card>
@@ -178,16 +184,18 @@ export default function TechnologyDomainPage() {
             <Card className="hover:shadow-lg transition-shadow border-slate-200">
               <CardHeader>
                 <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center mb-2">
-                  <GitBranch className="w-5 h-5 text-slate-700" />
+                  <Zap className="w-5 h-5 text-slate-700" />
                 </div>
-                <CardTitle className="text-base">Lifecycle Management</CardTitle>
+                <CardTitle className="text-base">Reliability</CardTitle>
                 <CardDescription>
-                  Structured pipelines for developing, testing, deploying, monitoring, and retiring AI models.
+                  A model that's right most of the time but unavailable when it matters trains people to stop trusting it.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  AI models are not static. They degrade, they drift, and they need to be retrained or replaced. Lifecycle management — sometimes called MLOps — provides the structured processes for managing models from development through retirement, treating AI operations with the same rigor as software engineering.
+                  For people: if this system went down during your highest-stakes decision window, would anyone
+                  notice before a customer did? For the AI system: does it have the fault tolerance to keep
+                  performing consistently under real, not ideal, conditions?
                 </p>
               </CardContent>
             </Card>
@@ -199,12 +207,14 @@ export default function TechnologyDomainPage() {
                 </div>
                 <CardTitle className="text-base">Security</CardTitle>
                 <CardDescription>
-                  Controls that protect AI systems and the data they use from threats and misuse.
+                  AI expands what's worth attacking — more data flowing through more places.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  AI introduces attack surfaces that traditional security frameworks were not designed to address: adversarial inputs, model theft, data poisoning, prompt injection, and the exposure of sensitive training data. AI-specific security controls are defined, implemented, and reviewed alongside general security practices.
+                  For people: do you know everywhere this system's outputs and underlying data can be accessed, and
+                  by whom? For the AI system: are its APIs and infrastructure secured and monitored, or trusted by
+                  default because they're internal?
                 </p>
               </CardContent>
             </Card>
@@ -212,30 +222,54 @@ export default function TechnologyDomainPage() {
             <Card className="hover:shadow-lg transition-shadow border-slate-200">
               <CardHeader>
                 <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center mb-2">
-                  <Zap className="w-5 h-5 text-slate-700" />
+                  <GitBranch className="w-5 h-5 text-slate-700" />
                 </div>
-                <CardTitle className="text-base">Innovation Enablement</CardTitle>
+                <CardTitle className="text-base">AI Operations and Automation</CardTitle>
                 <CardDescription>
-                  Infrastructure and processes that support rapid, safe experimentation with new AI approaches.
+                  Deploying a model is the easy part. Maintaining it is where most organizations get surprised.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Mature AI organizations don't only operate existing systems — they experiment with new capabilities in structured, low-risk environments. Sandbox environments, experimentation platforms, and rapid prototyping processes allow innovation to occur without disrupting production systems.
+                  For people: if this model needs to be rolled back tomorrow, does anyone know exactly how? For the
+                  AI system: are deployment, testing, and rollback automated enough that a correction doesn't depend
+                  on one engineer's memory?
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-100 border-slate-300">
+            <Card className="hover:shadow-lg transition-shadow border-slate-200">
+              <CardHeader>
+                <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center mb-2">
+                  <Eye className="w-5 h-5 text-slate-700" />
+                </div>
+                <CardTitle className="text-base">Observability</CardTitle>
+                <CardDescription>
+                  Model drift, environment drift, and data drift move on three schedules that rarely announce themselves.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-slate-600">
+                  For people: if behavior shifted last month, could you tell which of the three actually caused it?
+                  For the AI system: is drift tracked continuously across all three, or only checked when someone
+                  notices something's off?
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-100 border-slate-300 md:col-span-2 lg:col-span-3">
               <CardHeader>
                 <div className="w-10 h-10 bg-slate-200 rounded-lg flex items-center justify-center mb-2">
                   <Cog className="w-5 h-5 text-slate-700" />
                 </div>
-                <CardTitle className="text-base text-slate-900">Technology Follows Maturity</CardTitle>
+                <CardTitle className="text-base text-slate-900">Success Creates Its Own Lock-In</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-700">
-                  A common mistake is deploying sophisticated AI infrastructure before the organization has the people, governance, and data to use it. SIMA360 explicitly matches technology adoption to capability level — tools that require Level 4 or 5 capabilities are ill-advised at Level 1 or 2, regardless of vendor claims.
+                  A powerful model bolted onto infrastructure that was never built to carry it is a jet engine on a
+                  horse-drawn wagon. Organizations that avoid this assume from day one that the model, the technology
+                  around it, and the data flowing through it will all keep moving — separately, and not always at the
+                  same pace — and build for replaceability instead of permanence.
                 </p>
               </CardContent>
             </Card>
@@ -249,7 +283,7 @@ export default function TechnologyDomainPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the Technology domain looks like at each of the six SIMA360 capability levels.
+              What the Technology perspective looks like at each of the six SIMA360 maturity levels.
             </p>
           </div>
 
@@ -358,7 +392,7 @@ export default function TechnologyDomainPage() {
               href="/sima-core"
               className="text-slate-700 hover:text-slate-900 font-medium inline-flex items-center gap-1 transition-colors"
             >
-              View all five domains <ArrowRight className="w-4 h-4" />
+              View all five perspectives <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

@@ -160,7 +160,7 @@ export default function SimaAscendPage() {
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-2">Framework Aligned</h3>
               <p className="text-slate-600">
-                Directly aligned with SIMA360's strategic domains and capability levels for relevant, contextual
+                Directly aligned with SIMA360's strategic perspectives and maturity levels for relevant, contextual
                 learning
               </p>
             </div>
@@ -361,7 +361,7 @@ export default function SimaAscendPage() {
                   <div>
                     <h4 className="font-semibold text-slate-900 mb-2">Learning Outcomes:</h4>
                     <ul className="text-sm text-slate-600 space-y-1">
-                      <li>• Assess readiness across key dimensions</li>
+                      <li>• Assess readiness across key perspectives</li>
                       <li>• Establish foundational policies</li>
                       <li>• Structure pilot initiatives</li>
                       <li>• Implement oversight mechanisms</li>

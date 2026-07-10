@@ -55,11 +55,12 @@ export default function SimaFlowPage() {
             </Badge>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
               The Execution Engine
-              <span className="text-green-600 block">Connecting Domain to Results</span>
+              <span className="text-green-600 block">Connecting Perspective to Results</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8">
               SIMA Flow™ serves as the execution engine, tying SIMA Core™ models to SIMA Kit™ resourced through two
-              powerful cycles: the Core Cycle for domain development and the FLAI Cycle for project execution.
+              cycles that run simultaneously: the macro Core Cycle (Assess Capabilities → Set Groundwork → Execute)
+              for organizational advancement, and the project-level FLAI Cycle for execution within it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-green-500 hover:bg-green-600">
@@ -88,7 +89,7 @@ export default function SimaFlowPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Two Interconnected Cycles</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              SIMA Flow™ operates through two complementary cycles that ensure both domain alignment and tactical
+              SIMA Flow™ operates through two complementary cycles that ensure both perspective alignment and tactical
               execution
             </p>
           </div>
@@ -98,7 +99,7 @@ export default function SimaFlowPage() {
               <CardHeader>
                 <Layers className="w-8 h-8 text-green-600 mb-2" />
                 <CardTitle>Core Cycle (Macro)</CardTitle>
-                <CardDescription>Enterprise-level domain development and strategic alignment</CardDescription>
+                <CardDescription>Enterprise-level perspective development and strategic alignment</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -107,8 +108,8 @@ export default function SimaFlowPage() {
                       <span className="text-green-600 font-semibold text-sm">1</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900">Assess Domains</h4>
-                      <p className="text-sm text-slate-600">Evaluate maturity across five domains</p>
+                      <h4 className="font-semibold text-slate-900">Assess Capabilities</h4>
+                      <p className="text-sm text-slate-600">Evaluate maturity across five perspectives</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -195,22 +196,22 @@ export default function SimaFlowPage() {
           </div>
 
           <div className="space-y-12">
-            {/* Assess Domains */}
+            {/* Assess Capabilities */}
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mr-4">
                     <Search className="w-6 h-6" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900">Assess Domains</h3>
+                  <h3 className="text-2xl font-bold text-slate-900">Assess Capabilities</h3>
                 </div>
                 <p className="text-slate-600 mb-4">
-                  The diagnostic entry point that contextualizes readiness across the five Domains: Strategy,
-                  Governance, Data, People, and Technology.
+                  The diagnostic entry point that contextualizes readiness across the five Perspectives: Strategy,
+                  Governance, Data, People, and Technology. This is the phase SIMA-Probe is built to support.
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>• Evidence-based capability level assessment</li>
-                  <li>• Dimension-specific maturity evaluation</li>
+                  <li>• Evidence-based maturity level assessment</li>
+                  <li>• Perspective-specific maturity evaluation</li>
                   <li>• Gap identification and risk assessment</li>
                   <li>• Readiness validation for next steps</li>
                 </ul>
@@ -221,11 +222,11 @@ export default function SimaFlowPage() {
                   <div className="space-y-2">
                     <div className="flex items-center text-sm">
                       <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
-                      <span>Current capability level identification</span>
+                      <span>Current maturity level identification</span>
                     </div>
                     <div className="flex items-center text-sm">
                       <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
-                      <span>Dimension-specific readiness scores</span>
+                      <span>Perspective-specific readiness scores</span>
                     </div>
                     <div className="flex items-center text-sm">
                       <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
@@ -240,7 +241,7 @@ export default function SimaFlowPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <Card className="bg-emerald-50 border-emerald-200 md:order-1">
                 <CardContent className="p-6">
-                  <h4 className="font-semibold text-slate-900 mb-3">Domain Preparation</h4>
+                  <h4 className="font-semibold text-slate-900 mb-3">Perspective Preparation</h4>
                   <div className="space-y-2">
                     <div className="flex items-center text-sm">
                       <Target className="w-4 h-4 text-emerald-600 mr-2" />
@@ -284,10 +285,10 @@ export default function SimaFlowPage() {
                 </div>
                 <p className="text-slate-600 mb-4">
                   Prepare the organization for execution using SIMA Kit™ tools and templates aligned to current
-                  capability levels and domains.
+                  maturity levels and perspectives.
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>• Dimension-specific preparation activities</li>
+                  <li>• Perspective-specific preparation activities</li>
                   <li>• Role-based guidance and templates</li>
                   <li>• Risk validation and mitigation planning</li>
                   <li>• Resource allocation and scoping</li>
@@ -426,11 +427,16 @@ export default function SimaFlowPage() {
           <div className="mt-12 text-center">
             <Card className="max-w-2xl mx-auto bg-gradient-to-r from-green-50 to-emerald-50 border-green-200">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Why FLAI vs. Plan-Do-Check-Act (PDCA)?</h3>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Why FLAI vs. PDIA (Plan–Do–Inspect–Adapt)?</h3>
                 <p className="text-slate-600">
-                  While PDCA is ideal for agile delivery, FLAI was designed for strategy, innovation, and
-                  hypothesis-driven work. Language shapes mindset - FLAI encourages reflection, discovery, and
-                  intentional change.
+                  PDIA is the established empirical cycle for defined execution work — it assumes the organization
+                  already knows what outcome it's pursuing. AI maturity improvement, especially at the ambiguous
+                  early levels, often doesn't meet that assumption: the organization has to learn its way to the
+                  answer. Renaming the verbs isn't cosmetic. Plan assumes a known objective; Frame acknowledges the
+                  objective must be discovered through careful constraint definition. Do assumes execution toward a
+                  known outcome; Learn treats the intervention as an experiment. Inspect evaluates conformance to a
+                  standard; Assess observes whether behavior actually shifted. Adapt optimizes a working system;
+                  Improve may require reframing the constraint entirely.
                 </p>
               </CardContent>
             </Card>
@@ -479,7 +485,7 @@ export default function SimaFlowPage() {
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-2">Ensures Alignment</h3>
               <p className="text-slate-600">
-                Groundwork phase ensures preparation efforts are tailored to capability levels and domains
+                Groundwork phase ensures preparation efforts are tailored to maturity levels and perspectives
               </p>
             </div>
           </div>

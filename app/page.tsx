@@ -77,8 +77,8 @@ export default function HomePage() {
                 <BarChart3 className="w-8 h-8 text-blue-600 mb-2" />
                 <CardTitle className="text-lg">SIMA-Probe™</CardTitle>
                 <CardDescription>
-                  Diagnostic assessment tool that measures organizational AI maturity across all five dimensions and six
-                  capability levels. The assessment entry point for the ecosystem.
+                  Diagnostic assessment tool that measures organizational AI maturity across all five perspectives and six
+                  maturity levels. The assessment entry point for the ecosystem.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -95,7 +95,7 @@ export default function HomePage() {
                 <Brain className="w-8 h-8 text-indigo-600 mb-2" />
                 <CardTitle className="text-lg">SIMA-Core™</CardTitle>
                 <CardDescription>
-                  The vocabulary layer. Defines the five domains, six capability levels, and tool categories that every
+                  The vocabulary layer. Defines the five perspectives, six maturity levels, and tool categories that every
                   other component operates within. The architecture the whole framework rests on.
                 </CardDescription>
               </CardHeader>
@@ -113,8 +113,9 @@ export default function HomePage() {
                 <Zap className="w-8 h-8 text-green-600 mb-2" />
                 <CardTitle className="text-lg">SIMA-Flow™</CardTitle>
                 <CardDescription>
-                  The improvement cycle architecture. Provides the structured process — grounded in PDCA — for moving
-                  from current-state assessment to target-state advancement through disciplined iterations.
+                  The improvement cycle architecture. Provides the structured process — the Core Cycle for
+                  organizational advancement and the FLAI cycle for project-level execution — for moving from
+                  current-state assessment to target-state advancement through disciplined iterations.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -183,12 +184,12 @@ export default function HomePage() {
               a specific role and connects to the others in a defined sequence.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              SIMA-Core defines the framework's vocabulary: the five domains, <Link href="/maturity" className="text-blue-600 hover:text-blue-800 underline">six capability levels</Link>, and tool
+              SIMA-Core defines the framework's vocabulary: the five perspectives, <Link href="/maturity" className="text-blue-600 hover:text-blue-800 underline">six maturity levels</Link>, and tool
               categories that every other component operates within. SIMA-Probe applies that vocabulary diagnostically,
-              measuring where the organization actually stands across all five dimensions. SIMA-Flow provides the
+              measuring where the organization actually stands across all five perspectives. SIMA-Flow provides the
               improvement cycle architecture — the structured process for moving from current state to target state
               through disciplined, evidence-based iterations. SIMA-Kit supplies the templates, rubrics, playbooks, and
-              governance tools those cycles require at every capability level. SIMA-Ascend builds the practitioner
+              governance tools those cycles require at every maturity level. SIMA-Ascend builds the practitioner
               capability organizations need to run the system consistently and advance it over time.
             </p>
           </div>
@@ -221,7 +222,7 @@ export default function HomePage() {
               <h3 className="text-xl font-semibold text-slate-900 mb-2">Starts Where You Actually Are</h3>
               <p className="text-slate-600">
                 Most frameworks tell you where to go. SIMA360 starts by measuring where you actually are — five
-                dimensions, six capability levels — so improvement cycles are grounded in evidence, not assumption.
+                perspectives, six maturity levels — so improvement cycles are grounded in evidence, not assumption.
               </p>
             </div>
 
@@ -261,9 +262,9 @@ export default function HomePage() {
                   <p className="text-slate-700 leading-relaxed mb-4">
                     SIMA360 is grounded in the research and maturity architecture established in{" "}
                     <Link href="/the-book" className="text-blue-600 hover:text-blue-800 underline">
-                      <em>The Structured AI Maturity Accelerator</em>
+                      <em>The AI Rush — Too Much. Too Soon.</em>
                     </Link>{" "}
-                    by Dr. Charles Suscheck. The framework's five domains, six capability levels, and improvement cycle
+                    by Dr. Charles Suscheck. The framework's five perspectives, six maturity levels, and improvement cycle
                     design come directly from that foundation — not from consulting convention.
                   </p>
                   <p className="text-slate-700 leading-relaxed">

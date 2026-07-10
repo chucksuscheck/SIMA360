@@ -88,7 +88,7 @@ export function EnterpriseScoreCard({
 
       {/* Confidence band note */}
       <p className="text-xs text-slate-400 mt-3">
-        Free-tier confidence band: {confidenceLow.toFixed(1)} – {confidenceHigh.toFixed(1)} &nbsp;·&nbsp; Harmonic mean of domain scores
+        Free-tier confidence band: {confidenceLow.toFixed(1)} – {confidenceHigh.toFixed(1)} &nbsp;·&nbsp; Harmonic mean of perspective scores
       </p>
     </div>
   )

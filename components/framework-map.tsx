@@ -24,7 +24,7 @@ const hotspots: Hotspot[] = [
   { id: "sima-kit",    label: "SIMA-Kit™",             href: "/sima-kit",             top: 65, left: 52, width: 44, height: 34, tip: "top"    },
   { id: "sima-ascend", label: "SIMA-Ascend™",          href: "/sima-ascend",          top: 65, left:  4, width: 44, height: 34, tip: "top"    },
   { id: "sima-probe",  label: "SIMA-Probe™",           href: "/sima-probe",           top: 17, left:  0, width: 25, height: 40, tip: "right"  },
-  // ── Five Domains (middle ring) ────────────────────────────────────
+  // ── Five Perspectives (middle ring) ───────────────────────────────
   { id: "strategy",    label: "Strategy",              href: "/sima-core/strategy",   top: 19, left: 37, width: 26, height: 15, tip: "bottom" },
   { id: "governance",  label: "Governance",            href: "/sima-core/governance", top: 27, left: 58, width: 22, height: 18, tip: "left"   },
   { id: "data",        label: "Data",                  href: "/sima-core/data",       top: 54, left: 57, width: 22, height: 18, tip: "left"   },
@@ -61,7 +61,7 @@ const mobileNav = [
     ],
   },
   {
-    heading: "AI Domains",
+    heading: "AI Perspectives",
     links: [
       { label: "Strategy",    href: "/sima-core/strategy"    },
       { label: "Governance",  href: "/sima-core/governance"  },
@@ -97,7 +97,7 @@ export function FrameworkMap() {
             The SIMA360™ Operating Architecture
           </h2>
           <p className="text-slate-500 max-w-lg mx-auto text-sm leading-relaxed">
-            Five integrated components. Five organizational domains. Six capability levels.
+            Five integrated components. Five organizational perspectives. Six maturity levels.
             One structured path to AI maturity.
           </p>
         </div>
@@ -115,7 +115,7 @@ export function FrameworkMap() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/sima360-framework-overview.svg"
-              alt="SIMA360 framework map — five SIMA components surrounding five AI domains and six capability levels, with FLAI at center"
+              alt="SIMA360 framework map — five SIMA components surrounding five AI perspectives and six maturity levels, with FLAI at center"
               width={600}
               height={600}
               className="w-full h-auto select-none"

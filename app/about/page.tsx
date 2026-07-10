@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "About SIMA360™ — Framework Origin & Research Foundation",
   description:
-    "SIMA360 was built on two years of comparative research across nine leading AI maturity frameworks. Learn about the research foundation, the gaps it addressed, and the framework that resulted.",
+    "SIMA360 was built on two years of comparative research across nine AI maturity frameworks — Element AI, Accenture, IBM, Metascient, Ovum, BCG/MIT Sloan, Microsoft, Gartner, and Deloitte. Learn about the research foundation, the gaps it addressed, and the framework that resulted.",
 }
 
 import { Button } from "@/components/ui/button"
@@ -138,7 +138,11 @@ const AboutPage = () => {
           </div>
 
           <div className="bg-white rounded-lg p-8 mb-8 border border-purple-200">
-            <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">Foundational Research Sources</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-2 text-center">The Nine Frameworks</h3>
+            <p className="text-sm text-slate-500 text-center mb-6 max-w-2xl mx-auto">
+              A cross-section of enterprise, technology platform, responsible-AI, and industry-specific approaches —
+              mapped against SIMA360's five perspectives and six maturity levels.
+            </p>
 
             <div className="grid lg:grid-cols-3 gap-6">
               <Card className="border-l-4 border-l-blue-500">
@@ -148,24 +152,32 @@ const AboutPage = () => {
                       <Building2 className="w-5 h-5 text-blue-600" />
                     </div>
                     <div>
-                      <CardTitle className="text-lg">Enterprise Leaders</CardTitle>
-                      <CardDescription className="text-sm">Industry Giants</CardDescription>
+                      <CardTitle className="text-lg">General AI Maturity</CardTitle>
+                      <CardDescription className="text-sm">Enterprise-Scale Models</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3 text-sm">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">Gartner AI Maturity</span>
+                      <span className="font-medium text-slate-700">Gartner — CIO's Guide to AI</span>
+                      <Badge variant="outline" className="text-xs">Reference Architecture</Badge>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="font-medium text-slate-700">Element AI — AI Maturity Model</span>
+                      <Badge variant="outline" className="text-xs">Stage Granularity</Badge>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="font-medium text-slate-700">Accenture — Art of AI Maturity</span>
                       <Badge variant="outline" className="text-xs">Strategy & Culture</Badge>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">McKinsey AI Readiness</span>
-                      <Badge variant="outline" className="text-xs">Diagnostics</Badge>
+                      <span className="font-medium text-slate-700">Deloitte — State of AI in the Enterprise</span>
+                      <Badge variant="outline" className="text-xs">Risk & Process</Badge>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">Deloitte AI Capability</span>
-                      <Badge variant="outline" className="text-xs">Risk & Process</Badge>
+                      <span className="font-medium text-slate-700">Metascient — AI Transformation Model</span>
+                      <Badge variant="outline" className="text-xs">Behavioral Labels</Badge>
                     </div>
                   </div>
                 </CardContent>
@@ -178,7 +190,7 @@ const AboutPage = () => {
                       <Shield className="w-5 h-5 text-green-600" />
                     </div>
                     <div>
-                      <CardTitle className="text-lg">Standards Bodies</CardTitle>
+                      <CardTitle className="text-lg">Responsible AI</CardTitle>
                       <CardDescription className="text-sm">Governance & Ethics</CardDescription>
                     </div>
                   </div>
@@ -186,16 +198,12 @@ const AboutPage = () => {
                 <CardContent>
                   <div className="space-y-3 text-sm">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">NIST AI RMF</span>
-                      <Badge variant="outline" className="text-xs">Trustworthiness</Badge>
+                      <span className="font-medium text-slate-700">Microsoft — Responsible AI Maturity Model</span>
+                      <Badge variant="outline" className="text-xs">Accountability</Badge>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">WEF Governance</span>
-                      <Badge variant="outline" className="text-xs">Ethics & Rights</Badge>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">ISO/IEC Standards</span>
-                      <Badge variant="outline" className="text-xs">Compliance</Badge>
+                      <span className="font-medium text-slate-700">BCG / MIT Sloan — Overestimating RAI Maturity</span>
+                      <Badge variant="outline" className="text-xs">Structure vs. Behavior</Badge>
                     </div>
                   </div>
                 </CardContent>
@@ -208,24 +216,20 @@ const AboutPage = () => {
                       <Zap className="w-5 h-5 text-purple-600" />
                     </div>
                     <div>
-                      <CardTitle className="text-lg">Technology Leaders</CardTitle>
-                      <CardDescription className="text-sm">Platform & Tools</CardDescription>
+                      <CardTitle className="text-lg">Technology & Industry-Specific</CardTitle>
+                      <CardDescription className="text-sm">Platform & Deployment</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3 text-sm">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">Microsoft AI Maturity</span>
-                      <Badge variant="outline" className="text-xs">Business-Friendly</Badge>
+                      <span className="font-medium text-slate-700">IBM — The AI Ladder</span>
+                      <Badge variant="outline" className="text-xs">MLOps Depth</Badge>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">Google AI Principles</span>
-                      <Badge variant="outline" className="text-xs">Technical Focus</Badge>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">IBM Watson Framework</span>
-                      <Badge variant="outline" className="text-xs">Enterprise AI</Badge>
+                      <span className="font-medium text-slate-700">Ovum (Omdia) — AI Maturity for CSPs</span>
+                      <Badge variant="outline" className="text-xs">Deployment Context</Badge>
                     </div>
                   </div>
                 </CardContent>
@@ -246,25 +250,25 @@ const AboutPage = () => {
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
                     <p className="text-slate-700 text-sm">
-                      <strong>Gartner's AI dimension</strong> — High-level governance and adoption frameworks
+                      <strong>Gartner's five-stage progression</strong> — Provided the reference architecture for SIMA360's maturity-level naming
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0" />
                     <p className="text-slate-700 text-sm">
-                      <strong>McKinsey's diagnostic approach</strong> — Strong capability assessment methodologies
+                      <strong>Element AI's stage-by-stage mapping</strong> — The most operationally useful template for describing what each maturity level looks like
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
                     <p className="text-slate-700 text-sm">
-                      <strong>NIST's trustworthiness focus</strong> — Ethical AI and accountability frameworks
+                      <strong>Accenture's foundational-vs-differentiation finding</strong> — Directly informed SIMA360's weakest-constraint principle
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0" />
                     <p className="text-slate-700 text-sm">
-                      <strong>Microsoft's business alignment</strong> — Practical, enterprise-ready approaches
+                      <strong>Microsoft and BCG's governance depth</strong> — Informed the distinction between governance that exists formally and governance that functions operationally
                     </p>
                   </div>
                 </div>
@@ -279,27 +283,29 @@ const AboutPage = () => {
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0" />
                     <p className="text-slate-700 text-sm">
-                      <strong>Operational execution depth</strong> — Most frameworks lacked detailed implementation
-                      guidance
+                      <strong>No improvement methodology</strong> — Every framework describes states; none describes
+                      how to move between them. This is the gap FLAI (Frame–Learn–Assess–Improve) was built to fill.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0" />
                     <p className="text-slate-700 text-sm">
-                      <strong>Structured improvement paths</strong> — Assessments without actionable advancement
-                      guidance
+                      <strong>Structural indicators, not behavioral ones</strong> — All nine frameworks assess
+                      documents, training completion, and deployment counts, not whether structures hold under real pressure
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0" />
                     <p className="text-slate-700 text-sm">
-                      <strong>Human-AI collaboration focus</strong> — Emphasis on AI autonomy with human oversight
+                      <strong>No cross-perspective dependency</strong> — None address the interaction effect: weakness
+                      in one perspective limits the effective maturity of the entire system
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0" />
                     <p className="text-slate-700 text-sm">
-                      <strong>Integrated improvement cycles</strong> — Continuous advancement at every maturity stage
+                      <strong>No AI-specific failure modes</strong> — Representational drift, recursive reinforcement,
+                      and synthetic confidence appear in none of the nine source frameworks
                     </p>
                   </div>
                 </div>
@@ -317,7 +323,7 @@ const AboutPage = () => {
             <p className="text-lg text-slate-700 leading-relaxed">
               Every framework analyzed in the foundational research describes organizational AI maturity at various
               stages. None of them explains how to get from one stage to the next. They produce assessments. They do not
-              produce improvement paths. Organizations completing a Gartner or McKinsey AI maturity assessment know
+              produce improvement paths. Organizations completing a Gartner or Deloitte AI maturity assessment know
               where they stand. They do not know what to do operationally to change their standing. SIMA360 provides
               that — the structured diagnostic, the improvement cycle, the implementation resources, and the
               practitioner capability development that turns a maturity score into a maturity trajectory.
@@ -337,7 +343,7 @@ const AboutPage = () => {
               <h2 className="text-3xl font-bold text-slate-900">The Intellectual Foundation</h2>
             </div>
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
-              The five domains, six capability levels, FLAI methodology, and diagnostic principles in SIMA360 are
+              The five perspectives, six maturity levels, FLAI methodology, and diagnostic principles in SIMA360 are
               grounded in the book <em>The AI Rush: Too Much. Too Soon.</em> The book establishes the conceptual
               argument. SIMA360 operationalizes it. Organizations that want to understand why the framework is
               structured the way it is should start with the book.
@@ -352,15 +358,15 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* 5. Why AI Implementation Fails (demoted failure stories) */}
+      {/* 5. Why AI Implementation Fails */}
       <section className="py-16 px-4 bg-slate-50">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">What the Research Showed About AI Failures</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">What the Book's Case Studies Show</h2>
             <p className="text-lg text-slate-600">
-              The comparative research confirmed patterns that practitioners already recognize. Organizations fail at AI
-              implementation in predictable ways — and those patterns point directly to the maturity gaps SIMA360 is
-              designed to address.
+              <em>The AI Rush</em> traces its argument through real organizational failures — not because the
+              technology broke, but because the conditions surrounding it weren't mature enough to catch drift before
+              it compounded. Two of those cases illustrate the pattern this book calls synthetic confidence.
             </p>
           </div>
 
@@ -369,28 +375,29 @@ const AboutPage = () => {
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-                    <Users className="w-5 h-5 text-red-600" />
+                    <TrendingUp className="w-5 h-5 text-red-600" />
                   </div>
                   <div>
-                    <CardTitle className="text-xl text-red-800">Amazon's Recruiting AI Disaster</CardTitle>
-                    <CardDescription className="text-sm text-red-600">Gender Bias at Scale</CardDescription>
+                    <CardTitle className="text-xl text-red-800">Zillow's Home-Buying Algorithm</CardTitle>
+                    <CardDescription className="text-sm text-red-600">Coherent Doesn't Mean Correct</CardDescription>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3 text-slate-700">
                   <p>
-                    <strong>The Vision:</strong> Sift through thousands of resumes, identify top talent, and accelerate
-                    recruitment with machine precision.
+                    <strong>The Vision:</strong> Use pricing models to buy homes directly at scale, moving faster than
+                    any team of human analysts could.
                   </p>
                   <p>
-                    <strong>The Reality:</strong> The AI consistently ranked male candidates higher, penalized terms
-                    like "women's chess club captain," and discriminated against graduates from all-women colleges.
+                    <strong>The Reality:</strong> The model's individual pricing decisions were defensible one at a
+                    time. Thousands of them, leaning the same direction at once, produced a billions-of-dollars
+                    exposure nobody was positioned to see until it was already there.
                   </p>
                   <p>
-                    <strong>The Root Cause:</strong> Training on ten years of biased historical data with no guardrails,
-                    bias mitigation techniques, fairness audits, or data diversity reviews. Too much trust in AI
-                    algorithms with little governance.
+                    <strong>The Root Cause:</strong> The organization trusted the model because it was coherent, fast,
+                    and consistent with what it already believed — not because anyone kept testing it against reality.
+                    A single point of control watched one number while five other perspectives moved unmonitored.
                   </p>
                 </div>
               </CardContent>
@@ -403,9 +410,9 @@ const AboutPage = () => {
                     <AlertTriangle className="w-5 h-5 text-orange-600" />
                   </div>
                   <div>
-                    <CardTitle className="text-xl text-orange-800">Tesla's Autopilot Crashes</CardTitle>
+                    <CardTitle className="text-xl text-orange-800">Microsoft's Tay Chatbot</CardTitle>
                     <CardDescription className="text-sm text-orange-600">
-                      Overconfidence in Partial Autonomy
+                      Shipping Isn't Governing
                     </CardDescription>
                   </div>
                 </div>
@@ -413,16 +420,18 @@ const AboutPage = () => {
               <CardContent>
                 <div className="space-y-3 text-slate-700">
                   <p>
-                    <strong>The Vision:</strong> Autopilot to drive cars more safely and easily than a human could.
+                    <strong>The Vision:</strong> An AI personality that would learn to sound more natural through real
+                    conversations with people on social media.
                   </p>
                   <p>
-                    <strong>The Reality:</strong> Multiple high-profile crashes where Autopilot failed to detect
-                    stationary vehicles, misread road markings, and struggled with unpredictable conditions.
+                    <strong>The Reality:</strong> Coordinated users shaped Tay's responses within hours. Microsoft
+                    pulled it offline sixteen hours after launch.
                   </p>
                   <p>
-                    <strong>The Root Cause:</strong> Insufficient edge case testing, arrogant assumptions about driving
-                    complexity, lack of human-in-the-loop safeguards, and messaging that amplified capabilities over
-                    constraints.
+                    <strong>The Root Cause:</strong> The technology worked exactly as designed — it learned from what
+                    people fed it. What was missing was a way to watch what it was learning in real time, decide how
+                    much drift was tolerable, and pull it back the moment reality stopped matching the plan. A rollout
+                    plan is not a governance plan.
                   </p>
                 </div>
               </CardContent>
@@ -430,42 +439,42 @@ const AboutPage = () => {
           </div>
 
           <div className="bg-white border border-slate-200 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center">The Pattern is Clear</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center">The Pattern Is Clear</h3>
             <div className="grid md:grid-cols-4 gap-6 text-center">
               <div>
                 <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Eye className="w-6 h-6 text-red-600" />
                 </div>
-                <h4 className="font-semibold text-slate-900 mb-2">Blind Trust in AI</h4>
+                <h4 className="font-semibold text-slate-900 mb-2">Synthetic Confidence</h4>
                 <p className="text-sm text-slate-600">
-                  Organizations assume AI knows more than humans and can operate independently
+                  Trusting an output because it's coherent and consistent with belief — not because anyone tested it
                 </p>
               </div>
               <div>
                 <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Shield className="w-6 h-6 text-red-600" />
                 </div>
-                <h4 className="font-semibold text-slate-900 mb-2">No Governance</h4>
+                <h4 className="font-semibold text-slate-900 mb-2">One Control Point</h4>
                 <p className="text-sm text-slate-600">
-                  Lack of proper oversight, bias detection, and risk management frameworks
-                </p>
-              </div>
-              <div>
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <TrendingUp className="w-6 h-6 text-red-600" />
-                </div>
-                <h4 className="font-semibold text-slate-900 mb-2">Rush to Deploy</h4>
-                <p className="text-sm text-slate-600">
-                  Pressure to implement AI quickly without proper preparation or testing
+                  A single dashboard or owner watching one number while four other perspectives go unmonitored
                 </p>
               </div>
               <div>
                 <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <AlertTriangle className="w-6 h-6 text-red-600" />
                 </div>
-                <h4 className="font-semibold text-slate-900 mb-2">Ignoring Edge Cases</h4>
+                <h4 className="font-semibold text-slate-900 mb-2">Shipping Without Governing</h4>
                 <p className="text-sm text-slate-600">
-                  Insufficient testing for real-world complexity and unexpected scenarios
+                  A rollout plan for how a system meets the world, with no plan for who watches it once it's there
+                </p>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Users className="w-6 h-6 text-red-600" />
+                </div>
+                <h4 className="font-semibold text-slate-900 mb-2">Capability Outrunning Maturity</h4>
+                <p className="text-sm text-slate-600">
+                  Expanding what AI is allowed to do faster than the organization can actually oversee it
                 </p>
               </div>
             </div>
@@ -498,7 +507,7 @@ const AboutPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  Measures organizational AI maturity across all five dimensions and six capability levels, producing
+                  Measures organizational AI maturity across all five perspectives and six maturity levels, producing
                   diagnostic results that drive structured improvement. The assessment entry point for the ecosystem.
                 </p>
                 <Button variant="ghost" asChild className="p-0 h-auto text-blue-600 hover:text-blue-800">
@@ -523,7 +532,7 @@ const AboutPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  The vocabulary layer of the framework: three core models — Domains, AI Capability Levels, and
+                  The vocabulary layer of the framework: three core models — Strategic Perspectives, AI Maturity Levels, and
                   AI Tool Categories — that every other component operates within.
                 </p>
                 <Button variant="ghost" asChild className="p-0 h-auto text-indigo-600 hover:text-indigo-800">
@@ -548,8 +557,9 @@ const AboutPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  The cycle architecture that structures improvement — the Core Cycle for domain development and
-                  the FLAI Cycle (Frame, Learn, Assess, Improve) for project-level execution.
+                  The cycle architecture that structures improvement — the macro Core Cycle (Assess Capabilities → Set
+                  Groundwork → Execute) for organizational advancement and the FLAI Cycle (Frame, Learn, Assess,
+                  Improve) for project-level execution within it.
                 </p>
                 <Button variant="ghost" asChild className="p-0 h-auto text-green-600 hover:text-green-800">
                   <Link href="/sima-flow">
@@ -573,8 +583,8 @@ const AboutPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  The resource layer — templates, rubrics, playbooks, and governance tools stratified by capability
-                  level and domain that SIMA-Flow cycles require.
+                  The resource layer — templates, rubrics, playbooks, and governance tools stratified by maturity
+                  level and perspective that SIMA-Flow cycles require.
                 </p>
                 <Button variant="ghost" asChild className="p-0 h-auto text-purple-600 hover:text-purple-800">
                   <Link href="/sima-kit">
