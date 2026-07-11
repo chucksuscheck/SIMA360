@@ -405,6 +405,7 @@ export default function SIMAProbe() {
                       <div>
                         <CardTitle className="text-2xl">Level 2 – Insight</CardTitle>
                         <CardDescription className="text-lg mt-2">Basic Subscription</CardDescription>
+                        <p className="text-sm font-semibold text-slate-500 mt-1">Pricing: Pending Announcement</p>
                       </div>
                       <Badge className="bg-blue-100 text-blue-700 text-lg px-4 py-2">PAID</Badge>
                     </div>
@@ -466,6 +467,7 @@ export default function SIMAProbe() {
                       <div>
                         <CardTitle className="text-2xl">Level 3 – Advisory</CardTitle>
                         <CardDescription className="text-lg mt-2">Organizational Subscription</CardDescription>
+                        <p className="text-sm font-semibold text-slate-500 mt-1">Pricing: Pending Announcement</p>
                       </div>
                       <Badge className="bg-purple-100 text-purple-700 text-lg px-4 py-2">PREMIUM</Badge>
                     </div>
@@ -534,6 +536,7 @@ export default function SIMAProbe() {
                       <div>
                         <CardTitle className="text-2xl">Level 3A – Consulting Extension</CardTitle>
                         <CardDescription className="text-lg mt-2">Enterprise Consulting</CardDescription>
+                        <p className="text-sm font-semibold text-slate-500 mt-1">Pricing: Pending Announcement</p>
                       </div>
                       <Badge className="bg-gradient-to-r from-purple-600 to-blue-600 text-white text-lg px-4 py-2">
                         ENTERPRISE

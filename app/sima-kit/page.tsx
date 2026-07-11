@@ -422,7 +422,8 @@ const SIMAKitPage = () => {
               </Link>
             </Button>
           </div>
-          <p className="text-sm text-purple-200 mt-4">
+          <p className="text-sm font-semibold text-purple-100 mt-4">Pricing: Pending Announcement</p>
+          <p className="text-sm text-purple-200 mt-1">
             SIMA Kit™ resources are available under license. Contact info@sima360.org for details.
           </p>
         </div>

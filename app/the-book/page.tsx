@@ -16,8 +16,9 @@ export const metadata: Metadata = {
   },
 }
 
-// TODO: Replace with the actual purchase URL before launch
-const BOOK_PURCHASE_URL = "#"
+// No retail listing exists yet — points to an internal "publication pending" page.
+// Replace with the actual purchase URL once the book is available for sale.
+const BOOK_PURCHASE_URL = "/the-book/publication-pending"
 
 export default function TheBookPage() {
   return (
@@ -57,9 +58,9 @@ export default function TheBookPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600" asChild>
-                  <a href={BOOK_PURCHASE_URL} target="_blank" rel="noopener noreferrer">
+                  <Link href={BOOK_PURCHASE_URL}>
                     Get the Book <ArrowRight className="ml-2 w-4 h-4" />
-                  </a>
+                  </Link>
                 </Button>
                 <Button
                   size="lg"
@@ -194,9 +195,9 @@ export default function TheBookPage() {
               significant gaps.
             </p>
             <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600" asChild>
-              <a href={BOOK_PURCHASE_URL} target="_blank" rel="noopener noreferrer">
+              <Link href={BOOK_PURCHASE_URL}>
                 Get the Book <ArrowRight className="ml-2 w-4 h-4" />
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
