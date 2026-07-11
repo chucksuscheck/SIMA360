@@ -139,6 +139,15 @@ export function Navigation() {
           Download Guide
         </a>
 
+        <a
+          href="https://SIMA360Classes.eventbee.com/boxoffice"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
+        >
+          Class List
+        </a>
+
         <Link
           href="/about"
           className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
@@ -242,6 +251,16 @@ export function Navigation() {
               className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
             >
               Download Guide
+            </a>
+
+            <a
+              href="https://SIMA360Classes.eventbee.com/boxoffice"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMobile}
+              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
+            >
+              Class List
             </a>
 
             <Link

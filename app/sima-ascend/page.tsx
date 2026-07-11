@@ -56,7 +56,7 @@ export default function SimaAscendPage() {
             </Link>
             <Navigation />
             <Button asChild className="hidden md:inline-flex">
-              <a href="mailto:charles.suscheck@sima360.org?subject=Schedule%20a%20Conversation">
+              <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">
                 Schedule a Conversation
               </a>
             </Button>
@@ -615,7 +615,7 @@ export default function SimaAscendPage() {
               asChild
               className="border-orange-300 text-orange-100 hover:bg-orange-800 bg-transparent"
             >
-              <a href="mailto:charles.suscheck@sima360.org?subject=Schedule%20a%20Conversation">
+              <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">
                 Schedule a Conversation
               </a>
             </Button>
