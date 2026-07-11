@@ -117,6 +117,13 @@ export function Navigation() {
         </div>
 
         <Link
+          href="/sima-probe/assessment"
+          className="ml-2 px-4 py-2 text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 rounded transition-colors"
+        >
+          Start Probe
+        </Link>
+
+        <Link
           href="/the-book"
           className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
         >
@@ -137,13 +144,6 @@ export function Navigation() {
           className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
         >
           About
-        </Link>
-
-        <Link
-          href="/sima-probe/assessment"
-          className="ml-2 px-4 py-2 text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 rounded transition-colors"
-        >
-          Assessment
         </Link>
       </nav>
 
@@ -218,6 +218,16 @@ export function Navigation() {
               )}
             </div>
 
+            <div className="px-4 pt-2 pb-1 border-t border-slate-100 mt-1">
+              <Link
+                href="/sima-probe/assessment"
+                onClick={closeMobile}
+                className="block w-full text-center px-4 py-2 text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 rounded transition-colors"
+              >
+                Start Probe
+              </Link>
+            </div>
+
             <Link
               href="/the-book"
               onClick={closeMobile}
@@ -243,16 +253,6 @@ export function Navigation() {
             >
               About
             </Link>
-
-            <div className="px-4 pt-2 pb-1 border-t border-slate-100 mt-1">
-              <Link
-                href="/sima-probe/assessment"
-                onClick={closeMobile}
-                className="block w-full text-center px-4 py-2 text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 rounded transition-colors"
-              >
-                Assessment
-              </Link>
-            </div>
           </div>
         )}
       </div>
