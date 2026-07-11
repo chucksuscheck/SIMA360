@@ -23,42 +23,42 @@ const capabilityLevels = [
     name: "Initial",
     color: "slate",
     description:
-      "No AI-specific infrastructure exists. AI tools are used ad-hoc, often as consumer or departmental applications with no formal selection or evaluation. Security implications of AI tools are not reviewed. There is no model or pipeline lifecycle management.",
+      "Technology hasn't formed into a real AI operating environment — tools get tested informally with no stable pattern of organizational use. The work is identifying where AI use should begin and what basic conditions need to exist first.",
   },
   {
     level: 2,
     name: "Exploring",
     color: "slate2",
     description:
-      "Experimenting with AI tools using available cloud resources. No standardization of tools or platforms across teams. Minimal security review of AI tool usage. Teams are learning what infrastructure AI actually requires through trial and error.",
+      "Technology is fragmented and isolated in small pilots. Change is easy here, but not usefully so — if a model is replaced, very little breaks, because very little is actually supported yet. Stable integration points need to be built.",
   },
   {
     level: 3,
     name: "Applying",
     color: "orange",
     description:
-      "Specific AI tools are selected for pilot projects. Some initial infrastructure investment is underway. Basic security considerations are being addressed for high-visibility use cases. MLOps practices are nascent or absent.",
+      "Technology supports real workflows, creating value and dependency at the same time. The test is what happens when a component changes: if it causes unexpected downstream issues, the system is stable only until it's touched.",
   },
   {
     level: 4,
     name: "Formalizing",
     color: "amber",
     description:
-      "A standardized AI technology stack is defined and governed. Formal security policies cover AI tool adoption and data use. MLOps practices are emerging — structured pipelines for model development, testing, and deployment are taking shape.",
+      "Technology is structured and integrated, but the limitation is inflexibility rather than instability. Changes are possible but expensive, slow, or require coordination across components — stable in a way that resists improvement.",
   },
   {
     level: 5,
     name: "Optimizing",
     color: "yellow",
     description:
-      "Infrastructure is scalable and cost-optimized. Automated ML pipelines are in production. Proactive security monitoring for AI systems is in place. Model performance is tracked and models are retrained or retired on a defined schedule.",
+      "The system is designed to evolve — dependencies are understood and changes can be introduced without destabilizing decisions. The failure to watch for is overextension: adding complexity faster than it can be governed.",
   },
   {
     level: 6,
     name: "Leading",
     color: "lime",
     description:
-      "State-of-the-art infrastructure supports autonomous AI operations with robust human oversight. The organization contributes to technology innovation and open-source tooling. AI infrastructure is a competitive differentiator. Operational AI is self-monitoring within defined governance boundaries.",
+      "Technology is deliberately structured to support ongoing change, managing dependency as a first-class concern. The failure mode here runs the other way: building for flexibility that isn't yet needed.",
   },
 ]
 
@@ -356,17 +356,17 @@ export default function TechnologyPerspectivePage() {
               {
                 component: "SIMA-Probe™",
                 href: "/sima-probe",
-                role: "Measures your current Technology maturity level — assessing infrastructure readiness, tool governance, lifecycle management, and security posture for AI operations.",
+                role: "Measures your current Technology maturity level — assessing Architecture and Adaptability, Integration, Reliability, Security, AI Operations and Automation, and Observability.",
               },
               {
                 component: "SIMA-Flow™",
                 href: "/sima-flow",
-                role: "Structures improvement cycles for building technology capability — from selecting and governing AI tools to implementing MLOps pipelines and proactive security monitoring.",
+                role: "Structures improvement cycles for building sustainable technology capability — from abstracting a dependency behind a service layer to building model, environment, and data drift observability.",
               },
               {
                 component: "SIMA-Kit™",
                 href: "/sima-kit",
-                role: "Provides AI tool evaluation frameworks, infrastructure readiness checklists, MLOps pipeline templates, and AI-specific security control references.",
+                role: "Provides architecture-readiness checklists, integration and reliability templates, AI operations and rollback runbooks, and drift-observability references.",
               },
               {
                 component: "SIMA-Ascend™",

@@ -191,9 +191,11 @@ export default function ResultsPage() {
             Perspective scores are weighted averages of capability scores within each perspective, using
             the relative weights defined in the SIMA360™ framework. Anchor capabilities below
             Applying (2.0) cap the perspective at Applying. Perspectives with fewer than 3 evidence
-            responses are also capped at Applying. The enterprise score is the weighted harmonic
-            mean of perspective scores, weighted by strategic importance: Governance 25%,
-            Technology 22%, Data 20%, Strategy 18%, People 15%.
+            responses are also capped at Applying. Per the book's weakest-constraint principle
+            (Chapter 10), the enterprise score is <em>not</em> an average of the five perspective
+            scores — it is the lowest of the five. The system behaves at the level of its least
+            mature perspective, not its most advanced one, regardless of how far ahead the other
+            four have gotten.
           </p>
           <p>
             Contradictions (e.g., an unestablished anchor alongside high scores elsewhere) trigger

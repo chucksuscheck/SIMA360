@@ -228,10 +228,9 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-700">
-                    AI is under consideration but the organizational conditions for reliable AI outcomes do not yet
-                    exist. No formal governance. No defined strategy for AI investment or prioritization. Data access
-                    is unstructured. AI literacy is concentrated in isolated individuals rather than distributed across
-                    the organization. Technology infrastructure has not been evaluated for AI readiness.
+                    AI interest is real, but nothing yet coordinates it. Activity is possible; consistency isn't.
+                    Success here isn't a strategy document — it's narrowing general awareness down to the small
+                    number of decisions worth examining first.
                   </p>
                 </CardContent>
               </Card>
@@ -245,10 +244,9 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-700">
-                    Isolated experimentation is underway but governance, data, and people conditions remain informal.
-                    Individual projects reflect individual initiative rather than organizational strategy. Early AI
-                    awareness is growing but there is no shared vocabulary for evaluating AI readiness, no formal risk
-                    management, and no structured process for moving from experimentation to application.
+                    Multiple efforts are underway, but they're disconnected — each built on its own assumptions, with
+                    no shared standard connecting them. Work spreads across many places without learning
+                    accumulating anywhere.
                   </p>
                 </CardContent>
               </Card>
@@ -262,11 +260,9 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-700">
-                    Specific AI use cases are producing results but the operational conditions that would make those
-                    results repeatable are not yet in place. Governance frameworks are beginning to emerge. Data quality
-                    investments have started. Some cross-functional coordination exists but is project-dependent rather
-                    than structural. Early momentum is real but fragile — dependent on specific people and specific
-                    projects rather than organizational systems.
+                    Individual efforts work and can be defended on their own terms, but they don't generalize past the
+                    specific context that produced them. The organization is productive in ways that don't add up —
+                    opportunism, not architecture, is driving outcomes.
                   </p>
                 </CardContent>
               </Card>
@@ -280,11 +276,9 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-700">
-                    Repeatable operational conditions are being established. Governance is documented and beginning to
-                    function operationally rather than performatively. Data quality and access are managed through
-                    formal policies. AI strategy is aligned with business priorities and visible to leadership.
-                    Cross-functional teams apply standardized practices. The organization is transitioning from
-                    dependent on individual initiative to dependent on organizational systems.
+                    Structure exists and holds under normal conditions. The gap shows up specifically when something
+                    is contested, urgent, or the world changes underneath it — documentation looks complete before
+                    the pressure test runs.
                   </p>
                 </CardContent>
               </Card>
@@ -298,10 +292,9 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-700">
-                    AI operates within robust governance structures that function under real operational conditions —
-                    not just in compliance reviews. Feedback loops produce continuous improvement across all five
-                    perspectives. Real-time analytics inform strategic decisions. The organization proactively manages AI
-                    risk rather than reactively responding to failures. Capability is organizational, not individual.
+                    The system is tested against outcomes continuously, and what's learned changes what happens next,
+                    not just what gets documented. The challenge is resisting expansion driven by capability rather
+                    than readiness.
                   </p>
                 </CardContent>
               </Card>
@@ -315,11 +308,8 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-700">
-                    AI is embedded in the organization's strategic differentiation and operational identity.
-                    Governance, data, people, technology, and strategy conditions are mutually reinforcing and
-                    continuously improving. The organization contributes to industry standards rather than following
-                    them. New AI capabilities are absorbed by a mature organizational system — not deployed into an
-                    unprepared one.
+                    Improvement is built into how the organization operates day to day, rather than something applied
+                    to it periodically. This isn't the final destination — it's the beginning of stewardship.
                   </p>
                 </CardContent>
               </Card>
@@ -378,7 +368,7 @@ export default function SIMAProbe() {
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span>Enterprise score — harmonic mean of perspective scores weighted by strategic importance</span>
+                          <span>Enterprise score — the weakest-constraint principle: your lowest perspective score sets the operating level, not an average of all five</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />

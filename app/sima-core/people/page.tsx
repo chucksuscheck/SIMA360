@@ -23,42 +23,42 @@ const capabilityLevels = [
     name: "Initial",
     color: "slate",
     description:
-      "AI is viewed as a technology problem, not a people one. There are no training programs, no AI literacy initiatives, and no structured talent strategy. A few individuals may be self-educating. The organization as a whole is unprepared to work alongside AI systems.",
+      "People don't yet share a frame for AI's role in their work — they can't explain what it's supposed to change, what stays their responsibility, or where judgment is expected. Basic role clarity has to exist first.",
   },
   {
     level: 2,
     name: "Exploring",
     color: "sky",
     description:
-      "Ad-hoc learning is occurring. Internal champions are advocating for AI literacy but without organizational support. Some individuals have completed self-directed courses. There is no structured program, no defined competency model, and no investment in change management.",
+      "Expectations are unclear and behavior reflects it. Some people lean heavily on AI outputs, others ignore them, with no shared guidance. What's needed is just basic expectations for when AI should be used, and how.",
   },
   {
     level: 3,
     name: "Applying",
     color: "blue",
     description:
-      "Training exists for specific roles involved in AI projects. Early cross-functional collaboration is beginning. Responsible AI (RAI) has not yet entered training curricula. Change management is acknowledged but not resourced or structured.",
+      "Usage shows real value, but interpretation stays local — two experienced people can act on the same output differently and both believe they're right. The inconsistency hides behind case complexity instead of missing standards.",
   },
   {
     level: 4,
     name: "Formalizing",
     color: "violet",
     description:
-      "A structured AI literacy program is in place. A defined talent strategy for AI covers hiring, reskilling, and retention. Change management processes are documented and staffed. Responsible AI principles are introduced in training programs.",
+      "The problem looks solved: training exists, guidance is documented. What completion rates can't show is what happens under pressure — people revert to personal judgment, and the variation training was supposed to eliminate comes back.",
   },
   {
     level: 5,
     name: "Optimizing",
     color: "purple",
     description:
-      "Enterprise-wide AI competency is building. Continuous learning is embedded in the culture. Responsible AI is central to training rather than a footnote. Cross-functional teams working on AI have the skills they need. Leadership actively models AI literacy.",
+      "Interpretation is consistent and explainable. People understand why the guidance exists and apply it similarly across contexts. The difficulty is sustaining that as the system reaches new users and new use cases.",
   },
   {
     level: 6,
     name: "Leading",
     color: "sky",
     description:
-      "AI literacy is a defining organizational characteristic. The organization develops and shares AI education externally. Talent recognized for AI expertise attracts further expertise. The culture is AI-ready — adaptive, curious, and responsible by default.",
+      "Interpretation itself becomes a source of improvement — differences in how outputs get applied are analyzed and fed back into guidance and training. The failure to watch for is complacency.",
   },
 ]
 
@@ -333,17 +333,17 @@ export default function PeoplePerspectivePage() {
               {
                 component: "SIMA-Probe™",
                 href: "/sima-probe",
-                role: "Measures your current People maturity level — assessing AI literacy, talent strategy, change management readiness, and RAI awareness across the organization.",
+                role: "Measures your current People maturity level — assessing Interpretation Rules, Visibility, Training as an Evolving System, Learning From Failure, and Guarding Against Overtrust.",
               },
               {
                 component: "SIMA-Flow™",
                 href: "/sima-flow",
-                role: "Structures improvement cycles for building organizational AI capability — from closing specific skills gaps to developing a long-term workforce readiness strategy.",
+                role: "Structures improvement cycles for building calibrated judgment — from closing a specific interpretation gap to building organization-wide guarding against overtrust.",
               },
               {
                 component: "SIMA-Kit™",
                 href: "/sima-kit",
-                role: "Provides AI literacy curriculum frameworks, change management planning templates, cross-functional team charters, and RAI training resources.",
+                role: "Provides interpretation-rule templates, visibility and override-logging patterns, evolving-training cadences, and guarding-against-overtrust playbooks.",
               },
               {
                 component: "SIMA-Ascend™",

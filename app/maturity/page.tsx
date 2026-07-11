@@ -21,144 +21,144 @@ const levels = [
     number: 1,
     slug: "initial",
     name: "Initial",
-    tagline: "AI is on the radar. It is not yet a system.",
+    tagline: "AI interest is real, but nothing yet coordinates it.",
     accent: "slate",
     borderClass: "border-slate-400",
     badgeClass: "bg-slate-100 text-slate-800 border-slate-300",
     numClass: "bg-slate-200 text-slate-800",
     overview:
-      "Organizations at the Initial level are at the starting point of every AI adoption journey. AI is being considered — driven by industry pressure, executive curiosity, or a specific use case that surfaced — but it has not yet been approached in a structured way. Initiatives, if any exist, are isolated experiments. There are no formal frameworks, no governance structures, and no shared understanding of what AI maturity means. This is not a failure state. Every organization begins here. The question is what it will take to advance.",
+      "Every organization begins here. Activity is possible; consistency isn't. This isn't revealed by how mature the organization looks on paper — it's revealed by behavior: pull three senior leaders aside separately and ask which AI-influenced decisions matter most right now. At Initial, you get opportunity or competitive pressure, not a specific decision. Success here isn't a strategy document, a policy, or a training program. It's narrowing a vague sense that AI matters down to the small number of specific conditions worth examining first.",
     perspectives: {
       Strategy:
-        "No formal AI strategy exists. AI decisions are ad-hoc. The technology is viewed as a point solution — something IT evaluates — rather than a strategic capability that leadership owns. Individual departments may pursue AI independently of any organizational direction.",
+        "Strategy hasn't formed enough to guide decisions. Leaders speak in terms of opportunity or competitive pressure, but nothing yet points at a specific decision. Success here isn't a strategy document — it's narrowing general awareness down to a small number of candidate decisions worth examining.",
       Governance:
-        "No AI governance structure exists. Tools are adopted without formal review. Ethical risks are unaddressed. Compliance obligations related to AI are not tracked. When something goes wrong, accountability is contested rather than pre-assigned.",
+        "Governance hasn't meaningfully formed around AI. General risk or compliance practices may exist, but haven't been translated into AI's specific decision conditions. Responsibility is assumed rather than assigned — no one can clearly say who owns an AI-influenced decision before something goes wrong. Success here is establishing that AI governance means decision control, not technology approval.",
       Data:
-        "Data is siloed across departments and systems. Quality is inconsistent and undocumented. There are no data governance policies. AI projects that require reliable data either struggle to get it or proceed on data that cannot be trusted.",
+        "Data is present but not yet a managed decision asset. Teams can't reliably say what data would be needed to support a given decision. The work here is narrow: identify the small set of data elements that matter most to the first decisions the organization wants to improve.",
       People:
-        "AI is viewed as a technology problem, not a people one. There are no training programs, no AI literacy initiatives, and no structured talent strategy. A few individuals may be self-educating. The organization as a whole is unprepared to work alongside AI systems.",
+        "People don't yet share a frame for AI's role in their work — they can't explain what it's supposed to change, what stays their responsibility, or where judgment is expected. Basic role clarity has to exist before consistent use is realistic.",
       Technology:
-        "No AI-specific infrastructure exists. Tools are used ad-hoc — often as consumer or departmental applications chosen without formal evaluation. Security implications of AI tools are not reviewed. There is no model or pipeline lifecycle management of any kind.",
+        "Technology hasn't formed into a real AI operating environment — tools get tested informally with no stable pattern of organizational use. There's no coherent system to depend on yet. The work is identifying where AI use should begin and what basic conditions need to exist first.",
     },
   },
   {
     number: 2,
     slug: "exploring",
     name: "Exploring",
-    tagline: "AI is being investigated. Structure is still missing.",
+    tagline: "Multiple efforts are underway, but nothing connects them.",
     accent: "blue",
     borderClass: "border-blue-400",
     badgeClass: "bg-blue-100 text-blue-800 border-blue-200",
     numClass: "bg-blue-100 text-blue-800",
     overview:
-      "At the Exploring level, AI has moved from passive awareness to active investigation. Teams are experimenting — running pilots, evaluating tools, building foundational literacy. These efforts are real and valuable, but they remain largely disconnected from each other and from organizational strategy. Champions have emerged, but they are working without a shared system. The risk at this level is that exploration without structure leads to redundant work, inconsistent results, and eventual disillusionment when early experiments don't scale.",
+      "Multiple efforts are underway, but they're disconnected — each built on its own assumptions, with no shared standard connecting them. Pull three senior leaders aside separately at this level and you'll get AI initiatives named, but materially different explanations of which decisions matter or why. The task isn't more experimentation. It's narrowing to the few decisions that actually matter and establishing the ownership and shared definitions that let those efforts start accumulating learning instead of just activity.",
     perspectives: {
       Strategy:
-        "Strategic discussion is beginning. A few champions are advocating for AI. There is no shared prioritization framework and no formal process for evaluating which AI investments make sense. Strategy exists in conversations and presentations, not in documents that govern decisions.",
+        "Strategy is conceptual. Leaders agree AI matters but describe different objectives when asked directly. Initiatives are driven by tools and enthusiasm rather than defined decision problems, so work spreads across many places without learning accumulating anywhere. The task is narrowing to the few decisions that actually matter.",
       Governance:
-        "Awareness of governance needs is emerging. Informal discussions about AI risk are occurring but produce no formal policies. Compliance questions are being raised without consistent answers. A few individuals are concerned; the organization is not yet structured to act on those concerns.",
+        "Governance is situational. Ownership may exist on paper but isn't exercised consistently, and similar situations produce different outcomes depending on who's involved. What has to be established before the next Maturity Level is repeatable ownership — knowing in advance who owns what.",
       Data:
-        "Awareness of data quality issues is growing. Some teams are cleaning data for specific projects. There is no formal governance, no stewardship roles, and no shared standard for what reliable data means across the organization.",
+        "Data exists but isn't a reliable decision asset — fragmented across systems, definitions varying by team, reconciliation happening informally. If two teams answer the same question differently and can't trace why, the organization is still exploring. What's needed is shared definitions for the handful of critical elements that support key decisions, not a comprehensive data strategy.",
       People:
-        "Ad-hoc learning is occurring. Internal champions are advocating for AI literacy but without organizational backing. Some individuals have completed self-directed training. There is no structured program, no defined competency model, and no investment in change management.",
+        "Expectations are unclear and behavior reflects it. Some people lean heavily on AI outputs, others ignore them, and neither approach is grounded in shared guidance. What has to be established isn't a sophisticated interpretation standard — just basic expectations for when AI should be used, and how.",
       Technology:
-        "Teams are experimenting with AI tools using available cloud resources. There is no standardization across teams. Security review of AI tool usage is minimal. Teams are learning what AI infrastructure actually requires through trial and error rather than design.",
+        "Technology is fragmented and isolated in small pilots. Change is easy here, but not in a useful way — if a model is replaced, very little breaks, because very little is actually supported yet. What needs building is stable integration points where behavior starts to matter.",
     },
   },
   {
     number: 3,
     slug: "applying",
     name: "Applying",
-    tagline: "AI is producing results. They aren't reproducible yet.",
+    tagline: "Individual efforts work, but they don't generalize.",
     accent: "indigo",
     borderClass: "border-indigo-400",
     badgeClass: "bg-indigo-100 text-indigo-800 border-indigo-200",
     numClass: "bg-indigo-100 text-indigo-800",
     overview:
-      "The Applying level marks the first genuine operational use of AI within the organization. Specific use cases are in production and delivering value in at least some functions. The challenge is that this value is partial and fragile. Projects succeed where the right people and conditions came together, not because the organization has built a repeatable capability. Opportunism — not architecture — is driving outcomes. Progress depends on specific individuals rather than on organizational systems that would produce results consistently.",
+      "Individual efforts work and can be defended on their own terms, but they don't generalize past the specific context that produced them. Teams can explain their own use cases but can't explain enterprise-level prioritization or trade-offs. The organization is productive in ways that don't add up — success is opportunism, not architecture, and the constraint at this level is the inability to stop work that isn't actually moving the organization forward as a system.",
     perspectives: {
       Strategy:
-        "An informal AI roadmap exists. Some alignment to business goals is present for specific projects, but it is project-level, not organizational. Investment planning and ROI tracking are absent or inconsistent. Success is recognized when it happens but not designed for in advance.",
+        "Individual teams can explain what they're improving and show measurable gains — but there's no shared logic for prioritizing across teams, so everything looks equally worth pursuing. The organization is productive in ways that don't add up. The constraint is the inability to stop work.",
       Governance:
-        "Some governance policies exist for specific AI use cases. Compliance efforts are a patchwork — thorough for high-visibility projects, absent for others. Risk is managed reactively. Documentation is incomplete and inconsistent across the portfolio.",
+        "Governance exists in parts of the organization — some decisions are well-controlled, others aren't, and similar decisions get handled differently across teams. The work here is extension: making consistent what's already working in one place and applying the same standard elsewhere.",
       Data:
-        "Data is made available and improved for targeted AI use cases. Quality is better for project-specific datasets but remains inconsistent across the organization. Data integration is partial — some silos have been addressed, others haven't been touched.",
+        "Data supports specific use cases, but the improvements are context-bound — dependent on local assumptions that don't generalize. Take a data-driven decision that works in one area and try it elsewhere: if performance degrades, the system is still applying rather than scaling. What needs identifying is which elements are portable across decisions and what standardizing them requires.",
       People:
-        "Training exists for specific roles involved in AI projects. Early cross-functional collaboration is beginning. Responsible AI has not yet entered training curricula. Change management is acknowledged as a need but is not resourced or structured.",
+        "Usage shows real value, but interpretation stays local — two experienced people can act on the same output differently and both believe they're right. The inconsistency hides because the organization attributes it to case complexity instead of missing standards.",
       Technology:
-        "Specific tools are selected for pilot projects. Some infrastructure investment is underway. Basic security considerations are being addressed for high-visibility use cases. MLOps practices are nascent or absent — models are deployed but not managed as living systems.",
+        "Technology supports real workflows, which creates value and dependency at the same time. The test is what happens when a component changes: if a model update or workflow adjustment causes unexpected downstream issues, the system is still applying — stable until it's touched.",
     },
   },
   {
     number: 4,
     slug: "formalizing",
     name: "Formalizing",
-    tagline: "AI capability is becoming institutional, not individual.",
+    tagline: "Structure holds under normal conditions — the gap shows up under pressure.",
     accent: "cyan",
     borderClass: "border-cyan-500",
     badgeClass: "bg-cyan-100 text-cyan-800 border-cyan-200",
     numClass: "bg-cyan-100 text-cyan-800",
     overview:
-      "At the Formalizing level, the organization makes the critical shift from individual AI successes to institutional AI capability. Governance frameworks are documented and enforced. Data management practices are intentional. Training programs are structured. Technology stacks are selected and governed. The hallmark of this level is repeatability — the ability to initiate an AI project and expect a predictable process, not just a hoped-for outcome. Leadership has committed to AI as an organizational priority, not just a departmental experiment.",
+      "Structure exists and holds under normal conditions. The gap shows up specifically when something is contested, urgent, or the world changes underneath it. This is the level most self-assessments mistake for a finish line, because the documentation looks complete — roles, responsibilities, policies, training records. The real test isn't the paperwork. It's tracing a recent difficult decision end to end. If that trace depends on who was in the room, the organization is still Formalizing no matter how thorough it looks on paper.",
     perspectives: {
       Strategy:
-        "A documented AI strategy exists and is aligned to organizational objectives. Prioritization criteria are defined. Initial investment tracking is in place. Leadership has formally endorsed the strategy and it is used — not just filed.",
+        "Strategy is explicit and aligned — priority decisions are identified and connected to outcomes. The weakness shows up when evidence contradicts the plan: divergence gets treated as an execution problem to close through effort, not a signal to reconsider the framing. Strategy is being followed. It isn't yet being tested.",
       Governance:
-        "A formal AI governance framework is in place with defined roles and responsibilities. Compliance documentation covers major regulatory requirements. Ethical review processes exist. Risk identification is proactive rather than reactive.",
+        "Governance looks complete — roles, responsibilities, and escalation paths are defined and followed under normal conditions. The real test isn't the documentation. It's finding a recent decision that was genuinely difficult and tracing how it was actually resolved. If that trace depends on who was in the room, governance is still Formalizing no matter how thorough the paperwork looks.",
       Data:
-        "Formal data governance policies are in place. Stewardship roles are defined and staffed. A data catalog or registry exists. Quality standards are documented and enforced for critical datasets. Integration of key data sources is actively underway.",
+        "Definitions are standardized and governed across the organization — which creates a specific new blind spot. The system is stable under known conditions but can't tell a quality failure from representational drift: data that passes every check while no longer representing how the business actually operates. If the organization can't explain that difference, it's still Formalizing.",
       People:
-        "A structured AI literacy program is in place. A defined talent strategy covers hiring, reskilling, and retention. Change management processes are documented and staffed. Responsible AI principles are introduced in formal training programs.",
+        "The problem looks solved: training exists, guidance is documented, people know how they're supposed to interact with the system. What completion rates can't show is what happens when stakes are higher or time is short — under pressure, people revert to personal judgment, and the variation training was supposed to eliminate comes back.",
       Technology:
-        "A standardized AI technology stack is defined and governed. Formal security policies cover AI tool adoption and data use. MLOps practices are emerging — structured pipelines for model development, testing, and deployment are taking shape.",
+        "Technology is structured and integrated, but the limitation is inflexibility rather than instability. Changes are possible but expensive, slow, or require coordination across components. It's stable in a way that resists improvement.",
     },
   },
   {
     number: 5,
     slug: "optimizing",
     name: "Optimizing",
-    tagline: "The system is working. The organization is using it to get better.",
+    tagline: "The system is tested continuously, and what's learned changes what happens next.",
     accent: "sky",
     borderClass: "border-sky-400",
     badgeClass: "bg-sky-100 text-sky-800 border-sky-200",
     numClass: "bg-sky-100 text-sky-800",
     overview:
-      "The Optimizing level organization has moved from building AI capability to actively improving it. Feedback loops are operating — AI performance is measured, governance is continuously evaluated, data quality is monitored in near-real-time, and people development is ongoing. The organization doesn't just run AI projects; it learns from them systematically and uses that learning to do the next one better. AI is integrated into strategic planning, not managed as a separate initiative. At this level, the framework is working and the organization is using it to advance.",
+      "The system is tested against outcomes continuously, and what's learned changes what happens next, not just what gets documented. Movement becomes selective — the organization advances where the system proves reliable and holds back where it doesn't. The challenge at this level isn't building more structure. It's resisting expansion driven by capability rather than readiness, and sustaining consistency as the system reaches new users, new use cases, and new decisions.",
     perspectives: {
       Strategy:
-        "The AI strategy is dynamic — reviewed and updated on a defined cadence. KPIs are measured and tied to business outcomes. AI planning is integrated into the broader organizational strategic planning cycle, not managed as a separate track.",
+        "Strategy is continuously tested against outcomes, and what's learned changes what happens next. Movement becomes selective — the organization advances where the system proves reliable and holds back where it doesn't. The challenge is resisting expansion driven by capability rather than readiness.",
       Governance:
-        "Governance operates as a continuous function. Compliance is monitored in near-real time. Ethical review is embedded in the AI development lifecycle, not bolted on at the end. Risk posture is continuously assessed and communicated to leadership.",
+        "Governance holds regardless of context. Ownership is exercised predictably, escalation is clear, and overrides get examined rather than hidden. The constraint here is maintaining that consistency as AI capability expands.",
       Data:
-        "Real-time data quality monitoring is in place. Integrated data pipelines feed AI systems reliably. The data catalog is maintained and actively used. Data lineage is tracked. Quality issues are caught and resolved before they reach AI systems.",
+        "Feedback loops are operational rather than theoretical. When a decision fails, the organization can trace whether the cause was completeness, timeliness, relevance, or drift, and correct it in a way that improves future performance. The temptation at this Maturity Level is expanding faster than feedback can keep up.",
       People:
-        "Enterprise-wide AI competency is building. Continuous learning is embedded in the culture. Responsible AI is central to training rather than a footnote. Cross-functional teams working on AI have the skills they need. Leadership actively models AI literacy.",
+        "Interpretation is consistent and explainable. People understand why the guidance exists and apply it similarly across contexts, and when two people disagree, the organization can explain why. The difficulty is sustaining that as the system reaches new users and new use cases.",
       Technology:
-        "Infrastructure is scalable and cost-optimized. Automated ML pipelines are in production. Proactive security monitoring for AI systems is in place. Model performance is tracked and models are retrained or retired on a defined schedule.",
+        "The system is designed to evolve — dependencies are understood and changes can be introduced without destabilizing decisions. The organization can predict the impact of a change, execute it, and verify the outcome with minimal disruption. The failure to watch for is overextension: adding complexity faster than it can be governed.",
     },
   },
   {
     number: 6,
     slug: "leading",
     name: "Leading",
-    tagline: "AI is a defining characteristic of how this organization operates and competes.",
+    tagline: "Improvement is built into how the organization operates, not applied to it periodically.",
     accent: "emerald",
     borderClass: "border-emerald-500",
     badgeClass: "bg-emerald-100 text-emerald-800 border-emerald-200",
     numClass: "bg-emerald-100 text-emerald-800",
     overview:
-      "Leading organizations have made AI a defining characteristic of how they operate and compete. AI is embedded in strategy, culture, governance, and operations. The organization doesn't just use the SIMA360 framework — it contributes to how AI maturity thinking evolves across its industry. It publishes practices, attracts talent by reputation, participates in regulatory and standards conversations, and operates AI systems that self-monitor within sophisticated governance boundaries. This is not the final destination. It is the beginning of stewardship.",
+      "Improvement is built into how the perspective operates day to day, rather than something applied to it periodically. Strategy isn't separate from operations — it's the mechanism decisions improve through. Governance evolves deliberately alongside the systems it governs, anticipating new risks before they surface as failures. The question at this level is no longer whether the system holds. It's whether it's still governing, learning from, and improving the right things as conditions keep changing. This isn't the final destination. It's the beginning of stewardship.",
     perspectives: {
       Strategy:
-        "AI is a core component of organizational strategy and competitive differentiation. The organization contributes to shaping industry direction. Strategic AI governance is sophisticated, self-reinforcing, and externally recognized.",
+        "Strategy isn't separate from operations — it's the mechanism decisions improve through. The organization anticipates where its approach will fail and adjusts before degradation shows up. The question shifts from whether the strategy is being followed to whether it's still correct.",
       Governance:
-        "Governance is a source of organizational competitive advantage and trust. The organization contributes to shaping industry and regulatory standards. AI systems include built-in self-monitoring with human oversight. Governance practices are published and referenced by others.",
+        "Governance evolves deliberately alongside the systems it governs, anticipating new risks before they surface as failures. The question is no longer whether governance holds — it's whether it's still governing the right things as conditions change.",
       Data:
-        "Data is treated as a strategic organizational asset. Pipelines are self-optimizing and continuously monitored. Data intelligence is enterprise-wide. The organization's data practices are referenced externally as exemplary in the field.",
+        "Data strategy is tied directly to decision strategy — the organization anticipates where current data will fall short before a new decision gets introduced, rather than waiting for the failure. The failure mode here is overextension: sophistication that isn't yet tied to any decision the organization is actually trying to improve.",
       People:
-        "AI literacy is a defining organizational characteristic. The organization develops and shares AI education externally. Talent recognized for AI expertise attracts further expertise. The culture is AI-ready — adaptive, curious, and responsible by default.",
+        "Interpretation itself becomes a source of improvement — differences in how outputs get applied are analyzed and fed back into guidance and training. The failure to watch for is complacency: assuming today's alignment holds as complexity increases.",
       Technology:
-        "State-of-the-art infrastructure supports autonomous AI operations with robust human oversight. The organization contributes to technology innovation and open-source tooling. AI infrastructure is a competitive differentiator. Operational AI self-monitors within defined governance boundaries.",
+        "Technology is deliberately structured to support ongoing change, managing dependency as a first-class concern. The failure mode here runs the other way: building for flexibility that isn't yet needed.",
     },
   },
 ]

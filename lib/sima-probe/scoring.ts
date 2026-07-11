@@ -30,12 +30,12 @@ export function getMaturityLevel(score: number): MaturityLevel {
 }
 
 export const MATURITY_DESCRIPTIONS: Record<MaturityLevel, string> = {
-  Initial: 'No repeatable capability established. Outcomes are unpredictable.',
-  Exploring: 'Informal awareness exists but no reliable operational practice.',
-  Applying: 'Capability is present but inconsistent. Anchor requirements not fully met.',
-  Formalizing: 'Defined, documented, and applied across most relevant contexts.',
-  Optimizing: 'Measured, managed, and continuously improved.',
-  Leading: 'Fully institutionalized. Serves as a reference model.',
+  Initial: "AI interest is real, but nothing yet coordinates it. Activity is possible; consistency isn't.",
+  Exploring: 'Multiple efforts are underway, but disconnected — each built on its own assumptions, with no shared standard connecting them.',
+  Applying: "Individual efforts work and can be defended on their own terms, but they don't generalize past the context that produced them.",
+  Formalizing: 'Structure exists and holds under normal conditions. The gap shows up when something is contested, urgent, or the world changes underneath it.',
+  Optimizing: "The system is tested against outcomes continuously, and what's learned changes what happens next — not just what gets documented.",
+  Leading: 'Improvement is built into how the organization operates day to day, rather than something applied to it periodically.',
 }
 
 function round1(n: number): number {
@@ -293,16 +293,12 @@ function buildPriorityReason(cap: CapabilityScore, result: DomainResult): string
   return `High-weight capability (${cap.weight}%) in a ${domainWeight}%-weighted domain. Small improvements here compound into enterprise score gains.`
 }
 
-// Weighted harmonic mean across domain scores, using enterprise domain weights
-function weightedHarmonicMean(
-  scores: Array<{ score: number; weight: number }>
-): number {
-  const totalWeight = scores.reduce((s, e) => s + e.weight, 0)
-  const weightedInverseSum = scores.reduce(
-    (s, e) => s + e.weight / Math.max(e.score, 0.1), // guard against division by zero
-    0
-  )
-  return totalWeight / weightedInverseSum
+// Weakest-constraint principle (Chapter 10): the system behaves at the level of
+// its least mature perspective, not an average of all five. Don't average the
+// five results — take the lowest one. That is the operating level, regardless
+// of how far ahead the other four perspectives have gotten.
+function weakestConstraint(scores: Array<{ score: number }>): number {
+  return Math.min(...scores.map(e => e.score))
 }
 
 export function scoreAssessment(answers: Answers): ScoringResult {
@@ -317,7 +313,7 @@ export function scoreAssessment(answers: Answers): ScoringResult {
     weight: DOMAIN_WEIGHTS[d],
   }))
 
-  const enterpriseScore = round1(weightedHarmonicMean(domainScoreInputs))
+  const enterpriseScore = round1(weakestConstraint(domainScoreInputs))
 
   return {
     domains,

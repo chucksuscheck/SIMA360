@@ -23,42 +23,42 @@ const capabilityLevels = [
     name: "Initial",
     color: "slate",
     description:
-      "Data is siloed across departments and systems. Quality is inconsistent and undocumented. There are no data governance policies. AI projects that require reliable data struggle to get it, or proceed on data that isn't trustworthy.",
+      "Data is present but not yet a managed decision asset. Teams can't reliably say what data would be needed to support a given decision. The work is narrow: identify the elements that matter most to the first decisions to improve.",
   },
   {
     level: 2,
     name: "Exploring",
     color: "cyan",
     description:
-      "Awareness of data quality issues is growing. Some teams are cleaning data for specific projects. There is no formal governance, no stewardship roles, and no shared understanding of what 'good data' means across the organization.",
+      "Data exists but isn't a reliable decision asset — fragmented across systems, definitions varying by team, reconciliation happening informally. Shared definitions for the critical elements are what's needed, not a full data strategy.",
   },
   {
     level: 3,
     name: "Applying",
     color: "teal",
     description:
-      "Data is made available and improved for targeted AI use cases. Quality is better for project-specific datasets but remains inconsistent across the organization. Data integration is partial — some silos have been addressed, others haven't.",
+      "Data supports specific use cases, but the improvements are context-bound — dependent on local assumptions that don't generalize. A data-driven decision that works in one area often degrades when tried elsewhere.",
   },
   {
     level: 4,
     name: "Formalizing",
     color: "emerald",
     description:
-      "Formal data governance policies are in place. Data stewardship roles are defined and staffed. A data catalog or registry exists. Quality standards are documented and enforced for critical datasets. Integration of key data sources is underway.",
+      "Definitions are standardized and governed across the organization — which creates a new blind spot. The system can't tell a quality failure from representational drift: data that passes every check while no longer representing reality.",
   },
   {
     level: 5,
     name: "Optimizing",
     color: "green",
     description:
-      "Real-time data quality monitoring is in place. Integrated data pipelines feed AI systems reliably. The data catalog is maintained and used. Data lineage is tracked. Quality issues are caught and resolved before they reach AI systems.",
+      "Feedback loops are operational rather than theoretical. When a decision fails, the organization can trace whether the cause was completeness, timeliness, relevance, or drift, and correct it. The temptation is expanding faster than feedback can keep up.",
   },
   {
     level: 6,
     name: "Leading",
     color: "cyan",
     description:
-      "Data is treated as a strategic organizational asset. Pipelines are self-optimizing and continuously monitored. Data intelligence is enterprise-wide. The organization's data practices are referenced externally as exemplary.",
+      "Data strategy is tied directly to decision strategy — the organization anticipates where current data will fall short before a new decision gets introduced, rather than waiting for the failure.",
   },
 ]
 
@@ -392,17 +392,17 @@ export default function DataPerspectivePage() {
               {
                 component: "SIMA-Probe™",
                 href: "/sima-probe",
-                role: "Measures your current Data maturity level across accessibility, quality, integration, governance, and stewardship — revealing which gaps are most limiting your AI outcomes.",
+                role: "Measures your current Data maturity level across Accuracy and Completeness, Relevance and Representativeness, Consistency and Definition, Traceability and Lineage, Security and Ethics, and Continuous Monitoring and Correction.",
               },
               {
                 component: "SIMA-Flow™",
                 href: "/sima-flow",
-                role: "Structures the improvement cycle for data capability — from establishing baseline data quality standards to building continuous data monitoring into AI operations.",
+                role: "Structures the improvement cycle for data capability — from separating a structural quality failure out from representational drift to building the feedback loop that catches recursive reinforcement.",
               },
               {
                 component: "SIMA-Kit™",
                 href: "/sima-kit",
-                role: "Provides data governance policy templates, stewardship role definitions, data quality frameworks, integration checklists, and data catalog starter resources.",
+                role: "Provides shared-definition templates, representativeness and lineage-tracing checklists, security-and-ethics review guides, and drift-monitoring playbooks.",
               },
               {
                 component: "SIMA-Ascend™",

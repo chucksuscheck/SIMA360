@@ -23,42 +23,42 @@ const capabilityLevels = [
     name: "Initial",
     color: "slate",
     description:
-      "No AI governance structure exists. AI tools are adopted without formal review. Ethical risks are unaddressed. Compliance obligations related to AI are not tracked. Accountability for AI outcomes is unclear.",
+      "Governance hasn't meaningfully formed around AI. General risk or compliance practices may exist, but haven't been translated into AI's specific decision conditions. Responsibility is assumed rather than assigned.",
   },
   {
     level: 2,
     name: "Exploring",
     color: "indigo",
     description:
-      "Awareness of governance needs is emerging. Informal discussions about AI risk are occurring but produce no formal policies. Compliance questions are being raised without consistent answers. A few individuals are concerned; the organization is not yet structured to act.",
+      "Governance is situational. Ownership may exist on paper but isn't exercised consistently, and similar situations produce different outcomes depending on who's involved. Repeatable ownership has to be established.",
   },
   {
     level: 3,
     name: "Applying",
     color: "purple",
     description:
-      "Some governance policies exist for specific AI use cases. Compliance efforts are a patchwork — thorough for high-visibility projects, absent for others. Risk is managed reactively. Documentation is incomplete and inconsistent.",
+      "Governance exists in parts of the organization — some decisions are well-controlled, others aren't, and similar decisions get handled differently across teams. The work is extension: making it consistent everywhere.",
   },
   {
     level: 4,
     name: "Formalizing",
     color: "violet",
     description:
-      "A formal AI governance framework is in place with defined roles and responsibilities. Compliance documentation covers major regulatory requirements. Ethical review processes exist. Risk identification is proactive rather than reactive.",
+      "Governance looks complete — roles, responsibilities, and escalation paths are defined and followed under normal conditions. The real test is tracing a genuinely difficult decision to see if it depended on who was in the room.",
   },
   {
     level: 5,
     name: "Optimizing",
     color: "blue",
     description:
-      "Governance operates as a continuous function. Compliance is monitored in near-real time. Ethical review is embedded in the AI development lifecycle, not bolted on afterward. Risk posture is continuously assessed and communicated to leadership.",
+      "Governance holds regardless of context. Ownership is exercised predictably, escalation is clear, and overrides get examined rather than hidden. The constraint is maintaining consistency as AI capability expands.",
   },
   {
     level: 6,
     name: "Leading",
     color: "indigo",
     description:
-      "Governance is a source of organizational competitive advantage and trust. The organization contributes to shaping industry and regulatory standards. AI systems include built-in self-monitoring with human oversight. Governance practices are published and referenced by others.",
+      "Governance evolves deliberately alongside the systems it governs, anticipating new risks before they surface as failures. The question is no longer whether governance holds, but whether it's governing the right things.",
   },
 ]
 

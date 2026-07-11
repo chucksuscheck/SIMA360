@@ -23,42 +23,42 @@ const capabilityLevels = [
     name: "Initial",
     color: "slate",
     description:
-      "AI is viewed as a point solution, not a strategic capability. Decisions about AI initiatives are ad-hoc. No formal vision, prioritization criteria, or success metrics exist. Individual departments may pursue AI independently of organizational direction.",
+      "Strategy hasn't formed enough to guide decisions. Leaders speak in terms of opportunity or competitive pressure, but nothing yet points at a specific decision. Success here is narrowing general awareness down to a small number of candidate decisions worth examining.",
   },
   {
     level: 2,
     name: "Exploring",
     color: "blue",
     description:
-      "Strategic discussion is beginning. A few champions are advocating for AI. There is no shared prioritization framework and no formal process for evaluating which AI investments make sense. Strategy exists in conversation, not in documents.",
+      "Strategy is conceptual. Leaders agree AI matters but describe different objectives when asked directly. Initiatives are driven by tools and enthusiasm rather than defined decision problems, so work spreads without learning accumulating anywhere.",
   },
   {
     level: 3,
     name: "Applying",
     color: "indigo",
     description:
-      "An informal AI roadmap exists. Some alignment to business goals is present for specific projects, but it is project-level, not organizational. Investment planning and ROI tracking are absent or inconsistent.",
+      "Individual teams can explain what they're improving and show measurable gains — but there's no shared logic for prioritizing across teams, so everything looks equally worth pursuing. The constraint is the inability to stop work.",
   },
   {
     level: 4,
     name: "Formalizing",
     color: "cyan",
     description:
-      "A documented AI strategy exists that is aligned to organizational objectives. Prioritization criteria are defined. Initial investment tracking is in place. Leadership has formally endorsed the strategy.",
+      "Strategy is explicit and aligned — priority decisions are identified and connected to outcomes. The weakness shows up when evidence contradicts the plan: divergence gets treated as an execution problem, not a signal to reconsider the framing.",
   },
   {
     level: 5,
     name: "Optimizing",
     color: "sky",
     description:
-      "The AI strategy is dynamic — it is reviewed and updated on a defined cadence. KPIs are measured and tied to business outcomes. AI planning is integrated into the broader organizational strategic planning cycle.",
+      "Strategy is continuously tested against outcomes, and what's learned changes what happens next. Movement becomes selective. The challenge is resisting expansion driven by capability rather than readiness.",
   },
   {
     level: 6,
     name: "Leading",
     color: "blue",
     description:
-      "AI is a core component of organizational strategy and competitive differentiation. The organization contributes to shaping industry direction. Strategic AI governance is sophisticated and self-reinforcing.",
+      "Strategy isn't separate from operations — it's the mechanism decisions improve through. The organization anticipates where its approach will fail and adjusts before degradation shows up.",
   },
 ]
 

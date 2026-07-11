@@ -7,7 +7,7 @@
  *   B) Mature respondent   — scores 3–4 across the board
  *   C) Contradiction case  — G1=0, G2=4 → GOVERNANCE_THEATER fires, affected cap reduced 40%
  *   D) Anchor cap          — G1=1 (Exploring), other G scores high → domain capped at 2.0
- *   E) Harmonic mean check — known domain scores → verify enterprise score
+ *   E) Weakest-constraint  — known domain scores → verify enterprise score is the minimum, not an average
  */
 
 import { scoreAssessment, scoreDomain, getMaturityLevel } from './scoring'
@@ -60,8 +60,8 @@ console.log('\nCase A — All zeros:')
   )
 
   assert('evidence count = 0 for governance', result.domains.governance.evidenceCount, 0)
-  // Harmonic mean uses a 0.1 floor to avoid division-by-zero; all-zero enterprise = 0.1
-  assert('enterprise score = 0.1 (zero floor)', result.enterpriseScore, 0.1)
+  // Weakest-constraint principle: enterprise score = min of all domain scores
+  assert('enterprise score = 0.0 (weakest constraint)', result.enterpriseScore, 0)
 }
 
 // ── Case B: Mature respondent (3–4 range) ─────────────────────────────────────
@@ -77,7 +77,7 @@ console.log('\nCase B — Mature respondent (scores 3):')
   assert('evidence count = 6', result.domains.governance.evidenceCount, 6)
   assert('no anchors violated', result.domains.governance.anchorsViolated, false)
 
-  // Enterprise: weighted harmonic mean of five 3.0s = 3.0
+  // Enterprise: weakest-constraint minimum of five 3.0s = 3.0
   assert('enterprise score = 3.0', result.enterpriseScore, 3)
   assert('enterprise maturity = Formalizing', result.enterpriseMaturityLevel, 'Formalizing')
 }
@@ -119,18 +119,18 @@ console.log('\nCase D — Anchor cap (G1=1, all others=4):')
   assert('maturity = Applying', result.maturityLevel, 'Applying')
 }
 
-// ── Case E: Harmonic mean arithmetic ─────────────────────────────────────────
-console.log('\nCase E — Weighted harmonic mean:')
+// ── Case E: Weakest-constraint arithmetic ────────────────────────────────────
+console.log('\nCase E — Weakest-constraint minimum:')
 {
   // Manually set up known domain scores by crafting exact answers.
   // Easiest: set all answers to 2.0 → all domain scores = 2.0
-  // Weighted harmonic mean of five 2.0s with any weights = 2.0
+  // Minimum of five equal 2.0s = 2.0, regardless of domain weights
   const answers = allAnswers(2)
   const result = scoreAssessment(answers)
   // All caps fire at 2.0 (anchor cap: 2 is exactly threshold, anchorsViolated = false for ≥ 2.0)
   // evidence count = 6 (all > 0)
   // Expected enterprise score = 2.0
-  assertApprox('harmonic mean of all 2.0 domains ≈ 2.0', result.enterpriseScore, 2.0)
+  assertApprox('minimum of all 2.0 domains ≈ 2.0', result.enterpriseScore, 2.0)
 }
 
 // ── Case F: Evidence cap (< 3 non-zero capabilities) ─────────────────────────

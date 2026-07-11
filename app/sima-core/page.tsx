@@ -195,11 +195,11 @@ export default function SimaCorePage() {
               </CardHeader>
               <CardContent>
                 <ul className="text-sm text-slate-600 space-y-2 mb-4">
-                  <li>• Vision Alignment with strategic outcomes</li>
-                  <li>• Prioritization based on impact and feasibility</li>
-                  <li>• Investment Planning with long-term ROI</li>
-                  <li>• Integration with digital transformation</li>
-                  <li>• Evaluation with clear success metrics</li>
+                  <li>• Current Situation and Vision</li>
+                  <li>• Competitive Advantage</li>
+                  <li>• Strategic Choices Roadmap</li>
+                  <li>• Required Capabilities and Execution Model</li>
+                  <li>• Measures of Success and Learning and Adaptation</li>
                 </ul>
                 <Link href="/sima-core/strategy" className="text-sm text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-1">
                   Explore Strategy perspective <ArrowRight className="w-3 h-3" />
@@ -211,15 +211,16 @@ export default function SimaCorePage() {
               <CardHeader>
                 <Shield className="w-8 h-8 text-indigo-600 mb-2" />
                 <CardTitle>Governance Perspective</CardTitle>
-                <CardDescription>Manages AI risks, ensures compliance, and upholds ethical standards</CardDescription>
+                <CardDescription>Keeps AI-influenced decisions inside their constraints once the system is running</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="text-sm text-slate-600 space-y-2 mb-4">
-                  <li>• Ethical Oversight for fairness and bias</li>
-                  <li>• Regulatory Compliance across geographies</li>
-                  <li>• Risk Management with proactive mitigation</li>
-                  <li>• Documentation for auditability</li>
-                  <li>• Communication of AI usage and responsibilities</li>
+                  <li>• Decision Rights</li>
+                  <li>• Roles and Accountability</li>
+                  <li>• Policies and Standards</li>
+                  <li>• Risk, Compliance, and Controls</li>
+                  <li>• Transparency and Traceability</li>
+                  <li>• Continuous Monitoring and Improvement</li>
                 </ul>
                 <Link href="/sima-core/governance" className="text-sm text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center gap-1">
                   Explore Governance perspective <ArrowRight className="w-3 h-3" />
@@ -231,15 +232,16 @@ export default function SimaCorePage() {
               <CardHeader>
                 <Database className="w-8 h-8 text-cyan-600 mb-2" />
                 <CardTitle>Data Perspective</CardTitle>
-                <CardDescription>Encompasses data quality, access, governance, and strategy</CardDescription>
+                <CardDescription>Determines whether the organization keeps learning from the world or from itself</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="text-sm text-slate-600 space-y-2 mb-4">
-                  <li>• Accessibility with well-organized data</li>
-                  <li>• Quality through cleansing and validation</li>
-                  <li>• Integration of siloed data sources</li>
-                  <li>• Governance with formal policies</li>
-                  <li>• Stewardship with defined roles</li>
+                  <li>• Accuracy and Completeness</li>
+                  <li>• Relevance and Representativeness</li>
+                  <li>• Consistency and Definition</li>
+                  <li>• Accessibility and Timeliness</li>
+                  <li>• Traceability and Lineage, Security and Ethics</li>
+                  <li>• Interpretation and Application, Continuous Monitoring and Correction</li>
                 </ul>
                 <Link href="/sima-core/data" className="text-sm text-cyan-600 hover:text-cyan-800 font-medium inline-flex items-center gap-1">
                   Explore Data perspective <ArrowRight className="w-3 h-3" />
@@ -251,15 +253,15 @@ export default function SimaCorePage() {
               <CardHeader>
                 <Users className="w-8 h-8 text-sky-600 mb-2" />
                 <CardTitle>People Perspective</CardTitle>
-                <CardDescription>Focuses on workforce readiness and cultural adoption</CardDescription>
+                <CardDescription>Determines how AI outputs get interpreted, trusted, challenged, or waved through</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="text-sm text-slate-600 space-y-2 mb-4">
-                  <li>• AI Literacy across all employees</li>
-                  <li>• Talent Strategy for hiring and training</li>
-                  <li>• Cross-functional Teams collaboration</li>
-                  <li>• Change Management support</li>
-                  <li>• RAI Awareness and training</li>
+                  <li>• Interpretation Rules</li>
+                  <li>• Visibility</li>
+                  <li>• Training as an Evolving System</li>
+                  <li>• Learning From Failure</li>
+                  <li>• Guarding Against Overtrust</li>
                 </ul>
                 <Link href="/sima-core/people" className="text-sm text-sky-600 hover:text-sky-800 font-medium inline-flex items-center gap-1">
                   Explore People perspective <ArrowRight className="w-3 h-3" />
@@ -271,15 +273,16 @@ export default function SimaCorePage() {
               <CardHeader>
                 <Cog className="w-8 h-8 text-slate-600 mb-2" />
                 <CardTitle>Technology Perspective</CardTitle>
-                <CardDescription>Infrastructure, tools, and technical practices for scalable AI</CardDescription>
+                <CardDescription>Determines whether the system can sustain change without degrading decision quality</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="text-sm text-slate-600 space-y-2 mb-4">
-                  <li>• Infrastructure for compute-intensive workloads</li>
-                  <li>• Tools that are standardized and efficient</li>
-                  <li>• Lifecycle Management with structured pipelines</li>
-                  <li>• Security against threats and misuse</li>
-                  <li>• Innovation supporting rapid experimentation</li>
+                  <li>• Architecture and Adaptability</li>
+                  <li>• Integration</li>
+                  <li>• Reliability</li>
+                  <li>• Security</li>
+                  <li>• AI Operations and Automation</li>
+                  <li>• Observability</li>
                 </ul>
                 <Link href="/sima-core/technology" className="text-sm text-slate-600 hover:text-slate-900 font-medium inline-flex items-center gap-1">
                   Explore Technology perspective <ArrowRight className="w-3 h-3" />
@@ -313,13 +316,13 @@ export default function SimaCorePage() {
                   <CardTitle className="text-lg"><Link href="/maturity#initial" className="hover:text-blue-600 hover:underline transition-colors">Initial</Link></CardTitle>
                 </div>
                 <CardDescription>
-                  All initiatives start here. AI is being considered with curious but unstructured application.
+                  AI interest is real, but nothing yet coordinates it. Activity is possible; consistency isn't.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  AI vision and leadership support begins. Organizations build awareness and start exploring
-                  possibilities.
+                  Success here isn't a strategy document or a policy — it's narrowing general awareness down to the
+                  small number of decisions worth examining first.
                 </p>
               </CardContent>
             </Card>
@@ -333,12 +336,13 @@ export default function SimaCorePage() {
                   <CardTitle className="text-lg"><Link href="/maturity#exploring" className="hover:text-blue-600 hover:underline transition-colors">Exploring</Link></CardTitle>
                 </div>
                 <CardDescription>
-                  Structured experimentation and foundational skill development with isolated experiments.
+                  Multiple efforts are underway, but they're disconnected — each built on its own assumptions.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Early AI awareness with disconnected experiments, limited awareness, and lack of strategic direction.
+                  No shared standard connects the work yet, so effort spreads across many places without learning
+                  accumulating anywhere.
                 </p>
               </CardContent>
             </Card>
@@ -352,12 +356,13 @@ export default function SimaCorePage() {
                   <CardTitle className="text-lg"><Link href="/maturity#applying" className="hover:text-blue-600 hover:underline transition-colors">Applying</Link></CardTitle>
                 </div>
                 <CardDescription>
-                  Piloting AI projects with limited scope and success, often opportunistic rather than strategic.
+                  Individual efforts work and can be defended on their own terms, but they don't generalize.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  Foundational investments in talent, data quality, and tooling begin to emerge with growing momentum.
+                  The organization is productive in ways that don't add up — opportunism, not architecture, is
+                  driving outcomes.
                 </p>
               </CardContent>
             </Card>
@@ -371,13 +376,13 @@ export default function SimaCorePage() {
                   <CardTitle className="text-lg"><Link href="/maturity#formalizing" className="hover:text-blue-600 hover:underline transition-colors">Formalizing</Link></CardTitle>
                 </div>
                 <CardDescription>
-                  Standardizing governance, workflows, and initial AI applications with repeatable practices.
+                  Structure exists and holds under normal conditions.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  AI is prioritized by leadership and increasingly integrated into business processes with formal
-                  frameworks.
+                  The gap shows up specifically when something is contested, urgent, or the world changes underneath
+                  it — the paperwork looks complete before the pressure test runs.
                 </p>
               </CardContent>
             </Card>
@@ -391,12 +396,13 @@ export default function SimaCorePage() {
                   <CardTitle className="text-lg"><Link href="/maturity#optimizing" className="hover:text-blue-600 hover:underline transition-colors">Optimizing</Link></CardTitle>
                 </div>
                 <CardDescription>
-                  Refining systems with feedback loops, proactive governance, and operational AI.
+                  The system is tested against outcomes continuously.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  AI leveraged strategically across functions with robust governance and real-time analytics.
+                  What's learned changes what happens next, not just what gets documented. The challenge is resisting
+                  expansion driven by capability rather than readiness.
                 </p>
               </CardContent>
             </Card>
@@ -410,12 +416,13 @@ export default function SimaCorePage() {
                   <CardTitle className="text-lg"><Link href="/maturity#leading" className="hover:text-blue-600 hover:underline transition-colors">Leading</Link></CardTitle>
                 </div>
                 <CardDescription>
-                  Continuous AI-driven innovation and enterprise-wide integration with industry leadership.
+                  Improvement is built into how the organization operates day to day.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  AI is core to strategic differentiation, driving innovation and shaping industry standards.
+                  Not something applied to the system periodically — this is not the final destination, it's the
+                  beginning of stewardship.
                 </p>
               </CardContent>
             </Card>
