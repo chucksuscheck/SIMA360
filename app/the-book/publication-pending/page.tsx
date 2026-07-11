@@ -10,7 +10,7 @@ import { SiteFooter } from "@/components/site-footer"
 export const metadata: Metadata = {
   title: "Publication Pending — The AI Rush | SIMA360™",
   description:
-    "The AI Rush: Too Much. Too Soon. by Dr. Charles Suscheck is not yet available for purchase. Check back soon for retail availability.",
+    "The AI Rush: Too Much. Too Soon. by Dr. Charles Suscheck publishes mid-August 2026. Check back here for retail availability.",
   alternates: {
     canonical: "https://www.sima360.org/the-book/publication-pending",
   },
@@ -57,7 +57,7 @@ export default function PublicationPendingPage() {
             <div className="flex-1 text-center md:text-left">
               <Badge variant="secondary" className="mb-4 bg-indigo-100 text-indigo-800 border-indigo-200">
                 <Clock className="w-4 h-4 mr-2" />
-                Publication Pending
+                Publishing Mid-August 2026
               </Badge>
               <h1 className="text-4xl font-bold text-slate-900 mb-6 leading-tight">
                 The AI Rush —
@@ -65,8 +65,8 @@ export default function PublicationPendingPage() {
               </h1>
               <p className="text-lg text-slate-600 mb-8">
                 <em>The AI Rush: Too Much. Too Soon.</em> by Dr. Charles Suscheck is not yet available for purchase.
-                Retail availability will be announced here as soon as the book is published — check back soon, or
-                explore the framework the book gives rise to in the meantime.
+                The book is expected to publish in mid-August 2026 — retail availability will be announced here as
+                soon as it's live. In the meantime, explore the framework the book gives rise to below.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600" asChild>
