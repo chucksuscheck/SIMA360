@@ -143,7 +143,7 @@ export function Navigation() {
           href="/sima-probe/assessment"
           className="ml-2 px-4 py-2 text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 rounded transition-colors"
         >
-          Get Started
+          Assessment
         </Link>
       </nav>
 
@@ -250,7 +250,7 @@ export function Navigation() {
                 onClick={closeMobile}
                 className="block w-full text-center px-4 py-2 text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 rounded transition-colors"
               >
-                Get Started
+                Assessment
               </Link>
             </div>
           </div>

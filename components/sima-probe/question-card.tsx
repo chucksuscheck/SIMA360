@@ -56,8 +56,8 @@ export function QuestionCard({ question, selectedValue, onSelect }: QuestionCard
               className={cn(
                 'w-full flex items-start gap-4 px-5 py-4 rounded-lg border text-left transition-all duration-100',
                 isSelected
-                  ? 'border-slate-900 bg-slate-900 text-white shadow-sm'
-                  : 'border-slate-200 bg-white text-slate-700 hover:border-slate-400 hover:bg-slate-50'
+                  ? 'border-blue-600 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-sm'
+                  : 'border-slate-200 bg-white text-slate-700 hover:border-blue-300 hover:bg-blue-50/50'
               )}
             >
               <span
