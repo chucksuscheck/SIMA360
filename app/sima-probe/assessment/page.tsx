@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react'
-import { Badge } from '@/components/ui/badge'
 import { Navigation } from '@/components/navigation'
 import { QUESTIONS } from '@/lib/sima-probe/questions'
 import type { Answers, AssessmentSession } from '@/lib/sima-probe/types'
@@ -146,7 +145,6 @@ export default function AssessmentPage() {
       <section className="py-10 bg-gradient-to-br from-blue-50 via-purple-50 to-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <Badge className="mb-3 bg-blue-100 text-blue-700 hover:bg-blue-200">Free Diagnostic Assessment</Badge>
             <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               SIMA Probe™ Assessment
             </h1>

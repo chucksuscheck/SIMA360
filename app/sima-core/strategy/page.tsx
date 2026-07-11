@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Target, CheckCircle, AlertCircle, BarChart3, Compass, Eye, Award, Layers, GitBranch, RefreshCw, ClipboardList } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
@@ -100,11 +99,6 @@ export default function StrategyPerspectivePage() {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Badge variant="secondary" className="bg-blue-100 text-blue-800 border-blue-200">
-                Perspective
-              </Badge>
-            </div>
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
                 <Target className="w-8 h-8 text-blue-600" />
@@ -447,7 +441,7 @@ export default function StrategyPerspectivePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
               <Link href="/sima-probe/assessment">
-                Start the Assessment <ArrowRight className="ml-2 w-4 h-4" />
+                Start Assessment <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="border-slate-400 text-slate-200 hover:bg-slate-800 bg-transparent">

@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Shield, AlertCircle, FileText, Scale, Eye, RefreshCw, Users } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
@@ -100,11 +99,6 @@ export default function GovernancePerspectivePage() {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Badge variant="secondary" className="bg-indigo-100 text-indigo-800 border-indigo-200">
-                Perspective
-              </Badge>
-            </div>
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center">
                 <Shield className="w-8 h-8 text-indigo-600" />
@@ -410,7 +404,7 @@ export default function GovernancePerspectivePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
               <Link href="/sima-probe/assessment">
-                Start the Assessment <ArrowRight className="ml-2 w-4 h-4" />
+                Start Assessment <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="border-slate-400 text-slate-200 hover:bg-slate-800 bg-transparent">

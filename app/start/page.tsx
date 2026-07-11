@@ -132,9 +132,6 @@ export default function StartPage() {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4 bg-slate-100 text-slate-700 border-slate-200">
-              SIMA360™ Entry Points
-            </Badge>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
               Where Do You Want to Start?
             </h1>

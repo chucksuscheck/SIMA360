@@ -11,10 +11,8 @@ export const metadata: Metadata = {
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import {
   ArrowRight,
-  Brain,
   Database,
   Cog,
   Shield,
@@ -53,10 +51,6 @@ export default function SimaCorePage() {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4 bg-blue-100 text-blue-800 border-blue-200">
-              <Brain className="w-4 h-4 mr-2" />
-              SIMA Core™ Framework
-            </Badge>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
               The Core Elements
               <span className="text-blue-600 block">of SIMA360</span>

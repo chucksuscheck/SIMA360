@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { ArrowRight, BookOpen, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -47,10 +46,6 @@ export default function TheBookPage() {
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
             {/* Text */}
             <div className="flex-1 text-center md:text-left">
-              <Badge variant="secondary" className="mb-4 bg-indigo-100 text-indigo-800 border-indigo-200">
-                <BookOpen className="w-4 h-4 mr-2" />
-                The Intellectual Foundation
-              </Badge>
               <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
                 The AI Rush —
                 <span className="text-indigo-600 block">Too Much. Too Soon.</span>

@@ -25,7 +25,6 @@ import {
   ArrowRight,
   TrendingUp,
   Users,
-  BookOpen,
   Award,
   CheckCircle,
   Target,
@@ -86,10 +85,6 @@ export default function SimaAscendPage() {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4 bg-orange-100 text-orange-800 border-orange-200">
-              <BookOpen className="w-4 h-4 mr-2" />
-              SIMA Ascend™ Training & Certification
-            </Badge>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
               Building the Practitioner Capability
               <span className="text-orange-600 block">the Framework Requires</span>

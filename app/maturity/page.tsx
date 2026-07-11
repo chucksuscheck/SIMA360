@@ -192,7 +192,6 @@ export default function MaturityPage() {
       {/* Hero */}
       <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto text-center max-w-4xl">
-          <Badge variant="secondary" className="mb-4">SIMA360™ Framework</Badge>
           <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
             The Six Maturity Levels
           </h1>
@@ -351,7 +350,7 @@ export default function MaturityPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
               <Link href="/sima-probe/assessment">
-                Start the Assessment <ArrowRight className="ml-2 w-4 h-4" />
+                Start Assessment <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="border-slate-400 text-slate-200 hover:bg-slate-800 bg-transparent">

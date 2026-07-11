@@ -85,10 +85,6 @@ const AboutPage = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4 bg-blue-100 text-blue-800 border-blue-200">
-              <Layers className="w-4 h-4 mr-2" />
-              Framework Origin
-            </Badge>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
               Built on Research.
               <span className="text-blue-600 block">Designed for Operational Reality.</span>

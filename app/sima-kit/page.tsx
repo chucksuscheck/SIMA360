@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -22,7 +21,6 @@ import {
 } from "@/components/ui/breadcrumb"
 import {
   ArrowRight,
-  Package,
   Target,
   Layers,
   CheckCircle,
@@ -82,10 +80,6 @@ const SIMAKitPage = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4 bg-purple-100 text-purple-800 border-purple-200">
-              <Package className="w-4 h-4 mr-2" />
-              SIMA Kit™ - Operational Heart
-            </Badge>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
               The Resource Layer of
               <span className="text-purple-600 block">the SIMA360 Framework</span>

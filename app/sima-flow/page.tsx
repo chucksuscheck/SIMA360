@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import {
   ArrowRight,
   Zap,
@@ -51,10 +50,6 @@ export default function SimaFlowPage() {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4 bg-green-100 text-green-800 border-green-200">
-              <Zap className="w-4 h-4 mr-2" />
-              SIMA Flow™ Framework
-            </Badge>
             <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
               The Execution Engine
               <span className="text-green-600 block">Connecting Perspective to Results</span>

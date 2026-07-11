@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Brain, Zap, Target, Users, BookOpen, Lightbulb, CheckCircle, BarChart3 } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
@@ -41,9 +40,6 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <Badge variant="secondary" className="mb-4">
-            AI Maturity Framework
-          </Badge>
           <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight max-w-4xl mx-auto">
             Most organizations have deployed AI. Few have developed the capability to produce reliable outcomes from it.
           </h1>
@@ -55,7 +51,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
               <Link href="/sima-probe/assessment">
-                Start with the Assessment <ArrowRight className="ml-2 w-4 h-4" />
+                Start Assessment <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
@@ -312,7 +308,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <Link href="/sima-probe/assessment">Start the Assessment</Link>
+              <Link href="/sima-probe/assessment">Start Assessment</Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="border-slate-400 text-slate-200 hover:bg-slate-800 bg-transparent">
               <Link href="/start">Find Your Entry Point</Link>

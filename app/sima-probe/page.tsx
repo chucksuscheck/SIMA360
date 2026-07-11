@@ -52,7 +52,6 @@ export default function SIMAProbe() {
       <section className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">Diagnostic Assessment Tool</Badge>
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               SIMA Probe™
             </h1>
