@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Navigation } from '@/components/navigation'
-import { QUESTIONS, DOMAIN_ORDER, DOMAIN_META } from '@/lib/sima-probe/questions'
+import { QUESTIONS } from '@/lib/sima-probe/questions'
 import type { Answers, AssessmentSession } from '@/lib/sima-probe/types'
 import { QuestionCard } from '@/components/sima-probe/question-card'
 import { ProgressIndicator } from '@/components/sima-probe/progress-indicator'
@@ -71,10 +71,6 @@ export default function AssessmentPage() {
   const currentAnswer = answers[currentQuestion?.id]
   const isLastQuestion = currentIndex === TOTAL - 1
   const isFirstQuestion = currentIndex === 0
-  const currentDomain = currentQuestion?.domain
-  const prevDomain = currentIndex > 0 ? QUESTIONS[currentIndex - 1]?.domain : null
-  const isNewDomain = currentDomain !== prevDomain
-
   const handleSelect = useCallback((value: number) => {
     if (!currentQuestion) return
     const newAnswers = { ...answers, [currentQuestion.id]: value }
@@ -130,8 +126,6 @@ export default function AssessmentPage() {
   }
 
   if (!isReady || !currentQuestion) return null
-
-  const meta = DOMAIN_META[currentDomain]
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -189,18 +183,6 @@ export default function AssessmentPage() {
           />
         </div>
       </div>
-
-      {/* Perspective transition banner */}
-      {isNewDomain && (
-        <div className={cn('py-3 border-b', meta.bgColor)}>
-          <div className="max-w-3xl mx-auto px-4">
-            <p className={cn('text-xs font-semibold uppercase tracking-wider', meta.color)}>
-              Now entering: {meta.label}
-            </p>
-            <p className="text-xs text-slate-600 mt-0.5">{meta.description}</p>
-          </div>
-        </div>
-      )}
 
       {/* Main question area */}
       <main className="flex-1 flex flex-col justify-center py-10 bg-slate-50">

@@ -71,21 +71,11 @@ export function ProgressIndicator({
       </div>
 
       {/* Progress bar */}
-      <div className="w-full bg-slate-100 rounded-full h-1.5 mb-1">
+      <div className="w-full bg-slate-100 rounded-full h-1.5">
         <div
           className="bg-gradient-to-r from-blue-500 to-purple-500 h-1.5 rounded-full transition-all duration-300"
           style={{ width: `${progressPct}%` }}
         />
-      </div>
-
-      {/* Label */}
-      <div className="flex justify-between items-center">
-        <span className="text-xs text-slate-400">
-          {DOMAIN_META[currentDomain].label} · question {questionInDomain} of 6
-        </span>
-        <span className="text-xs text-slate-400">
-          {answeredCount} / {totalQuestions} answered
-        </span>
       </div>
     </div>
   )
