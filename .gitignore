@@ -32,3 +32,6 @@ next-env.d.ts
 
 # package manager lock files (keep pnpm-lock.yaml, ignore npm/yarn)
 package-lock.json
+
+# Markdown docs (not part of the deployed site)
+*.md
