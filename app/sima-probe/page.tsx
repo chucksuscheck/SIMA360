@@ -67,6 +67,13 @@ export default function SIMAProbe() {
               >
                 <Link href="/sima-probe/assessment">Begin Free Assessment</Link>
               </Button>
+              <Button
+                size="lg"
+                asChild
+                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
+              >
+                <Link href="/pricing">Pricing</Link>
+              </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link href="#what-you-get">See What You Get</Link>
               </Button>
