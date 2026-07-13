@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "About SIMA360™ — Framework Origin & Research Foundation",
   description:
-    "SIMA360 was built on two years of comparative research across nine AI maturity frameworks — Element AI, Accenture, IBM, Metascient, Ovum, BCG/MIT Sloan, Microsoft, Gartner, and Deloitte. Learn about the research foundation, the gaps it addressed, and the framework that resulted.",
+    "SIMA360 was built on two years of comparative research across nine AI maturity frameworks — Element AI, Accenture, IBM, Metascient, Ovum, BCG/MIT Sloan, Microsoft, Gartner, and Deloitte — research that revealed why organizational maturity, not tool capability, determines whether AI produces reliable outcomes. Learn how the Five Perspectives emerged from that research and why SIMA360 exists to turn a diagnosis into a trajectory.",
   alternates: {
     canonical: "https://www.sima360.org/about",
   },
@@ -41,6 +41,11 @@ import {
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
+import { ECOSYSTEM_COMPONENTS, type EcosystemComponent } from "@/lib/sima-ecosystem"
+
+function ecosystemDescription(slug: EcosystemComponent["slug"]): string {
+  return ECOSYSTEM_COMPONENTS.find((c) => c.slug === slug)!.description
+}
 
 const AboutPage = () => {
   return (
@@ -90,9 +95,12 @@ const AboutPage = () => {
               <span className="text-blue-600 block">Designed for Operational Reality.</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-              SIMA360 emerged from two years of comparative analysis across nine leading AI maturity frameworks. The
-              research revealed a consistent gap across all existing models: they describe what AI maturity looks like,
-              but none provides a structured path to achieving it. SIMA360 was built to fill that gap.
+              Most organizations that adopt AI don't fail because the technology breaks. They fail because AI
+              amplifies whatever was already unclear, inconsistent, or unmonitored in the organization around it —
+              and capability and maturity are not the same thing. SIMA360 emerged from two years of comparative
+              analysis across nine leading AI maturity frameworks, built to answer the question those frameworks
+              left open: not just where an organization stands, but what to do next, and why organizational
+              maturity — not tool capability — is what actually determines whether AI produces reliable outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-blue-500 hover:bg-blue-600">
@@ -129,9 +137,16 @@ const AboutPage = () => {
               synthesized what the existing research got right, identified what it consistently missed, and built the
               missing layer.
             </p>
-            <p className="text-lg text-slate-600">
+            <p className="text-lg text-slate-600 mb-4">
               Through extensive comparative evaluation, we identified the strengths and limitations of existing
               frameworks, then combined their best features while addressing their collective blind spots.
+            </p>
+            <p className="text-lg text-slate-600">
+              The five perspectives at the center of SIMA360 — Strategy, Governance, Data, People, and Technology —
+              weren't chosen in advance. They were the consistent underlying structure that kept showing up, under
+              different names and with different degrees of coverage, across all nine frameworks once they were
+              compared side by side. That consistency is the evidence these are the right five, not a preference for
+              a clean list.
             </p>
           </div>
 
@@ -318,13 +333,25 @@ const AboutPage = () => {
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Gap No Framework Addressed</h2>
-            <p className="text-lg text-slate-700 leading-relaxed">
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
               Every framework analyzed in the foundational research describes organizational AI maturity at various
               stages. None of them explains how to get from one stage to the next. They produce assessments. They do not
               produce improvement paths. Organizations completing a Gartner or Deloitte AI maturity assessment know
-              where they stand. They do not know what to do operationally to change their standing. SIMA360 provides
-              that — the structured diagnostic, the improvement cycle, the implementation resources, and the
-              practitioner capability development that turns a maturity score into a maturity trajectory.
+              where they stand. They do not know what to do operationally to change their standing.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              That gap shows up the same way in practice: organizations work through the framework's diagnostic
+              principles, understand exactly where they stand, and still ask the same question — now what do I
+              actually do with this? SIMA360 exists to answer it, with structured tools, role-specific guidance, and
+              a formal way to evaluate where the organization actually stands, so a maturity gap turns into a
+              maturity trajectory instead of stopping at a diagnosis.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed">
+              That distinction matters because capability and maturity are not the same thing. Capability is what an
+              organization's AI can do. Maturity is the harder question — whether the organization can handle what
+              it's doing without losing its grip as it gets more complicated. A framework that only measures the
+              first can certify an organization as advanced while the second is quietly missing, and it's the second
+              one that determines whether AI produces reliable outcomes over time.
             </p>
           </div>
         </div>
@@ -345,6 +372,14 @@ const AboutPage = () => {
               grounded in the book <em>The AI Rush: Too Much. Too Soon.</em> The book establishes the conceptual
               argument. SIMA360 operationalizes it. Organizations that want to understand why the framework is
               structured the way it is should start with the book.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              The book's argument is that the technology is rarely what separates organizations with similar AI
+              budgets and wildly different outcomes. It's the operating system underneath it — the five
+              perspectives, working together or quietly working against each other — that determines whether an
+              organization is mature enough to grow. A system behaves at the level of its least mature perspective,
+              not its most advanced one; that weakest-constraint principle is why SIMA360 measures all five
+              independently instead of producing a single blended score.
             </p>
             <Link
               href="/the-book"
@@ -504,10 +539,7 @@ const AboutPage = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 mb-4">
-                  Measures organizational AI maturity across all five perspectives and six maturity levels, producing
-                  diagnostic results that drive structured improvement. The assessment entry point for the ecosystem.
-                </p>
+                <p className="text-slate-600 mb-4">{ecosystemDescription("sima-probe")}</p>
                 <Button variant="ghost" asChild className="p-0 h-auto text-blue-600 hover:text-blue-800">
                   <Link href="/sima-probe">
                     Learn More <ArrowRight className="ml-1 w-4 h-4" />
@@ -529,10 +561,7 @@ const AboutPage = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 mb-4">
-                  The vocabulary layer of the framework: three core models — Strategic Perspectives, AI Maturity Levels, and
-                  AI Tool Categories — that every other component operates within.
-                </p>
+                <p className="text-slate-600 mb-4">{ecosystemDescription("sima-core")}</p>
                 <Button variant="ghost" asChild className="p-0 h-auto text-indigo-600 hover:text-indigo-800">
                   <Link href="/sima-core">
                     Learn More <ArrowRight className="ml-1 w-4 h-4" />
@@ -554,11 +583,7 @@ const AboutPage = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 mb-4">
-                  The cycle architecture that structures improvement — the macro Core Cycle (Assess Capabilities → Set
-                  Groundwork → Execute) for organizational advancement and the FLAI Cycle (Frame, Learn, Assess,
-                  Improve) for project-level execution within it.
-                </p>
+                <p className="text-slate-600 mb-4">{ecosystemDescription("sima-flow")}</p>
                 <Button variant="ghost" asChild className="p-0 h-auto text-green-600 hover:text-green-800">
                   <Link href="/sima-flow">
                     Learn More <ArrowRight className="ml-1 w-4 h-4" />
@@ -575,15 +600,12 @@ const AboutPage = () => {
                   </div>
                   <div>
                     <CardTitle className="text-xl">SIMA-Kit™</CardTitle>
-                    <CardDescription className="text-sm text-slate-500">Implementation Resource Library</CardDescription>
+                    <CardDescription className="text-sm text-slate-500">Operational Resource Layer</CardDescription>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 mb-4">
-                  The resource layer — templates, rubrics, playbooks, and governance tools stratified by maturity
-                  level and perspective that SIMA-Flow cycles require.
-                </p>
+                <p className="text-slate-600 mb-4">{ecosystemDescription("sima-kit")}</p>
                 <Button variant="ghost" asChild className="p-0 h-auto text-purple-600 hover:text-purple-800">
                   <Link href="/sima-kit">
                     Learn More <ArrowRight className="ml-1 w-4 h-4" />
