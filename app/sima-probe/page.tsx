@@ -262,7 +262,7 @@ export default function SIMAProbe() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-purple-500">
+              <Card className="border-l-4 border-l-indigo-500">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Badge variant="outline">Level 3</Badge>
@@ -278,7 +278,7 @@ export default function SIMAProbe() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-green-500">
+              <Card className="border-l-4 border-l-cyan-500">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Badge variant="outline">Level 4</Badge>
@@ -294,7 +294,7 @@ export default function SIMAProbe() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-orange-500">
+              <Card className="border-l-4 border-l-sky-500">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Badge variant="outline">Level 5</Badge>
@@ -310,7 +310,7 @@ export default function SIMAProbe() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-red-500">
+              <Card className="border-l-4 border-l-emerald-500">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Badge variant="outline">Level 6</Badge>
