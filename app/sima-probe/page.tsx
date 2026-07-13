@@ -168,7 +168,7 @@ export default function SIMAProbe() {
               <Card>
                 <CardHeader>
                   <Zap className="w-8 h-8 mb-2 text-green-600" />
-                  <CardTitle className="text-lg">AI Tool Category Selection</CardTitle>
+                  <CardTitle className="text-lg">AI Tool Tier Selection</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600">

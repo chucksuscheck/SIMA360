@@ -93,7 +93,7 @@ export default function HomePage() {
                 <Brain className="w-8 h-8 text-indigo-600 mb-2" />
                 <CardTitle className="text-lg">SIMA-Core™</CardTitle>
                 <CardDescription>
-                  The vocabulary layer. Defines the five perspectives, six maturity levels, and tool categories that every
+                  The vocabulary layer. Defines the five perspectives, six maturity levels, and tool tiers that every
                   other component operates within. The architecture the whole framework rests on.
                 </CardDescription>
               </CardHeader>
@@ -183,7 +183,7 @@ export default function HomePage() {
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
               SIMA-Core defines the framework's vocabulary: the five perspectives, <Link href="/maturity" className="text-blue-600 hover:text-blue-800 underline">six maturity levels</Link>, and tool
-              categories that every other component operates within. SIMA-Probe applies that vocabulary diagnostically,
+              tiers that every other component operates within. SIMA-Probe applies that vocabulary diagnostically,
               measuring where the organization actually stands across all five perspectives. SIMA-Flow provides the
               improvement cycle architecture — the structured process for moving from current state to target state
               through disciplined, evidence-based iterations. SIMA-Kit supplies the templates, rubrics, playbooks, and

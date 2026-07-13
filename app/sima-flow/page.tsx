@@ -55,7 +55,7 @@ export default function SimaFlowPage() {
               <span className="text-green-600 block">Connecting Perspective to Results</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              SIMA Flow™ serves as the execution engine, tying SIMA Core™ models to SIMA Kit™ resourced through two
+              SIMA Flow™ serves as the execution engine, tying SIMA Core™ constructs to SIMA Kit™ resourced through two
               cycles that run simultaneously: the macro Core Cycle (Assess Capabilities → Set Groundwork → Execute)
               for organizational advancement, and the project-level FLAI Cycle for execution within it.
             </p>

@@ -219,7 +219,7 @@ const SIMAKitPage = () => {
                   <h4 className="font-semibold text-slate-800 mb-2">Key Components</h4>
                   <ul className="text-sm text-slate-600 space-y-1">
                     <li>• Perspective-specific maturity characteristics</li>
-                    <li>• Tool category selection guidance</li>
+                    <li>• Tool tier selection guidance</li>
                     <li>• Role involvement recommendations</li>
                     <li>• Milestone plans and checkpoints</li>
                   </ul>
