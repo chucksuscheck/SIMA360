@@ -15,8 +15,10 @@ import { ArrowRight, Shield, AlertCircle, FileText, Scale, Eye, RefreshCw, Users
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
+import { MaturityProgression } from "@/components/sima-core/maturity-progression"
+import { PerspectiveSymptoms } from "@/components/sima-core/perspective-symptoms"
 
-const capabilityLevels = [
+const maturityLevels = [
   {
     level: 1,
     name: "Initial",
@@ -273,73 +275,45 @@ export default function GovernancePerspectivePage() {
         </div>
       </section>
 
-      {/* Capability Progression */}
-      <section className="py-16 px-4 bg-indigo-50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the Governance perspective looks like at each of the six SIMA360 maturity levels.
-            </p>
-          </div>
+      <MaturityProgression
+        perspectiveName="Governance"
+        levels={maturityLevels}
+        levelColorMap={levelColorMap}
+        numberColorMap={numberColorMap}
+        sectionBgClass="bg-indigo-50"
+      />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {capabilityLevels.map((lvl) => (
-              <div
-                key={lvl.level}
-                className={`rounded-lg border-l-4 p-5 ${levelColorMap[lvl.color] ?? "border-l-slate-300 bg-slate-50"}`}
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${numberColorMap[lvl.color] ?? "bg-slate-100"}`}>
-                    {lvl.level}
-                  </div>
-                  <Link href={`/maturity#${lvl.name.toLowerCase()}`} className="font-semibold text-slate-900 hover:text-blue-600 hover:underline transition-colors">{lvl.name}</Link>
-                </div>
-                <p className="text-sm text-slate-700 leading-relaxed">{lvl.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Common Gaps */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Common Governance Gaps</h2>
-          <div className="space-y-4">
-            {[
-              {
-                gap: "Governance policies exist on paper but are not enforced in practice.",
-                consequence: "Compliance risk accumulates silently until an audit, incident, or regulatory action forces a reckoning.",
-              },
-              {
-                gap: "Ethical review is treated as a one-time pre-launch checkpoint.",
-                consequence: "AI systems that were fair at launch can drift into bias as data distributions shift over time.",
-              },
-              {
-                gap: "Risk ownership is diffused — everyone is responsible, which means no one is.",
-                consequence: "When an AI system causes harm, the response is slow and accountability is contested.",
-              },
-              {
-                gap: "Legal and compliance teams are informed of AI deployments after the fact.",
-                consequence: "Regulatory exposure is not caught until remediation is more expensive than prevention would have been.",
-              },
-              {
-                gap: "Documentation is treated as overhead, not as a governance asset.",
-                consequence: "The organization cannot answer basic questions about its AI systems in an audit or public inquiry.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-4 p-4 rounded-lg bg-slate-50 border border-slate-200">
-                <AlertCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm font-semibold text-slate-900 mb-1">{item.gap}</p>
-                  <p className="text-sm text-slate-600">{item.consequence}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PerspectiveSymptoms
+        perspectiveName="Governance"
+        items={[
+          {
+            symptom:
+              "The model's numbers look steady — same accuracy, same confidence — but outcomes vary wildly by team, by manager, by day.",
+            explanation:
+              "A Policies and Standards failure: nobody wrote down how the output is supposed to be read, so each team decides that for itself.",
+          },
+          {
+            symptom: "The same recommendation gets followed by one team and ignored by another, with no clear reason why.",
+            explanation:
+              "Decision Rights left ambiguous — if nobody defined where discretion ends and authority begins, trust becomes a personal call instead of a shared one.",
+          },
+          {
+            symptom: "Overrides get logged, but nobody is actually reading the pattern — only counting them.",
+            explanation:
+              "Roles and Accountability and Continuous Monitoring and Improvement failing together — an override with no owner, feeding a loop that was never built.",
+          },
+          {
+            symptom: "Results shift, and leadership can't connect the dots back to a decision, an interpretation, or a system change.",
+            explanation:
+              "Transparency and Traceability by definition — without a chain connecting outputs, decisions, overrides, and outcomes, drift is invisible until it's expensive.",
+          },
+          {
+            symptom: "Compliance looked fine at the last review, so nobody's checked since.",
+            explanation:
+              "Risk, Compliance, and Controls treated as a one-time certification instead of a continuous check — exactly the gap that lets risk accumulate quietly between reviews.",
+          },
+        ]}
+      />
 
       {/* Ecosystem Connection */}
       <section className="py-16 px-4 bg-indigo-50">

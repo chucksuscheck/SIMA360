@@ -11,12 +11,14 @@ export const metadata: Metadata = {
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { ArrowRight, Database, AlertCircle, CheckCircle, GitMerge, Lock, Target, Clock, GitBranch, Eye, RefreshCw } from "lucide-react"
+import { ArrowRight, Database, CheckCircle, GitMerge, Lock, Target, Clock, GitBranch, Eye, RefreshCw } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
+import { MaturityProgression } from "@/components/sima-core/maturity-progression"
+import { PerspectiveSymptoms } from "@/components/sima-core/perspective-symptoms"
 
-const capabilityLevels = [
+const maturityLevels = [
   {
     level: 1,
     name: "Initial",
@@ -309,73 +311,49 @@ export default function DataPerspectivePage() {
         </div>
       </section>
 
-      {/* Capability Progression */}
-      <section className="py-16 px-4 bg-cyan-50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the Data perspective looks like at each of the six SIMA360 maturity levels.
-            </p>
-          </div>
+      <MaturityProgression
+        perspectiveName="Data"
+        levels={maturityLevels}
+        levelColorMap={levelColorMap}
+        numberColorMap={numberColorMap}
+        sectionBgClass="bg-cyan-50"
+      />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {capabilityLevels.map((lvl) => (
-              <div
-                key={lvl.level}
-                className={`rounded-lg border-l-4 p-5 ${levelColorMap[lvl.color] ?? "border-l-slate-300 bg-slate-50"}`}
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${numberColorMap[lvl.color] ?? "bg-slate-100"}`}>
-                    {lvl.level}
-                  </div>
-                  <Link href={`/maturity#${lvl.name.toLowerCase()}`} className="font-semibold text-slate-900 hover:text-blue-600 hover:underline transition-colors">{lvl.name}</Link>
-                </div>
-                <p className="text-sm text-slate-700 leading-relaxed">{lvl.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Common Gaps */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Common Data Gaps</h2>
-          <div className="space-y-4">
-            {[
-              {
-                gap: "Data quality is cleaned for the initial model training but not maintained as the system runs.",
-                consequence: "Models degrade over time as production data drifts from what the model was trained on.",
-              },
-              {
-                gap: "Integration is treated as a one-time data migration rather than an ongoing pipeline.",
-                consequence: "AI systems fall out of sync with source systems and produce outputs that no longer reflect reality.",
-              },
-              {
-                gap: "Data governance is delegated entirely to IT, with no business ownership.",
-                consequence: "Governance policies are technically accurate but practically irrelevant to how business users work with data.",
-              },
-              {
-                gap: "Stewardship roles are named but not resourced or empowered.",
-                consequence: "Data quality accountability exists on an org chart but not in practice.",
-              },
-              {
-                gap: "The organization assumes that more data is better without evaluating relevance or quality.",
-                consequence: "AI systems trained on large volumes of poor-quality data underperform systems trained on smaller, curated datasets.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-4 p-4 rounded-lg bg-slate-50 border border-slate-200">
-                <AlertCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm font-semibold text-slate-900 mb-1">{item.gap}</p>
-                  <p className="text-sm text-slate-600">{item.consequence}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PerspectiveSymptoms
+        perspectiveName="Data"
+        items={[
+          {
+            symptom:
+              "Validation scores hold and the model looks fine on paper, but people are quietly working around it, overriding it, redoing the work themselves.",
+            explanation:
+              "Interpretation and Application and Continuous Monitoring and Correction failing together — nobody built a way to act on what the workarounds are actually saying.",
+          },
+          {
+            symptom:
+              "A growing share of what feeds the next version is the system's own prior output, not anything observed independently.",
+            explanation:
+              "Recursive reinforcement inside the data pipeline — exactly what Traceability and Lineage and Continuous Monitoring and Correction are supposed to catch together.",
+          },
+          {
+            symptom:
+              "The system performs well on common cases and poorly on rare, consequential ones — the rare cases don't move a dashboard average.",
+            explanation:
+              "Relevance and Representativeness failing exactly where it matters most — the edge cases were never represented on purpose.",
+          },
+          {
+            symptom:
+              "A workflow changes, customer behavior shifts, an upstream system updates — and the meaning of the incoming data moves before anyone catches it.",
+            explanation:
+              "Consistency and Definition and Accessibility and Timeliness failing together — the term still looks the same, but what it actually measures has quietly changed.",
+          },
+          {
+            symptom:
+              "Past decisions get fed back into training as if they were objectively correct, now repeated by a machine at scale and with total confidence.",
+            explanation:
+              "Traceability and Lineage and Accuracy and Completeness both skipped — nobody traced where the label came from, and nobody checked whether it was actually right.",
+          },
+        ]}
+      />
 
       {/* Ecosystem Connection */}
       <section className="py-16 px-4 bg-cyan-50">

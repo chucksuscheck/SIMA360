@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "SIMA-Core — Framework Foundation | SIMA360™",
   description:
-    "SIMA-Core defines the conceptual vocabulary of the SIMA360 framework: five strategic perspectives, six maturity levels, and five AI tool tiers that every other component operates within.",
+    "SIMA-Core defines the conceptual vocabulary of the SIMA360 framework: five strategic perspectives, six maturity levels, and five AI tool categories that every other component operates within.",
   alternates: {
     canonical: "https://www.sima360.org/sima-core",
   },
@@ -56,9 +56,9 @@ export default function SimaCorePage() {
               <span className="text-blue-600 block">of SIMA360</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              SIMA Core™ is the static structural foundation consisting of three core constructs: the Strategic
-              Perspectives construct, the AI Maturity Levels construct, and the AI Tool Tiers construct. It provides the
-              organizing principles for effective and responsible AI maturity — the same three constructs developed
+              SIMA Core™ is the static structural foundation consisting of three core models: the Strategic
+              Perspectives model, the AI Maturity Levels model, and the AI Tool Categories model. It provides the
+              organizing principles for effective and responsible AI maturity — the same three models developed
               throughout <em>The AI Rush: Too Much. Too Soon.</em>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -96,21 +96,21 @@ export default function SimaCorePage() {
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
               SIMA-Core answers one question: what are the conceptual structures this framework uses to describe AI
-              maturity? The answer is three interconnected constructs: the Strategic Perspectives construct, the AI Maturity
-              Levels construct, and the AI Tool Tiers construct. Everything else in the SIMA360 ecosystem operates within the
-              vocabulary these three constructs define.
+              maturity? The answer is three interconnected models: the Strategic Perspectives model, the AI Maturity
+              Levels model, and the AI Tool Categories model. Everything else in the SIMA360 ecosystem operates within the
+              vocabulary these three models define.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Three Core Constructs Overview */}
+      {/* Three Core Models Overview */}
       <section className="py-16 px-4 bg-blue-50">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Three Core Constructs</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Three Core Models</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              SIMA Core™ consists of three interconnected constructs that provide the foundation for strategic AI
+              SIMA Core™ consists of three interconnected models that provide the foundation for strategic AI
               implementation
             </p>
           </div>
@@ -155,8 +155,8 @@ export default function SimaCorePage() {
                 <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Settings className="w-8 h-8 text-cyan-600" />
                 </div>
-                <CardTitle className="text-xl">AI Tool Tiers</CardTitle>
-                <CardDescription>Five tiers based on autonomy and functional capabilities</CardDescription>
+                <CardTitle className="text-xl">AI Tool Categories</CardTitle>
+                <CardDescription>Five categories based on autonomy and functional capabilities</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600 mb-4">
@@ -169,11 +169,11 @@ export default function SimaCorePage() {
         </div>
       </section>
 
-      {/* Strategic Perspectives Construct */}
+      {/* Strategic Perspectives Model */}
       <section id="perspectives" className="py-16 px-4 scroll-mt-20">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Strategic Perspectives Construct</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Strategic Perspectives Model</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Five perspectives that serve as organizing principles for assessing organizational readiness and
               implementing AI in a scalable, ethical, and value-generating manner
@@ -287,11 +287,11 @@ export default function SimaCorePage() {
         </div>
       </section>
 
-      {/* AI Maturity Levels Construct */}
+      {/* AI Maturity Levels Model */}
       <section id="capability-levels" className="py-16 px-4 bg-blue-50 scroll-mt-20">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">AI Maturity Levels Construct</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">AI Maturity Levels Model</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Six progressive levels of increasing maturity and capability. Select any level to see what it means across all five perspectives.{" "}
               <Link href="/maturity" className="text-blue-600 hover:text-blue-800 underline">
@@ -424,13 +424,13 @@ export default function SimaCorePage() {
         </div>
       </section>
 
-      {/* AI Tool Tiers Construct */}
+      {/* AI Tool Categories Model */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">AI Tool Tiers Construct</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">AI Tool Categories Model</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Five tiers of AI tools based on autonomy and functional capabilities, from passive assistants to
+              Five categories of AI tools based on autonomy and functional capabilities, from passive assistants to
               strategic, independent actors
             </p>
           </div>
@@ -565,19 +565,20 @@ export default function SimaCorePage() {
           <div className="mt-8 p-6 bg-amber-50 border border-amber-200 rounded-lg">
             <h3 className="text-lg font-semibold text-amber-900 mb-2">Important Note</h3>
             <p className="text-amber-800">
-              The purpose of each tool tier is not to encourage the use of all tools, but to provide groupings that
-              can be safely applied with reduced risk based on your AI Capability Level. Using complex tools at low
-              capability levels is ill-advised.
+              The purpose of each tool category is not to encourage the use of all tools, but to provide groupings that
+              can be safely applied with reduced risk based on your AI Maturity Level. Using complex tools at low
+              maturity levels is ill-advised.
             </p>
           </div>
 
           <div className="mt-6 p-6 bg-blue-50 border border-blue-200 rounded-lg">
             <h3 className="text-lg font-semibold text-blue-900 mb-2">Relationship to AI Maturity Levels</h3>
             <p className="text-blue-800">
-              The AI Tool Tiers roughly parallel the AI Maturity Levels — organizations at earlier Levels are
-              generally better served by lower Tiers, while higher Levels create the governance and oversight needed
-              to safely adopt higher-autonomy Tiers. The relationship is directional, not one-to-one: with five Tiers
-              and six Levels, maturity is the gating condition for tool adoption, not a fixed lockstep pairing.
+              The AI Tool Categories roughly parallel the AI Maturity Levels — organizations at earlier Levels are
+              generally better served by lower-autonomy categories, while higher Levels create the governance and
+              oversight needed to safely adopt higher-autonomy categories. The relationship is directional, not
+              one-to-one: with five categories and six Levels, maturity is the gating condition for tool adoption,
+              not a fixed lockstep pairing.
             </p>
           </div>
         </div>
@@ -599,8 +600,8 @@ export default function SimaCorePage() {
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">Static Foundation</h3>
                 <p className="text-slate-600 text-sm mb-4">
                   SIMA Core™ is static and provides the structural foundation. SIMA Flow™ provides the dynamic
-                  application of the core constructs, while SIMA Kit™ provides the necessary collateral to apply the Core
-                  Constructs.
+                  application of the core models, while SIMA Kit™ provides the necessary collateral to apply the Core
+                  Models.
                 </p>
               </CardContent>
             </Card>
@@ -609,7 +610,7 @@ export default function SimaCorePage() {
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">Progressive Maturity</h3>
                 <p className="text-slate-600 text-sm mb-4">
-                  The point is not to reach the highest capability, but to use the capability assessment to lay the
+                  The point is not to reach the highest Maturity Level, but to use the maturity assessment to lay the
                   groundwork for projects and identify areas for improvement.
                 </p>
               </CardContent>
@@ -627,10 +628,11 @@ export default function SimaCorePage() {
 
             <Card className="border-0 shadow-md bg-white">
               <CardContent className="p-6">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">Holistic Integration</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">Weakest-Constraint Principle</h3>
                 <p className="text-slate-600 text-sm mb-4">
-                  The perspectives work together to provide a comprehensive approach to AI maturity, ensuring all
-                  aspects of the organization are considered and aligned.
+                  The system behaves at the level of its least mature perspective, not its most advanced one. A
+                  strong Technology perspective can't compensate for weak Governance — sophisticated technology can
+                  scale a governance failure faster than weak governance could ever generate one on its own.
                 </p>
               </CardContent>
             </Card>

@@ -11,12 +11,14 @@ export const metadata: Metadata = {
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { ArrowRight, Users, AlertCircle, BookOpen, Eye, RefreshCw, GraduationCap, Shield } from "lucide-react"
+import { ArrowRight, Users, BookOpen, Eye, RefreshCw, GraduationCap, Shield } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
+import { MaturityProgression } from "@/components/sima-core/maturity-progression"
+import { PerspectiveSymptoms } from "@/components/sima-core/perspective-symptoms"
 
-const capabilityLevels = [
+const maturityLevels = [
   {
     level: 1,
     name: "Initial",
@@ -250,73 +252,45 @@ export default function PeoplePerspectivePage() {
         </div>
       </section>
 
-      {/* Capability Progression */}
-      <section className="py-16 px-4 bg-sky-50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the People perspective looks like at each of the six SIMA360 maturity levels.
-            </p>
-          </div>
+      <MaturityProgression
+        perspectiveName="People"
+        levels={maturityLevels}
+        levelColorMap={levelColorMap}
+        numberColorMap={numberColorMap}
+        sectionBgClass="bg-sky-50"
+      />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {capabilityLevels.map((lvl) => (
-              <div
-                key={lvl.level}
-                className={`rounded-lg border-l-4 p-5 ${levelColorMap[lvl.color] ?? "border-l-slate-300 bg-slate-50"}`}
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${numberColorMap[lvl.color] ?? "bg-slate-100"}`}>
-                    {lvl.level}
-                  </div>
-                  <Link href={`/maturity#${lvl.name.toLowerCase()}`} className="font-semibold text-slate-900 hover:text-blue-600 hover:underline transition-colors">{lvl.name}</Link>
-                </div>
-                <p className="text-sm text-slate-700 leading-relaxed">{lvl.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Common Gaps */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Common People Gaps</h2>
-          <div className="space-y-4">
-            {[
-              {
-                gap: "AI literacy programs target data scientists and engineers but exclude business stakeholders.",
-                consequence: "Leaders commission AI projects they don't understand and can't evaluate. Frontline employees resist AI tools they weren't prepared to use.",
-              },
-              {
-                gap: "Talent strategy focuses on hiring without addressing reskilling for existing employees.",
-                consequence: "A two-tier workforce emerges: AI-capable new hires and an existing workforce that feels displaced and disengaged.",
-              },
-              {
-                gap: "Change management is treated as a communication exercise rather than a structured process.",
-                consequence: "AI adoption encounters sustained resistance that wasn't anticipated because no one mapped who would be most affected.",
-              },
-              {
-                gap: "Cross-functional AI teams exist on paper but the collaboration structures to make them work don't.",
-                consequence: "Technical teams build things business teams don't understand. Business teams ask for things technical teams can't safely build.",
-              },
-              {
-                gap: "Responsible AI training is a one-hour module delivered once at onboarding.",
-                consequence: "Employees know the principles exist but don't know how to apply them when an ambiguous situation arises.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-4 p-4 rounded-lg bg-slate-50 border border-slate-200">
-                <AlertCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm font-semibold text-slate-900 mb-1">{item.gap}</p>
-                  <p className="text-sm text-slate-600">{item.consequence}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PerspectiveSymptoms
+        perspectiveName="People"
+        items={[
+          {
+            symptom: "Decisions that should land the same way stop lining up across teams.",
+            explanation:
+              "Traces to Interpretation Rules: without shared guidance, each team is quietly deciding the rule for itself.",
+          },
+          {
+            symptom: "Outputs get accepted quickly because they're well-formed, not because anyone checked them.",
+            explanation:
+              "Guarding Against Overtrust with no friction left in the system — the same failure that put fabricated case law into a federal court filing.",
+          },
+          {
+            symptom: "People quietly fix, bypass, or reinterpret outputs without surfacing any of it.",
+            explanation:
+              "A Visibility failure: the correction is real, but nothing captured it — usually a culture signal before it's a process signal.",
+          },
+          {
+            symptom:
+              "Experienced people stop forming independent judgments because the system has been right often enough to feel authoritative, and expertise atrophies from disuse.",
+            explanation:
+              "What happens when Training as an Evolving System stalls: nobody recalibrated guidance often enough to catch the erosion while it was still reversible.",
+          },
+          {
+            symptom: "The system's recent behavior lines up suspiciously well with what your most vocal team already believed.",
+            explanation:
+              "Learning From Failure skipped at the verification step — a correction propagated before anyone confirmed it was right.",
+          },
+        ]}
+      />
 
       {/* Ecosystem Connection */}
       <section className="py-16 px-4 bg-sky-50">

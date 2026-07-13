@@ -11,12 +11,14 @@ export const metadata: Metadata = {
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { ArrowRight, Cog, AlertCircle, Server, Wrench, GitBranch, Lock, Zap, Eye } from "lucide-react"
+import { ArrowRight, Cog, Server, Wrench, GitBranch, Lock, Zap, Eye } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
+import { MaturityProgression } from "@/components/sima-core/maturity-progression"
+import { PerspectiveSymptoms } from "@/components/sima-core/perspective-symptoms"
 
-const capabilityLevels = [
+const maturityLevels = [
   {
     level: 1,
     name: "Initial",
@@ -273,73 +275,45 @@ export default function TechnologyPerspectivePage() {
         </div>
       </section>
 
-      {/* Capability Progression */}
-      <section className="py-16 px-4 bg-slate-100">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the Technology perspective looks like at each of the six SIMA360 maturity levels.
-            </p>
-          </div>
+      <MaturityProgression
+        perspectiveName="Technology"
+        levels={maturityLevels}
+        levelColorMap={levelColorMap}
+        numberColorMap={numberColorMap}
+        sectionBgClass="bg-slate-100"
+      />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {capabilityLevels.map((lvl) => (
-              <div
-                key={lvl.level}
-                className={`rounded-lg border-l-4 p-5 ${levelColorMap[lvl.color] ?? "border-l-slate-300 bg-slate-50"}`}
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${numberColorMap[lvl.color] ?? "bg-slate-100"}`}>
-                    {lvl.level}
-                  </div>
-                  <Link href={`/maturity#${lvl.name.toLowerCase()}`} className="font-semibold text-slate-900 hover:text-blue-600 hover:underline transition-colors">{lvl.name}</Link>
-                </div>
-                <p className="text-sm text-slate-700 leading-relaxed">{lvl.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Common Gaps */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Common Technology Gaps</h2>
-          <div className="space-y-4">
-            {[
-              {
-                gap: "AI tools are adopted by individual teams without central evaluation or approval.",
-                consequence: "The organization ends up with a fragmented toolscape, duplicated costs, and inconsistent security posture across AI deployments.",
-              },
-              {
-                gap: "Models are deployed but not monitored — no drift detection, no performance tracking.",
-                consequence: "Models degrade silently. Stakeholders lose trust in AI outputs without understanding why quality has declined.",
-              },
-              {
-                gap: "Security reviews for AI systems reuse general IT frameworks without addressing AI-specific risks.",
-                consequence: "Attack surfaces like adversarial inputs, prompt injection, and training data exposure remain unaddressed.",
-              },
-              {
-                gap: "Infrastructure is provisioned for the pilot and not scaled for production.",
-                consequence: "AI systems that work in testing fail under production load, creating the impression that AI doesn't work when the real problem is infrastructure.",
-              },
-              {
-                gap: "Experimentation happens in production environments because no sandbox infrastructure exists.",
-                consequence: "Failed experiments disrupt live systems. Risk-aversion grows. Innovation slows.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-4 p-4 rounded-lg bg-slate-50 border border-slate-200">
-                <AlertCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm font-semibold text-slate-900 mb-1">{item.gap}</p>
-                  <p className="text-sm text-slate-600">{item.consequence}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PerspectiveSymptoms
+        perspectiveName="Technology"
+        items={[
+          {
+            symptom: "Teams avoid an obvious model upgrade because migration feels too expensive to attempt.",
+            explanation:
+              "Unmanaged Model Drift — dependency that accumulated quietly during normal operation. Traces to Architecture and Adaptability left unbuilt, and Observability that never flagged it while it was still small.",
+          },
+          {
+            symptom:
+              "Similar workflows start producing inconsistent results, and the usual suspects — the model, the code — haven't changed.",
+            explanation:
+              "Usually Environment Drift: something the AI depends on moved. Integration and Observability failing together — the dependency existed, but nobody was watching the seam.",
+          },
+          {
+            symptom: "Nothing in the release history changed, but the behavior did.",
+            explanation:
+              "Data Drift — the one most monitoring setups are least equipped to catch, because they're built to flag model and code changes, not shifts in what's flowing through an unchanged system.",
+          },
+          {
+            symptom:
+              "When the system actually goes down, nobody can execute the fix quickly — the rollback plan has never been rehearsed.",
+            explanation:
+              "Reliability and AI Operations and Automation failing together: disaster recovery was assumed, not tested.",
+          },
+          {
+            symptom: "Nobody can produce a current list of who or what can reach this system's outputs and underlying data.",
+            explanation: "Security treated as a launch-day checklist instead of a standing condition.",
+          },
+        ]}
+      />
 
       {/* Ecosystem Connection */}
       <section className="py-16 px-4 bg-slate-100">

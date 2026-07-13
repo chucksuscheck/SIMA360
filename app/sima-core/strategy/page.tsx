@@ -11,12 +11,14 @@ export const metadata: Metadata = {
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { ArrowRight, Target, CheckCircle, AlertCircle, BarChart3, Compass, Eye, Award, Layers, GitBranch, RefreshCw, ClipboardList } from "lucide-react"
+import { ArrowRight, Target, BarChart3, Compass, Eye, Award, Layers, GitBranch, RefreshCw, ClipboardList } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
+import { MaturityProgression } from "@/components/sima-core/maturity-progression"
+import { PerspectiveSymptoms } from "@/components/sima-core/perspective-symptoms"
 
-const capabilityLevels = [
+const maturityLevels = [
   {
     level: 1,
     name: "Initial",
@@ -310,73 +312,47 @@ export default function StrategyPerspectivePage() {
         </div>
       </section>
 
-      {/* Capability Progression */}
-      <section className="py-16 px-4 bg-blue-50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Capability Progression</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              What the Strategy perspective looks like at each of the six SIMA360 maturity levels.
-            </p>
-          </div>
+      <MaturityProgression
+        perspectiveName="Strategy"
+        levels={maturityLevels}
+        levelColorMap={levelColorMap}
+        numberColorMap={numberColorMap}
+        sectionBgClass="bg-blue-50"
+      />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {capabilityLevels.map((lvl) => (
-              <div
-                key={lvl.level}
-                className={`rounded-lg border-l-4 p-5 ${levelColorMap[lvl.color] ?? "border-l-slate-300 bg-slate-50"}`}
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${numberColorMap[lvl.color] ?? "bg-slate-100"}`}>
-                    {lvl.level}
-                  </div>
-                  <Link href={`/maturity#${lvl.name.toLowerCase()}`} className="font-semibold text-slate-900 hover:text-blue-600 hover:underline transition-colors">{lvl.name}</Link>
-                </div>
-                <p className="text-sm text-slate-700 leading-relaxed">{lvl.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Common Gaps */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Common Strategy Gaps</h2>
-          <div className="space-y-4">
-            {[
-              {
-                gap: "AI strategy lives in the IT department, not in leadership.",
-                consequence: "Projects get funded and executed but never connect to business value.",
-              },
-              {
-                gap: "Success metrics are defined after the project is running.",
-                consequence: "There is no baseline, so there is no way to know if anything improved.",
-              },
-              {
-                gap: "Investment planning accounts for tools but not for data, talent, or governance.",
-                consequence: "Projects stall when the tooling is in place but the infrastructure to use it isn't.",
-              },
-              {
-                gap: "AI roadmaps are built in isolation from the rest of digital transformation.",
-                consequence: "Redundant investments, conflicting systems, and organizational confusion about priorities.",
-              },
-              {
-                gap: "Prioritization is driven by enthusiasm rather than evidence.",
-                consequence: "High-visibility, low-value projects consume resources that could have moved the organization forward.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-4 p-4 rounded-lg bg-slate-50 border border-slate-200">
-                <AlertCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm font-semibold text-slate-900 mb-1">{item.gap}</p>
-                  <p className="text-sm text-slate-600">{item.consequence}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PerspectiveSymptoms
+        perspectiveName="Strategy"
+        items={[
+          {
+            symptom:
+              "Activity outpaces understanding — more automation gets rolled out while nobody can explain what's actually improving operationally.",
+            explanation:
+              "What happens when Required Capabilities and Vision get answered for the AI system but left blank for people — the infrastructure gets built, but the evidence of what it's earned the right to do never does.",
+          },
+          {
+            symptom: "The same AI recommendation leads three different teams to three different decisions.",
+            explanation:
+              "The direct symptom of an unanswered Strategic Choices Roadmap and Measures of Success — if neither specified how a recommendation should be read, three teams will reasonably read it three different ways.",
+          },
+          {
+            symptom:
+              "Model accuracy climbs while customer trust erodes, or escalations get worse — the AI's numbers and the organization's actual outcomes stop matching up.",
+            explanation:
+              "Traces to Measures of Success and Learning and Adaptation breaking down together — the metrics were tracked, but nothing fed what they showed back into how either system operates.",
+          },
+          {
+            symptom: "Overrides stop making sense, and the pattern becomes messy or invisible to leadership.",
+            explanation:
+              "Almost always Execution Model or Learning and Adaptation left undefined — nobody owns the override, or nobody's studying what it means.",
+          },
+          {
+            symptom:
+              "People start trusting AI output because it sounds right, not because anyone checked it — synthetic confidence takes hold.",
+            explanation:
+              "Unlike the other four, this doesn't trace to a single component — it's what happens when several of the eight go unanswered at once and the gap between them stops being visible.",
+          },
+        ]}
+      />
 
       {/* Ecosystem Connection */}
       <section className="py-16 px-4 bg-blue-50">
