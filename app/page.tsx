@@ -1,26 +1,52 @@
 import type { Metadata } from "next"
 
+const HOMEPAGE_DESCRIPTION =
+  "AI increases organizational capability and scales inconsistency. Whether it produces reliable outcomes depends on organizational maturity. SIMA360 diagnoses and builds that maturity — five perspectives, six Maturity Levels."
+
 export const metadata: Metadata = {
-  title: "SIMA360™ — Structured AI Maturity Framework",
-  description:
-    "SIMA360 is the operational framework for organizational AI maturity. Five integrated components: assessment, improvement cycles, implementation tools, and practitioner development.",
+  title: "SIMA360™ — Structured AI Maturity Accelerator",
+  description: HOMEPAGE_DESCRIPTION,
   alternates: {
     canonical: "https://www.sima360.org",
+  },
+  openGraph: {
+    title: "SIMA360™ — Structured AI Maturity Accelerator",
+    description: HOMEPAGE_DESCRIPTION,
+    url: "https://www.sima360.org",
+    siteName: "SIMA360™",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "SIMA360™ — Structured AI Maturity Accelerator",
+    description: HOMEPAGE_DESCRIPTION,
   },
 }
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, Brain, Zap, Target, Users, BookOpen, Lightbulb, CheckCircle, BarChart3 } from "lucide-react"
+import { ArrowRight, Brain, Zap, Target, BookOpen, CheckCircle, BarChart3 } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
 import { FrameworkMap } from "@/components/framework-map"
-import Image from "next/image"
+
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "SIMA360™",
+  alternateName: "Structured AI Maturity Accelerator",
+  url: "https://www.sima360.org",
+  description: HOMEPAGE_DESCRIPTION,
+}
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 to-cyan-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4">
@@ -41,12 +67,14 @@ export default function HomePage() {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight max-w-4xl mx-auto">
-            Most organizations have deployed AI. Few have developed the capability to produce reliable outcomes from it.
+            Most organizations have deployed AI. Few have developed the maturity to produce reliable outcomes from it.
           </h1>
           <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-            SIMA360 is the operational framework built for that gap. Five integrated components — assessment,
-            improvement cycles, implementation tools, and practitioner development — built on the diagnostic and
-            maturity architecture established in the book.
+            AI increases what an organization can do — and scales whatever inconsistency already exists inside it.
+            Left unmanaged, it doesn't fix weak decisions; it makes them louder. Whether that activity turns into
+            reliable outcomes is determined by organizational maturity, not the technology. SIMA360 exists to
+            diagnose and build that maturity, across the five perspectives and six Maturity Levels established in
+            the book.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
@@ -93,7 +121,7 @@ export default function HomePage() {
                 <Brain className="w-8 h-8 text-indigo-600 mb-2" />
                 <CardTitle className="text-lg">SIMA-Core™</CardTitle>
                 <CardDescription>
-                  The vocabulary layer. Defines the five perspectives, six maturity levels, and tool tiers that every
+                  The vocabulary layer. Defines the five perspectives, six maturity levels, and tool categories that every
                   other component operates within. The architecture the whole framework rests on.
                 </CardDescription>
               </CardHeader>
@@ -130,8 +158,8 @@ export default function HomePage() {
                 <Target className="w-8 h-8 text-purple-600 mb-2" />
                 <CardTitle className="text-lg">SIMA-Kit™</CardTitle>
                 <CardDescription>
-                  The resource library. Templates, rubrics, playbooks, and governance tools organized by capability
-                  level — the implementation resources SIMA-Flow cycles require at each stage.
+                  The resource library. Templates, rubrics, playbooks, and governance tools organized by Maturity
+                  Level — the implementation resources SIMA-Flow cycles require at each stage.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -183,7 +211,7 @@ export default function HomePage() {
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
               SIMA-Core defines the framework's vocabulary: the five perspectives, <Link href="/maturity" className="text-blue-600 hover:text-blue-800 underline">six maturity levels</Link>, and tool
-              tiers that every other component operates within. SIMA-Probe applies that vocabulary diagnostically,
+              categories that every other component operates within. SIMA-Probe applies that vocabulary diagnostically,
               measuring where the organization actually stands across all five perspectives. SIMA-Flow provides the
               improvement cycle architecture — the structured process for moving from current state to target state
               through disciplined, evidence-based iterations. SIMA-Kit supplies the templates, rubrics, playbooks, and
@@ -202,13 +230,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose SIMA360? */}
+      {/* Why It's Built This Way */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Choose SIMA360™?</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Why It's Built This Way</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Proven methodology backed by strategic intelligence principles
+              Diagnostic first, not prescriptive first — activity and improvement aren't the same thing.
             </p>
           </div>
 
@@ -219,8 +247,9 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-2">Starts Where You Actually Are</h3>
               <p className="text-slate-600">
-                Most frameworks tell you where to go. SIMA360 starts by measuring where you actually are — five
-                perspectives, six maturity levels — so improvement cycles are grounded in evidence, not assumption.
+                Capability is what a system can do. Maturity is whether the organization can handle what it's doing.
+                SIMA360 measures the second one first — five perspectives, six Maturity Levels — so improvement is
+                grounded in evidence, not assumption.
               </p>
             </div>
 
@@ -228,10 +257,12 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Closes Every Gap</h3>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">No Single Point of Control</h3>
               <p className="text-slate-600">
-                Assessment, improvement cycles, governance tools, and practitioner development — in one integrated
-                system. Most organizations are missing two or three of those. SIMA360 closes all the gaps.
+                AI touches strategy, governance, data, people, and technology at once — not one part of the
+                organization in isolation. A model can be flawless and still fail if nobody defined which decisions
+                it's allowed to influence, so SIMA360 tracks all five perspectives independently: the weakest one
+                determines whether the system holds up.
               </p>
             </div>
 
@@ -239,10 +270,11 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Works at Any Maturity Level</h3>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Improves Through Disciplined Cycles</h3>
               <p className="text-slate-600">
-                It's a structured operating system that works regardless of your stack, industry, or current maturity
-                level — and takes into consideration learning over time.
+                Maturity isn't earned in one deployment decision. It's built through repeated, evidence-based cycles
+                of assessment and adjustment — the same discipline SIMA360 runs at every Maturity Level, so growth is
+                earned one step at a time rather than assumed.
               </p>
             </div>
           </div>
