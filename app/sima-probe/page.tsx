@@ -23,7 +23,7 @@ import {
 export const metadata: Metadata = {
   title: "SIMA-Probe — AI Maturity Assessment | SIMA360™",
   description:
-    "SIMA-Probe is the diagnostic component of SIMA360, applying the framework's five perspectives to assess organizational AI maturity — from a free self-assessment to full advisory engagements.",
+    "SIMA-Probe is SIMA360's behavioral diagnostic instrument — evaluating organizational AI maturity across the five Perspectives through evidence of how decisions actually hold up under pressure, revealing which perspective is the organization's current constraint.",
   alternates: {
     canonical: "https://www.sima360.org/sima-probe",
   },
@@ -56,8 +56,8 @@ export default function SIMAProbe() {
               SIMA Probe™
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              Measure your organization's AI maturity across five Perspectives with actionable insights and
-              prescriptive guidance
+              Diagnose your organization's AI maturity across the five Perspectives — behavioral evidence of how
+              decisions actually hold up, not a checklist of what's documented
             </p>
             <div className="flex gap-4 justify-center">
               <Button
@@ -81,16 +81,27 @@ export default function SIMAProbe() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">What is SIMA Probe?</h2>
             <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-              SIMA-Probe is the diagnostic assessment tool within the SIMA360™ framework, designed to measure an
-              organization's AI maturity across five Perspectives: <strong>Strategy</strong>,{" "}
-              <strong>Governance</strong>,<strong> Data</strong>, <strong>People</strong>, and{" "}
-              <strong>Technology</strong>. Each Perspective is evaluated across the SIMA360 Maturity Model's six
-              Maturity Levels: Initial, Exploring, Applying, Formalizing, Optimizing, and Leading.
+              SIMA-Probe is SIMA360's maturity evaluation instrument — behavioral, not structural. Where a
+              conventional assessment asks whether governance policies exist, whether training programs have been
+              completed, or whether systems have been deployed, SIMA-Probe asks how those structures actually
+              perform when a decision is contested, when data conditions change, and when the system operates under
+              real operational pressure. Those questions produce documentation. SIMA-Probe produces evidence.
+            </p>
+            <p className="text-lg text-slate-700 mb-8 leading-relaxed">
+              The assessment evaluates each of the five Perspectives — <strong>Strategy</strong>,{" "}
+              <strong>Governance</strong>, <strong>Data</strong>, <strong>People</strong>, and{" "}
+              <strong>Technology</strong> — independently against the six Maturity Levels, producing a
+              perspective-by-perspective maturity profile rather than a single organizational score. That
+              differentiation is the point: it reveals which perspective is currently constraining the
+              organization's AI reliability, since the system behaves at the level of its least mature perspective,
+              not its most advanced one. Knowing which perspective is the constraint is what makes improvement
+              sequencing possible.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              SIMA-Probe serves as the guide for organizations within their AI maturity journey, providing the
-              foundational assessment that informs capability-building roadmaps, project planning, and resource
-              allocation decisions.
+              The result isn't a score to interpret on your own. Each Maturity Level determination connects directly
+              into the Set Groundwork phase of the SIMA-Flow™ Core Cycle — triggering the entrance criteria, goals,
+              strategies, and exit criteria SIMA-Kit™ provides for the actual level and perspective the organization
+              is operating in.
             </p>
           </div>
         </div>
@@ -190,11 +201,12 @@ export default function SIMAProbe() {
               <Card className="md:col-span-2">
                 <CardHeader>
                   <TrendingUp className="w-8 h-8 mb-2 text-red-600" />
-                  <CardTitle className="text-lg">Gap Analysis</CardTitle>
+                  <CardTitle className="text-lg">Constraint Identification</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600">
-                    Highlights specific areas requiring attention before advancing to higher Maturity Levels
+                    Surfaces which perspective is currently the constraint — the one governing overall reliability —
+                    before advancing to higher Maturity Levels
                   </p>
                 </CardContent>
               </Card>
@@ -557,7 +569,7 @@ export default function SIMAProbe() {
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
-                          <span>Survey combined with tailored consulting interview sessions</span>
+                          <span>Behavioral assessment combined with tailored consulting interview sessions</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
@@ -697,10 +709,13 @@ export default function SIMAProbe() {
                   <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl font-bold text-purple-600">2</span>
                   </div>
-                  <CardTitle>Complete Assessment</CardTitle>
+                  <CardTitle>Provide Behavioral Evidence</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-600">Answer questions honestly based on current practices</p>
+                  <p className="text-slate-600">
+                    Respond based on how decisions actually hold up under pressure — not what the policy says should
+                    happen
+                  </p>
                 </CardContent>
               </Card>
 
@@ -709,10 +724,12 @@ export default function SIMAProbe() {
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl font-bold text-green-600">3</span>
                   </div>
-                  <CardTitle>Take Action</CardTitle>
+                  <CardTitle>Address the Constraint</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-600">Use results to inform your AI maturity journey</p>
+                  <p className="text-slate-600">
+                    Use your constraining perspective to sequence the next improvement cycle
+                  </p>
                 </CardContent>
               </Card>
             </div>
