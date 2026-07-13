@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "SIMA-Kit — Implementation Resource Library | SIMA360™",
+  title: "SIMA-Kit — Operational Resource Layer | SIMA360™",
   description:
-    "SIMA-Kit provides the templates, rubrics, playbooks, and governance tools stratified by maturity level and perspective that SIMA-Flow cycles require.",
+    "SIMA-Kit is the operational resource layer of SIMA360 — level-specific guidance that turns a SIMA-Probe assessment into the structured improvement work SIMA-Flow's cycles carry out, not a static template library.",
   alternates: {
     canonical: "https://www.sima360.org/sima-kit",
   },
@@ -85,8 +85,9 @@ const SIMAKitPage = () => {
               <span className="text-purple-600 block">the SIMA360 Framework</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              SIMA Kit™ is the operational heart of SIMA360™'s execution model, providing practical tools, templates,
-              and guidance to turn strategic intent into real-world AI maturity gains.
+              SIMA Kit™ doesn't run the improvement cycle — Flow does. It answers the question every organization
+              hits right after an honest SIMA-Probe™ assessment: now what? Entrance criteria, goals, strategies, and
+              exit criteria, specific to the Maturity Level and perspective the organization is actually in.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-purple-500 hover:bg-purple-600">
@@ -113,9 +114,11 @@ const SIMAKitPage = () => {
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Complete Toolkit for AI Transformation</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Turns a Diagnosis Into Structured Work</h2>
             <p className="text-lg text-slate-600">
-              SIMA-Kit supplies the templates, rubrics, playbooks, and governance tools that SIMA-Flow cycles require — stratified by maturity level and perspective so every resource matches the organization's current state.
+              SIMA-Probe identifies where the organization stands and which perspective is the constraint. What
+              SIMA-Kit supplies next is what SIMA-Flow's cycles actually need to act on that finding, matched to the
+              exact Maturity Level and perspective in play.
             </p>
           </div>
 
@@ -125,10 +128,13 @@ const SIMAKitPage = () => {
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <FileText className="w-6 h-6 text-purple-600" />
                 </div>
-                <CardTitle className="text-lg">Gap Analysis Templates</CardTitle>
+                <CardTitle className="text-lg">Constraint-Specific Strategies</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 text-sm">Identify specific capability gaps across all perspectives</p>
+                <p className="text-slate-600 text-sm">
+                  Targeted improvement approaches for the perspective SIMA-Probe identifies as the organization's
+                  current constraint
+                </p>
               </CardContent>
             </Card>
 
@@ -137,10 +143,13 @@ const SIMAKitPage = () => {
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <BarChart3 className="w-6 h-6 text-purple-600" />
                 </div>
-                <CardTitle className="text-lg">Capability Scoring Rubrics</CardTitle>
+                <CardTitle className="text-lg">Entrance &amp; Exit Criteria</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 text-sm">Assess AI maturity with structured evaluation mechanisms</p>
+                <p className="text-slate-600 text-sm">
+                  The readiness indicators and advancement benchmarks that mark when a perspective is ready for the
+                  next Maturity Level
+                </p>
               </CardContent>
             </Card>
 
@@ -149,11 +158,11 @@ const SIMAKitPage = () => {
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Users className="w-6 h-6 text-purple-600" />
                 </div>
-                <CardTitle className="text-lg">Role-Based Playbooks</CardTitle>
+                <CardTitle className="text-lg">Role-Based Guidance</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 text-sm">
-                  Tailored guidance for different roles and organizational levels
+                  Tailored guidance for the people actually running SIMA-Flow's improvement cycles
                 </p>
               </CardContent>
             </Card>
@@ -179,21 +188,23 @@ const SIMAKitPage = () => {
                     <Layers className="w-5 h-5 text-purple-600" />
                   </div>
                   <div>
-                    <CardTitle className="text-xl">Capabilities Toolkit</CardTitle>
+                    <CardTitle className="text-xl">Maturity Toolkit</CardTitle>
                     <CardDescription className="text-sm text-slate-500">(Macro Cycle)</CardDescription>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  Enterprise-level assessment, planning, and capability growth across departments, portfolios, and
-                  enterprise functions with cross-functional alignment.
+                  Anchored by the SIMA-Probe™ assessment, providing the enterprise-level guidance that turns a
+                  Maturity Level determination into planning, growth, and cross-functional alignment across
+                  departments and portfolios.
                 </p>
 
                 <div className="mb-4">
-                  <h4 className="font-semibold text-slate-800 mb-2">Capability Evaluation Checklist</h4>
+                  <h4 className="font-semibold text-slate-800 mb-2">Anchored by SIMA-Probe™</h4>
                   <p className="text-sm text-slate-600 mb-2">
-                    Based on 15+ AI maturity models, providing AI Maturity Level ratings from Initial to Leading
+                    SIMA-Probe sits at the core of the Maturity Toolkit, producing the evidence-based Maturity Level
+                    rating — from Initial to Leading — that every other resource here is keyed to
                   </p>
                 </div>
 
@@ -235,42 +246,47 @@ const SIMAKitPage = () => {
                   </div>
                   <div>
                     <CardTitle className="text-xl">Project-Level Toolbox</CardTitle>
-                    <CardDescription className="text-sm text-slate-500">(Per Project)</CardDescription>
+                    <CardDescription className="text-sm text-slate-500">(Per FLAI Cycle)</CardDescription>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  Initiative-level delivery, experimentation, and iteration using the FLAI cycle (Frame, Learn, Assess,
-                  Improve) for pilots, POCs, and scaled deployments.
+                  Supports each FLAI cycle Flow runs — Frame, Learn, Assess, Improve — with what a controlled study
+                  of one operational condition actually needs, not a generic delivery kit.
                 </p>
 
                 <div className="mb-4">
                   <h4 className="font-semibold text-slate-800 mb-2">Core Tools</h4>
                   <ul className="text-sm text-slate-600 space-y-1">
                     <li>
-                      • <strong>Use Case Canvas:</strong> Define and prioritize AI opportunities
+                      • <strong>Use Case Canvas:</strong> Defines, evaluates, and prioritizes AI opportunities before
+                      resources are committed
                     </li>
                     <li>
-                      • <strong>Vision & Value Templates:</strong> Articulate purpose and benefits
+                      • <strong>Vision and Value Development:</strong> Defines success in terms of decision behavior,
+                      not adoption metrics
                     </li>
                     <li>
-                      • <strong>Project Planning Patterns:</strong> Capability-tailored playbooks
+                      • <strong>Execution Control Materials:</strong> Capture what a FLAI cycle learns and convert it
+                      into updated standards
                     </li>
                   </ul>
                 </div>
 
                 <div className="mb-4">
-                  <h4 className="font-semibold text-slate-800 mb-2">Risk & Learning</h4>
+                  <h4 className="font-semibold text-slate-800 mb-2">FLAI Cycle Support</h4>
                   <ul className="text-sm text-slate-600 space-y-1">
+                    <li>
+                      • <strong>Framing Templates:</strong> Capture the operational condition, assumption, and
+                      boundary being studied
+                    </li>
                     <li>
                       • <strong>AI Risk Checklists:</strong> Ethical and compliance safeguards
                     </li>
                     <li>
-                      • <strong>Test & Learning Cards:</strong> Capture experiments and results
-                    </li>
-                    <li>
-                      • <strong>Analysis Templates:</strong> Post-iteration reflection
+                      • <strong>Results Analysis:</strong> Examines FLAI outcomes across iterations — is improvement
+                      compounding or plateauing?
                     </li>
                   </ul>
                 </div>
@@ -329,11 +345,10 @@ const SIMAKitPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">SIMA Kit™ Within SIMA360™</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              By integrating both macro (maturity-level) and micro (project-level) tooling, SIMA Kit™ becomes a
-              catalyst for sustainable AI transformation
-            </p>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto mt-4">
-              Kit does not direct the improvement cycle — Flow does. Kit ensures that when Flow requires a capability assessment, a project planning template, or a governance checklist, the right resource is available at the right level.
+              SIMA Kit™ integrates both the macro Maturity Toolkit and the micro Project-Level Toolbox — but it
+              doesn't direct the improvement cycle; Flow does. Kit ensures that when Flow's Core Cycle needs
+              level-specific guidance, or a FLAI cycle needs a framing or control template, the right resource is
+              already keyed to the right Maturity Level and perspective.
             </p>
           </div>
 
@@ -343,11 +358,12 @@ const SIMAKitPage = () => {
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <CheckCircle className="w-6 h-6 text-green-600" />
                 </div>
-                <CardTitle className="text-lg">Reduces Waste</CardTitle>
+                <CardTitle className="text-lg">Prevents Overreach</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 text-sm">
-                  Eliminates wasted effort on misaligned projects through structured guidance
+                  Keeps effort at the Maturity Level the organization is actually ready for, not the one it wishes it
+                  were at
                 </p>
               </CardContent>
             </Card>
@@ -361,7 +377,7 @@ const SIMAKitPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 text-sm">
-                  Speeds organizational learning through repeatable templates and playbooks
+                  Keeps every FLAI cycle grounded in guidance matched to where the organization actually stands
                 </p>
               </CardContent>
             </Card>
@@ -385,11 +401,12 @@ const SIMAKitPage = () => {
                 <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <FileText className="w-6 h-6 text-orange-600" />
                 </div>
-                <CardTitle className="text-lg">Creates Repository</CardTitle>
+                <CardTitle className="text-lg">Compounds Learning</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 text-sm">
-                  Builds living repository of best practices, artifacts, and lessons learned
+                  Each cycle's outcome sharpens the next — understanding accumulates instead of resetting with every
+                  initiative
                 </p>
               </CardContent>
             </Card>
@@ -402,8 +419,7 @@ const SIMAKitPage = () => {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your AI Implementation?</h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Access the operational heart of SIMA360™ and bridge the gap between strategy and execution with
-            comprehensive tools and guidance
+            Access the resources that turn a SIMA-Probe™ diagnosis into SIMA-Flow's structured improvement work
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild className="bg-white text-purple-900 hover:bg-purple-50">

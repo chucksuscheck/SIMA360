@@ -65,7 +65,7 @@ const entryPoints = [
     borderColor: "border-t-green-500",
     label: "Execute with Structure",
     heading: "Running an AI Project",
-    body: "If you have an active AI initiative and need a structured execution and learning methodology, start with SIMA-Flow. SIMA-Kit provides the templates and tools your cycles require.",
+    body: "If you have an active AI initiative and need a structured execution and learning methodology, start with SIMA-Flow. SIMA-Kit provides the level-specific guidance your cycles require — not just templates.",
     primaryLabel: "Explore SIMA-Flow",
     primaryHref: "/sima-flow",
     primaryExternal: false,
