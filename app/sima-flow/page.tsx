@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "SIMA-Flow — Improvement Cycle Architecture | SIMA360™",
   description:
-    "SIMA-Flow is the cycle architecture of SIMA360, connecting capability assessment to structured improvement through the Core Cycle and FLAI project execution methodology.",
+    "SIMA-Flow is the cycle architecture of SIMA360, connecting capability assessment to structured improvement through the Core Cycle and FLAI — the book's disciplined organizational-learning cycle, not a project-delivery methodology.",
   alternates: {
     canonical: "https://www.sima360.org/sima-flow",
   },
@@ -86,8 +86,8 @@ export default function SimaFlowPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Two Interconnected Cycles</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              SIMA Flow™ operates through two complementary cycles that ensure both perspective alignment and tactical
-              execution
+              SIMA Flow™ operates through two complementary cycles — one for organizational alignment, one for
+              disciplined, evidence-based learning
             </p>
           </div>
 
@@ -135,7 +135,7 @@ export default function SimaFlowPage() {
               <CardHeader>
                 <RefreshCw className="w-8 h-8 text-emerald-600 mb-2" />
                 <CardTitle>FLAI Cycle (Micro)</CardTitle>
-                <CardDescription>Project-level execution with continuous learning and improvement</CardDescription>
+                <CardDescription>Project-level improvement, run as organizational learning — not delivery</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -145,7 +145,10 @@ export default function SimaFlowPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-900">Frame</h4>
-                      <p className="text-sm text-slate-600">Identify objectives, boundaries, and risks</p>
+                      <p className="text-sm text-slate-600">
+                        Define the specific operational condition to study — narrow enough that two observers would
+                        agree on it
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -154,7 +157,9 @@ export default function SimaFlowPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-900">Learn</h4>
-                      <p className="text-sm text-slate-600">Deploy tools, collect data, explore capabilities</p>
+                      <p className="text-sm text-slate-600">
+                        Introduce one deliberate, constrained intervention, treated as an experiment — not a rollout
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -163,7 +168,10 @@ export default function SimaFlowPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-900">Assess</h4>
-                      <p className="text-sm text-slate-600">Evaluate outcomes, detect gaps, benchmark progress</p>
+                      <p className="text-sm text-slate-600">
+                        Observe whether behavior actually shifted, through controls tied to that behavior — not
+                        whether activity happened
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -172,7 +180,10 @@ export default function SimaFlowPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-900">Improve</h4>
-                      <p className="text-sm text-slate-600">Apply learnings to iterate forward</p>
+                      <p className="text-sm text-slate-600">
+                        Decide from what was learned: extend it, target what's still unstable, or reframe the
+                        constraint
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -303,12 +314,13 @@ export default function SimaFlowPage() {
                   <h3 className="text-2xl font-bold text-slate-900">Execute</h3>
                 </div>
                 <p className="text-slate-600 mb-4">
-                  Operationalize strategic intent through iterative FLAI cycles, with complexity and iterations matched
-                  to organizational Maturity Levels.
+                  Run FLAI as disciplined organizational learning, not project delivery — each cycle targets
+                  whichever perspective is currently the constraint, with what the cycle studies shifting as maturity
+                  increases: clarity first, then consistency, then adaptability.
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>• Maturity-matched project complexity</li>
-                  <li>• Iterative FLAI cycle execution</li>
+                  <li>• Cycles scoped to the current constraint, not a delivery plan</li>
+                  <li>• FLAI cycles run as controlled studies, not sprints</li>
                   <li>• Continuous learning and adaptation</li>
                   <li>• Knowledge asset accumulation</li>
                 </ul>
@@ -341,9 +353,12 @@ export default function SimaFlowPage() {
       <section id="flai" className="py-16 px-4 bg-green-50 scroll-mt-20">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">FLAI Project Cycle</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">FLAI: The Learning Cycle</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Designed for strategy, innovation, and hypothesis-driven work - treating learning as a primary deliverable
+              A structured method for examining how AI operates inside the organization and whether that operation
+              produces reliable outcomes over time. Improvement here is an organizational learning problem, not a
+              delivery effort — something implemented, rolled out, and closed. FLAI treats each cycle as a controlled
+              study, not a project plan.
             </p>
           </div>
 
@@ -354,14 +369,14 @@ export default function SimaFlowPage() {
                   <Target className="w-6 h-6" />
                 </div>
                 <CardTitle>Frame</CardTitle>
-                <CardDescription>Structure ambiguity without false certainty</CardDescription>
+                <CardDescription>Define the boundary of what's being studied — not the solution</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>• Establish boundaries and assumptions</li>
-                  <li>• Define problem space clearly</li>
-                  <li>• Articulate working hypotheses</li>
-                  <li>• Surface key unknowns</li>
+                  <li>• Start with the constraint — the lowest-scoring perspective from the diagnosis</li>
+                  <li>• Isolate one specific operational condition, tied to one capability</li>
+                  <li>• Narrow enough that two observers would describe it the same way</li>
+                  <li>• Framing doesn't define the solution in advance</li>
                 </ul>
               </CardContent>
             </Card>
@@ -372,14 +387,14 @@ export default function SimaFlowPage() {
                   <BookOpen className="w-6 h-6" />
                 </div>
                 <CardTitle>Learn</CardTitle>
-                <CardDescription>Prioritize insight over output</CardDescription>
+                <CardDescription>Introduce a controlled intervention, treated as an experiment</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>• Conduct exploration and research</li>
-                  <li>• Prototype and test assumptions</li>
-                  <li>• Gather relevant data</li>
-                  <li>• Embrace failure as learning</li>
+                  <li>• Introduce one deliberate, constrained change — small enough to isolate its effects</li>
+                  <li>• Treat the change as an experiment, not an endpoint</li>
+                  <li>• Improvement must be demonstrated through observed behavior</li>
+                  <li>• Deployment itself doesn't count as progress</li>
                 </ul>
               </CardContent>
             </Card>
@@ -390,14 +405,14 @@ export default function SimaFlowPage() {
                   <Search className="w-6 h-6" />
                 </div>
                 <CardTitle>Assess</CardTitle>
-                <CardDescription>Interpret learnings in context</CardDescription>
+                <CardDescription>Observe behavior through controls tied to what's being studied</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>• Analyze patterns and implications</li>
-                  <li>• Evaluate system dynamics</li>
-                  <li>• Validate or challenge assumptions</li>
-                  <li>• Understand broader context</li>
+                  <li>• Use controls tied directly to the behavior being studied — not easy metrics</li>
+                  <li>• Measure whether behavior shifted, not whether activity happened</li>
+                  <li>• Compare decisions, escalations, or interpretation before and after</li>
+                  <li>• Avoid governance theater — oversight that looks active but changes nothing</li>
                 </ul>
               </CardContent>
             </Card>
@@ -408,14 +423,14 @@ export default function SimaFlowPage() {
                   <TrendingUp className="w-6 h-6" />
                 </div>
                 <CardTitle>Improve</CardTitle>
-                <CardDescription>Intentional, directional refinement</CardDescription>
+                <CardDescription>Decide what's next from what was actually learned</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>• Refine strategy and focus</li>
-                  <li>• Update guiding assumptions</li>
-                  <li>• Plan next iteration</li>
-                  <li>• Integrate learnings</li>
+                  <li>• If behavior improved and holds, extend the change into adjacent contexts</li>
+                  <li>• If it only improved partially, target where instability persists</li>
+                  <li>• If it didn't improve, the constraint was likely misidentified — reframe</li>
+                  <li>• The outcome becomes the next cycle's frame — nothing is planned in advance</li>
                 </ul>
               </CardContent>
             </Card>
