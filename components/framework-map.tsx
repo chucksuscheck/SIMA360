@@ -30,7 +30,7 @@ const hotspots: Hotspot[] = [
   { id: "data",        label: "Data",                  href: "/sima-core/data",       top: 54, left: 57, width: 22, height: 18, tip: "left"   },
   { id: "people",      label: "People",                href: "/sima-core/people",     top: 63, left: 25, width: 28, height: 14, tip: "top"    },
   { id: "technology",  label: "Technology",            href: "/sima-core/technology", top: 37, left: 13, width: 22, height: 20, tip: "right"  },
-  // ── Capability Levels (inner ring) ────────────────────────────────
+  // ── Maturity Levels (inner ring) ────────────────────────────────
   { id: "initial",     label: "Level 1 · Initial",     href: "/maturity#initial",     top: 30, left: 44, width: 14, height: 12, tip: "bottom" },
   { id: "exploring",   label: "Level 2 · Exploring",   href: "/maturity#exploring",   top: 37, left: 57, width: 15, height: 12, tip: "left"   },
   { id: "applying",    label: "Level 3 · Applying",    href: "/maturity#applying",    top: 52, left: 55, width: 15, height: 12, tip: "left"   },
@@ -71,7 +71,7 @@ const mobileNav = [
     ],
   },
   {
-    heading: "Capability Levels",
+    heading: "Maturity Levels",
     links: [
       { label: "1 · Initial",     href: "/maturity#initial"     },
       { label: "2 · Exploring",   href: "/maturity#exploring"   },

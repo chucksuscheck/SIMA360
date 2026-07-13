@@ -1,4 +1,4 @@
-export type Domain = 'governance' | 'strategy' | 'data' | 'people' | 'technology'
+export type Perspective = 'governance' | 'strategy' | 'data' | 'people' | 'technology'
 export type CapabilityType = 'anchor' | 'core' | 'supporting'
 export type MaturityLevel = 'Initial' | 'Exploring' | 'Applying' | 'Formalizing' | 'Optimizing' | 'Leading'
 export type RiskSeverity = 'CRITICAL' | 'HIGH' | 'MEDIUM' | 'INFO'
@@ -10,7 +10,7 @@ export interface ResponseOption {
 
 export interface Question {
   id: string
-  domain: Domain
+  perspective: Perspective
   capability: string
   type: CapabilityType
   weight: number
@@ -29,8 +29,8 @@ export interface CapabilityScore {
   adjustedScore: number
 }
 
-export interface DomainResult {
-  domain: Domain
+export interface PerspectiveResult {
+  perspective: Perspective
   score: number
   maturityLevel: MaturityLevel
   confidenceLow: number
@@ -46,14 +46,14 @@ export interface DomainResult {
 export interface RiskFlag {
   id: string
   severity: RiskSeverity
-  domain: Domain | null
+  perspective: Perspective | null
   title: string
   explanation: string
 }
 
 export interface NextPriority {
   capability: string
-  domain: Domain
+  perspective: Perspective
   questionId: string
   currentScore: number
   weight: number
@@ -61,7 +61,7 @@ export interface NextPriority {
 }
 
 export interface ScoringResult {
-  domains: Record<Domain, DomainResult>
+  perspectives: Record<Perspective, PerspectiveResult>
   enterpriseScore: number
   enterpriseMaturityLevel: MaturityLevel
   enterpriseConfidenceLow: number

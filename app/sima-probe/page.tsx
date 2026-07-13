@@ -85,7 +85,7 @@ export default function SIMAProbe() {
               organization's AI maturity across five Perspectives: <strong>Strategy</strong>,{" "}
               <strong>Governance</strong>,<strong> Data</strong>, <strong>People</strong>, and{" "}
               <strong>Technology</strong>. Each Perspective is evaluated across the SIMA360 Maturity Model's six
-              capability levels: Initial, Exploring, Applying, Formalizing, Optimizing, and Leading.
+              Maturity Levels: Initial, Exploring, Applying, Formalizing, Optimizing, and Leading.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
               SIMA-Probe serves as the guide for organizations within their AI maturity journey, providing the
@@ -168,7 +168,7 @@ export default function SIMAProbe() {
               <Card>
                 <CardHeader>
                   <Zap className="w-8 h-8 mb-2 text-green-600" />
-                  <CardTitle className="text-lg">AI Tool Tier Selection</CardTitle>
+                  <CardTitle className="text-lg">AI Tool Category Selection</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600">
@@ -194,7 +194,7 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600">
-                    Highlights specific areas requiring attention before advancing to higher capability levels
+                    Highlights specific areas requiring attention before advancing to higher Maturity Levels
                   </p>
                 </CardContent>
               </Card>
@@ -430,7 +430,7 @@ export default function SIMAProbe() {
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                           <span>
-                            Percentage-based maturity distribution showing progression through capability levels
+                            Percentage-based maturity distribution showing progression through Maturity Levels
                           </span>
                         </li>
                         <li className="flex items-start gap-2">
@@ -490,7 +490,7 @@ export default function SIMAProbe() {
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
-                          <span>Full percentage-based maturity distribution across all capability levels</span>
+                          <span>Full percentage-based maturity distribution across all Maturity Levels</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />

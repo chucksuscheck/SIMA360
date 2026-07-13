@@ -55,7 +55,7 @@ export default function SimaFlowPage() {
               <span className="text-green-600 block">Connecting Perspective to Results</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              SIMA Flow™ serves as the execution engine, tying SIMA Core™ constructs to SIMA Kit™ resourced through two
+              SIMA Flow™ serves as the execution engine, tying SIMA Core™ models to SIMA Kit™ resourced through two
               cycles that run simultaneously: the macro Core Cycle (Assess Capabilities → Set Groundwork → Execute)
               for organizational advancement, and the project-level FLAI Cycle for execution within it.
             </p>
@@ -304,10 +304,10 @@ export default function SimaFlowPage() {
                 </div>
                 <p className="text-slate-600 mb-4">
                   Operationalize strategic intent through iterative FLAI cycles, with complexity and iterations matched
-                  to organizational capability levels.
+                  to organizational Maturity Levels.
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>• Capability-matched project complexity</li>
+                  <li>• Maturity-matched project complexity</li>
                   <li>• Iterative FLAI cycle execution</li>
                   <li>• Continuous learning and adaptation</li>
                   <li>• Knowledge asset accumulation</li>
@@ -450,7 +450,7 @@ export default function SimaFlowPage() {
               Connecting capability assessment with project execution through structured learning loops
             </p>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto mt-4">
-              SIMA-Flow is the cycle architecture. SIMA-Kit is the resource library it draws from. Flow determines when and how resources are deployed; Kit ensures those resources exist at every capability level.
+              SIMA-Flow is the cycle architecture. SIMA-Kit is the resource library it draws from. Flow determines when and how resources are deployed; Kit ensures those resources exist at every Maturity Level.
             </p>
           </div>
 

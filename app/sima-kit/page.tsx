@@ -219,7 +219,7 @@ const SIMAKitPage = () => {
                   <h4 className="font-semibold text-slate-800 mb-2">Key Components</h4>
                   <ul className="text-sm text-slate-600 space-y-1">
                     <li>• Perspective-specific maturity characteristics</li>
-                    <li>• Tool tier selection guidance</li>
+                    <li>• Tool category selection guidance</li>
                     <li>• Role involvement recommendations</li>
                     <li>• Milestone plans and checkpoints</li>
                   </ul>
@@ -307,15 +307,15 @@ const SIMAKitPage = () => {
               { name: "Data", icon: BarChart3, color: "bg-purple-100 text-purple-600" },
               { name: "People", icon: Users, color: "bg-orange-100 text-orange-600" },
               { name: "Technology", icon: Lightbulb, color: "bg-red-100 text-red-600" },
-            ].map((domain, index) => (
+            ].map((perspective, index) => (
               <Card key={index} className="text-center hover:shadow-md transition-shadow">
                 <CardContent className="pt-6">
                   <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${domain.color}`}
+                    className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${perspective.color}`}
                   >
-                    <domain.icon className="w-6 h-6" />
+                    <perspective.icon className="w-6 h-6" />
                   </div>
-                  <h3 className="font-semibold text-slate-800">{domain.name}</h3>
+                  <h3 className="font-semibold text-slate-800">{perspective.name}</h3>
                 </CardContent>
               </Card>
             ))}
@@ -329,7 +329,7 @@ const SIMAKitPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">SIMA Kit™ Within SIMA360™</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              By integrating both macro (capability-level) and micro (project-level) tooling, SIMA Kit™ becomes a
+              By integrating both macro (maturity-level) and micro (project-level) tooling, SIMA Kit™ becomes a
               catalyst for sustainable AI transformation
             </p>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto mt-4">

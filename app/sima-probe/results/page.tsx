@@ -7,12 +7,12 @@ import { ArrowLeft, RotateCcw } from 'lucide-react'
 import { Navigation } from '@/components/navigation'
 import { SiteFooter } from '@/components/site-footer'
 import { EnterpriseScoreCard } from '@/components/sima-probe/enterprise-score-card'
-import { DomainScoreCard } from '@/components/sima-probe/domain-score-card'
+import { PerspectiveScoreCard } from '@/components/sima-probe/perspective-score-card'
 import { RiskFlagCard } from '@/components/sima-probe/risk-flag-card'
 import { NextStepsCard } from '@/components/sima-probe/next-steps-card'
 import type { AssessmentSession, ScoringResult } from '@/lib/sima-probe/types'
 import { scoreAssessment } from '@/lib/sima-probe/scoring'
-import { DOMAIN_ORDER } from '@/lib/sima-probe/questions'
+import { PERSPECTIVE_ORDER } from '@/lib/sima-probe/questions'
 
 const SESSION_KEY = 'sima-probe-session'
 
@@ -132,8 +132,8 @@ export default function ResultsPage() {
             Perspective Scores
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {DOMAIN_ORDER.map(domain => (
-              <DomainScoreCard key={domain} result={result.domains[domain]} />
+            {PERSPECTIVE_ORDER.map(perspective => (
+              <PerspectiveScoreCard key={perspective} result={result.perspectives[perspective]} />
             ))}
           </div>
         </section>

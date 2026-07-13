@@ -1,5 +1,5 @@
 import type { NextPriority } from '@/lib/sima-probe/types'
-import { DOMAIN_META } from '@/lib/sima-probe/questions'
+import { PERSPECTIVE_META } from '@/lib/sima-probe/questions'
 import { cn } from '@/lib/utils'
 
 interface NextStepsCardProps {
@@ -17,7 +17,7 @@ export function NextStepsCard({ priorities }: NextStepsCardProps) {
       </div>
       <div className="divide-y divide-slate-100">
         {priorities.map((priority, i) => {
-          const meta = DOMAIN_META[priority.domain]
+          const meta = PERSPECTIVE_META[priority.perspective]
           return (
             <div key={priority.questionId} className="px-6 py-4 flex items-start gap-4">
               <span className="text-2xl font-bold text-slate-200 leading-none mt-0.5 w-6 flex-shrink-0">

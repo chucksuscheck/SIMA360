@@ -530,8 +530,8 @@ const AboutPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  The vocabulary layer of the framework: three core constructs — Strategic Perspectives, AI Maturity Levels, and
-                  AI Tool Tiers — that every other component operates within.
+                  The vocabulary layer of the framework: three core models — Strategic Perspectives, AI Maturity Levels, and
+                  AI Tool Categories — that every other component operates within.
                 </p>
                 <Button variant="ghost" asChild className="p-0 h-auto text-indigo-600 hover:text-indigo-800">
                   <Link href="/sima-core">

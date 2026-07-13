@@ -1,10 +1,10 @@
-import type { Domain, Question } from './types'
+import type { Perspective, Question } from './types'
 
 export const QUESTIONS: Question[] = [
   // ── GOVERNANCE ──────────────────────────────────────────────────────────────
   {
     id: 'G1',
-    domain: 'governance',
+    perspective: 'governance',
     capability: 'Accountability Architecture',
     type: 'anchor',
     weight: 22,
@@ -20,7 +20,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'G2',
-    domain: 'governance',
+    perspective: 'governance',
     capability: 'Escalation & Exception Handling',
     type: 'anchor',
     weight: 18,
@@ -36,7 +36,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'G3',
-    domain: 'governance',
+    perspective: 'governance',
     capability: 'Human Oversight & Intervention',
     type: 'core',
     weight: 15,
@@ -52,7 +52,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'G4',
-    domain: 'governance',
+    perspective: 'governance',
     capability: 'Runtime Governance & Monitoring',
     type: 'core',
     weight: 14,
@@ -68,7 +68,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'G5',
-    domain: 'governance',
+    perspective: 'governance',
     capability: 'Risk Classification & Control',
     type: 'core',
     weight: 12,
@@ -84,7 +84,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'G6',
-    domain: 'governance',
+    perspective: 'governance',
     capability: 'Incident & Failure Response',
     type: 'supporting',
     weight: 8,
@@ -102,7 +102,7 @@ export const QUESTIONS: Question[] = [
   // ── STRATEGY ─────────────────────────────────────────────────────────────────
   {
     id: 'S1',
-    domain: 'strategy',
+    perspective: 'strategy',
     capability: 'Operational Translation',
     type: 'anchor',
     weight: 20,
@@ -118,7 +118,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'S2',
-    domain: 'strategy',
+    perspective: 'strategy',
     capability: 'Portfolio Prioritization',
     type: 'anchor',
     weight: 18,
@@ -134,7 +134,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'S3',
-    domain: 'strategy',
+    perspective: 'strategy',
     capability: 'Cross-Functional Coordination',
     type: 'core',
     weight: 15,
@@ -150,7 +150,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'S4',
-    domain: 'strategy',
+    perspective: 'strategy',
     capability: 'Strategic Vision Alignment',
     type: 'core',
     weight: 13,
@@ -166,7 +166,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'S5',
-    domain: 'strategy',
+    perspective: 'strategy',
     capability: 'Adaptive Strategic Learning',
     type: 'core',
     weight: 12,
@@ -182,7 +182,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'S6',
-    domain: 'strategy',
+    perspective: 'strategy',
     capability: 'Value Realization',
     type: 'supporting',
     weight: 7,
@@ -200,7 +200,7 @@ export const QUESTIONS: Question[] = [
   // ── DATA ─────────────────────────────────────────────────────────────────────
   {
     id: 'D1',
-    domain: 'data',
+    perspective: 'data',
     capability: 'Runtime Monitoring',
     type: 'anchor',
     weight: 21,
@@ -216,7 +216,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'D2',
-    domain: 'data',
+    perspective: 'data',
     capability: 'Data Lineage & Traceability',
     type: 'anchor',
     weight: 18,
@@ -232,7 +232,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'D3',
-    domain: 'data',
+    perspective: 'data',
     capability: 'Representational Stability',
     type: 'core',
     weight: 15,
@@ -248,7 +248,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'D4',
-    domain: 'data',
+    perspective: 'data',
     capability: 'Feedback Loop Detection',
     type: 'core',
     weight: 13,
@@ -264,7 +264,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'D5',
-    domain: 'data',
+    perspective: 'data',
     capability: 'Runtime Data Trust',
     type: 'core',
     weight: 10,
@@ -280,7 +280,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'D6',
-    domain: 'data',
+    perspective: 'data',
     capability: 'Operational Data Escalation',
     type: 'supporting',
     weight: 8,
@@ -298,7 +298,7 @@ export const QUESTIONS: Question[] = [
   // ── PEOPLE ────────────────────────────────────────────────────────────────────
   {
     id: 'P1',
-    domain: 'people',
+    perspective: 'people',
     capability: 'Human Judgment Calibration',
     type: 'anchor',
     weight: 22,
@@ -314,7 +314,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'P2',
-    domain: 'people',
+    perspective: 'people',
     capability: 'Escalation & Accountability',
     type: 'anchor',
     weight: 20,
@@ -330,7 +330,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'P3',
-    domain: 'people',
+    perspective: 'people',
     capability: 'Psychological Safety & Learning Culture',
     type: 'core',
     weight: 16,
@@ -346,7 +346,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'P4',
-    domain: 'people',
+    perspective: 'people',
     capability: 'Human Oversight Behavior',
     type: 'core',
     weight: 14,
@@ -362,7 +362,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'P5',
-    domain: 'people',
+    perspective: 'people',
     capability: 'Operational Culture',
     type: 'core',
     weight: 11,
@@ -378,7 +378,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'P6',
-    domain: 'people',
+    perspective: 'people',
     capability: 'Behavioral Measurement',
     type: 'supporting',
     weight: 7,
@@ -396,7 +396,7 @@ export const QUESTIONS: Question[] = [
   // ── TECHNOLOGY ────────────────────────────────────────────────────────────────
   {
     id: 'T1',
-    domain: 'technology',
+    perspective: 'technology',
     capability: 'Operational Observability',
     type: 'anchor',
     weight: 22,
@@ -412,7 +412,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'T2',
-    domain: 'technology',
+    perspective: 'technology',
     capability: 'Model Operations',
     type: 'anchor',
     weight: 18,
@@ -428,7 +428,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'T3',
-    domain: 'technology',
+    perspective: 'technology',
     capability: 'Runtime Governance Support',
     type: 'core',
     weight: 15,
@@ -444,7 +444,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'T4',
-    domain: 'technology',
+    perspective: 'technology',
     capability: 'Reliability Engineering',
     type: 'core',
     weight: 13,
@@ -460,7 +460,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'T5',
-    domain: 'technology',
+    perspective: 'technology',
     capability: 'Vendor & Dependency Management',
     type: 'supporting',
     weight: 8,
@@ -476,7 +476,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'T6',
-    domain: 'technology',
+    perspective: 'technology',
     capability: 'Prompt Governance',
     type: 'supporting',
     weight: 6,
@@ -492,7 +492,7 @@ export const QUESTIONS: Question[] = [
   },
 ]
 
-export const DOMAIN_ORDER: Domain[] = [
+export const PERSPECTIVE_ORDER: Perspective[] = [
   'governance',
   'strategy',
   'data',
@@ -500,8 +500,8 @@ export const DOMAIN_ORDER: Domain[] = [
   'technology',
 ]
 
-export const DOMAIN_META: Record<
-  Domain,
+export const PERSPECTIVE_META: Record<
+  Perspective,
   { label: string; description: string; color: string; borderColor: string; bgColor: string }
 > = {
   governance: {

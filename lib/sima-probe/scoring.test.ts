@@ -1,16 +1,16 @@
 /**
  * Manual verification script for the SIMA-Probe scoring engine.
- * Run: npx ts-node lib/sima-probe/scoring.test.ts
+ * Run: npx tsx lib/sima-probe/scoring.test.ts
  *
  * Cases tested:
  *   A) All zeros           — everything Initial, anchors violated, evidence caps fire
  *   B) Mature respondent   — scores 3–4 across the board
  *   C) Contradiction case  — G1=0, G2=4 → GOVERNANCE_THEATER fires, affected cap reduced 40%
- *   D) Anchor cap          — G1=1 (Exploring), other G scores high → domain capped at 2.0
- *   E) Weakest-constraint  — known domain scores → verify enterprise score is the minimum, not an average
+ *   D) Anchor cap          — G1=1 (Exploring), other G scores high → perspective capped at 2.0
+ *   E) Weakest-constraint  — known perspective scores → verify enterprise score is the minimum, not an average
  */
 
-import { scoreAssessment, scoreDomain, getMaturityLevel } from './scoring'
+import { scoreAssessment, scorePerspective, getMaturityLevel } from './scoring'
 import type { Answers } from './types'
 import { QUESTIONS } from './questions'
 
@@ -18,7 +18,7 @@ function allAnswers(value: number): Answers {
   return Object.fromEntries(QUESTIONS.map(q => [q.id, value]))
 }
 
-function domainAnswers(base: Answers, overrides: Answers): Answers {
+function perspectiveAnswers(base: Answers, overrides: Answers): Answers {
   return { ...base, ...overrides }
 }
 
@@ -46,21 +46,21 @@ console.log('\nCase A — All zeros:')
   const answers = allAnswers(0)
   const result = scoreAssessment(answers)
 
-  assert('all domain scores = 0.0', [
-    result.domains.governance.score,
-    result.domains.strategy.score,
-    result.domains.data.score,
-    result.domains.people.score,
-    result.domains.technology.score,
+  assert('all perspective scores = 0.0', [
+    result.perspectives.governance.score,
+    result.perspectives.strategy.score,
+    result.perspectives.data.score,
+    result.perspectives.people.score,
+    result.perspectives.technology.score,
   ], [0, 0, 0, 0, 0])
 
   assert('all maturity levels = Initial',
-    Object.values(result.domains).map(d => d.maturityLevel),
+    Object.values(result.perspectives).map(d => d.maturityLevel),
     ['Initial', 'Initial', 'Initial', 'Initial', 'Initial']
   )
 
-  assert('evidence count = 0 for governance', result.domains.governance.evidenceCount, 0)
-  // Weakest-constraint principle: enterprise score = min of all domain scores
+  assert('evidence count = 0 for governance', result.perspectives.governance.evidenceCount, 0)
+  // Weakest-constraint principle: enterprise score = min of all perspective scores
   assert('enterprise score = 0.0 (weakest constraint)', result.enterpriseScore, 0)
 }
 
@@ -71,11 +71,11 @@ console.log('\nCase B — Mature respondent (scores 3):')
   const result = scoreAssessment(answers)
 
   // With all scores = 3, no anchor cap (anchors = 3 >= 2.0), evidence count = 6
-  // Domain score = 3.0 for all domains
-  assert('governance score = 3.0', result.domains.governance.score, 3)
-  assert('governance maturity = Formalizing', result.domains.governance.maturityLevel, 'Formalizing')
-  assert('evidence count = 6', result.domains.governance.evidenceCount, 6)
-  assert('no anchors violated', result.domains.governance.anchorsViolated, false)
+  // Perspective score = 3.0 for all perspectives
+  assert('governance score = 3.0', result.perspectives.governance.score, 3)
+  assert('governance maturity = Formalizing', result.perspectives.governance.maturityLevel, 'Formalizing')
+  assert('evidence count = 6', result.perspectives.governance.evidenceCount, 6)
+  assert('no anchors violated', result.perspectives.governance.anchorsViolated, false)
 
   // Enterprise: weakest-constraint minimum of five 3.0s = 3.0
   assert('enterprise score = 3.0', result.enterpriseScore, 3)
@@ -87,7 +87,7 @@ console.log('\nCase C — GOVERNANCE_THEATER (G1=0, G2=4, G3=4, G4=4):')
 {
   const answers = allAnswers(2)
   const overrides: Answers = { G1: 0, G2: 4, G3: 4, G4: 4 }
-  const result = scoreDomain('governance', { ...answers, ...overrides })
+  const result = scorePerspective('governance', { ...answers, ...overrides })
 
   assert('contradiction flag = GOVERNANCE_THEATER',
     result.contradictionFlags.includes('GOVERNANCE_THEATER'), true)
@@ -96,7 +96,7 @@ console.log('\nCase C — GOVERNANCE_THEATER (G1=0, G2=4, G3=4, G4=4):')
   const g2Cap = result.capabilityScores.find(c => c.questionId === 'G2')!
   assertApprox('G2 adjusted score ≈ 2.4 (4 × 0.6)', g2Cap.adjustedScore, 2.4)
 
-  // G1 is the anchor at 0.0 → anchorsViolated = true → domain capped at 2.0
+  // G1 is the anchor at 0.0 → anchorsViolated = true → perspective capped at 2.0
   assert('anchorsViolated = true', result.anchorsViolated, true)
   assert('governance capped at 2.0', result.score <= 2.0, true)
 }
@@ -111,10 +111,10 @@ console.log('\nCase D — Anchor cap (G1=1, all others=4):')
     P1: 3, P2: 3, P3: 3, P4: 3, P5: 3, P6: 3,
     T1: 3, T2: 3, T3: 3, T4: 3, T5: 3, T6: 3,
   }
-  const result = scoreDomain('governance', answers)
+  const result = scorePerspective('governance', answers)
 
-  // G1=1 < 2.0 → anchor cap fires, domain score capped at 2.0
-  assert('domain capped at ≤ 2.0 when anchor < 2.0', result.score <= 2.0, true)
+  // G1=1 < 2.0 → anchor cap fires, perspective score capped at 2.0
+  assert('perspective capped at ≤ 2.0 when anchor < 2.0', result.score <= 2.0, true)
   assert('anchorsViolated = true', result.anchorsViolated, true)
   assert('maturity = Applying', result.maturityLevel, 'Applying')
 }
@@ -122,15 +122,15 @@ console.log('\nCase D — Anchor cap (G1=1, all others=4):')
 // ── Case E: Weakest-constraint arithmetic ────────────────────────────────────
 console.log('\nCase E — Weakest-constraint minimum:')
 {
-  // Manually set up known domain scores by crafting exact answers.
-  // Easiest: set all answers to 2.0 → all domain scores = 2.0
-  // Minimum of five equal 2.0s = 2.0, regardless of domain weights
+  // Manually set up known perspective scores by crafting exact answers.
+  // Easiest: set all answers to 2.0 → all perspective scores = 2.0
+  // Minimum of five equal 2.0s = 2.0, regardless of perspective weights
   const answers = allAnswers(2)
   const result = scoreAssessment(answers)
   // All caps fire at 2.0 (anchor cap: 2 is exactly threshold, anchorsViolated = false for ≥ 2.0)
   // evidence count = 6 (all > 0)
   // Expected enterprise score = 2.0
-  assertApprox('minimum of all 2.0 domains ≈ 2.0', result.enterpriseScore, 2.0)
+  assertApprox('minimum of all 2.0 perspectives ≈ 2.0', result.enterpriseScore, 2.0)
 }
 
 // ── Case F: Evidence cap (< 3 non-zero capabilities) ─────────────────────────
@@ -143,12 +143,12 @@ console.log('\nCase F — Evidence cap (only 2 non-zero capabilities in governan
     P1: 3, P2: 3, P3: 3, P4: 3, P5: 3, P6: 3,
     T1: 3, T2: 3, T3: 3, T4: 3, T5: 3, T6: 3,
   }
-  const result = scoreDomain('governance', answers)
+  const result = scorePerspective('governance', answers)
 
   assert('evidence count = 2', result.evidenceCount, 2)
-  // Raw domain score would be high (G1=4, G2=4 dominate by weight),
+  // Raw perspective score would be high (G1=4, G2=4 dominate by weight),
   // but evidence cap should bring it down to max 2.0
-  assert('domain capped at ≤ 2.0 by evidence cap', result.score <= 2.0, true)
+  assert('perspective capped at ≤ 2.0 by evidence cap', result.score <= 2.0, true)
 }
 
 // ── Case G: Confidence bands ───────────────────────────────────────────────────
@@ -157,8 +157,8 @@ console.log('\nCase G — Confidence bands:')
   const answers = allAnswers(3)
   const result = scoreAssessment(answers)
 
-  assert('governance confidenceLow = 2.0', result.domains.governance.confidenceLow, 2)
-  assert('governance confidenceHigh = 4.0', result.domains.governance.confidenceHigh, 4)
+  assert('governance confidenceLow = 2.0', result.perspectives.governance.confidenceLow, 2)
+  assert('governance confidenceHigh = 4.0', result.perspectives.governance.confidenceHigh, 4)
   assert('enterprise confidenceLow = 2.0', result.enterpriseConfidenceLow, 2)
   assert('enterprise confidenceHigh = 4.0', result.enterpriseConfidenceHigh, 4)
 }

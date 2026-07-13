@@ -1,18 +1,18 @@
 import type {
-  Domain,
+  Perspective,
   MaturityLevel,
   RiskSeverity,
   Answers,
   CapabilityScore,
-  DomainResult,
+  PerspectiveResult,
   RiskFlag,
   NextPriority,
   ScoringResult,
 } from './types'
-import { QUESTIONS, DOMAIN_ORDER } from './questions'
+import { QUESTIONS, PERSPECTIVE_ORDER } from './questions'
 
-// Enterprise-level domain weights (sum to 1.0)
-const DOMAIN_WEIGHTS: Record<Domain, number> = {
+// Enterprise-level perspective weights (sum to 1.0)
+const PERSPECTIVE_WEIGHTS: Record<Perspective, number> = {
   governance: 0.25,
   technology: 0.22,
   data: 0.20,
@@ -43,12 +43,12 @@ function round1(n: number): number {
 }
 
 // Returns the contradiction flag type and the question IDs whose scores should be reduced 40%
-function detectDomainContradiction(
-  domain: Domain,
+function detectPerspectiveContradiction(
+  perspective: Perspective,
   rawScores: Record<string, number>
 ): { flagType: string | null; affectedIds: string[] } {
-  // Each domain has one designated anchor question for theater detection
-  const theaterRules: Record<Domain, { anchorId: string; flagType: string }> = {
+  // Each perspective has one designated anchor question for theater detection
+  const theaterRules: Record<Perspective, { anchorId: string; flagType: string }> = {
     governance: { anchorId: 'G1', flagType: 'GOVERNANCE_THEATER' },
     strategy:   { anchorId: 'S1', flagType: 'STRATEGY_THEATER' },
     data:       { anchorId: 'D1', flagType: 'DATA_MONITORING_CLAIM' },
@@ -56,13 +56,13 @@ function detectDomainContradiction(
     technology: { anchorId: 'T1', flagType: 'OBSERVABILITY_CLAIM' },
   }
 
-  const rule = theaterRules[domain]
+  const rule = theaterRules[perspective]
   const triggerScore = rawScores[rule.anchorId]
 
   if (triggerScore < 1) {
-    // Find all questions in this domain that scored > 3
-    const allDomainIds = QUESTIONS.filter(q => q.domain === domain).map(q => q.id)
-    const affectedIds = allDomainIds.filter(id => rawScores[id] > 3)
+    // Find all questions in this perspective that scored > 3
+    const allPerspectiveIds = QUESTIONS.filter(q => q.perspective === perspective).map(q => q.id)
+    const affectedIds = allPerspectiveIds.filter(id => rawScores[id] > 3)
     if (affectedIds.length > 0) {
       return { flagType: rule.flagType, affectedIds }
     }
@@ -70,17 +70,17 @@ function detectDomainContradiction(
   return { flagType: null, affectedIds: [] }
 }
 
-export function scoreDomain(domain: Domain, answers: Answers): DomainResult {
-  const domainQuestions = QUESTIONS.filter(q => q.domain === domain)
+export function scorePerspective(perspective: Perspective, answers: Answers): PerspectiveResult {
+  const perspectiveQuestions = QUESTIONS.filter(q => q.perspective === perspective)
 
   // Step 1: Raw scores from answers
   const rawScores: Record<string, number> = {}
-  for (const q of domainQuestions) {
+  for (const q of perspectiveQuestions) {
     rawScores[q.id] = answers[q.id] ?? 0
   }
 
   // Step 2: Contradiction detection → apply 40% reduction to affected capabilities
-  const { flagType, affectedIds } = detectDomainContradiction(domain, rawScores)
+  const { flagType, affectedIds } = detectPerspectiveContradiction(perspective, rawScores)
   const contradictionFlags: string[] = flagType ? [flagType] : []
 
   const adjustedScores: Record<string, number> = { ...rawScores }
@@ -89,7 +89,7 @@ export function scoreDomain(domain: Domain, answers: Answers): DomainResult {
   }
 
   // Step 3: Build CapabilityScore objects
-  const capabilityScores: CapabilityScore[] = domainQuestions.map(q => ({
+  const capabilityScores: CapabilityScore[] = perspectiveQuestions.map(q => ({
     questionId: q.id,
     capability: q.capability,
     type: q.type,
@@ -101,34 +101,34 @@ export function scoreDomain(domain: Domain, answers: Answers): DomainResult {
   // Step 4: Evidence count — capabilities with adjusted score > 0
   const evidenceCount = capabilityScores.filter(c => c.adjustedScore > 0).length
 
-  // Step 5: Weighted domain score (weights are raw percentages, normalized by their sum)
-  const totalWeight = domainQuestions.reduce((s, q) => s + q.weight, 0)
+  // Step 5: Weighted perspective score (weights are raw percentages, normalized by their sum)
+  const totalWeight = perspectiveQuestions.reduce((s, q) => s + q.weight, 0)
   const weightedSum = capabilityScores.reduce(
     (sum, c) => sum + c.adjustedScore * c.weight,
     0
   )
-  let domainScore = weightedSum / totalWeight
+  let perspectiveScore = weightedSum / totalWeight
 
-  // Step 6: Raw domain score (before caps) used for ANCHOR_VIOLATION check
-  const rawDomainScore =
+  // Step 6: Raw perspective score (before caps) used for ANCHOR_VIOLATION check
+  const rawPerspectiveScore =
     capabilityScores.reduce((sum, c) => sum + c.rawScore * c.weight, 0) / totalWeight
 
-  // Step 7: Anchor cap — if any anchor scores below Applying (< 2.0), cap domain at 2.0
+  // Step 7: Anchor cap — if any anchor scores below Applying (< 2.0), cap perspective at 2.0
   const anchors = capabilityScores.filter(c => c.type === 'anchor')
   const anchorsViolated = anchors.some(c => c.adjustedScore < 2.0)
   if (anchorsViolated) {
-    domainScore = Math.min(domainScore, 2.0)
+    perspectiveScore = Math.min(perspectiveScore, 2.0)
   }
 
   // Step 8: Evidence cap — fewer than 3 evidence responses → cap at 2.0
   if (evidenceCount < 3) {
-    domainScore = Math.min(domainScore, 2.0)
+    perspectiveScore = Math.min(perspectiveScore, 2.0)
   }
 
   // Step 9: ANCHOR_VIOLATION contradiction flag
-  // Triggered when any anchor's raw score < 1 and the raw domain score would have exceeded 2.0
+  // Triggered when any anchor's raw score < 1 and the raw perspective score would have exceeded 2.0
   const anchorViolationTriggered =
-    anchors.some(c => c.rawScore < 1) && rawDomainScore > 2.0
+    anchors.some(c => c.rawScore < 1) && rawPerspectiveScore > 2.0
   if (anchorViolationTriggered) {
     contradictionFlags.push('ANCHOR_VIOLATION')
   }
@@ -140,9 +140,9 @@ export function scoreDomain(domain: Domain, answers: Answers): DomainResult {
   })
   const constraint = sorted[0]
 
-  const score = round1(domainScore)
+  const score = round1(perspectiveScore)
   return {
-    domain,
+    perspective,
     score,
     maturityLevel: getMaturityLevel(score),
     confidenceLow: round1(Math.max(0, score - 1.0)),
@@ -168,15 +168,15 @@ const CONTRADICTION_EXPLANATIONS: Record<string, string> = {
   OBSERVABILITY_CLAIM:
     'Operational Observability (T1) is unestablished, yet other Technology capabilities scored high. Technology capability claims cannot be verified without production monitoring.',
   ANCHOR_VIOLATION:
-    'A foundational anchor capability scored Initial while the overall domain trended above Exploring. The domain score has been capped at Applying.',
+    'A foundational anchor capability scored Initial while the overall perspective trended above Exploring. The perspective score has been capped at Applying.',
 }
 
-function buildRiskFlags(domainResults: Record<Domain, DomainResult>): RiskFlag[] {
+function buildRiskFlags(perspectiveResults: Record<Perspective, PerspectiveResult>): RiskFlag[] {
   const allFlags: RiskFlag[] = []
 
-  for (const domain of DOMAIN_ORDER) {
-    const result = domainResults[domain]
-    const domainLabel = domain.charAt(0).toUpperCase() + domain.slice(1)
+  for (const perspective of PERSPECTIVE_ORDER) {
+    const result = perspectiveResults[perspective]
+    const perspectiveLabel = perspective.charAt(0).toUpperCase() + perspective.slice(1)
 
     // CRITICAL: Any anchor capability scoring Initial (< 1.0)
     for (const cap of result.capabilityScores.filter(c => c.type === 'anchor')) {
@@ -184,9 +184,9 @@ function buildRiskFlags(domainResults: Record<Domain, DomainResult>): RiskFlag[]
         allFlags.push({
           id: `CRITICAL_${cap.questionId}`,
           severity: 'CRITICAL',
-          domain,
-          title: `${cap.capability} unestablished (${domainLabel})`,
-          explanation: `${cap.capability} scored ${cap.adjustedScore.toFixed(1)} — Initial. This is a foundational anchor. No reliable AI maturity in ${domainLabel} can be claimed or built upon without it.`,
+          perspective,
+          title: `${cap.capability} unestablished (${perspectiveLabel})`,
+          explanation: `${cap.capability} scored ${cap.adjustedScore.toFixed(1)} — Initial. This is a foundational anchor. No reliable AI maturity in ${perspectiveLabel} can be claimed or built upon without it.`,
         })
       }
     }
@@ -197,42 +197,42 @@ function buildRiskFlags(domainResults: Record<Domain, DomainResult>): RiskFlag[]
     )
     if (coresBelowApplying.length >= 2) {
       allFlags.push({
-        id: `HIGH_${domain}_CORES`,
+        id: `HIGH_${perspective}_CORES`,
         severity: 'HIGH',
-        domain,
-        title: `${domainLabel}: ${coresBelowApplying.length} core capabilities absent`,
-        explanation: `${coresBelowApplying.map(c => c.capability).join(' and ')} are below Applying in ${domainLabel}. Core capabilities must reach Applying before the domain can operate reliably under real conditions.`,
+        perspective,
+        title: `${perspectiveLabel}: ${coresBelowApplying.length} core capabilities absent`,
+        explanation: `${coresBelowApplying.map(c => c.capability).join(' and ')} are below Applying in ${perspectiveLabel}. Core capabilities must reach Applying before the perspective can operate reliably under real conditions.`,
       })
     }
 
-    // MEDIUM: Domain score more than 1.5 above lowest individual capability
+    // MEDIUM: Perspective score more than 1.5 above lowest individual capability
     const lowestAdjusted = Math.min(...result.capabilityScores.map(c => c.adjustedScore))
     const gap = result.score - lowestAdjusted
     if (gap > 1.5) {
       allFlags.push({
-        id: `MEDIUM_${domain}_GAP`,
+        id: `MEDIUM_${perspective}_GAP`,
         severity: 'MEDIUM',
-        domain,
-        title: `${domainLabel}: high within-domain score spread`,
-        explanation: `${domainLabel} domain score is ${result.score.toFixed(1)}, but its lowest capability sits at ${lowestAdjusted.toFixed(1)} — a gap of ${gap.toFixed(1)}. High-scoring capabilities are masking weak foundations that will fail under operational pressure.`,
+        perspective,
+        title: `${perspectiveLabel}: high within-perspective score spread`,
+        explanation: `${perspectiveLabel} perspective score is ${result.score.toFixed(1)}, but its lowest capability sits at ${lowestAdjusted.toFixed(1)} — a gap of ${gap.toFixed(1)}. High-scoring capabilities are masking weak foundations that will fail under operational pressure.`,
       })
     }
 
     // INFO: Contradiction flags
     for (const flagType of result.contradictionFlags) {
       allFlags.push({
-        id: `INFO_${flagType}_${domain}`,
+        id: `INFO_${flagType}_${perspective}`,
         severity: 'INFO',
-        domain,
+        perspective,
         title: `Contradiction detected: ${flagType.replace(/_/g, ' ')}`,
         explanation:
           CONTRADICTION_EXPLANATIONS[flagType] ??
-          `A scoring contradiction was detected in ${domainLabel}. Review responses for consistency.`,
+          `A scoring contradiction was detected in ${perspectiveLabel}. Review responses for consistency.`,
       })
     }
   }
 
-  // Sort by severity; within same severity, sort by domain order for determinism
+  // Sort by severity; within same severity, sort by perspective order for determinism
   const severityOrder: Record<RiskSeverity, number> = {
     CRITICAL: 0,
     HIGH: 1,
@@ -243,22 +243,22 @@ function buildRiskFlags(domainResults: Record<Domain, DomainResult>): RiskFlag[]
     const severityDiff =
       severityOrder[a.severity] - severityOrder[b.severity]
     if (severityDiff !== 0) return severityDiff
-    return DOMAIN_ORDER.indexOf(a.domain!) - DOMAIN_ORDER.indexOf(b.domain!)
+    return PERSPECTIVE_ORDER.indexOf(a.perspective!) - PERSPECTIVE_ORDER.indexOf(b.perspective!)
   })
 
   return allFlags.slice(0, 3)
 }
 
-function buildNextPriorities(domainResults: Record<Domain, DomainResult>): NextPriority[] {
+function buildNextPriorities(perspectiveResults: Record<Perspective, PerspectiveResult>): NextPriority[] {
   const candidates: NextPriority[] = []
 
-  for (const domain of DOMAIN_ORDER) {
-    const result = domainResults[domain]
+  for (const perspective of PERSPECTIVE_ORDER) {
+    const result = perspectiveResults[perspective]
     for (const cap of result.capabilityScores) {
       const reason = buildPriorityReason(cap, result)
       candidates.push({
         capability: cap.capability,
-        domain,
+        perspective,
         questionId: cap.questionId,
         currentScore: round1(cap.adjustedScore),
         weight: cap.weight,
@@ -267,30 +267,30 @@ function buildNextPriorities(domainResults: Record<Domain, DomainResult>): NextP
     }
   }
 
-  // Rank by potential impact: domain weight × capability weight × score gap to 5
+  // Rank by potential impact: perspective weight × capability weight × score gap to 5
   candidates.sort((a, b) => {
     const impactA =
-      DOMAIN_WEIGHTS[a.domain] * a.weight * (5 - a.currentScore)
+      PERSPECTIVE_WEIGHTS[a.perspective] * a.weight * (5 - a.currentScore)
     const impactB =
-      DOMAIN_WEIGHTS[b.domain] * b.weight * (5 - b.currentScore)
+      PERSPECTIVE_WEIGHTS[b.perspective] * b.weight * (5 - b.currentScore)
     return impactB - impactA
   })
 
   return candidates.slice(0, 3)
 }
 
-function buildPriorityReason(cap: CapabilityScore, result: DomainResult): string {
+function buildPriorityReason(cap: CapabilityScore, result: PerspectiveResult): string {
   if (cap.type === 'anchor' && cap.adjustedScore < 2.0) {
-    return `Anchor below Applying — caps the entire ${result.domain} domain at ${result.score.toFixed(1)}. Resolving this unlocks the domain ceiling.`
+    return `Anchor below Applying — caps the entire ${result.perspective} perspective at ${result.score.toFixed(1)}. Resolving this unlocks the perspective ceiling.`
   }
   if (cap.type === 'anchor' && cap.adjustedScore < 3.0) {
-    return `Anchor at ${cap.adjustedScore.toFixed(1)} — highest-weight capability in this domain. Improvement here has the most direct effect on the domain score.`
+    return `Anchor at ${cap.adjustedScore.toFixed(1)} — highest-weight capability in this perspective. Improvement here has the most direct effect on the perspective score.`
   }
   if (cap.adjustedScore < 1.0) {
     return `Scored Initial (${cap.adjustedScore.toFixed(1)}) — no capability established. Foundational gap with high remediation leverage.`
   }
-  const domainWeight = Math.round(DOMAIN_WEIGHTS[result.domain] * 100)
-  return `High-weight capability (${cap.weight}%) in a ${domainWeight}%-weighted domain. Small improvements here compound into enterprise score gains.`
+  const perspectiveWeight = Math.round(PERSPECTIVE_WEIGHTS[result.perspective] * 100)
+  return `High-weight capability (${cap.weight}%) in a ${perspectiveWeight}%-weighted perspective. Small improvements here compound into enterprise score gains.`
 }
 
 // Weakest-constraint principle (Chapter 10): the system behaves at the level of
@@ -302,26 +302,26 @@ function weakestConstraint(scores: Array<{ score: number }>): number {
 }
 
 export function scoreAssessment(answers: Answers): ScoringResult {
-  const domains = {} as Record<Domain, DomainResult>
-  for (const domain of DOMAIN_ORDER) {
-    domains[domain] = scoreDomain(domain, answers)
+  const perspectives = {} as Record<Perspective, PerspectiveResult>
+  for (const perspective of PERSPECTIVE_ORDER) {
+    perspectives[perspective] = scorePerspective(perspective, answers)
   }
 
-  const domainScoreInputs = DOMAIN_ORDER.map(d => ({
-    domain: d,
-    score: domains[d].score,
-    weight: DOMAIN_WEIGHTS[d],
+  const perspectiveScoreInputs = PERSPECTIVE_ORDER.map(d => ({
+    perspective: d,
+    score: perspectives[d].score,
+    weight: PERSPECTIVE_WEIGHTS[d],
   }))
 
-  const enterpriseScore = round1(weakestConstraint(domainScoreInputs))
+  const enterpriseScore = round1(weakestConstraint(perspectiveScoreInputs))
 
   return {
-    domains,
+    perspectives,
     enterpriseScore,
     enterpriseMaturityLevel: getMaturityLevel(enterpriseScore),
     enterpriseConfidenceLow: round1(Math.max(0, enterpriseScore - 1.0)),
     enterpriseConfidenceHigh: round1(Math.min(5, enterpriseScore + 1.0)),
-    topRiskFlags: buildRiskFlags(domains),
-    nextPriorities: buildNextPriorities(domains),
+    topRiskFlags: buildRiskFlags(perspectives),
+    nextPriorities: buildNextPriorities(perspectives),
   }
 }

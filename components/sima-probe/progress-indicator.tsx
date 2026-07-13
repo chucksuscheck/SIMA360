@@ -1,7 +1,7 @@
 'use client'
 
-import type { Domain } from '@/lib/sima-probe/types'
-import { DOMAIN_ORDER, DOMAIN_META } from '@/lib/sima-probe/questions'
+import type { Perspective } from '@/lib/sima-probe/types'
+import { PERSPECTIVE_ORDER, PERSPECTIVE_META } from '@/lib/sima-probe/questions'
 import { cn } from '@/lib/utils'
 
 interface ProgressIndicatorProps {
@@ -16,26 +16,26 @@ export function ProgressIndicator({
   answeredCount,
 }: ProgressIndicatorProps) {
   const progressPct = Math.round((answeredCount / totalQuestions) * 100)
-  const currentDomain = domainForIndex(currentIndex)
-  const domainIndex = DOMAIN_ORDER.indexOf(currentDomain)
-  const questionInDomain = (currentIndex % 6) + 1
+  const currentPerspective = perspectiveForIndex(currentIndex)
+  const perspectiveIndex = PERSPECTIVE_ORDER.indexOf(currentPerspective)
+  const questionInPerspective = (currentIndex % 6) + 1
 
   return (
     <div className="w-full">
-      {/* Domain tabs */}
+      {/* Perspective tabs */}
       <div className="flex items-center gap-1 mb-3 overflow-x-auto pb-1">
-        {DOMAIN_ORDER.map((domain, i) => {
-          const meta = DOMAIN_META[domain]
-          const isActive = domain === currentDomain
-          const isDone = i < domainIndex
-          const questionsAnsweredInDomain = Math.min(
+        {PERSPECTIVE_ORDER.map((perspective, i) => {
+          const meta = PERSPECTIVE_META[perspective]
+          const isActive = perspective === currentPerspective
+          const isDone = i < perspectiveIndex
+          const questionsAnsweredInPerspective = Math.min(
             Math.max(0, answeredCount - i * 6),
             6
           )
 
           return (
             <div
-              key={domain}
+              key={perspective}
               className={cn(
                 'flex-1 min-w-[80px] flex flex-col items-center px-2 py-1.5 rounded text-center transition-colors',
                 isActive ? cn('bg-white border border-slate-200 shadow-sm') : '',
@@ -56,7 +56,7 @@ export function ProgressIndicator({
                     key={j}
                     className={cn(
                       'w-1 h-1 rounded-full',
-                      isDone || (isActive && j < questionInDomain)
+                      isDone || (isActive && j < questionInPerspective)
                         ? isActive
                           ? 'bg-slate-700'
                           : 'bg-slate-400'
@@ -81,6 +81,6 @@ export function ProgressIndicator({
   )
 }
 
-function domainForIndex(index: number): Domain {
-  return DOMAIN_ORDER[Math.floor(index / 6)] ?? DOMAIN_ORDER[0]
+function perspectiveForIndex(index: number): Perspective {
+  return PERSPECTIVE_ORDER[Math.floor(index / 6)] ?? PERSPECTIVE_ORDER[0]
 }

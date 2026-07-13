@@ -117,7 +117,7 @@ export default function TheBookPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">How the Book Became SIMA360</h2>
             <p className="text-lg text-slate-700 mb-10 text-center leading-relaxed max-w-3xl mx-auto">
               The book's five perspectives — Strategy, Governance, Data, People, and Technology — are SIMA-Core's
-              Strategic Perspectives construct. The book's six maturity levels are SIMA-Core's AI Maturity Levels construct.
+              Strategic Perspectives model. The book's six maturity levels are SIMA-Core's AI Maturity Levels model.
               The book's improvement methodology is FLAI. The book's diagnostic questions are what SIMA-Probe
               operationalizes into a formal assessment instrument. The book is not a companion to SIMA360.
               It is its origin.
@@ -139,7 +139,7 @@ export default function TheBookPage() {
                         "Conceptual framework",
                         "Maturity gap argument",
                         "Five perspectives",
-                        "Six capability levels",
+                        "Six maturity levels",
                         "FLAI methodology",
                         "Diagnostic principles",
                       ].map((item) => (

@@ -1,10 +1,10 @@
-import type { DomainResult } from '@/lib/sima-probe/types'
-import { DOMAIN_META } from '@/lib/sima-probe/questions'
+import type { PerspectiveResult } from '@/lib/sima-probe/types'
+import { PERSPECTIVE_META } from '@/lib/sima-probe/questions'
 import { MATURITY_DESCRIPTIONS } from '@/lib/sima-probe/scoring'
 import { cn } from '@/lib/utils'
 
-interface DomainScoreCardProps {
-  result: DomainResult
+interface PerspectiveScoreCardProps {
+  result: PerspectiveResult
 }
 
 const MATURITY_COLORS: Record<string, string> = {
@@ -16,8 +16,8 @@ const MATURITY_COLORS: Record<string, string> = {
   Leading:     'bg-violet-100 text-violet-800',
 }
 
-export function DomainScoreCard({ result }: DomainScoreCardProps) {
-  const meta = DOMAIN_META[result.domain]
+export function PerspectiveScoreCard({ result }: PerspectiveScoreCardProps) {
+  const meta = PERSPECTIVE_META[result.perspective]
 
   return (
     <div className={cn('rounded-xl border border-slate-200 bg-white overflow-hidden')}>
