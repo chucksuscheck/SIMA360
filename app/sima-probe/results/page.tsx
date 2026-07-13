@@ -10,9 +10,15 @@ import { EnterpriseScoreCard } from '@/components/sima-probe/enterprise-score-ca
 import { PerspectiveScoreCard } from '@/components/sima-probe/perspective-score-card'
 import { RiskFlagCard } from '@/components/sima-probe/risk-flag-card'
 import { NextStepsCard } from '@/components/sima-probe/next-steps-card'
+import { ConstraintUpsellCard } from '@/components/sima-probe/constraint-upsell-card'
 import type { AssessmentSession, ScoringResult } from '@/lib/sima-probe/types'
-import { scoreAssessment } from '@/lib/sima-probe/scoring'
+import { scoreAssessment, getConstrainingPerspective } from '@/lib/sima-probe/scoring'
 import { PERSPECTIVE_ORDER } from '@/lib/sima-probe/questions'
+
+// Every completed assessment today runs the Foundation-tier 30-question set — there is no
+// separate Insight-tier assessment yet — so the upsell always promotes the tier one above
+// Foundation. Once an Insight-tier assessment exists, key this off the session's actual tier.
+const NEXT_TIER = 'insight' as const
 
 const SESSION_KEY = 'sima-probe-session'
 
@@ -117,12 +123,21 @@ export default function ResultsPage() {
         </div>
 
         {/* Enterprise score */}
-        <section className="mb-10">
+        <section className="mb-6">
           <EnterpriseScoreCard
             score={result.enterpriseScore}
             maturityLevel={result.enterpriseMaturityLevel}
             confidenceLow={result.enterpriseConfidenceLow}
             confidenceHigh={result.enterpriseConfidenceHigh}
+          />
+        </section>
+
+        {/* Contextual upsell — generated from this result's actual constraint */}
+        <section className="mb-10">
+          <ConstraintUpsellCard
+            perspective={getConstrainingPerspective(result)}
+            maturityLevel={result.enterpriseMaturityLevel}
+            nextTier={NEXT_TIER}
           />
         </section>
 

@@ -301,6 +301,16 @@ function weakestConstraint(scores: Array<{ score: number }>): number {
   return Math.min(...scores.map(e => e.score))
 }
 
+// The constraining perspective per the weakest-constraint principle: the perspective
+// whose score equals the enterprise score (the minimum). PERSPECTIVE_ORDER gives a
+// deterministic tie-break when more than one perspective shares the lowest score.
+export function getConstrainingPerspective(result: ScoringResult): Perspective {
+  return (
+    PERSPECTIVE_ORDER.find(p => result.perspectives[p].score === result.enterpriseScore) ??
+    PERSPECTIVE_ORDER[0]
+  )
+}
+
 export function scoreAssessment(answers: Answers): ScoringResult {
   const perspectives = {} as Record<Perspective, PerspectiveResult>
   for (const perspective of PERSPECTIVE_ORDER) {
