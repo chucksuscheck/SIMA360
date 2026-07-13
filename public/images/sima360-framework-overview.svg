@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254" role="img" aria-labelledby="title desc">
 <title id="title">SIMA360 Framework Overview</title>
-<desc id="desc">A vector version of the SIMA360 framework showing SIMA components, five domains, capability levels, and FLAI at the center.</desc>
+<desc id="desc">A vector version of the SIMA360 framework showing SIMA components, five perspectives, Maturity Levels, and FLAI at the center.</desc>
 <defs>
   <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0b2e74" flood-opacity=".12"/></filter>
   <radialGradient id="centerGrad" cx="50%" cy="42%" r="60%"><stop offset="0" stop-color="#0b4ea2"/><stop offset="1" stop-color="#061f61"/></radialGradient>
@@ -40,8 +40,8 @@
 <path d="M429.04,622.85 A198,198 0 0 1 524.43,457.64 L579.34,548.31 A92,92 0 0 0 535.02,625.07 Z" fill="#eaf1ff" stroke="#ffffff" stroke-width="5"/>
 <circle cx="627.0" cy="627.0" r="84" fill="url(#centerGrad)" stroke="#ffffff" stroke-width="8"/>
 </g>
-<text x="627.0" y="262.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="30" font-weight="700" fill="#0c2f7d">FIVE DOMAINS</text>
-<text x="627.0" y="445.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="21" font-weight="700" fill="#0c2f7d">CAPABILITY LEVELS</text>
+<text x="627.0" y="262.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="30" font-weight="700" fill="#0c2f7d">FIVE PERSPECTIVES</text>
+<text x="627.0" y="445.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="21" font-weight="700" fill="#0c2f7d">MATURITY LEVELS</text>
 <text x="627.0" y="171.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="27" font-weight="700" fill="#0c2f7d">SIMA CORE™</text>
 <g stroke="#0b2d84" stroke-width="6" fill="none" stroke-linejoin="round"><path d="M626.9999999999999,45.0 l37,21 v43 l-37,22 l-37,-22 v-43 z"/><path d="M589.9999999999999,66.0 l37,22 l37,-22 M626.9999999999999,88.0 v43"/></g>
 <text x="1127.0" y="671.0" text-anchor="middle" font-family="Aptos Display, Arial Narrow, Arial, sans-serif" font-size="27" font-weight="700" fill="#078768">SIMA FLOW™</text>
