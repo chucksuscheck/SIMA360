@@ -13,9 +13,9 @@ const LEVEL_STYLES: Record<MaturityLevel, { pill: string; track: string; label: 
   Initial:     { pill: 'bg-red-100 text-red-800',     track: 'bg-red-400',     label: 'Immediate intervention required' },
   Exploring:   { pill: 'bg-orange-100 text-orange-800', track: 'bg-orange-400', label: 'Foundation building required' },
   Applying:    { pill: 'bg-yellow-100 text-yellow-700', track: 'bg-yellow-400', label: 'Operational consistency needed' },
-  Formalizing: { pill: 'bg-blue-100 text-blue-800',    track: 'bg-blue-500',    label: 'Scaling and standardization' },
+  Formalizing: { pill: 'bg-blue-100 text-blue-800',    track: 'bg-blue-500',    label: 'Holds normally — pressure-testing needed' },
   Optimizing:  { pill: 'bg-emerald-100 text-emerald-800', track: 'bg-emerald-500', label: 'Continuous improvement active' },
-  Leading:     { pill: 'bg-violet-100 text-violet-800', track: 'bg-violet-500', label: 'Reference-grade capability' },
+  Leading:     { pill: 'bg-violet-100 text-violet-800', track: 'bg-violet-500', label: 'Deliberate stewardship' },
 }
 
 // Which maturity bands are active on the scale bar

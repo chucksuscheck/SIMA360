@@ -18,8 +18,8 @@ export function PerspectiveSymptoms({ perspectiveName, items }: PerspectiveSympt
           Symptoms of Failing {perspectiveName}
         </h2>
         <p className="text-slate-600 text-center mb-8 max-w-2xl mx-auto">
-          {perspectiveName} rarely fails all at once. These are the signals the book points to — one for each
-          component above.
+          {perspectiveName} rarely fails all at once. These are the signals the book points to — each one tracing
+          back to a specific component.
         </p>
         <div className="space-y-4">
           {items.map((item, i) => (

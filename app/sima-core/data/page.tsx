@@ -134,7 +134,9 @@ export default function DataPerspectivePage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Eight Components, Answered Twice</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Data is two jobs wearing one name: making sure what feeds the AI is something it can learn the right
-              lessons from, and making sure what reaches people is something they can actually use.
+              lessons from, and making sure what reaches people is something they can actually use — the
+              Human-Direction System and the AI-Application System, data's version of the same split every
+              perspective runs on.
             </p>
           </div>
 

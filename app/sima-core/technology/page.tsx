@@ -137,7 +137,10 @@ export default function TechnologyPerspectivePage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Six Components, Answered Twice</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Six components, each answering its own version of "is this good enough to carry what we're about to
-              put on it." The weakest one sets the ceiling — readiness isn't an average, it's the lowest score.
+              put on it" — for the Human-Direction System (who builds and owns the architecture) and the
+              AI-Application System (the model's own technical behavior) alike, technology's version of the same
+              split every perspective runs on. The weakest one sets the ceiling — readiness isn't an average, it's
+              the lowest score.
             </p>
           </div>
 

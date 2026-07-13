@@ -30,6 +30,11 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
 import { FrameworkMap } from "@/components/framework-map"
+import { ECOSYSTEM_COMPONENTS, type EcosystemComponent } from "@/lib/sima-ecosystem"
+
+function ecosystemDescription(slug: EcosystemComponent["slug"]): string {
+  return ECOSYSTEM_COMPONENTS.find((c) => c.slug === slug)!.description
+}
 
 const JSON_LD = {
   "@context": "https://schema.org",
@@ -102,10 +107,7 @@ export default function HomePage() {
               <CardHeader>
                 <BarChart3 className="w-8 h-8 text-blue-600 mb-2" />
                 <CardTitle className="text-lg">SIMA-Probe™</CardTitle>
-                <CardDescription>
-                  Diagnostic assessment tool that measures organizational AI maturity across all five perspectives and six
-                  maturity levels. The assessment entry point for the ecosystem.
-                </CardDescription>
+                <CardDescription>{ecosystemDescription("sima-probe")}</CardDescription>
               </CardHeader>
               <CardContent>
                 <Button variant="ghost" asChild className="w-full">
@@ -120,10 +122,7 @@ export default function HomePage() {
               <CardHeader>
                 <Brain className="w-8 h-8 text-indigo-600 mb-2" />
                 <CardTitle className="text-lg">SIMA-Core™</CardTitle>
-                <CardDescription>
-                  The vocabulary layer. Defines the five perspectives, six maturity levels, and tool categories that every
-                  other component operates within. The architecture the whole framework rests on.
-                </CardDescription>
+                <CardDescription>{ecosystemDescription("sima-core")}</CardDescription>
               </CardHeader>
               <CardContent>
                 <Button variant="ghost" asChild className="w-full">
@@ -138,11 +137,7 @@ export default function HomePage() {
               <CardHeader>
                 <Zap className="w-8 h-8 text-green-600 mb-2" />
                 <CardTitle className="text-lg">SIMA-Flow™</CardTitle>
-                <CardDescription>
-                  The improvement cycle architecture. Provides the structured process — the Core Cycle for
-                  organizational advancement and the FLAI cycle for project-level execution — for moving from
-                  current-state assessment to target-state advancement through disciplined iterations.
-                </CardDescription>
+                <CardDescription>{ecosystemDescription("sima-flow")}</CardDescription>
               </CardHeader>
               <CardContent>
                 <Button variant="ghost" asChild className="w-full">
@@ -157,10 +152,7 @@ export default function HomePage() {
               <CardHeader>
                 <Target className="w-8 h-8 text-purple-600 mb-2" />
                 <CardTitle className="text-lg">SIMA-Kit™</CardTitle>
-                <CardDescription>
-                  The resource library. Templates, rubrics, playbooks, and governance tools organized by Maturity
-                  Level — the implementation resources SIMA-Flow cycles require at each stage.
-                </CardDescription>
+                <CardDescription>{ecosystemDescription("sima-kit")}</CardDescription>
               </CardHeader>
               <CardContent>
                 <Button variant="ghost" asChild className="w-full">
@@ -214,8 +206,8 @@ export default function HomePage() {
               categories that every other component operates within. SIMA-Probe applies that vocabulary diagnostically,
               measuring where the organization actually stands across all five perspectives. SIMA-Flow provides the
               improvement cycle architecture — the structured process for moving from current state to target state
-              through disciplined, evidence-based iterations. SIMA-Kit supplies the templates, rubrics, playbooks, and
-              governance tools those cycles require at every maturity level. SIMA-Ascend builds the practitioner
+              through disciplined, evidence-based iterations. SIMA-Kit supplies the level-specific guidance — entrance
+              criteria, goals, strategies, exit criteria — those cycles require at every Maturity Level. SIMA-Ascend builds the practitioner
               capability organizations need to run the system consistently and advance it over time.
             </p>
           </div>
@@ -292,7 +284,7 @@ export default function HomePage() {
                   <p className="text-slate-700 leading-relaxed mb-4">
                     SIMA360 is grounded in the research and maturity architecture established in{" "}
                     <Link href="/the-book" className="text-blue-600 hover:text-blue-800 underline">
-                      <em>The AI Rush — Too Much. Too Soon.</em>
+                      <em>The AI Rush: Too Much. Too Soon.</em>
                     </Link>{" "}
                     by Dr. Charles Suscheck. The framework's five perspectives, six maturity levels, and improvement cycle
                     design come directly from that foundation — not from consulting convention.

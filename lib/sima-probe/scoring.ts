@@ -287,7 +287,7 @@ function buildPriorityReason(cap: CapabilityScore, result: PerspectiveResult): s
     return `Anchor at ${cap.adjustedScore.toFixed(1)} — highest-weight capability in this perspective. Improvement here has the most direct effect on the perspective score.`
   }
   if (cap.adjustedScore < 1.0) {
-    return `Scored Initial (${cap.adjustedScore.toFixed(1)}) — no capability established. Foundational gap with high remediation leverage.`
+    return `Scored Initial (${cap.adjustedScore.toFixed(1)}) — no capability established. A foundational gap; fixing it has the most direct effect on this perspective.`
   }
   const perspectiveWeight = Math.round(PERSPECTIVE_WEIGHTS[result.perspective] * 100)
   return `High-weight capability (${cap.weight}%) in a ${perspectiveWeight}%-weighted perspective. Small improvements here compound into enterprise score gains.`

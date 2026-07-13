@@ -134,7 +134,8 @@ export default function GovernancePerspectivePage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Six Components, Answered Twice</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Governance is two jobs within one system: one aimed at people interpreting or overriding AI, one aimed
-              at keeping the AI itself inside its boundaries. Six components cover both.
+              at keeping the AI itself inside its boundaries — the Human-Direction System and the AI-Application
+              System, governance's version of the same split every perspective runs on. Six components cover both.
             </p>
           </div>
 

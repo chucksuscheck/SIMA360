@@ -124,7 +124,7 @@ export default function SimaFlowPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-900">Execute</h4>
-                      <p className="text-sm text-slate-600">Run projects through iterative FLAI cycles</p>
+                      <p className="text-sm text-slate-600">Run FLAI cycles as disciplined organizational learning</p>
                     </div>
                   </div>
                 </div>
@@ -465,7 +465,7 @@ export default function SimaFlowPage() {
               Connecting capability assessment with project execution through structured learning loops
             </p>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto mt-4">
-              SIMA-Flow is the cycle architecture. SIMA-Kit is the resource library it draws from. Flow determines when and how resources are deployed; Kit ensures those resources exist at every Maturity Level.
+              SIMA-Flow is the cycle architecture. SIMA-Kit is the operational resource layer it draws from. Flow determines when and how guidance gets applied; Kit ensures that guidance exists at every Maturity Level.
             </p>
           </div>
 

@@ -96,9 +96,8 @@ export default function SimaCorePage() {
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
               SIMA-Core answers one question: what are the conceptual structures this framework uses to describe AI
-              maturity? The answer is three interconnected models: the Strategic Perspectives model, the AI Maturity
-              Levels model, and the AI Tool Categories model. Everything else in the SIMA360 ecosystem operates within the
-              vocabulary these three models define.
+              maturity? Everything else in the SIMA360 ecosystem operates within the vocabulary those three models
+              define — the vocabulary the rest of this page introduces in detail below.
             </p>
           </div>
         </div>
@@ -600,8 +599,7 @@ export default function SimaCorePage() {
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">Static Foundation</h3>
                 <p className="text-slate-600 text-sm mb-4">
                   SIMA Core™ is static and provides the structural foundation. SIMA Flow™ provides the dynamic
-                  application of the core models, while SIMA Kit™ provides the necessary collateral to apply the Core
-                  Models.
+                  application of the core models, while SIMA Kit™ provides the resources needed to apply them.
                 </p>
               </CardContent>
             </Card>
@@ -610,8 +608,8 @@ export default function SimaCorePage() {
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">Progressive Maturity</h3>
                 <p className="text-slate-600 text-sm mb-4">
-                  The point is not to reach the highest Maturity Level, but to use the maturity assessment to lay the
-                  groundwork for projects and identify areas for improvement.
+                  The point is not to reach the highest Maturity Level, but to use the maturity assessment to set the
+                  groundwork for improvement and identify what needs attention next.
                 </p>
               </CardContent>
             </Card>
