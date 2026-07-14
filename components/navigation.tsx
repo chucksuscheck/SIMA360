@@ -164,9 +164,18 @@ export function Navigation() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsLearnMoreOpen(false)}
-                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors rounded-b-md"
+                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
               >
                 Download Guide
+              </a>
+              <a
+                href="https://www.eventbee.com/v/sima360classes/boxoffice/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsLearnMoreOpen(false)}
+                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors rounded-b-md"
+              >
+                Take Training
               </a>
             </div>
           )}
@@ -300,6 +309,15 @@ export function Navigation() {
                     className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
                   >
                     Download Guide
+                  </a>
+                  <a
+                    href="https://www.eventbee.com/v/sima360classes/boxoffice/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeMobile}
+                    className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                  >
+                    Take Training
                   </a>
                 </div>
               )}
