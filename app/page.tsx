@@ -71,7 +71,7 @@ export default function HomePage() {
       </header>
 
       {/* 1. Hero — small product eyebrow, hook headline, single CTA */}
-      <section className="py-12 px-4">
+      <section className="pt-12 pb-4 px-4">
         <div className="container mx-auto text-center max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#64748b" }}>
             SIMA360™ — Structured AI Maturity Accelerator
@@ -83,7 +83,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. Why Assess Maturity — separated argument section, clearly broken from the hook */}
-      <section className="py-6 px-4">
+      <section className="pt-2 pb-6 px-4">
         <div className="container mx-auto text-center max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#64748b" }}>
             Why Assess Maturity
@@ -112,9 +112,12 @@ export default function HomePage() {
       {/* 3. Diagram — the visual centerpiece: bigger, elevated, colorfully framed */}
       <section className="py-14 px-4">
         <div className="container mx-auto max-w-6xl text-center mb-6">
-          <h2 className="text-2xl sm:text-3xl font-bold" style={{ color: "#0f172a" }}>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2" style={{ color: "#0f172a" }}>
             Start With the Assessment
           </h2>
+          <p className="text-sm" style={{ color: "#64748b" }}>
+            Click any component below to explore it
+          </p>
         </div>
         <div
           className="container mx-auto max-w-6xl rounded-lg border-2 bg-white shadow-xl p-6 sm:p-8"
