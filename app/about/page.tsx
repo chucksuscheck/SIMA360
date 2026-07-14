@@ -13,14 +13,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import {
   ArrowRight,
   Users,
   Target,
@@ -29,7 +21,6 @@ import {
   CheckCircle,
   Brain,
   BookOpen,
-  Home,
   AlertTriangle,
   TrendingUp,
   Eye,
@@ -64,24 +55,6 @@ const AboutPage = () => {
           </div>
         </div>
       </header>
-
-      {/* Breadcrumb */}
-      <div className="container mx-auto px-4 py-4">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">
-                <Home className="h-4 w-4" />
-                Home
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>About</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
 
       {/* 1. Hero Section */}
       <section className="py-20 px-4">
