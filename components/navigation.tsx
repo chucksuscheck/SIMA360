@@ -2,7 +2,9 @@
 
 import { useState, useRef } from "react"
 import Link from "next/link"
-import { ChevronDown, Menu, X } from "lucide-react"
+import { ChevronDown, ChevronRight, Menu, X } from "lucide-react"
+
+const learnMoreOverview = { label: "Overview", href: "/overview" }
 
 const frameworkLinks = [
   { label: "SIMA-Core™", href: "/sima-core" },
@@ -21,34 +23,41 @@ const perspectiveLinks = [
   { label: "Technology", href: "/sima-core/technology" },
 ]
 
+type SubmenuKey = "framework" | "perspectives" | null
+
 export function Navigation() {
-  const [isFrameworkOpen, setIsFrameworkOpen] = useState(false)
-  const [isPerspectivesOpen, setIsPerspectivesOpen] = useState(false)
+  const [isLearnMoreOpen, setIsLearnMoreOpen] = useState(false)
+  const [activeSubmenu, setActiveSubmenu] = useState<SubmenuKey>(null)
   const [isMobileOpen, setIsMobileOpen] = useState(false)
+  const [isMobileLearnMoreOpen, setIsMobileLearnMoreOpen] = useState(false)
   const [isMobileFrameworkOpen, setIsMobileFrameworkOpen] = useState(false)
   const [isMobilePerspectivesOpen, setIsMobilePerspectivesOpen] = useState(false)
 
-  const frameworkTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const perspectivesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const learnMoreTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const submenuTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  const openFramework = () => {
-    if (frameworkTimeoutRef.current) clearTimeout(frameworkTimeoutRef.current)
-    setIsFrameworkOpen(true)
+  const openLearnMore = () => {
+    if (learnMoreTimeoutRef.current) clearTimeout(learnMoreTimeoutRef.current)
+    setIsLearnMoreOpen(true)
   }
-  const closeFramework = () => {
-    frameworkTimeoutRef.current = setTimeout(() => setIsFrameworkOpen(false), 300)
+  const closeLearnMore = () => {
+    learnMoreTimeoutRef.current = setTimeout(() => {
+      setIsLearnMoreOpen(false)
+      setActiveSubmenu(null)
+    }, 300)
   }
 
-  const openPerspectives = () => {
-    if (perspectivesTimeoutRef.current) clearTimeout(perspectivesTimeoutRef.current)
-    setIsPerspectivesOpen(true)
+  const openSubmenu = (key: SubmenuKey) => {
+    if (submenuTimeoutRef.current) clearTimeout(submenuTimeoutRef.current)
+    setActiveSubmenu(key)
   }
-  const closePerspectives = () => {
-    perspectivesTimeoutRef.current = setTimeout(() => setIsPerspectivesOpen(false), 300)
+  const closeSubmenu = () => {
+    submenuTimeoutRef.current = setTimeout(() => setActiveSubmenu(null), 300)
   }
 
   const closeMobile = () => {
     setIsMobileOpen(false)
+    setIsMobileLearnMoreOpen(false)
     setIsMobileFrameworkOpen(false)
     setIsMobilePerspectivesOpen(false)
   }
@@ -64,89 +73,104 @@ export function Navigation() {
           Home
         </Link>
 
-        {/* The Framework dropdown */}
-        <div className="relative" onMouseEnter={openFramework} onMouseLeave={closeFramework}>
+        <Link
+          href="/sima-probe"
+          className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
+        >
+          Assess Now
+        </Link>
+
+        {/* Learn More dropdown */}
+        <div className="relative" onMouseEnter={openLearnMore} onMouseLeave={closeLearnMore}>
           <button
             className="flex items-center gap-1 px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
-            aria-expanded={isFrameworkOpen}
+            aria-expanded={isLearnMoreOpen}
             aria-haspopup="true"
           >
-            The Framework
-            <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isFrameworkOpen ? "rotate-180" : ""}`} />
+            Learn More
+            <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isLearnMoreOpen ? "rotate-180" : ""}`} />
           </button>
-          {isFrameworkOpen && (
-            <div className="absolute top-full left-0 mt-1 w-52 bg-white border border-slate-200 rounded-md shadow-lg z-50">
-              {frameworkLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsFrameworkOpen(false)}
-                  className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
+          {isLearnMoreOpen && (
+            <div className="absolute top-full left-0 mt-1 w-52 bg-white border border-slate-200 rounded-md shadow-lg z-50 py-1">
+              <Link
+                href={learnMoreOverview.href}
+                onClick={() => setIsLearnMoreOpen(false)}
+                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors rounded-t-md"
+              >
+                {learnMoreOverview.label}
+              </Link>
+
+              {/* The Framework — nested submenu */}
+              <div className="relative" onMouseEnter={() => openSubmenu("framework")} onMouseLeave={closeSubmenu}>
+                <button
+                  className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+                  aria-expanded={activeSubmenu === "framework"}
+                  aria-haspopup="true"
                 >
-                  {link.label}
-                </Link>
-              ))}
+                  The Framework
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+                {activeSubmenu === "framework" && (
+                  <div className="absolute top-0 left-full ml-1 w-52 bg-white border border-slate-200 rounded-md shadow-lg z-50">
+                    {frameworkLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setIsLearnMoreOpen(false)}
+                        className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Perspectives — nested submenu */}
+              <div className="relative" onMouseEnter={() => openSubmenu("perspectives")} onMouseLeave={closeSubmenu}>
+                <button
+                  className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+                  aria-expanded={activeSubmenu === "perspectives"}
+                  aria-haspopup="true"
+                >
+                  Perspectives
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+                {activeSubmenu === "perspectives" && (
+                  <div className="absolute top-0 left-full ml-1 w-44 bg-white border border-slate-200 rounded-md shadow-lg z-50">
+                    {perspectiveLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setIsLearnMoreOpen(false)}
+                        className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <Link
+                href="/the-book"
+                onClick={() => setIsLearnMoreOpen(false)}
+                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+              >
+                The Book
+              </Link>
+              <a
+                href="/SIMA360_Guide.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsLearnMoreOpen(false)}
+                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors rounded-b-md"
+              >
+                Download Guide
+              </a>
             </div>
           )}
         </div>
-
-        {/* Perspectives dropdown */}
-        <div className="relative" onMouseEnter={openPerspectives} onMouseLeave={closePerspectives}>
-          <button
-            className="flex items-center gap-1 px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
-            aria-expanded={isPerspectivesOpen}
-            aria-haspopup="true"
-          >
-            Perspectives
-            <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isPerspectivesOpen ? "rotate-180" : ""}`} />
-          </button>
-          {isPerspectivesOpen && (
-            <div className="absolute top-full left-0 mt-1 w-44 bg-white border border-slate-200 rounded-md shadow-lg z-50">
-              {perspectiveLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsPerspectivesOpen(false)}
-                  className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
-
-        <Link
-          href="/sima-probe/assessment"
-          className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
-        >
-          Start Assessment
-        </Link>
-
-        <Link
-          href="/the-book"
-          className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
-        >
-          The Book
-        </Link>
-
-        <a
-          href="/SIMA360_Guide.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
-        >
-          Download Guide
-        </a>
-
-        <a
-          href="https://SIMA360Classes.eventbee.com/boxoffice"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
-        >
-          Class List
-        </a>
 
         <Link
           href="/about"
@@ -154,6 +178,13 @@ export function Navigation() {
         >
           About
         </Link>
+
+        <a
+          href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation"
+          className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
+        >
+          Schedule a Conversation
+        </a>
       </nav>
 
       {/* ── Mobile hamburger + menu (< md) ── */}
@@ -177,91 +208,102 @@ export function Navigation() {
               Home
             </Link>
 
-            {/* The Framework mobile */}
+            <Link
+              href="/sima-probe"
+              onClick={closeMobile}
+              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
+            >
+              Assess Now
+            </Link>
+
+            {/* Learn More mobile */}
             <div>
               <button
-                onClick={() => setIsMobileFrameworkOpen(!isMobileFrameworkOpen)}
+                onClick={() => setIsMobileLearnMoreOpen(!isMobileLearnMoreOpen)}
                 className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
               >
-                The Framework
-                <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileFrameworkOpen ? "rotate-180" : ""}`} />
+                Learn More
+                <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileLearnMoreOpen ? "rotate-180" : ""}`} />
               </button>
-              {isMobileFrameworkOpen && (
+              {isMobileLearnMoreOpen && (
                 <div className="bg-slate-50 border-t border-b border-slate-100">
-                  {frameworkLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={closeMobile}
-                      className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                  <Link
+                    href={learnMoreOverview.href}
+                    onClick={closeMobile}
+                    className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                  >
+                    {learnMoreOverview.label}
+                  </Link>
+
+                  {/* The Framework mobile submenu */}
+                  <div>
+                    <button
+                      onClick={() => setIsMobileFrameworkOpen(!isMobileFrameworkOpen)}
+                      className="flex items-center justify-between w-full pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
                     >
-                      {link.label}
-                    </Link>
-                  ))}
+                      The Framework
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileFrameworkOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    {isMobileFrameworkOpen && (
+                      <div className="bg-white">
+                        {frameworkLinks.map((link) => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            onClick={closeMobile}
+                            className="block pl-11 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Perspectives mobile submenu */}
+                  <div>
+                    <button
+                      onClick={() => setIsMobilePerspectivesOpen(!isMobilePerspectivesOpen)}
+                      className="flex items-center justify-between w-full pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                    >
+                      Perspectives
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobilePerspectivesOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    {isMobilePerspectivesOpen && (
+                      <div className="bg-white">
+                        {perspectiveLinks.map((link) => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            onClick={closeMobile}
+                            className="block pl-11 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <Link
+                    href="/the-book"
+                    onClick={closeMobile}
+                    className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                  >
+                    The Book
+                  </Link>
+                  <a
+                    href="/SIMA360_Guide.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeMobile}
+                    className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                  >
+                    Download Guide
+                  </a>
                 </div>
               )}
             </div>
-
-            {/* Perspectives mobile */}
-            <div>
-              <button
-                onClick={() => setIsMobilePerspectivesOpen(!isMobilePerspectivesOpen)}
-                className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
-              >
-                Perspectives
-                <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobilePerspectivesOpen ? "rotate-180" : ""}`} />
-              </button>
-              {isMobilePerspectivesOpen && (
-                <div className="bg-slate-50 border-t border-b border-slate-100">
-                  {perspectiveLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={closeMobile}
-                      className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <Link
-              href="/sima-probe/assessment"
-              onClick={closeMobile}
-              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
-            >
-              Start Assessment
-            </Link>
-
-            <Link
-              href="/the-book"
-              onClick={closeMobile}
-              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
-            >
-              The Book
-            </Link>
-
-            <a
-              href="/SIMA360_Guide.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={closeMobile}
-              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
-            >
-              Download Guide
-            </a>
-
-            <a
-              href="https://SIMA360Classes.eventbee.com/boxoffice"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={closeMobile}
-              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
-            >
-              Class List
-            </a>
 
             <Link
               href="/about"
@@ -270,6 +312,14 @@ export function Navigation() {
             >
               About
             </Link>
+
+            <a
+              href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation"
+              onClick={closeMobile}
+              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
+            >
+              Schedule a Conversation
+            </a>
           </div>
         )}
       </div>
