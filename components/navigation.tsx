@@ -74,7 +74,7 @@ export function Navigation() {
         </Link>
 
         <Link
-          href="/sima-probe"
+          href="/sima-probe/assessment"
           className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
         >
           Free Assessment
@@ -209,7 +209,7 @@ export function Navigation() {
             </Link>
 
             <Link
-              href="/sima-probe"
+              href="/sima-probe/assessment"
               onClick={closeMobile}
               className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
             >
