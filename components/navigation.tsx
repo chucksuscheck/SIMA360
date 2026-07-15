@@ -5,9 +5,10 @@ import Link from "next/link"
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const learnMoreOverview = { label: "Overview", href: "/overview" }
+const learnMoreOverview = { label: "SIMA360 Overview", href: "/overview" }
 
 const frameworkLinks = [
+  { label: "Overview", href: "/framework" },
   { label: "SIMA-Core™", href: "/sima-core" },
   { label: "SIMA-Probe™", href: "/sima-probe" },
   { label: "SIMA-Flow™", href: "/sima-flow" },
@@ -17,15 +18,25 @@ const frameworkLinks = [
 
 const maturityLevelLinks = [
   { label: "Overview", href: "/maturity" },
-  { label: "1 · Initial", href: "/maturity#initial" },
-  { label: "2 · Exploring", href: "/maturity#exploring" },
-  { label: "3 · Applying", href: "/maturity#applying" },
-  { label: "4 · Formalizing", href: "/maturity#formalizing" },
-  { label: "5 · Optimizing", href: "/maturity#optimizing" },
-  { label: "6 · Leading", href: "/maturity#leading" },
+  { label: "Initial", href: "/maturity/initial" },
+  { label: "Exploring", href: "/maturity/exploring" },
+  { label: "Applying", href: "/maturity/applying" },
+  { label: "Formalizing", href: "/maturity/formalizing" },
+  { label: "Optimizing", href: "/maturity/optimizing" },
+  { label: "Leading", href: "/maturity/leading" },
+]
+
+const toolCategoryLinks = [
+  { label: "Overview", href: "/tool-categories" },
+  { label: "Baseline", href: "/tool-categories/baseline" },
+  { label: "Business Assistance", href: "/tool-categories/business-assistance" },
+  { label: "Process Automation", href: "/tool-categories/process-automation" },
+  { label: "Decision Optimization", href: "/tool-categories/decision-optimization" },
+  { label: "Autonomous Execution", href: "/tool-categories/autonomous-execution" },
 ]
 
 const perspectiveLinks = [
+  { label: "Overview", href: "/perspectives" },
   { label: "Strategy", href: "/sima-core/strategy" },
   { label: "Governance", href: "/sima-core/governance" },
   { label: "Data", href: "/sima-core/data" },
@@ -39,7 +50,7 @@ const resourceLinks = [
   { label: "Take Training", href: "https://www.eventbee.com/v/sima360classes/boxoffice/", external: true },
 ]
 
-type SubmenuKey = "framework" | "maturity" | "perspectives" | "resources" | null
+type SubmenuKey = "framework" | "maturity" | "toolCategories" | "perspectives" | "resources" | null
 
 export function Navigation() {
   const [isLearnMoreOpen, setIsLearnMoreOpen] = useState(false)
@@ -48,6 +59,7 @@ export function Navigation() {
   const [isMobileLearnMoreOpen, setIsMobileLearnMoreOpen] = useState(false)
   const [isMobileFrameworkOpen, setIsMobileFrameworkOpen] = useState(false)
   const [isMobileMaturityOpen, setIsMobileMaturityOpen] = useState(false)
+  const [isMobileToolCategoriesOpen, setIsMobileToolCategoriesOpen] = useState(false)
   const [isMobilePerspectivesOpen, setIsMobilePerspectivesOpen] = useState(false)
   const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false)
 
@@ -78,6 +90,7 @@ export function Navigation() {
     setIsMobileLearnMoreOpen(false)
     setIsMobileFrameworkOpen(false)
     setIsMobileMaturityOpen(false)
+    setIsMobileToolCategoriesOpen(false)
     setIsMobilePerspectivesOpen(false)
     setIsMobileResourcesOpen(false)
   }
@@ -113,40 +126,14 @@ export function Navigation() {
                 {learnMoreOverview.label}
               </Link>
 
-              {/* Maturity Levels — nested submenu */}
-              <div className="relative" onMouseEnter={() => openSubmenu("maturity")} onMouseLeave={closeSubmenu}>
-                <button
-                  className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
-                  aria-expanded={activeSubmenu === "maturity"}
-                  aria-haspopup="true"
-                >
-                  Maturity Levels
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-                {activeSubmenu === "maturity" && (
-                  <div className="absolute top-0 left-full ml-1 w-52 bg-white border border-slate-200 rounded-md shadow-lg z-50">
-                    {maturityLevelLinks.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        onClick={() => setIsLearnMoreOpen(false)}
-                        className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* The Framework — nested submenu */}
+              {/* Framework — nested submenu */}
               <div className="relative" onMouseEnter={() => openSubmenu("framework")} onMouseLeave={closeSubmenu}>
                 <button
                   className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
                   aria-expanded={activeSubmenu === "framework"}
                   aria-haspopup="true"
                 >
-                  The Framework
+                  Framework
                   <ChevronRight className="w-4 h-4" />
                 </button>
                 {activeSubmenu === "framework" && (
@@ -178,6 +165,58 @@ export function Navigation() {
                 {activeSubmenu === "perspectives" && (
                   <div className="absolute top-0 left-full ml-1 w-44 bg-white border border-slate-200 rounded-md shadow-lg z-50">
                     {perspectiveLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setIsLearnMoreOpen(false)}
+                        className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Maturity Levels — nested submenu */}
+              <div className="relative" onMouseEnter={() => openSubmenu("maturity")} onMouseLeave={closeSubmenu}>
+                <button
+                  className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+                  aria-expanded={activeSubmenu === "maturity"}
+                  aria-haspopup="true"
+                >
+                  Maturity Levels
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+                {activeSubmenu === "maturity" && (
+                  <div className="absolute top-0 left-full ml-1 w-52 bg-white border border-slate-200 rounded-md shadow-lg z-50">
+                    {maturityLevelLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setIsLearnMoreOpen(false)}
+                        className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Tool Categories — nested submenu */}
+              <div className="relative" onMouseEnter={() => openSubmenu("toolCategories")} onMouseLeave={closeSubmenu}>
+                <button
+                  className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+                  aria-expanded={activeSubmenu === "toolCategories"}
+                  aria-haspopup="true"
+                >
+                  Tool Categories
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+                {activeSubmenu === "toolCategories" && (
+                  <div className="absolute top-0 left-full ml-1 w-56 bg-white border border-slate-200 rounded-md shadow-lg z-50">
+                    {toolCategoryLinks.map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
@@ -297,38 +336,13 @@ export function Navigation() {
                     {learnMoreOverview.label}
                   </Link>
 
-                  {/* Maturity Levels mobile submenu */}
-                  <div>
-                    <button
-                      onClick={() => setIsMobileMaturityOpen(!isMobileMaturityOpen)}
-                      className="flex items-center justify-between w-full pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
-                    >
-                      Maturity Levels
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileMaturityOpen ? "rotate-180" : ""}`} />
-                    </button>
-                    {isMobileMaturityOpen && (
-                      <div className="bg-white">
-                        {maturityLevelLinks.map((link) => (
-                          <Link
-                            key={link.href}
-                            href={link.href}
-                            onClick={closeMobile}
-                            className="block pl-11 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
-                          >
-                            {link.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* The Framework mobile submenu */}
+                  {/* Framework mobile submenu */}
                   <div>
                     <button
                       onClick={() => setIsMobileFrameworkOpen(!isMobileFrameworkOpen)}
                       className="flex items-center justify-between w-full pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
                     >
-                      The Framework
+                      Framework
                       <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileFrameworkOpen ? "rotate-180" : ""}`} />
                     </button>
                     {isMobileFrameworkOpen && (
@@ -359,6 +373,56 @@ export function Navigation() {
                     {isMobilePerspectivesOpen && (
                       <div className="bg-white">
                         {perspectiveLinks.map((link) => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            onClick={closeMobile}
+                            className="block pl-11 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Maturity Levels mobile submenu */}
+                  <div>
+                    <button
+                      onClick={() => setIsMobileMaturityOpen(!isMobileMaturityOpen)}
+                      className="flex items-center justify-between w-full pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                    >
+                      Maturity Levels
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileMaturityOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    {isMobileMaturityOpen && (
+                      <div className="bg-white">
+                        {maturityLevelLinks.map((link) => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            onClick={closeMobile}
+                            className="block pl-11 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Tool Categories mobile submenu */}
+                  <div>
+                    <button
+                      onClick={() => setIsMobileToolCategoriesOpen(!isMobileToolCategoriesOpen)}
+                      className="flex items-center justify-between w-full pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                    >
+                      Tool Categories
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileToolCategoriesOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    {isMobileToolCategoriesOpen && (
+                      <div className="bg-white">
+                        {toolCategoryLinks.map((link) => (
                           <Link
                             key={link.href}
                             href={link.href}

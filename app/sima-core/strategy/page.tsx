@@ -15,6 +15,7 @@ import { ArrowRight, Target, BarChart3, Compass, Eye, Award, Layers, GitBranch, 
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
+import { PerspectiveTabs } from "@/components/perspective-tabs"
 import { MaturityProgression } from "@/components/sima-core/maturity-progression"
 import { PerspectiveSymptoms } from "@/components/sima-core/perspective-symptoms"
 
@@ -95,6 +96,8 @@ export default function StrategyPerspectivePage() {
           </div>
         </div>
       </header>
+
+      <PerspectiveTabs active="strategy" />
 
       {/* Hero */}
       <section className="py-20 px-4">

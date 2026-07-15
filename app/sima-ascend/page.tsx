@@ -257,7 +257,7 @@ export default function SimaAscendPage() {
                   </div>
                   <div className="flex items-start text-sm">
                     <CheckCircle className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Ensures consistent SIMA application across projects</span>
+                    <span>Ensures consistent SIMA360 application across projects</span>
                   </div>
                   <div className="flex items-start text-sm">
                     <CheckCircle className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
@@ -295,7 +295,7 @@ export default function SimaAscendPage() {
                 <div className="space-y-2 mb-6">
                   <div className="flex items-start text-sm">
                     <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Advocates for SIMA at the executive level</span>
+                    <span>Advocates for SIMA360 at the executive level</span>
                   </div>
                   <div className="flex items-start text-sm">
                     <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
@@ -425,7 +425,7 @@ export default function SimaAscendPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  Equips team-level leaders to coach, align, and support the adoption of SIMA across teams while
+                  Equips team-level leaders to coach, align, and support the adoption of SIMA360 across teams while
                   evaluating impact and driving improvement.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -465,7 +465,7 @@ export default function SimaAscendPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  Designed for senior leaders to customize the SIMA framework at the enterprise level and embed it
+                  Designed for senior leaders to customize the SIMA360 framework at the enterprise level and embed it
                   within funding, policy, and governance models.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">

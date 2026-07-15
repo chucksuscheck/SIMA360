@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export type ModuleKey = "probe" | "core" | "kit" | "flow" | "ascend"
+export type ModuleKey = "overview" | "probe" | "core" | "kit" | "flow" | "ascend"
 
 const modules: {
   key: ModuleKey
@@ -10,10 +10,11 @@ const modules: {
   activeBg: string
   activeText: string
 }[] = [
-  { key: "probe", label: "Probe", href: "/sima-probe", dot: "#378ADD", activeBg: "#E6F1FB", activeText: "#042C53" },
+  { key: "overview", label: "Overview", href: "/framework", dot: "#334155", activeBg: "#F1F5F9", activeText: "#0F172A" },
   { key: "core", label: "Core", href: "/sima-core", dot: "#7F77DD", activeBg: "#EEEDFE", activeText: "#26215C" },
-  { key: "kit", label: "Kit", href: "/sima-kit", dot: "#D85A30", activeBg: "#FAECE7", activeText: "#4A1B0C" },
+  { key: "probe", label: "Probe", href: "/sima-probe", dot: "#378ADD", activeBg: "#E6F1FB", activeText: "#042C53" },
   { key: "flow", label: "Flow", href: "/sima-flow", dot: "#639922", activeBg: "#EAF3DE", activeText: "#173404" },
+  { key: "kit", label: "Kit", href: "/sima-kit", dot: "#D85A30", activeBg: "#FAECE7", activeText: "#4A1B0C" },
   { key: "ascend", label: "Ascend", href: "/sima-ascend", dot: "#1D9E75", activeBg: "#E1F5EE", activeText: "#04342C" },
 ]
 

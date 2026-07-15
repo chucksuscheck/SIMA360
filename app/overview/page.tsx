@@ -4,13 +4,13 @@ const HOMEPAGE_DESCRIPTION =
   "AI increases organizational capability and scales inconsistency. Whether it produces reliable outcomes depends on organizational maturity. SIMA360 diagnoses and builds that maturity — five perspectives, six Maturity Levels."
 
 export const metadata: Metadata = {
-  title: "SIMA Overview | SIMA360™",
+  title: "SIMA360 Overview | SIMA360™",
   description: HOMEPAGE_DESCRIPTION,
   alternates: {
     canonical: "https://www.sima360.org/overview",
   },
   openGraph: {
-    title: "SIMA Overview | SIMA360™",
+    title: "SIMA360 Overview | SIMA360™",
     description: HOMEPAGE_DESCRIPTION,
     url: "https://www.sima360.org/overview",
     siteName: "SIMA360™",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "SIMA Overview | SIMA360™",
+    title: "SIMA360 Overview | SIMA360™",
     description: HOMEPAGE_DESCRIPTION,
   },
 }

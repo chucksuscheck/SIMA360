@@ -174,7 +174,7 @@ const SIMAKitPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Two Complementary Components</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Both components are mapped directly to the five SIMA perspectives and aligned with SIMA Maturity Levels
+              Both components are mapped directly to the five SIMA360 perspectives and aligned with SIMA360 Maturity Levels
             </p>
           </div>
 

@@ -18,7 +18,7 @@ interface Hotspot {
 // Positions are percentages relative to the square image container.
 // Tune values here if the diagram image changes.
 const hotspots: Hotspot[] = [
-  // ── SIMA Components (outer ring) ──────────────────────────────────
+  // ── SIMA360 Components (outer ring) ──────────────────────────────────
   { id: "sima-core",   label: "SIMA-Core™",            href: "/sima-core",            top:  0, left: 22, width: 56, height: 21, tip: "bottom" },
   { id: "sima-flow",   label: "SIMA-Flow™",            href: "/sima-flow",            top: 17, left: 75, width: 25, height: 40, tip: "left"   },
   { id: "sima-kit",    label: "SIMA-Kit™",             href: "/sima-kit",             top: 65, left: 52, width: 44, height: 34, tip: "top"    },
@@ -31,12 +31,12 @@ const hotspots: Hotspot[] = [
   { id: "people",      label: "People",                href: "/sima-core/people",     top: 63, left: 25, width: 28, height: 14, tip: "top"    },
   { id: "technology",  label: "Technology",            href: "/sima-core/technology", top: 37, left: 13, width: 22, height: 20, tip: "right"  },
   // ── Maturity Levels (inner ring) ────────────────────────────────
-  { id: "initial",     label: "Level 1 · Initial",     href: "/maturity#initial",     top: 30, left: 44, width: 14, height: 12, tip: "bottom" },
-  { id: "exploring",   label: "Level 2 · Exploring",   href: "/maturity#exploring",   top: 37, left: 57, width: 15, height: 12, tip: "left"   },
-  { id: "applying",    label: "Level 3 · Applying",    href: "/maturity#applying",    top: 52, left: 55, width: 15, height: 12, tip: "left"   },
-  { id: "formalizing", label: "Level 4 · Formalizing", href: "/maturity#formalizing", top: 59, left: 38, width: 22, height: 12, tip: "top"    },
-  { id: "optimizing",  label: "Level 5 · Optimizing",  href: "/maturity#optimizing",  top: 51, left: 25, width: 16, height: 12, tip: "right"  },
-  { id: "leading",     label: "Level 6 · Leading",     href: "/maturity#leading",     top: 35, left: 24, width: 15, height: 12, tip: "right"  },
+  { id: "initial",     label: "Level 1 · Initial",     href: "/maturity/initial",     top: 30, left: 44, width: 14, height: 12, tip: "bottom" },
+  { id: "exploring",   label: "Level 2 · Exploring",   href: "/maturity/exploring",   top: 37, left: 57, width: 15, height: 12, tip: "left"   },
+  { id: "applying",    label: "Level 3 · Applying",    href: "/maturity/applying",    top: 52, left: 55, width: 15, height: 12, tip: "left"   },
+  { id: "formalizing", label: "Level 4 · Formalizing", href: "/maturity/formalizing", top: 59, left: 38, width: 22, height: 12, tip: "top"    },
+  { id: "optimizing",  label: "Level 5 · Optimizing",  href: "/maturity/optimizing",  top: 51, left: 25, width: 16, height: 12, tip: "right"  },
+  { id: "leading",     label: "Level 6 · Leading",     href: "/maturity/leading",     top: 35, left: 24, width: 15, height: 12, tip: "right"  },
   // ── Center (FLAI) ─────────────────────────────────────────────────
   { id: "flai",        label: "FLAI Methodology",       href: "/sima-flow#flai",        top: 43, left: 42, width: 16, height: 15, tip: "top"    },
 ]
@@ -73,12 +73,12 @@ const mobileNav = [
   {
     heading: "Maturity Levels",
     links: [
-      { label: "1 · Initial",     href: "/maturity#initial"     },
-      { label: "2 · Exploring",   href: "/maturity#exploring"   },
-      { label: "3 · Applying",    href: "/maturity#applying"    },
-      { label: "4 · Formalizing", href: "/maturity#formalizing" },
-      { label: "5 · Optimizing",  href: "/maturity#optimizing"  },
-      { label: "6 · Leading",     href: "/maturity#leading"     },
+      { label: "1 · Initial",     href: "/maturity/initial"     },
+      { label: "2 · Exploring",   href: "/maturity/exploring"   },
+      { label: "3 · Applying",    href: "/maturity/applying"    },
+      { label: "4 · Formalizing", href: "/maturity/formalizing" },
+      { label: "5 · Optimizing",  href: "/maturity/optimizing"  },
+      { label: "6 · Leading",     href: "/maturity/leading"     },
     ],
   },
 ]
@@ -115,7 +115,7 @@ export function FrameworkMap() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/sima360-framework-overview.svg"
-              alt="SIMA360 framework map — five SIMA components surrounding five AI perspectives and six maturity levels, with FLAI at center"
+              alt="SIMA360 framework map — five SIMA360 components surrounding five AI perspectives and six maturity levels, with FLAI at center"
               width={600}
               height={600}
               className="w-full h-auto select-none"

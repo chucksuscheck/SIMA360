@@ -308,7 +308,7 @@ export default function SimaCorePage() {
                   <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-sm font-bold">
                     1
                   </div>
-                  <CardTitle className="text-lg"><Link href="/maturity#initial" className="hover:text-blue-600 hover:underline transition-colors">Initial</Link></CardTitle>
+                  <CardTitle className="text-lg"><Link href="/maturity/initial" className="hover:text-blue-600 hover:underline transition-colors">Initial</Link></CardTitle>
                 </div>
                 <CardDescription>
                   AI interest is real, but nothing yet coordinates it. Activity is possible; consistency isn't.
@@ -328,7 +328,7 @@ export default function SimaCorePage() {
                   <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-sm font-bold">
                     2
                   </div>
-                  <CardTitle className="text-lg"><Link href="/maturity#exploring" className="hover:text-blue-600 hover:underline transition-colors">Exploring</Link></CardTitle>
+                  <CardTitle className="text-lg"><Link href="/maturity/exploring" className="hover:text-blue-600 hover:underline transition-colors">Exploring</Link></CardTitle>
                 </div>
                 <CardDescription>
                   Multiple efforts are underway, but they're disconnected — each built on its own assumptions.
@@ -348,7 +348,7 @@ export default function SimaCorePage() {
                   <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-sm font-bold">
                     3
                   </div>
-                  <CardTitle className="text-lg"><Link href="/maturity#applying" className="hover:text-blue-600 hover:underline transition-colors">Applying</Link></CardTitle>
+                  <CardTitle className="text-lg"><Link href="/maturity/applying" className="hover:text-blue-600 hover:underline transition-colors">Applying</Link></CardTitle>
                 </div>
                 <CardDescription>
                   Individual efforts work and can be defended on their own terms, but they don't generalize.
@@ -368,7 +368,7 @@ export default function SimaCorePage() {
                   <div className="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center text-sm font-bold">
                     4
                   </div>
-                  <CardTitle className="text-lg"><Link href="/maturity#formalizing" className="hover:text-blue-600 hover:underline transition-colors">Formalizing</Link></CardTitle>
+                  <CardTitle className="text-lg"><Link href="/maturity/formalizing" className="hover:text-blue-600 hover:underline transition-colors">Formalizing</Link></CardTitle>
                 </div>
                 <CardDescription>
                   Structure exists and holds under normal conditions.
@@ -388,7 +388,7 @@ export default function SimaCorePage() {
                   <div className="w-8 h-8 bg-sky-100 rounded-full flex items-center justify-center text-sm font-bold">
                     5
                   </div>
-                  <CardTitle className="text-lg"><Link href="/maturity#optimizing" className="hover:text-blue-600 hover:underline transition-colors">Optimizing</Link></CardTitle>
+                  <CardTitle className="text-lg"><Link href="/maturity/optimizing" className="hover:text-blue-600 hover:underline transition-colors">Optimizing</Link></CardTitle>
                 </div>
                 <CardDescription>
                   The system is tested against outcomes continuously.
@@ -408,7 +408,7 @@ export default function SimaCorePage() {
                   <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-sm font-bold">
                     6
                   </div>
-                  <CardTitle className="text-lg"><Link href="/maturity#leading" className="hover:text-blue-600 hover:underline transition-colors">Leading</Link></CardTitle>
+                  <CardTitle className="text-lg"><Link href="/maturity/leading" className="hover:text-blue-600 hover:underline transition-colors">Leading</Link></CardTitle>
                 </div>
                 <CardDescription>
                   Improvement is built into how the organization operates day to day.

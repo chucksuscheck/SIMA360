@@ -15,6 +15,7 @@ import { ArrowRight, Shield, AlertCircle, FileText, Scale, Eye, RefreshCw, Users
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
+import { PerspectiveTabs } from "@/components/perspective-tabs"
 import { MaturityProgression } from "@/components/sima-core/maturity-progression"
 import { PerspectiveSymptoms } from "@/components/sima-core/perspective-symptoms"
 
@@ -95,6 +96,8 @@ export default function GovernancePerspectivePage() {
           </div>
         </div>
       </header>
+
+      <PerspectiveTabs active="governance" />
 
       {/* Hero */}
       <section className="py-20 px-4">

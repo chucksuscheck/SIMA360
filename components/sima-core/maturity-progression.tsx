@@ -45,7 +45,7 @@ export function MaturityProgression({
                   {lvl.level}
                 </div>
                 <Link
-                  href={`/maturity#${lvl.name.toLowerCase()}`}
+                  href={`/maturity/${lvl.name.toLowerCase()}`}
                   className="font-semibold text-slate-900 hover:text-blue-600 hover:underline transition-colors"
                 >
                   {lvl.name}

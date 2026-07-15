@@ -1,24 +1,40 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "AI Maturity Levels — SIMA360™",
+  title: "The Framework — SIMA360™",
   description:
-    "The six SIMA360 maturity levels — Initial through Leading — and what each level looks like across the five organizational perspectives: Strategy, Governance, Data, People, and Technology.",
+    "The five components of the SIMA360 framework — SIMA-Core, SIMA-Probe, SIMA-Flow, SIMA-Kit, and SIMA-Ascend — and how they work together to diagnose and build AI maturity.",
   alternates: {
-    canonical: "https://www.sima360.org/maturity",
+    canonical: "https://www.sima360.org/framework",
   },
 }
 
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { ArrowRight, Brain, BarChart3, Zap, Target, BookOpen } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
-import { maturityLevels } from "@/lib/maturity-levels"
-import { MaturityTabs } from "@/components/maturity-tabs"
+import { ModuleTabs } from "@/components/module-tabs"
+import { ECOSYSTEM_COMPONENTS } from "@/lib/sima-ecosystem"
 
-export default function MaturityPage() {
+const moduleMeta: Record<string, { icon: typeof Brain; color: string }> = {
+  "sima-core": { icon: Brain, color: "text-indigo-600" },
+  "sima-probe": { icon: BarChart3, color: "text-blue-600" },
+  "sima-flow": { icon: Zap, color: "text-green-600" },
+  "sima-kit": { icon: Target, color: "text-orange-600" },
+  "sima-ascend": { icon: BookOpen, color: "text-emerald-600" },
+}
+
+const modules = [
+  ECOSYSTEM_COMPONENTS.find((c) => c.slug === "sima-core")!,
+  ECOSYSTEM_COMPONENTS.find((c) => c.slug === "sima-probe")!,
+  ECOSYSTEM_COMPONENTS.find((c) => c.slug === "sima-flow")!,
+  ECOSYSTEM_COMPONENTS.find((c) => c.slug === "sima-kit")!,
+  ECOSYSTEM_COMPONENTS.find((c) => c.slug === "sima-ascend")!,
+]
+
+export default function FrameworkPage() {
   return (
     <div className="min-h-screen bg-white">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
@@ -35,48 +51,48 @@ export default function MaturityPage() {
         </div>
       </header>
 
-      <MaturityTabs active="overview" />
+      <ModuleTabs active="overview" />
 
       {/* Hero */}
       <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto text-center max-w-4xl">
           <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            The Six Maturity Levels
+            The Framework
           </h1>
           <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-            SIMA360 measures AI maturity across six progressive maturity levels — from Initial through Leading. Each level describes where an organization stands across all five perspectives: Strategy, Governance, Data, People, and Technology.
+            SIMA360 is five components working together — SIMA-Core, SIMA-Probe, SIMA-Flow, SIMA-Kit, and SIMA-Ascend. Each one plays a distinct role in diagnosing and building AI maturity.
           </p>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto">
-            The goal is not to reach Level 6. The goal is to know where you are, understand what it means, and advance deliberately.
+            Core defines the vocabulary. Probe measures where you stand. Flow structures how you advance. Kit supplies the resources. Ascend builds the people.
           </p>
         </div>
       </section>
 
-      {/* Level cards */}
+      {/* Module cards */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {maturityLevels.map((lvl) => (
-              <Link
-                key={lvl.slug}
-                href={`/maturity/${lvl.slug}`}
-                className={`group rounded-lg border-l-4 ${lvl.borderClass} border-t border-r border-b border-slate-200 bg-white p-6 hover:shadow-lg transition-shadow`}
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <Badge variant="outline" className={lvl.badgeClass}>
-                    Level {lvl.number}
-                  </Badge>
-                </div>
-                <h2 className="text-xl font-bold text-slate-900 mb-1 group-hover:text-blue-600 transition-colors">
-                  {lvl.name}
-                </h2>
-                <p className="text-sm text-slate-500 italic mb-3">{lvl.tagline}</p>
-                <p className="text-sm text-slate-700 leading-relaxed mb-4">{lvl.shortDescription}</p>
-                <span className="text-sm font-medium text-blue-600 inline-flex items-center gap-1">
-                  Explore Level {lvl.number} <ArrowRight className="w-3 h-3" />
-                </span>
-              </Link>
-            ))}
+            {modules.map((mod) => {
+              const meta = moduleMeta[mod.slug]
+              const Icon = meta.icon
+              return (
+                <Card key={mod.slug} className="hover:shadow-lg transition-shadow border-slate-200">
+                  <CardHeader>
+                    <Icon className={`w-8 h-8 ${meta.color} mb-2`} />
+                    <CardTitle>{mod.name}</CardTitle>
+                    <CardDescription>{mod.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Link
+                      href={mod.href}
+                      className={`text-sm font-medium inline-flex items-center gap-1 ${meta.color} hover:underline`}
+                    >
+                      Explore {mod.name} <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </CardContent>
+                </Card>
+              )
+            })}
           </div>
         </div>
       </section>
