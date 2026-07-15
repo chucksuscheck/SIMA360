@@ -3,6 +3,7 @@
 import { useState, useRef } from "react"
 import Link from "next/link"
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const learnMoreOverview = { label: "Overview", href: "/overview" }
 
@@ -12,7 +13,16 @@ const frameworkLinks = [
   { label: "SIMA-Flow™", href: "/sima-flow" },
   { label: "SIMA-Kit™", href: "/sima-kit" },
   { label: "SIMA-Ascend™", href: "/sima-ascend" },
-  { label: "Maturity Levels", href: "/maturity" },
+]
+
+const maturityLevelLinks = [
+  { label: "Overview", href: "/maturity" },
+  { label: "1 · Initial", href: "/maturity#initial" },
+  { label: "2 · Exploring", href: "/maturity#exploring" },
+  { label: "3 · Applying", href: "/maturity#applying" },
+  { label: "4 · Formalizing", href: "/maturity#formalizing" },
+  { label: "5 · Optimizing", href: "/maturity#optimizing" },
+  { label: "6 · Leading", href: "/maturity#leading" },
 ]
 
 const perspectiveLinks = [
@@ -23,7 +33,7 @@ const perspectiveLinks = [
   { label: "Technology", href: "/sima-core/technology" },
 ]
 
-type SubmenuKey = "framework" | "perspectives" | null
+type SubmenuKey = "framework" | "maturity" | "perspectives" | null
 
 export function Navigation() {
   const [isLearnMoreOpen, setIsLearnMoreOpen] = useState(false)
@@ -31,6 +41,7 @@ export function Navigation() {
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const [isMobileLearnMoreOpen, setIsMobileLearnMoreOpen] = useState(false)
   const [isMobileFrameworkOpen, setIsMobileFrameworkOpen] = useState(false)
+  const [isMobileMaturityOpen, setIsMobileMaturityOpen] = useState(false)
   const [isMobilePerspectivesOpen, setIsMobilePerspectivesOpen] = useState(false)
 
   const learnMoreTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -59,6 +70,7 @@ export function Navigation() {
     setIsMobileOpen(false)
     setIsMobileLearnMoreOpen(false)
     setIsMobileFrameworkOpen(false)
+    setIsMobileMaturityOpen(false)
     setIsMobilePerspectivesOpen(false)
   }
 
@@ -71,13 +83,6 @@ export function Navigation() {
           className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
         >
           Home
-        </Link>
-
-        <Link
-          href="/sima-probe/assessment"
-          className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
-        >
-          Free Assessment
         </Link>
 
         {/* Learn More dropdown */}
@@ -99,6 +104,32 @@ export function Navigation() {
               >
                 {learnMoreOverview.label}
               </Link>
+
+              {/* Maturity Levels — nested submenu */}
+              <div className="relative" onMouseEnter={() => openSubmenu("maturity")} onMouseLeave={closeSubmenu}>
+                <button
+                  className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+                  aria-expanded={activeSubmenu === "maturity"}
+                  aria-haspopup="true"
+                >
+                  Maturity Levels
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+                {activeSubmenu === "maturity" && (
+                  <div className="absolute top-0 left-full ml-1 w-52 bg-white border border-slate-200 rounded-md shadow-lg z-50">
+                    {maturityLevelLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setIsLearnMoreOpen(false)}
+                        className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               {/* The Framework — nested submenu */}
               <div className="relative" onMouseEnter={() => openSubmenu("framework")} onMouseLeave={closeSubmenu}>
@@ -181,9 +212,13 @@ export function Navigation() {
           )}
         </div>
 
+        <Button asChild size="sm">
+          <Link href="/sima-probe/assessment">Free Assessment</Link>
+        </Button>
+
         <Link
           href="/about"
-          className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
+          className="ml-auto px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
         >
           About
         </Link>
@@ -217,14 +252,6 @@ export function Navigation() {
               Home
             </Link>
 
-            <Link
-              href="/sima-probe/assessment"
-              onClick={closeMobile}
-              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
-            >
-              Free Assessment
-            </Link>
-
             {/* Learn More mobile */}
             <div>
               <button
@@ -243,6 +270,31 @@ export function Navigation() {
                   >
                     {learnMoreOverview.label}
                   </Link>
+
+                  {/* Maturity Levels mobile submenu */}
+                  <div>
+                    <button
+                      onClick={() => setIsMobileMaturityOpen(!isMobileMaturityOpen)}
+                      className="flex items-center justify-between w-full pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                    >
+                      Maturity Levels
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileMaturityOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    {isMobileMaturityOpen && (
+                      <div className="bg-white">
+                        {maturityLevelLinks.map((link) => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            onClick={closeMobile}
+                            className="block pl-11 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
 
                   {/* The Framework mobile submenu */}
                   <div>
@@ -322,6 +374,14 @@ export function Navigation() {
                 </div>
               )}
             </div>
+
+            <Link
+              href="/sima-probe/assessment"
+              onClick={closeMobile}
+              className="block px-4 py-2 text-sm font-medium text-blue-600 hover:bg-slate-50 transition-colors"
+            >
+              Free Assessment
+            </Link>
 
             <Link
               href="/about"
