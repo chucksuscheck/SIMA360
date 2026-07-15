@@ -86,8 +86,7 @@ export default function HomePage() {
           <div className="space-y-2 text-base leading-snug text-center" style={{ color: "#475569" }}>
             <p>Capability is what a system can do. Maturity is whether you can handle what it&rsquo;s doing.</p>
             <p>
-              SIMA-Probe finds your organization&rsquo;s AI maturity across five perspectives, strategy,
-              governance, data, people, and technology, free, in about 15 minutes.
+              Assess your organization&rsquo;s AI maturity across five perspectives in about 15 minutes.
             </p>
           </div>
         </div>
@@ -104,7 +103,7 @@ export default function HomePage() {
             <Link href="/sima-probe/assessment">Begin free assessment</Link>
           </Button>
           <p className="text-sm" style={{ color: "#64748b" }}>
-            Click below to explore
+            Click below to explore full ecosystem
           </p>
         </div>
         <div

@@ -34,7 +34,7 @@ const perspectiveLinks = [
 ]
 
 const resourceLinks = [
-  { label: "The Book", href: "/the-book", external: false },
+  { label: "Get the Book", href: "/the-book", external: false },
   { label: "Download Guide", href: "/SIMA360_Guide.pdf", external: true },
   { label: "Take Training", href: "https://www.eventbee.com/v/sima360classes/boxoffice/", external: true },
 ]
