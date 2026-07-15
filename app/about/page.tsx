@@ -17,9 +17,7 @@ import {
   Users,
   Target,
   Shield,
-  Lightbulb,
   CheckCircle,
-  Brain,
   BookOpen,
   AlertTriangle,
   TrendingUp,
@@ -27,16 +25,10 @@ import {
   Building2,
   Layers,
   Zap,
-  BarChart3,
 } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
-import { ECOSYSTEM_COMPONENTS, type EcosystemComponent } from "@/lib/sima-ecosystem"
-
-function ecosystemDescription(slug: EcosystemComponent["slug"]): string {
-  return ECOSYSTEM_COMPONENTS.find((c) => c.slug === slug)!.description
-}
 
 const AboutPage = () => {
   return (
@@ -485,134 +477,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* 6. The SIMA360 Framework */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">The SIMA360™ Framework</h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Five integrated components, each playing a specific role in the ecosystem
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-blue-500">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                    <BarChart3 className="w-5 h-5 text-blue-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl">SIMA-Probe™</CardTitle>
-                    <CardDescription className="text-sm text-slate-500">Diagnostic Assessment</CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-4">{ecosystemDescription("sima-probe")}</p>
-                <Button variant="ghost" asChild className="p-0 h-auto text-blue-600 hover:text-blue-800">
-                  <Link href="/sima-probe">
-                    Learn More <ArrowRight className="ml-1 w-4 h-4" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-indigo-500">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
-                    <Brain className="w-5 h-5 text-indigo-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl">SIMA-Core™</CardTitle>
-                    <CardDescription className="text-sm text-slate-500">Framework Vocabulary</CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-4">{ecosystemDescription("sima-core")}</p>
-                <Button variant="ghost" asChild className="p-0 h-auto text-indigo-600 hover:text-indigo-800">
-                  <Link href="/sima-core">
-                    Learn More <ArrowRight className="ml-1 w-4 h-4" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-green-500">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                    <Lightbulb className="w-5 h-5 text-green-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl">SIMA-Flow™</CardTitle>
-                    <CardDescription className="text-sm text-slate-500">Improvement Cycle Architecture</CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-4">{ecosystemDescription("sima-flow")}</p>
-                <Button variant="ghost" asChild className="p-0 h-auto text-green-600 hover:text-green-800">
-                  <Link href="/sima-flow">
-                    Learn More <ArrowRight className="ml-1 w-4 h-4" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-purple-500">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
-                    <Target className="w-5 h-5 text-purple-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl">SIMA-Kit™</CardTitle>
-                    <CardDescription className="text-sm text-slate-500">Operational Resource Layer</CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-4">{ecosystemDescription("sima-kit")}</p>
-                <Button variant="ghost" asChild className="p-0 h-auto text-purple-600 hover:text-purple-800">
-                  <Link href="/sima-kit">
-                    Learn More <ArrowRight className="ml-1 w-4 h-4" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-orange-500 lg:col-span-2">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-                    <BookOpen className="w-5 h-5 text-orange-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl">SIMA-Ascend™</CardTitle>
-                    <CardDescription className="text-sm text-slate-500">Practitioner Development & Certification</CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-4">
-                  Builds the organizational practitioner capability the framework requires — through three certification
-                  levels and five structured training programs, available online or through approved trainers.
-                </p>
-                <Button variant="ghost" asChild className="p-0 h-auto text-orange-600 hover:text-orange-800">
-                  <Link href="/sima-ascend">
-                    Learn More <ArrowRight className="ml-1 w-4 h-4" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Closing CTA */}
+      {/* 6. Closing CTA */}
       <section className="py-16 px-4 bg-slate-900 text-white">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Start with the Framework</h2>
@@ -635,6 +500,12 @@ const AboutPage = () => {
               <Link href="/start">Get Started</Link>
             </Button>
           </div>
+          <Link
+            href="/framework"
+            className="mt-6 inline-flex items-center gap-1 text-sm text-slate-300 hover:text-white transition-colors"
+          >
+            Explore the five framework components <ArrowRight className="w-3 h-3" />
+          </Link>
         </div>
       </section>
 
