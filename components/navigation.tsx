@@ -33,7 +33,13 @@ const perspectiveLinks = [
   { label: "Technology", href: "/sima-core/technology" },
 ]
 
-type SubmenuKey = "framework" | "maturity" | "perspectives" | null
+const resourceLinks = [
+  { label: "The Book", href: "/the-book", external: false },
+  { label: "Download Guide", href: "/SIMA360_Guide.pdf", external: true },
+  { label: "Take Training", href: "https://www.eventbee.com/v/sima360classes/boxoffice/", external: true },
+]
+
+type SubmenuKey = "framework" | "maturity" | "perspectives" | "resources" | null
 
 export function Navigation() {
   const [isLearnMoreOpen, setIsLearnMoreOpen] = useState(false)
@@ -43,6 +49,7 @@ export function Navigation() {
   const [isMobileFrameworkOpen, setIsMobileFrameworkOpen] = useState(false)
   const [isMobileMaturityOpen, setIsMobileMaturityOpen] = useState(false)
   const [isMobilePerspectivesOpen, setIsMobilePerspectivesOpen] = useState(false)
+  const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false)
 
   const learnMoreTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const submenuTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -72,6 +79,7 @@ export function Navigation() {
     setIsMobileFrameworkOpen(false)
     setIsMobileMaturityOpen(false)
     setIsMobilePerspectivesOpen(false)
+    setIsMobileResourcesOpen(false)
   }
 
   return (
@@ -183,31 +191,52 @@ export function Navigation() {
                 )}
               </div>
 
+              {/* Resources — nested submenu */}
+              <div className="relative" onMouseEnter={() => openSubmenu("resources")} onMouseLeave={closeSubmenu}>
+                <button
+                  className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+                  aria-expanded={activeSubmenu === "resources"}
+                  aria-haspopup="true"
+                >
+                  Resources
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+                {activeSubmenu === "resources" && (
+                  <div className="absolute top-0 left-full ml-1 w-52 bg-white border border-slate-200 rounded-md shadow-lg z-50">
+                    {resourceLinks.map((link) =>
+                      link.external ? (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setIsLearnMoreOpen(false)}
+                          className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          onClick={() => setIsLearnMoreOpen(false)}
+                          className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
+                        >
+                          {link.label}
+                        </Link>
+                      )
+                    )}
+                  </div>
+                )}
+              </div>
+
               <Link
-                href="/the-book"
+                href="/pricing"
                 onClick={() => setIsLearnMoreOpen(false)}
                 className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
               >
-                The Book
+                Pricing
               </Link>
-              <a
-                href="/SIMA360_Guide.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsLearnMoreOpen(false)}
-                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
-              >
-                Download Guide
-              </a>
-              <a
-                href="https://www.eventbee.com/v/sima360classes/boxoffice/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsLearnMoreOpen(false)}
-                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
-              >
-                Take Training
-              </a>
               <Link
                 href="/about"
                 onClick={() => setIsLearnMoreOpen(false)}
@@ -343,31 +372,51 @@ export function Navigation() {
                     )}
                   </div>
 
+                  {/* Resources mobile submenu */}
+                  <div>
+                    <button
+                      onClick={() => setIsMobileResourcesOpen(!isMobileResourcesOpen)}
+                      className="flex items-center justify-between w-full pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                    >
+                      Resources
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileResourcesOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    {isMobileResourcesOpen && (
+                      <div className="bg-white">
+                        {resourceLinks.map((link) =>
+                          link.external ? (
+                            <a
+                              key={link.href}
+                              href={link.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={closeMobile}
+                              className="block pl-11 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                            >
+                              {link.label}
+                            </a>
+                          ) : (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              onClick={closeMobile}
+                              className="block pl-11 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                            >
+                              {link.label}
+                            </Link>
+                          )
+                        )}
+                      </div>
+                    )}
+                  </div>
+
                   <Link
-                    href="/the-book"
+                    href="/pricing"
                     onClick={closeMobile}
                     className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
                   >
-                    The Book
+                    Pricing
                   </Link>
-                  <a
-                    href="/SIMA360_Guide.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={closeMobile}
-                    className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
-                  >
-                    Download Guide
-                  </a>
-                  <a
-                    href="https://www.eventbee.com/v/sima360classes/boxoffice/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={closeMobile}
-                    className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
-                  >
-                    Take Training
-                  </a>
                   <Link
                     href="/about"
                     onClick={closeMobile}
