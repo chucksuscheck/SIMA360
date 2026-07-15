@@ -204,10 +204,17 @@ export function Navigation() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsLearnMoreOpen(false)}
-                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors rounded-b-md"
+                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
               >
                 Take Training
               </a>
+              <Link
+                href="/about"
+                onClick={() => setIsLearnMoreOpen(false)}
+                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors rounded-b-md"
+              >
+                About
+              </Link>
             </div>
           )}
         </div>
@@ -216,19 +223,9 @@ export function Navigation() {
           <Link href="/sima-probe/assessment">Free Assessment</Link>
         </Button>
 
-        <Link
-          href="/about"
-          className="ml-auto px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
-        >
-          About
-        </Link>
-
-        <a
-          href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation"
-          className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
-        >
-          Schedule a Conversation
-        </a>
+        <Button asChild variant="outline" size="sm" className="ml-auto">
+          <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">Contact</a>
+        </Button>
       </nav>
 
       {/* ── Mobile hamburger + menu (< md) ── */}
@@ -371,6 +368,13 @@ export function Navigation() {
                   >
                     Take Training
                   </a>
+                  <Link
+                    href="/about"
+                    onClick={closeMobile}
+                    className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                  >
+                    About
+                  </Link>
                 </div>
               )}
             </div>
@@ -383,21 +387,11 @@ export function Navigation() {
               Free Assessment
             </Link>
 
-            <Link
-              href="/about"
-              onClick={closeMobile}
-              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
-            >
-              About
-            </Link>
-
-            <a
-              href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation"
-              onClick={closeMobile}
-              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
-            >
-              Schedule a Conversation
-            </a>
+            <div className="px-4 py-2">
+              <Button asChild variant="outline" size="sm" className="w-full" onClick={closeMobile}>
+                <a href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation">Contact</a>
+              </Button>
+            </div>
           </div>
         )}
       </div>
