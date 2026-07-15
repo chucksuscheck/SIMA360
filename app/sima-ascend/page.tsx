@@ -39,6 +39,7 @@ import {
   Building,
 } from "lucide-react"
 import { Navigation } from "@/components/navigation"
+import { ModuleTabs } from "@/components/module-tabs"
 import { SiteFooter } from "@/components/site-footer"
 
 export default function SimaAscendPage() {
@@ -58,6 +59,8 @@ export default function SimaAscendPage() {
           </div>
         </div>
       </header>
+
+      <ModuleTabs active="ascend" />
 
       {/* Breadcrumb */}
       <div className="container mx-auto px-4 py-4">

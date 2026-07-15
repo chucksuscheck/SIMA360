@@ -28,10 +28,12 @@ export default function PricingPage() {
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-xl font-bold text-slate-900">SIMA360™</h1>
-              <p className="text-sm text-slate-600">Structured AI Maturity Accelerator</p>
-            </div>
+            <Link href="/" className="flex items-center space-x-2">
+              <div>
+                <h1 className="text-xl font-bold text-slate-900">SIMA360™</h1>
+                <p className="text-sm text-slate-600">Structured AI Maturity Accelerator</p>
+              </div>
+            </Link>
             <Navigation />
           </div>
         </div>

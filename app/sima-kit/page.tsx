@@ -33,6 +33,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
+import { ModuleTabs } from "@/components/module-tabs"
 import { SiteFooter } from "@/components/site-footer"
 
 const SIMAKitPage = () => {
@@ -52,6 +53,8 @@ const SIMAKitPage = () => {
           </div>
         </div>
       </header>
+
+      <ModuleTabs active="kit" />
 
       {/* Breadcrumb */}
       <div className="container mx-auto px-4 py-4">
