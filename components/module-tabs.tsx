@@ -25,6 +25,7 @@ export function ModuleTabs({ active }: { active: ModuleKey }) {
         aria-label="Framework modules"
         className="container mx-auto px-4 flex items-center gap-1 overflow-x-auto whitespace-nowrap"
       >
+        <span className="px-4 py-3 text-sm font-medium text-slate-400 shrink-0">Framework:</span>
         {modules.map((mod) => {
           const isActive = mod.key === active
           return (

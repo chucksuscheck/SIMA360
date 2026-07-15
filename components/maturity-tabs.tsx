@@ -33,6 +33,7 @@ export function MaturityTabs({ active }: { active: MaturityLevelKey }) {
         aria-label="Maturity levels"
         className="container mx-auto px-4 flex items-center gap-1 overflow-x-auto whitespace-nowrap"
       >
+        <span className="px-4 py-3 text-sm font-medium text-slate-400 shrink-0">Maturity Level:</span>
         {levels.map((lvl) => {
           const isActive = lvl.key === active
           return (

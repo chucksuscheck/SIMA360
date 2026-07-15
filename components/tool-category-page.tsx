@@ -1,18 +1,20 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, ArrowRight, Eye, Users, Cog, Target, Zap } from "lucide-react"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
-import { toolCategories } from "@/lib/tool-categories"
+import { toolCategories, type MaturityStatus } from "@/lib/tool-categories"
 import { ToolCategoryTabs, type ToolCategoryKey } from "@/components/tool-category-tabs"
 
-const iconMap: Record<string, typeof Eye> = {
-  baseline: Eye,
-  "business-assistance": Users,
-  "process-automation": Cog,
-  "decision-optimization": Target,
-  "autonomous-execution": Zap,
+// Neutral three-tier scheme (solid / outlined / muted) rather than a
+// red/yellow/green treatment — those colors already carry other reserved
+// meanings elsewhere in the app (e.g. SIMA-Probe severity and maturity
+// level colors), so reusing them here would conflict with those.
+const maturityStatusClass: Record<MaturityStatus, string> = {
+  Safe: "bg-slate-900 text-white border-transparent",
+  Risky: "bg-white text-slate-700 border-slate-400",
+  Avoid: "bg-slate-100 text-slate-400 border-slate-200",
 }
 
 export function ToolCategoryPage({ slug }: { slug: string }) {
@@ -20,7 +22,6 @@ export function ToolCategoryPage({ slug }: { slug: string }) {
   const category = toolCategories[i]
   const prev = toolCategories[i - 1]
   const next = toolCategories[i + 1]
-  const Icon = iconMap[category.slug]
 
   return (
     <div className="min-h-screen bg-white">
@@ -44,34 +45,37 @@ export function ToolCategoryPage({ slug }: { slug: string }) {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className={`border-l-4 ${category.borderClass} pl-6 mb-12`}>
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center bg-slate-100">
-                <Icon className="w-5 h-5 text-slate-700" />
-              </div>
-              <Badge variant="outline" className={category.badgeClass}>
-                Category {category.number}
-              </Badge>
-            </div>
             <h1 className="text-4xl font-bold text-slate-900 mb-2">{category.name}</h1>
             <p className="text-lg text-slate-500 italic">{category.tagline}</p>
           </div>
 
           <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">{category.shortDescription}</p>
 
-          {/* Purpose / Examples / Characteristics */}
-          <div className="mb-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Purpose / Characteristics */}
+          <div className="mb-5">
+            <div className="grid sm:grid-cols-2 gap-5">
               <div className="rounded-lg p-5 border border-slate-200 bg-slate-50">
                 <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Purpose</p>
                 <p className="text-sm text-slate-700 leading-relaxed">{category.purpose}</p>
               </div>
               <div className="rounded-lg p-5 border border-slate-200 bg-slate-50">
-                <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Examples</p>
-                <p className="text-sm text-slate-700 leading-relaxed">{category.examples}</p>
-              </div>
-              <div className="rounded-lg p-5 border border-slate-200 bg-slate-50">
                 <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Characteristics</p>
                 <p className="text-sm text-slate-700 leading-relaxed">{category.characteristics}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Examples */}
+          <div className="mb-8">
+            <div className="rounded-lg p-5 border border-slate-200 bg-slate-50">
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Examples</p>
+              <div className="space-y-3">
+                {category.examples.map((ex) => (
+                  <div key={ex.name}>
+                    <p className="text-sm font-semibold text-slate-900">{ex.name}</p>
+                    <p className="text-sm text-slate-600 leading-relaxed">{ex.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -86,12 +90,20 @@ export function ToolCategoryPage({ slug }: { slug: string }) {
           </div>
 
           <div className="p-6 bg-blue-50 border border-blue-200 rounded-lg mb-8">
-            <h3 className="text-sm font-semibold text-blue-900 mb-2">Relationship to AI Maturity Levels</h3>
-            <p className="text-sm text-blue-800">
-              Tool categories roughly parallel the AI Maturity Levels — organizations at earlier Levels are generally
-              better served by lower-autonomy categories, while higher Levels create the governance and oversight
-              needed to safely adopt higher-autonomy categories. The relationship is directional, not one-to-one.
-            </p>
+            <h3 className="text-sm font-semibold text-blue-900 mb-4">Relationship to AI Maturity Levels</h3>
+            <div className="grid sm:grid-cols-2 gap-2">
+              {category.maturityRelationship.map((entry) => (
+                <div
+                  key={entry.level}
+                  className="flex items-center justify-between rounded-lg border border-blue-100 bg-white px-4 py-2.5"
+                >
+                  <span className="text-sm font-medium text-slate-700">{entry.level}</span>
+                  <Badge variant="outline" className={maturityStatusClass[entry.status]}>
+                    {entry.status}
+                  </Badge>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Assess CTA */}

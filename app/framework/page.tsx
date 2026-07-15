@@ -57,7 +57,7 @@ export default function FrameworkPage() {
       <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto text-center max-w-4xl">
           <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            The Framework
+            SIMA360 Framework
           </h1>
           <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
             SIMA360 is five components working together — SIMA-Core, SIMA-Probe, SIMA-Flow, SIMA-Kit, and SIMA-Ascend. Each one plays a distinct role in diagnosing and building AI maturity.

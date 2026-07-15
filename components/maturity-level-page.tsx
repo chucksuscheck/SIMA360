@@ -6,6 +6,7 @@ import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
 import { maturityLevels } from "@/lib/maturity-levels"
 import { MaturityTabs, type MaturityLevelKey } from "@/components/maturity-tabs"
+import { toolCategories, type MaturityStatus } from "@/lib/tool-categories"
 
 const perspectiveMeta = [
   { name: "Strategy", icon: Target, href: "/sima-core/strategy", color: "text-blue-600", bg: "bg-blue-50" },
@@ -14,6 +15,15 @@ const perspectiveMeta = [
   { name: "People", icon: Users, href: "/sima-core/people", color: "text-sky-600", bg: "bg-sky-50" },
   { name: "Technology", icon: Cog, href: "/sima-core/technology", color: "text-slate-600", bg: "bg-slate-50" },
 ]
+
+// Same neutral three-tier scheme used for Safe/Risky/Avoid on the
+// /tool-categories/* pages, kept in sync so both cross-referenced views
+// (by category, by level) look consistent.
+const maturityStatusClass: Record<MaturityStatus, string> = {
+  Safe: "bg-slate-900 text-white border-transparent",
+  Risky: "bg-white text-slate-700 border-slate-400",
+  Avoid: "bg-slate-100 text-slate-400 border-slate-200",
+}
 
 export function MaturityLevelPage({ slug }: { slug: string }) {
   const i = maturityLevels.findIndex((lvl) => lvl.slug === slug)
@@ -76,27 +86,52 @@ export function MaturityLevelPage({ slug }: { slug: string }) {
                   </div>
                 )
               })}
-
-              {next && (
-                <div className="rounded-lg p-5 border border-dashed border-slate-300 bg-slate-50 flex flex-col justify-between">
-                  <div>
-                    <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Moving Forward</p>
-                    <p className="text-sm text-slate-600 leading-relaxed">
-                      Advancing from Level {lvl.number} to Level {next.number} requires closing gaps across all five
-                      perspectives, not just the most visible ones. SIMA-Probe identifies where you stand; SIMA-Flow
-                      structures how you advance.
-                    </p>
-                  </div>
-                  <Link
-                    href={`/maturity/${next.slug}`}
-                    className="mt-4 text-sm font-medium text-blue-600 hover:text-blue-800 inline-flex items-center gap-1 transition-colors"
-                  >
-                    See Level {next.number}: {next.name} <ArrowRight className="w-3 h-3" />
-                  </Link>
-                </div>
-              )}
             </div>
           </div>
+
+          {/* Tool Categories at This Level */}
+          <div className="mb-8">
+            <h2 className="text-xl font-semibold text-slate-900 mb-6">Tool Categories at This Level</h2>
+            <div className="grid sm:grid-cols-2 gap-2 max-w-3xl">
+              {toolCategories.map((cat) => {
+                const status = cat.maturityRelationship.find((r) => r.level === lvl.name)!.status
+                return (
+                  <div
+                    key={cat.slug}
+                    className="flex items-center justify-between rounded-lg border border-slate-200 bg-slate-50 px-4 py-2.5"
+                  >
+                    <Link
+                      href={`/tool-categories/${cat.slug}`}
+                      className="text-sm font-medium text-slate-700 hover:underline"
+                    >
+                      {cat.name}
+                    </Link>
+                    <Badge variant="outline" className={maturityStatusClass[status]}>
+                      {status}
+                    </Badge>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Moving Forward */}
+          {next && (
+            <div className="mb-8 max-w-3xl rounded-lg p-5 border border-dashed border-slate-300 bg-slate-50">
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Moving Forward</p>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Advancing from Level {lvl.number} to Level {next.number} requires closing gaps across all five
+                perspectives, not just the most visible ones. SIMA-Probe identifies where you stand; SIMA-Flow
+                structures how you advance.
+              </p>
+              <Link
+                href={`/maturity/${next.slug}`}
+                className="mt-4 text-sm font-medium text-blue-600 hover:text-blue-800 inline-flex items-center gap-1 transition-colors"
+              >
+                See Level {next.number}: {next.name} <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
+          )}
 
           {/* Assess CTA */}
           <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-200">

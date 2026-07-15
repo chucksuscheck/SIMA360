@@ -1,3 +1,15 @@
+export type MaturityStatus = "Safe" | "Risky" | "Avoid"
+
+export interface MaturityRelationshipEntry {
+  level: string
+  status: MaturityStatus
+}
+
+export interface ToolExample {
+  name: string
+  description: string
+}
+
 export interface ToolCategory {
   number: number
   slug: string
@@ -7,8 +19,9 @@ export interface ToolCategory {
   borderClass: string
   badgeClass: string
   purpose: string
-  examples: string
+  examples: ToolExample[]
   characteristics: string
+  maturityRelationship: MaturityRelationshipEntry[]
 }
 
 export const toolCategories: ToolCategory[] = [
@@ -22,8 +35,30 @@ export const toolCategories: ToolCategory[] = [
     borderClass: "border-slate-400",
     badgeClass: "bg-slate-100 text-slate-800 border-slate-300",
     purpose: "Learn basics, gather usage data",
-    examples: "FAQs, internal wikis, chatbots",
+    examples: [
+      {
+        name: "Chatbots",
+        description:
+          "Conversational interfaces over structured knowledge bases that route users to predefined responses. Common in IT support, HR FAQs, and customer service triage.",
+      },
+      {
+        name: "Internal wikis and FAQs",
+        description: "Static, searchable references that don't require conversation, just structured lookup.",
+      },
+      {
+        name: "Static query-based support",
+        description: "Decision-tree-driven help systems built for a single, well-defined task.",
+      },
+    ],
     characteristics: "Low autonomy, high guidance, static knowledge bases",
+    maturityRelationship: [
+      { level: "Initial", status: "Safe" },
+      { level: "Exploring", status: "Safe" },
+      { level: "Applying", status: "Safe" },
+      { level: "Formalizing", status: "Safe" },
+      { level: "Optimizing", status: "Safe" },
+      { level: "Leading", status: "Safe" },
+    ],
   },
   {
     number: 2,
@@ -35,8 +70,33 @@ export const toolCategories: ToolCategory[] = [
     borderClass: "border-blue-400",
     badgeClass: "bg-blue-100 text-blue-800 border-blue-200",
     purpose: "Boost productivity and creativity",
-    examples: "Writing assistants, coding copilots, research summarizers",
+    examples: [
+      {
+        name: "Co-editors",
+        description: "AI that helps write emails, documents, or reports alongside a person, rather than for them.",
+      },
+      {
+        name: "AI pair programming assistants",
+        description: "Tools like GitHub Copilot that suggest code as a developer writes.",
+      },
+      {
+        name: "Research summarizers and slide builders",
+        description: "Tools that condense source material or draft first-pass presentations.",
+      },
+      {
+        name: "Meeting note transcribers and classifiers",
+        description: "Tools that capture and organize spoken discussion into structured notes.",
+      },
+    ],
     characteristics: "Dynamic support, task-specific boundaries",
+    maturityRelationship: [
+      { level: "Initial", status: "Risky" },
+      { level: "Exploring", status: "Safe" },
+      { level: "Applying", status: "Safe" },
+      { level: "Formalizing", status: "Safe" },
+      { level: "Optimizing", status: "Safe" },
+      { level: "Leading", status: "Safe" },
+    ],
   },
   {
     number: 3,
@@ -48,8 +108,31 @@ export const toolCategories: ToolCategory[] = [
     borderClass: "border-indigo-400",
     badgeClass: "bg-indigo-100 text-indigo-800 border-indigo-200",
     purpose: "Free resources, gain efficiency",
-    examples: "RPA bots, automated schedulers, workflow orchestrators",
+    examples: [
+      {
+        name: "Task Automator",
+        description:
+          "Performs a single, predefined, rules-based task with minimal variation, such as an RPA script, scheduling bot, or data entry tool.",
+      },
+      {
+        name: "Process Automator",
+        description:
+          "Automates a multi-step workflow that includes some logic-based branching, such as HR onboarding or procurement approval.",
+      },
+      {
+        name: "Workflow orchestrators",
+        description: "Coordinate automation across systems and handoffs, not just a single task.",
+      },
+    ],
     characteristics: "Rule-based logic, deterministic outcomes",
+    maturityRelationship: [
+      { level: "Initial", status: "Avoid" },
+      { level: "Exploring", status: "Risky" },
+      { level: "Applying", status: "Safe" },
+      { level: "Formalizing", status: "Safe" },
+      { level: "Optimizing", status: "Safe" },
+      { level: "Leading", status: "Safe" },
+    ],
   },
   {
     number: 4,
@@ -61,8 +144,31 @@ export const toolCategories: ToolCategory[] = [
     borderClass: "border-cyan-500",
     badgeClass: "bg-cyan-100 text-cyan-800 border-cyan-200",
     purpose: "Find insights, adapt to dynamic input",
-    examples: "Dynamic pricing, route optimization, scenario planners",
+    examples: [
+      {
+        name: "Adaptive Executor",
+        description:
+          "Executes decisions and adjusts its own behavior based on outcomes, used in dynamic pricing, intelligent routing, and personalized recommendations.",
+      },
+      {
+        name: "Strategic Partner",
+        description:
+          "Provides modeling, projections, and scenario analysis to support (not replace) executive decision-making, used in market planning and simulation-driven strategy work.",
+      },
+      {
+        name: "Route and resource optimization tools",
+        description: "Apply predictive modeling to logistics and resource allocation problems.",
+      },
+    ],
     characteristics: "Predictive modeling, evidence-based recommendations",
+    maturityRelationship: [
+      { level: "Initial", status: "Avoid" },
+      { level: "Exploring", status: "Avoid" },
+      { level: "Applying", status: "Risky" },
+      { level: "Formalizing", status: "Safe" },
+      { level: "Optimizing", status: "Safe" },
+      { level: "Leading", status: "Safe" },
+    ],
   },
   {
     number: 5,
@@ -74,8 +180,32 @@ export const toolCategories: ToolCategory[] = [
     borderClass: "border-sky-400",
     badgeClass: "bg-sky-100 text-sky-800 border-sky-200",
     purpose: "Drive autonomous execution safely",
-    examples: "Self-managing infrastructure, autonomous vehicles, AI command centers",
+    examples: [
+      {
+        name: "Autonomous Manager",
+        description:
+          "Manages an operational function without ongoing human intervention, such as system health monitoring or AI-managed data centers.",
+      },
+      {
+        name: "Independent Actor",
+        description:
+          "Initiates and acts on decisions across domains with the least human oversight of any category, such as fully autonomous vehicles or AI command centers.",
+      },
+      {
+        name: "Mission-critical automated infrastructure",
+        description:
+          "Includes cyber defense systems and fully autonomous warehouse or factory operations, where failure has immediate real-world consequences.",
+      },
+    ],
     characteristics: "Full autonomy, continuous learning, self-regulation",
+    maturityRelationship: [
+      { level: "Initial", status: "Avoid" },
+      { level: "Exploring", status: "Avoid" },
+      { level: "Applying", status: "Avoid" },
+      { level: "Formalizing", status: "Risky" },
+      { level: "Optimizing", status: "Safe" },
+      { level: "Leading", status: "Safe" },
+    ],
   },
 ]
 
