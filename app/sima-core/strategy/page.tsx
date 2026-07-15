@@ -100,32 +100,29 @@ export default function StrategyPerspectivePage() {
       <PerspectiveTabs active="strategy" />
 
       {/* Hero */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                <Target className="w-8 h-8 text-blue-600" />
-              </div>
-            </div>
-            <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="border-l-4 border-blue-400 pl-6 mb-12">
+            <h1 className="text-4xl font-bold text-slate-900 mb-2">
               Strategy Perspective
             </h1>
-            <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              Strategy determines which decisions AI is actually supposed to improve, and what the organization holds
-              constant while it finds out. It runs on two tracks at once — a Human-Direction System for aligning
-              people, and an AI-Application System for applying, watching, and growing the AI itself.
-            </p>
-            <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-500 italic">
               It is the perspective that answers: <em>which decisions is AI supposed to change, and how would we know if it stopped?</em>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700">
-                <Link href="/sima-probe/assessment">
-                  Assess Your Strategy Maturity <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </Button>
-            </div>
+          </div>
+
+          <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
+            Strategy determines which decisions AI is actually supposed to improve, and what the organization holds
+            constant while it finds out. It runs on two tracks at once — a Human-Direction System for aligning
+            people, and an AI-Application System for applying, watching, and growing the AI itself.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700">
+              <Link href="/sima-probe/assessment">
+                Assess Your Strategy Maturity <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

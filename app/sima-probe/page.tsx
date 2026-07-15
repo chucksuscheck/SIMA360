@@ -50,35 +50,35 @@ export default function SIMAProbe() {
       <ModuleTabs active="probe" />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+      <section className="py-16 px-4 bg-gradient-to-br from-blue-50 via-purple-50 to-slate-50">
+        <div className="container mx-auto max-w-5xl">
+          <div className="border-l-4 border-blue-400 pl-6 mb-12">
+            <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               SIMA Probe™
             </h1>
-            <p className="text-xl text-slate-600 mb-8">
-              Diagnose your organization's AI maturity across the five Perspectives — behavioral evidence of how
-              decisions actually hold up, not a checklist of what's documented
-            </p>
-            <div className="flex gap-4 justify-center">
-              <Button
-                size="lg"
-                asChild
-                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
-              >
-                <Link href="/sima-probe/assessment">Begin Free Assessment</Link>
-              </Button>
-              <Button
-                size="lg"
-                asChild
-                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
-              >
-                <Link href="/pricing">Pricing</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="#what-you-get">See What You Get</Link>
-              </Button>
-            </div>
+          </div>
+          <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
+            Diagnose your organization's AI maturity across the five Perspectives — behavioral evidence of how
+            decisions actually hold up, not a checklist of what's documented
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button
+              size="lg"
+              asChild
+              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
+            >
+              <Link href="/sima-probe/assessment">Begin Free Assessment</Link>
+            </Button>
+            <Button
+              size="lg"
+              asChild
+              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
+            >
+              <Link href="/pricing">Pricing</Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="#what-you-get">See What You Get</Link>
+            </Button>
           </div>
         </div>
       </section>

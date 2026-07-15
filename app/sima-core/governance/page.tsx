@@ -100,31 +100,28 @@ export default function GovernancePerspectivePage() {
       <PerspectiveTabs active="governance" />
 
       {/* Hero */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center">
-                <Shield className="w-8 h-8 text-indigo-600" />
-              </div>
-            </div>
-            <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="border-l-4 border-indigo-400 pl-6 mb-12">
+            <h1 className="text-4xl font-bold text-slate-900 mb-2">
               Governance Perspective
             </h1>
-            <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              Governance keeps AI-influenced decisions inside their constraints once the system is actually running —
-              watched continuously, not reviewed on a schedule, with the AI enforcing part of that control itself.
-            </p>
-            <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-500 italic">
               It is the perspective that asks: <em>does control hold when a decision is contested, urgent, or high-consequence — not just on paper?</em>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-indigo-600 hover:bg-indigo-700">
-                <Link href="/sima-probe/assessment">
-                  Assess Your Governance Maturity <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </Button>
-            </div>
+          </div>
+
+          <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
+            Governance keeps AI-influenced decisions inside their constraints once the system is actually running —
+            watched continuously, not reviewed on a schedule, with the AI enforcing part of that control itself.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" asChild className="bg-indigo-600 hover:bg-indigo-700">
+              <Link href="/sima-probe/assessment">
+                Assess Your Governance Maturity <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

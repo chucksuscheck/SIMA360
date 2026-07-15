@@ -7,6 +7,7 @@ export interface MaturityLevel {
   borderClass: string
   badgeClass: string
   numClass: string
+  bgGradientClass: string
   overview: string
   perspectives: {
     Strategy: string
@@ -28,6 +29,7 @@ export const maturityLevels: MaturityLevel[] = [
     borderClass: "border-slate-400",
     badgeClass: "bg-slate-100 text-slate-800 border-slate-300",
     numClass: "bg-slate-200 text-slate-800",
+    bgGradientClass: "bg-gradient-to-br from-slate-50 to-gray-100",
     overview:
       "Every organization begins here. Activity is possible; consistency isn't. This isn't revealed by how mature the organization looks on paper — it's revealed by behavior: pull three senior leaders aside separately and ask which AI-influenced decisions matter most right now. At Initial, you get opportunity or competitive pressure, not a specific decision. Success here isn't a strategy document, a policy, or a training program. It's narrowing a vague sense that AI matters down to the small number of specific conditions worth examining first.",
     perspectives: {
@@ -53,6 +55,7 @@ export const maturityLevels: MaturityLevel[] = [
     borderClass: "border-blue-400",
     badgeClass: "bg-blue-100 text-blue-800 border-blue-200",
     numClass: "bg-blue-100 text-blue-800",
+    bgGradientClass: "bg-gradient-to-br from-blue-50 to-sky-50",
     overview:
       "Multiple efforts are underway, but they're disconnected — each built on its own assumptions, with no shared standard connecting them. Pull three senior leaders aside separately at this level and you'll get AI initiatives named, but materially different explanations of which decisions matter or why. The task isn't more experimentation. It's narrowing to the few decisions that actually matter and establishing the ownership and shared definitions that let those efforts start accumulating learning instead of just activity.",
     perspectives: {
@@ -78,6 +81,7 @@ export const maturityLevels: MaturityLevel[] = [
     borderClass: "border-indigo-400",
     badgeClass: "bg-indigo-100 text-indigo-800 border-indigo-200",
     numClass: "bg-indigo-100 text-indigo-800",
+    bgGradientClass: "bg-gradient-to-br from-indigo-50 to-purple-50",
     overview:
       "Individual efforts work and can be defended on their own terms, but they don't generalize past the specific context that produced them. Teams can explain their own use cases but can't explain enterprise-level prioritization or trade-offs. The organization is productive in ways that don't add up — success is opportunism, not architecture, and the constraint at this level is the inability to stop work that isn't actually moving the organization forward as a system.",
     perspectives: {
@@ -103,6 +107,7 @@ export const maturityLevels: MaturityLevel[] = [
     borderClass: "border-cyan-500",
     badgeClass: "bg-cyan-100 text-cyan-800 border-cyan-200",
     numClass: "bg-cyan-100 text-cyan-800",
+    bgGradientClass: "bg-gradient-to-br from-cyan-50 to-teal-50",
     overview:
       "Structure exists and holds under normal conditions. The gap shows up specifically when something is contested, urgent, or the world changes underneath it. This is the level most self-assessments mistake for a finish line, because the documentation looks complete — roles, responsibilities, policies, training records. The real test isn't the paperwork. It's tracing a recent difficult decision end to end. If that trace depends on who was in the room, the organization is still Formalizing no matter how thorough it looks on paper.",
     perspectives: {
@@ -128,6 +133,7 @@ export const maturityLevels: MaturityLevel[] = [
     borderClass: "border-sky-400",
     badgeClass: "bg-sky-100 text-sky-800 border-sky-200",
     numClass: "bg-sky-100 text-sky-800",
+    bgGradientClass: "bg-gradient-to-br from-sky-50 to-blue-50",
     overview:
       "The system is tested against outcomes continuously, and what's learned changes what happens next, not just what gets documented. Movement becomes selective — the organization advances where the system proves reliable and holds back where it doesn't. The challenge at this level isn't building more structure. It's resisting expansion driven by capability rather than readiness, and sustaining consistency as the system reaches new users, new use cases, and new decisions.",
     perspectives: {
@@ -153,6 +159,7 @@ export const maturityLevels: MaturityLevel[] = [
     borderClass: "border-emerald-500",
     badgeClass: "bg-emerald-100 text-emerald-800 border-emerald-200",
     numClass: "bg-emerald-100 text-emerald-800",
+    bgGradientClass: "bg-gradient-to-br from-emerald-50 to-teal-50",
     overview:
       "Improvement is built into how the perspective operates day to day, rather than something applied to it periodically. Strategy isn't separate from operations — it's the mechanism decisions improve through. Governance evolves deliberately alongside the systems it governs, anticipating new risks before they surface as failures. The question at this level is no longer whether the system holds. It's whether it's still governing, learning from, and improving the right things as conditions keep changing. This isn't the final destination. It's the beginning of stewardship.",
     perspectives: {

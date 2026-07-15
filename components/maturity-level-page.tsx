@@ -32,7 +32,7 @@ export function MaturityLevelPage({ slug }: { slug: string }) {
   const next = maturityLevels[i + 1]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className={`min-h-screen ${lvl.bgGradientClass}`}>
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -53,11 +53,6 @@ export function MaturityLevelPage({ slug }: { slug: string }) {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className={`border-l-4 ${lvl.borderClass} pl-6 mb-12`}>
-            <div className="flex items-center gap-3 mb-2">
-              <Badge variant="outline" className={lvl.badgeClass}>
-                Level {lvl.number}
-              </Badge>
-            </div>
             <h1 className="text-4xl font-bold text-slate-900 mb-2">{lvl.name}</h1>
             <p className="text-lg text-slate-500 italic">{lvl.tagline}</p>
           </div>

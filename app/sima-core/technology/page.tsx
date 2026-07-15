@@ -102,32 +102,29 @@ export default function TechnologyPerspectivePage() {
       <PerspectiveTabs active="technology" />
 
       {/* Hero */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center">
-                <Cog className="w-8 h-8 text-slate-700" />
-              </div>
-            </div>
-            <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="border-l-4 border-slate-400 pl-6 mb-12">
+            <h1 className="text-4xl font-bold text-slate-900 mb-2">
               Technology Perspective
             </h1>
-            <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              Technology determines whether the organization can change the model, the environment, or the data
-              underneath it — separately, and not always at the same pace — without renegotiating everything built
-              around it.
-            </p>
-            <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-500 italic">
               It is the perspective that asks: <em>can this system sustain change without degrading decision quality?</em>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-slate-700 hover:bg-slate-800">
-                <Link href="/sima-probe/assessment">
-                  Assess Your Technology Maturity <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </Button>
-            </div>
+          </div>
+
+          <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
+            Technology determines whether the organization can change the model, the environment, or the data
+            underneath it — separately, and not always at the same pace — without renegotiating everything built
+            around it.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" asChild className="bg-slate-700 hover:bg-slate-800">
+              <Link href="/sima-probe/assessment">
+                Assess Your Technology Maturity <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

@@ -12,14 +12,6 @@ export const metadata: Metadata = {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import {
   ArrowRight,
   Target,
   Layers,
@@ -29,7 +21,6 @@ import {
   BarChart3,
   Shield,
   Lightbulb,
-  Home,
 } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
@@ -56,54 +47,36 @@ const SIMAKitPage = () => {
 
       <ModuleTabs active="kit" />
 
-      {/* Breadcrumb */}
-      <div className="container mx-auto px-4 py-4">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">
-                <Home className="h-4 w-4" />
-                Home
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>SIMA Kit™</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
-
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="border-l-4 border-purple-400 pl-6 mb-12">
+            <h1 className="text-4xl font-bold text-slate-900 mb-2 leading-tight">
               The Resource Layer of
               <span className="text-purple-600 block">the SIMA360 Framework</span>
             </h1>
-            <p className="text-xl text-slate-600 mb-8">
-              SIMA Kit™ doesn't run the improvement cycle — Flow does. It answers the question every organization
-              hits right after an honest SIMA-Probe™ assessment: now what? Entrance criteria, goals, strategies, and
-              exit criteria, specific to the Maturity Level and perspective the organization is actually in.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-purple-500 hover:bg-purple-600">
-                <a href="mailto:info@sima360.org?subject=SIMA%20Kit%20Access">
-                  Request Access <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="border-purple-600 text-purple-600 hover:bg-purple-50 bg-transparent"
-              >
-                <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
-                  Download Guide
-                </a>
-              </Button>
-            </div>
+          </div>
+          <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
+            SIMA Kit™ doesn't run the improvement cycle — Flow does. It answers the question every organization
+            hits right after an honest SIMA-Probe™ assessment: now what? Entrance criteria, goals, strategies, and
+            exit criteria, specific to the Maturity Level and perspective the organization is actually in.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" asChild className="bg-purple-500 hover:bg-purple-600">
+              <a href="mailto:info@sima360.org?subject=SIMA%20Kit%20Access">
+                Request Access <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="border-purple-600 text-purple-600 hover:bg-purple-50 bg-transparent"
+            >
+              <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
+                Download Guide
+              </a>
+            </Button>
           </div>
         </div>
       </section>

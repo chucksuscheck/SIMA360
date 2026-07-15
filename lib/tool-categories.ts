@@ -18,6 +18,7 @@ export interface ToolCategory {
   shortDescription: string
   borderClass: string
   badgeClass: string
+  bgGradientClass: string
   purpose: string
   examples: ToolExample[]
   characteristics: string
@@ -34,6 +35,7 @@ export const toolCategories: ToolCategory[] = [
       "Low autonomy, high guidance, static knowledge bases. The entry point — every organization already has some of these in place.",
     borderClass: "border-slate-400",
     badgeClass: "bg-slate-100 text-slate-800 border-slate-300",
+    bgGradientClass: "bg-gradient-to-br from-slate-50 to-gray-100",
     purpose: "Learn basics, gather usage data",
     examples: [
       {
@@ -69,6 +71,7 @@ export const toolCategories: ToolCategory[] = [
       "Dynamic support with task-specific boundaries. The human stays in the loop, but the tool does real work alongside them.",
     borderClass: "border-blue-400",
     badgeClass: "bg-blue-100 text-blue-800 border-blue-200",
+    bgGradientClass: "bg-gradient-to-br from-blue-50 to-sky-50",
     purpose: "Boost productivity and creativity",
     examples: [
       {
@@ -107,6 +110,7 @@ export const toolCategories: ToolCategory[] = [
       "Rule-based logic with deterministic outcomes. The workflow runs itself, but only within boundaries someone else defined.",
     borderClass: "border-indigo-400",
     badgeClass: "bg-indigo-100 text-indigo-800 border-indigo-200",
+    bgGradientClass: "bg-gradient-to-br from-indigo-50 to-purple-50",
     purpose: "Free resources, gain efficiency",
     examples: [
       {
@@ -143,6 +147,7 @@ export const toolCategories: ToolCategory[] = [
       "Predictive modeling and evidence-based recommendations. The tool starts shaping judgment calls, not just executing them.",
     borderClass: "border-cyan-500",
     badgeClass: "bg-cyan-100 text-cyan-800 border-cyan-200",
+    bgGradientClass: "bg-gradient-to-br from-cyan-50 to-teal-50",
     purpose: "Find insights, adapt to dynamic input",
     examples: [
       {
@@ -179,6 +184,7 @@ export const toolCategories: ToolCategory[] = [
       "Full autonomy, continuous learning, self-regulation. The highest-risk, highest-capability tier — and the one that demands the most governance.",
     borderClass: "border-sky-400",
     badgeClass: "bg-sky-100 text-sky-800 border-sky-200",
+    bgGradientClass: "bg-gradient-to-br from-sky-50 to-blue-50",
     purpose: "Drive autonomous execution safely",
     examples: [
       {

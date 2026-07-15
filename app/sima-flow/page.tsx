@@ -49,35 +49,35 @@ export default function SimaFlowPage() {
       <ModuleTabs active="flow" />
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="border-l-4 border-green-400 pl-6 mb-12">
+            <h1 className="text-4xl font-bold text-slate-900 mb-2 leading-tight">
               The Execution Engine
               <span className="text-green-600 block">Connecting Perspective to Results</span>
             </h1>
-            <p className="text-xl text-slate-600 mb-8">
-              SIMA Flow™ serves as the execution engine, tying SIMA Core™ models to SIMA Kit™ resourced through two
-              cycles that run simultaneously: the macro Core Cycle (Assess Capabilities → Set Groundwork → Execute)
-              for organizational advancement, and the project-level FLAI Cycle for execution within it.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-green-500 hover:bg-green-600">
-                <a href="https://SIMA360Classes.eventbee.com/boxoffice" target="_blank" rel="noopener noreferrer">
-                  Register for Training <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
-              >
-                <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
-                  Download Guide
-                </a>
-              </Button>
-            </div>
+          </div>
+          <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
+            SIMA Flow™ serves as the execution engine, tying SIMA Core™ models to SIMA Kit™ resourced through two
+            cycles that run simultaneously: the macro Core Cycle (Assess Capabilities → Set Groundwork → Execute)
+            for organizational advancement, and the project-level FLAI Cycle for execution within it.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" asChild className="bg-green-500 hover:bg-green-600">
+              <a href="https://SIMA360Classes.eventbee.com/boxoffice" target="_blank" rel="noopener noreferrer">
+                Register for Training <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
+            >
+              <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
+                Download Guide
+              </a>
+            </Button>
           </div>
         </div>
       </section>

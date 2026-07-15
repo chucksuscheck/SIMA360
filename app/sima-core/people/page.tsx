@@ -100,31 +100,28 @@ export default function PeoplePerspectivePage() {
       <PerspectiveTabs active="people" />
 
       {/* Hero */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center">
-                <Users className="w-8 h-8 text-sky-600" />
-              </div>
-            </div>
-            <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="border-l-4 border-sky-400 pl-6 mb-12">
+            <h1 className="text-4xl font-bold text-slate-900 mb-2">
               People Perspective
             </h1>
-            <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-              People determines how AI outputs get interpreted, trusted, challenged, or waved through. It's where the
-              Human-Direction System and the AI-Application System actually touch — and the contact runs both ways.
-            </p>
-            <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-500 italic">
               It is the perspective that asks: <em>would two experienced people reach the same conclusion from the same output, for the same reason?</em>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-sky-600 hover:bg-sky-700">
-                <Link href="/sima-probe/assessment">
-                  Assess Your People Maturity <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </Button>
-            </div>
+          </div>
+
+          <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
+            People determines how AI outputs get interpreted, trusted, challenged, or waved through. It's where the
+            Human-Direction System and the AI-Application System actually touch — and the contact runs both ways.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" asChild className="bg-sky-600 hover:bg-sky-700">
+              <Link href="/sima-probe/assessment">
+                Assess Your People Maturity <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

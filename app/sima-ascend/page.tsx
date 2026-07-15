@@ -12,14 +12,6 @@ export const metadata: Metadata = {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
 import Link from "next/link"
 import {
   ArrowRight,
@@ -62,58 +54,41 @@ export default function SimaAscendPage() {
 
       <ModuleTabs active="ascend" />
 
-      {/* Breadcrumb */}
-      <div className="container mx-auto px-4 py-4">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link href="/">Home</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>SIMA Ascend™</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
-
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="border-l-4 border-orange-400 pl-6 mb-12">
+            <h1 className="text-4xl font-bold text-slate-900 mb-2 leading-tight">
               Building the Practitioner Capability
               <span className="text-orange-600 block">the Framework Requires</span>
             </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-              Organizations don't mature because employees complete training. They mature when employees know when
-              to trust an AI output, when to challenge it, and when to set it aside — and when that judgment holds
-              up under real operational pressure, not just on a certification exam. Organizations can have
-              sophisticated AI tools, mature data infrastructure, and formal governance policies and still fail to
-              produce reliable outcomes if the people running those systems lack that judgment. SIMA-Ascend exists to
-              build it: the skill to ground work in a SIMA-Probe™ assessment rather than aspiration, to run FLAI
-              cycles as disciplined organizational learning, and to develop that shared understanding across an
-              organization.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-orange-500 hover:bg-orange-600">
-                <a href="https://SIMA360Classes.eventbee.com/boxoffice" target="_blank" rel="noopener noreferrer">
-                  Register for Training <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="border-orange-600 text-orange-600 hover:bg-orange-50 bg-transparent"
-              >
-                <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
-                  Download Guide
-                </a>
-              </Button>
-            </div>
+          </div>
+          <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
+            Organizations don't mature because employees complete training. They mature when employees know when
+            to trust an AI output, when to challenge it, and when to set it aside — and when that judgment holds
+            up under real operational pressure, not just on a certification exam. Organizations can have
+            sophisticated AI tools, mature data infrastructure, and formal governance policies and still fail to
+            produce reliable outcomes if the people running those systems lack that judgment. SIMA-Ascend exists to
+            build it: the skill to ground work in a SIMA-Probe™ assessment rather than aspiration, to run FLAI
+            cycles as disciplined organizational learning, and to develop that shared understanding across an
+            organization.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" asChild className="bg-orange-500 hover:bg-orange-600">
+              <a href="https://SIMA360Classes.eventbee.com/boxoffice" target="_blank" rel="noopener noreferrer">
+                Register for Training <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="border-orange-600 text-orange-600 hover:bg-orange-50 bg-transparent"
+            >
+              <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
+                Download Guide
+              </a>
+            </Button>
           </div>
         </div>
       </section>

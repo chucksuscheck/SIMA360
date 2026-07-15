@@ -50,36 +50,36 @@ export default function SimaCorePage() {
       <ModuleTabs active="core" />
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="border-l-4 border-blue-400 pl-6 mb-12">
+            <h1 className="text-4xl font-bold text-slate-900 mb-2 leading-tight">
               The Core Elements
               <span className="text-blue-600 block">of SIMA360</span>
             </h1>
-            <p className="text-xl text-slate-600 mb-8">
-              SIMA Core™ is the static structural foundation consisting of three core models: the Strategic
-              Perspectives model, the AI Maturity Levels model, and the AI Tool Categories model. It provides the
-              organizing principles for effective and responsible AI maturity — the same three models developed
-              throughout <em>The AI Rush: Too Much. Too Soon.</em>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-blue-500 hover:bg-blue-600">
-                <a href="https://SIMA360Classes.eventbee.com/boxoffice" target="_blank" rel="noopener noreferrer">
-                  Register for Training <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent"
-              >
-                <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
-                  Download Guide
-                </a>
-              </Button>
-            </div>
+          </div>
+          <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
+            SIMA Core™ is the static structural foundation consisting of three core models: the Strategic
+            Perspectives model, the AI Maturity Levels model, and the AI Tool Categories model. It provides the
+            organizing principles for effective and responsible AI maturity — the same three models developed
+            throughout <em>The AI Rush: Too Much. Too Soon.</em>
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" asChild className="bg-blue-500 hover:bg-blue-600">
+              <a href="https://SIMA360Classes.eventbee.com/boxoffice" target="_blank" rel="noopener noreferrer">
+                Register for Training <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent"
+            >
+              <a href="/SIMA360_Guide.pdf" target="_blank" rel="noopener noreferrer">
+                Download Guide
+              </a>
+            </Button>
           </div>
         </div>
       </section>
