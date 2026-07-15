@@ -80,7 +80,7 @@ export default function HomePage() {
             SIMA360™ — Structured AI Maturity Accelerator
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight" style={{ color: "#0f172a" }}>
-            Is AI helping you produce more output, or improve your business?
+            Is AI improving your business or only providing more output?
           </h1>
 
           <div className="space-y-2 text-base leading-snug text-center" style={{ color: "#475569" }}>
