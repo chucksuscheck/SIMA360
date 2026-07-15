@@ -2,9 +2,10 @@ import type { Metadata } from "next"
 import fs from "node:fs"
 import path from "node:path"
 import Link from "next/link"
-import { BookOpen, Layers, Info } from "lucide-react"
+import { BookOpen, ClipboardCheck, Download, Layers, Info } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
+import { Button } from "@/components/ui/button"
 
 const HOMEPAGE_DESCRIPTION =
   "AI increases organizational capability and scales inconsistency. Whether it produces reliable outcomes depends on organizational maturity. SIMA360 diagnoses and builds that maturity — five perspectives, six Maturity Levels."
@@ -43,7 +44,7 @@ const JSON_LD = {
 // Rewritten to relative paths here to match how every other internal link on
 // this site is written — swap this out if the SVG is regenerated with different hrefs.
 function loadDiagramSvg(): string {
-  const filePath = path.join(process.cwd(), "public", "sima360_map.svg")
+  const filePath = path.join(process.cwd(), "public", "sima360-diagram.svg")
   const raw = fs.readFileSync(filePath, "utf8")
   return raw.replace(/https:\/\/www\.sima360\.org/g, "")
 }
@@ -61,49 +62,32 @@ export default function HomePage() {
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-xl font-bold" style={{ color: "#0f172a" }}>SIMA360™</h1>
-              <p className="text-sm" style={{ color: "#475569" }}>Structured AI Maturity Accelerator</p>
-            </div>
+            <Link href="/" className="flex items-center space-x-2">
+              <div>
+                <h1 className="text-xl font-bold" style={{ color: "#0f172a" }}>SIMA360™</h1>
+                <p className="text-sm" style={{ color: "#475569" }}>Structured AI Maturity Accelerator</p>
+              </div>
+            </Link>
             <Navigation />
           </div>
         </div>
       </header>
 
-      {/* 1. Hero — small product eyebrow, hook headline, single CTA */}
-      <section className="pt-12 pb-4 px-4">
+      {/* 1. Hero — small product eyebrow, hook headline, argument copy */}
+      <section className="pt-12 pb-6 px-4">
         <div className="container mx-auto text-center max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#64748b" }}>
             SIMA360™ — Structured AI Maturity Accelerator
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight" style={{ color: "#0f172a" }}>
-            Are you getting better at running the business — or just producing more output with AI&rsquo;s help?
+            Is AI helping you produce more output, or improve your business?
           </h1>
-        </div>
-      </section>
-
-      {/* 2. Why Assess Maturity — separated argument section, clearly broken from the hook */}
-      <section className="pt-2 pb-6 px-4">
-        <div className="container mx-auto text-center max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#64748b" }}>
-            Why Assess Maturity
-          </p>
 
           <div className="space-y-2 text-base leading-snug text-center" style={{ color: "#475569" }}>
+            <p>Capability is what a system can do. Maturity is whether you can handle what it&rsquo;s doing.</p>
             <p>
-              Most AI initiatives don&rsquo;t fail because the technology underperforms. They fail because nobody
-              checked whether the organization could handle what it started doing.
-            </p>
-            <p>
-              Metrics improve. Adoption spreads. Decision quality stays flat — or drops — because output was the
-              only thing anyone measured.
-            </p>
-            <p className="font-semibold" style={{ color: "#0f172a" }}>
-              AI doesn&rsquo;t fix a weak decision. It makes it louder.
-            </p>
-            <p>
-              Capability is what a system can do. Maturity is whether you can handle what it&rsquo;s doing. You
-              can&rsquo;t read that off a dashboard. You have to measure it.
+              SIMA-Probe finds your organization&rsquo;s AI maturity across five perspectives, strategy,
+              governance, data, people, and technology, free, in about 15 minutes.
             </p>
           </div>
         </div>
@@ -112,11 +96,15 @@ export default function HomePage() {
       {/* 3. Diagram — the visual centerpiece: bigger, elevated, colorfully framed */}
       <section className="py-14 px-4">
         <div className="container mx-auto max-w-6xl text-center mb-6">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-2" style={{ color: "#0f172a" }}>
-            Start With the Assessment
-          </h2>
+          <Button
+            size="lg"
+            asChild
+            className="mb-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
+          >
+            <Link href="/sima-probe/assessment">Begin free assessment</Link>
+          </Button>
           <p className="text-sm" style={{ color: "#64748b" }}>
-            Click any component below to explore it
+            Click below to explore
           </p>
         </div>
         <div
@@ -136,9 +124,9 @@ export default function HomePage() {
           <h2 className="text-sm font-semibold uppercase tracking-widest mb-6" style={{ color: "#3b82f6" }}>
             Learn More
           </h2>
-          <div className="grid sm:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-5 gap-4">
             <Link
-              href="/sima-core"
+              href="/overview"
               className="flex flex-col items-center gap-2 rounded-lg border bg-white p-4 hover:shadow-lg transition-shadow"
               style={{ borderColor: "#e2e8f0" }}
             >
@@ -153,6 +141,16 @@ export default function HomePage() {
               <BookOpen className="w-6 h-6" style={{ color: "#ea580c" }} />
               <span className="text-sm font-medium" style={{ color: "#0f172a" }}>The Book</span>
             </Link>
+            <a
+              href="/SIMA360_Guide.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-2 rounded-lg border bg-white p-4 hover:shadow-lg transition-shadow"
+              style={{ borderColor: "#e2e8f0" }}
+            >
+              <Download className="w-6 h-6" style={{ color: "#16a34a" }} />
+              <span className="text-sm font-medium" style={{ color: "#0f172a" }}>Download Guide</span>
+            </a>
             <Link
               href="/about"
               className="flex flex-col items-center gap-2 rounded-lg border bg-white p-4 hover:shadow-lg transition-shadow"
@@ -160,6 +158,14 @@ export default function HomePage() {
             >
               <Info className="w-6 h-6" style={{ color: "#3b82f6" }} />
               <span className="text-sm font-medium" style={{ color: "#0f172a" }}>About</span>
+            </Link>
+            <Link
+              href="/sima-probe#subscription-levels"
+              className="flex flex-col items-center gap-2 rounded-lg border bg-white p-4 hover:shadow-lg transition-shadow"
+              style={{ borderColor: "#e2e8f0" }}
+            >
+              <ClipboardCheck className="w-6 h-6" style={{ color: "#d946ef" }} />
+              <span className="text-sm font-medium" style={{ color: "#0f172a" }}>Assessment</span>
             </Link>
           </div>
         </div>
