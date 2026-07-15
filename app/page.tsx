@@ -94,12 +94,12 @@ export default function HomePage() {
       </section>
 
       {/* 3. Diagram — the visual centerpiece: bigger, elevated, colorfully framed */}
-      <section className="py-14 px-4">
+      <section className="pt-4 pb-14 px-4">
         <div className="container mx-auto max-w-6xl text-center mb-6">
           <Button
             size="lg"
             asChild
-            className="mb-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
+            className="mb-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
           >
             <Link href="/sima-probe/assessment">Begin free assessment</Link>
           </Button>
