@@ -56,7 +56,7 @@ export default function OverviewPage() {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight max-w-4xl mx-auto">
-            Most organizations have deployed AI. Few have developed the maturity to produce reliable outcomes from it.
+            Most organizations have deployed AI. Few have developed the maturity to support it.
           </h1>
           <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
             AI increases what an organization can do — and scales whatever inconsistency already exists inside it.
