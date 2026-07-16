@@ -16,40 +16,51 @@ export const metadata: Metadata = {
   },
 }
 
-const summaryRows = [
+const compareColumns = [
+  { stage: "Assess", product: "SIMA-Probe™", dot: "#378ADD", href: "/pricing/assess" },
+  { stage: "Equip", product: "SIMA-Kit™", dot: "#D85A30", href: "/pricing/equip" },
+  { stage: "Improve", product: "SIMA-Flow™", dot: "#639922", href: "/pricing/improve" },
+  { stage: "Learn", product: "SIMA-Ascend™", dot: "#1D9E75", href: "/pricing/ascend" },
+]
+
+type CompareCell = { price: string; descriptor?: string } | null
+
+const compareRows: { tier: string; cells: CompareCell[] }[] = [
   {
-    stage: "Assess",
-    product: "SIMA-Probe™",
-    dot: "#378ADD",
-    description: "Free maturity assessment, adaptive scoring, AI-generated interpretation, and organization plans.",
-    price: "Free – Custom",
-    href: "/pricing/assess",
+    tier: "Entry",
+    cells: [
+      { price: "Free", descriptor: "Basic assessment" },
+      { price: "$19–29", descriptor: "Individual resources" },
+      null,
+      { price: "$99–199", descriptor: "Individual course" },
+    ],
   },
   {
-    stage: "Equip",
-    product: "SIMA-Kit™",
-    dot: "#D85A30",
-    description:
-      "Individual templates through domain and capability packs, plus recurring resource-library subscriptions.",
-    price: "$19 – $299+",
-    href: "/pricing/equip",
+    tier: "Professional",
+    cells: [
+      { price: "$99–249", descriptor: "Adaptive assessment" },
+      { price: "$49–79", descriptor: "Professional resources" },
+      { price: "$2,500–5,000", descriptor: "Assessment Workshop" },
+      { price: "$199–499", descriptor: "Domain course / learning path" },
+    ],
   },
   {
-    stage: "Improve",
-    product: "SIMA-Flow™",
-    dot: "#639922",
-    description:
-      "Consulting engagements that apply the Core Cycle inside your organization — from workshops to enterprise transformation.",
-    price: "$2,500 – $25,000+",
-    href: "/pricing/improve",
+    tier: "Team / Organization",
+    cells: [
+      { price: "$599/yr", descriptor: "Organization plan" },
+      { price: "$299+", descriptor: "Domain & Capability Packs, plus $29–79/mo subscriptions" },
+      { price: "$10,000–25,000", descriptor: "Governance Engagement" },
+      { price: "$995–4,995", descriptor: "Complete curriculum / instructor-led workshop" },
+    ],
   },
   {
-    stage: "Learn",
-    product: "SIMA-Ascend™",
-    dot: "#1D9E75",
-    description: "Structured training programs and certification pathways for practitioners and teams.",
-    price: "$99 – $4,995+",
-    href: "/pricing/ascend",
+    tier: "Enterprise",
+    cells: [
+      { price: "Custom" },
+      { price: "Included", descriptor: "with Enterprise" },
+      { price: "Custom" },
+      { price: "Custom" },
+    ],
   },
 ]
 
@@ -58,15 +69,6 @@ const journeySteps = [
   { stage: "Improve", goal: "Begin implementation", primary: "SIMA-Kit™", secondary: "SIMA-Flow™" },
   { stage: "Build capability", goal: "Train individuals and teams", primary: "SIMA-Ascend™", secondary: "SIMA-Kit™" },
   { stage: "Transform", goal: "Enterprise implementation", primary: "Consulting", secondary: "Licensing" },
-]
-
-const roadmapSteps = [
-  { name: "SIMA-Probe Free", goal: "Understand current maturity" },
-  { name: "Professional Assessment", goal: "Receive detailed guidance" },
-  { name: "SIMA-Kit Resources", goal: "Begin implementation" },
-  { name: "SIMA-Ascend", goal: "Build organizational capability" },
-  { name: "SIMA-Flow", goal: "Accelerate transformation" },
-  { name: "Enterprise Platform", goal: "Continuous improvement" },
 ]
 
 export default function PricingPage() {
@@ -107,55 +109,58 @@ export default function PricingPage() {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-2">Compare</p>
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Every stage, one platform</h2>
-            <p className="text-lg text-slate-600">
-              Each stage of SIMA360 has its own pricing page with full detail — here&rsquo;s what each one covers.
-            </p>
           </div>
+
+          <h3 className="text-sm font-semibold text-slate-700 mb-4">Pricing by tier</h3>
 
           <div className="overflow-x-auto rounded-lg border border-slate-200">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-slate-50 border-b border-slate-200">
-                  <th className="px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Stage</th>
-                  <th className="px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
-                    Capabilities
+                  <th className="px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500 align-bottom">
+                    Tier
                   </th>
-                  <th className="px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
-                    Starting at
-                  </th>
-                  <th className="px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500 text-right">
-                    Details
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {summaryRows.map((row) => (
-                  <tr key={row.stage} className="border-b border-slate-100 last:border-0">
-                    <td className="px-5 py-4 align-top">
-                      <div className="flex items-center gap-2">
+                  {compareColumns.map((col) => (
+                    <th key={col.stage} className="px-5 py-3 text-center align-bottom">
+                      <div className="flex items-center justify-center gap-2">
                         <span
                           aria-hidden="true"
                           className="w-2 h-2 rounded-full shrink-0"
-                          style={{ backgroundColor: row.dot }}
+                          style={{ backgroundColor: col.dot }}
                         />
-                        <div>
-                          <p className="text-sm font-semibold text-slate-900">{row.stage}</p>
-                          <p className="text-xs text-slate-500">{row.product}</p>
-                        </div>
+                        <span className="text-sm font-semibold text-slate-900">{col.stage}</span>
                       </div>
-                    </td>
-                    <td className="px-5 py-4 align-top text-sm text-slate-600 max-w-md">{row.description}</td>
-                    <td className="px-5 py-4 align-top text-sm font-semibold text-slate-900 whitespace-nowrap">
-                      {row.price}
-                    </td>
-                    <td className="px-5 py-4 align-top text-right">
+                      <p className="text-xs text-slate-500 mt-1">{col.product}</p>
                       <Link
-                        href={row.href}
-                        className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors whitespace-nowrap"
+                        href={col.href}
+                        className="inline-flex items-center gap-1 text-xs font-medium text-blue-600 hover:text-blue-800 transition-colors whitespace-nowrap mt-1"
                       >
                         View pricing <ArrowRight className="w-3 h-3" />
                       </Link>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {compareRows.map((row) => (
+                  <tr key={row.tier} className="border-b border-slate-100 last:border-0">
+                    <td className="px-5 py-4 align-top text-sm font-semibold text-slate-900 whitespace-nowrap">
+                      {row.tier}
                     </td>
+                    {row.cells.map((cell, i) => (
+                      <td key={i} className="px-5 py-4 align-top text-center">
+                        {cell ? (
+                          <>
+                            <p className="text-sm font-semibold text-slate-900 whitespace-nowrap">{cell.price}</p>
+                            {cell.descriptor && (
+                              <p className="text-sm text-slate-600 mt-1">{cell.descriptor}</p>
+                            )}
+                          </>
+                        ) : (
+                          <p className="text-sm text-slate-400">—</p>
+                        )}
+                      </td>
+                    ))}
                   </tr>
                 ))}
               </tbody>
@@ -176,7 +181,7 @@ export default function PricingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {journeySteps.map((step, i) => (
               <div key={step.stage} className="rounded-lg p-5 border border-slate-200 bg-white">
                 <div className="flex items-center gap-2 mb-3">
@@ -202,23 +207,6 @@ export default function PricingPage() {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-6">
-              In six purchases, from first assessment to continuous improvement
-            </p>
-            <div className="relative pl-8 space-y-8 border-l border-slate-200 ml-3">
-              {roadmapSteps.map((step, i) => (
-                <div key={step.name} className="relative">
-                  <span className="absolute -left-[calc(2rem+0.5px)] flex items-center justify-center w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-semibold">
-                    {i + 1}
-                  </span>
-                  <p className="text-sm font-semibold text-slate-900">{step.name}</p>
-                  <p className="text-sm text-slate-600">{step.goal}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
