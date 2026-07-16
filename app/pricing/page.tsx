@@ -20,7 +20,7 @@ const compareColumns = [
   { stage: "Assess", product: "SIMA-Probe™", dot: "#378ADD", href: "/pricing/assess" },
   { stage: "Equip", product: "SIMA-Kit™", dot: "#D85A30", href: "/pricing/equip" },
   { stage: "Improve", product: "SIMA-Flow™", dot: "#639922", href: "/pricing/improve" },
-  { stage: "Learn", product: "SIMA-Ascend™", dot: "#1D9E75", href: "/pricing/ascend" },
+  { stage: "Learn", product: "SIMA-Ascend™", dot: "#1D9E75", href: "/pricing/learn" },
 ]
 
 type CompareCell = { price: string; descriptor?: string } | null
@@ -65,9 +65,9 @@ const compareRows: { tier: string; cells: CompareCell[] }[] = [
 ]
 
 const journeySteps = [
-  { stage: "Understand", goal: "Determine current maturity", primary: "SIMA-Probe™", secondary: "The Book" },
-  { stage: "Improve", goal: "Begin implementation", primary: "SIMA-Kit™", secondary: "SIMA-Flow™" },
-  { stage: "Build capability", goal: "Train individuals and teams", primary: "SIMA-Ascend™", secondary: "SIMA-Kit™" },
+  { stage: "Assess", goal: "Determine current maturity", primary: "SIMA-Probe™", secondary: "The Book" },
+  { stage: "Equip", goal: "Begin implementation", primary: "SIMA-Kit™", secondary: "SIMA-Flow™" },
+  { stage: "Learn", goal: "Train individuals and teams", primary: "SIMA-Ascend™", secondary: "SIMA-Kit™" },
   { stage: "Transform", goal: "Enterprise implementation", primary: "Consulting", secondary: "Licensing" },
 ]
 
@@ -205,6 +205,14 @@ export default function PricingPage() {
                     </Badge>
                   </div>
                 </div>
+                {step.stage === "Transform" && (
+                  <a
+                    href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation"
+                    className="mt-3 inline-block text-xs font-medium text-blue-600 hover:text-blue-800 transition-colors"
+                  >
+                    Schedule a conversation
+                  </a>
+                )}
               </div>
             ))}
           </div>

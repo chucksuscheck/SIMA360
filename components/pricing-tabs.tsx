@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export type PricingKey = "overview" | "assess" | "equip" | "improve" | "ascend"
+export type PricingKey = "overview" | "assess" | "equip" | "improve" | "learn"
 
 const tabs: {
   key: PricingKey
@@ -14,7 +14,7 @@ const tabs: {
   { key: "assess", label: "Assess", href: "/pricing/assess", dot: "#378ADD", activeBg: "#E6F1FB", activeText: "#042C53" },
   { key: "equip", label: "Equip", href: "/pricing/equip", dot: "#D85A30", activeBg: "#FAECE7", activeText: "#4A1B0C" },
   { key: "improve", label: "Improve", href: "/pricing/improve", dot: "#639922", activeBg: "#EAF3DE", activeText: "#173404" },
-  { key: "ascend", label: "Learn", href: "/pricing/ascend", dot: "#1D9E75", activeBg: "#E1F5EE", activeText: "#04342C" },
+  { key: "learn", label: "Learn", href: "/pricing/learn", dot: "#1D9E75", activeBg: "#E1F5EE", activeText: "#04342C" },
 ]
 
 export function PricingTabs({ active }: { active: PricingKey }) {

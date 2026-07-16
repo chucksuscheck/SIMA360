@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
 import { PricingTabs } from "@/components/pricing-tabs"
-import { ChevronDown } from "lucide-react"
+import { PricingCard, type PricingCardData } from "@/components/pricing-card"
 
 export const metadata: Metadata = {
   title: "Improve Pricing — SIMA-Flow™ | SIMA360™",
@@ -14,12 +14,47 @@ export const metadata: Metadata = {
   },
 }
 
-const flowPricing = [
-  { name: "Assessment Workshop", price: "$2,500–5,000" },
-  { name: "Governance Engagement", price: "$10,000–25,000" },
-  { name: "Organizational Roadmap", price: "$25,000+" },
-  { name: "Executive Advisory", price: "Monthly retainer" },
-  { name: "Enterprise Transformation", price: "Custom" },
+const flowPricing: PricingCardData[] = [
+  {
+    name: "Assessment Workshop",
+    price: "$2,500–5,000",
+    features: [],
+    ctaLabel: "Schedule a conversation",
+    ctaHref: "mailto:info@sima360.org?subject=Assessment%20Workshop%20Inquiry",
+    checkClass: "text-lime-700",
+  },
+  {
+    name: "Governance Engagement",
+    price: "$10,000–25,000",
+    features: [],
+    ctaLabel: "Schedule a conversation",
+    ctaHref: "mailto:info@sima360.org?subject=Governance%20Engagement%20Inquiry",
+    checkClass: "text-lime-700",
+  },
+  {
+    name: "Organizational Roadmap",
+    price: "$25,000+",
+    features: [],
+    ctaLabel: "Schedule a conversation",
+    ctaHref: "mailto:info@sima360.org?subject=Organizational%20Roadmap%20Inquiry",
+    checkClass: "text-lime-700",
+  },
+  {
+    name: "Executive Advisory",
+    price: "Monthly retainer",
+    features: [],
+    ctaLabel: "Schedule a conversation",
+    ctaHref: "mailto:info@sima360.org?subject=Executive%20Advisory%20Inquiry",
+    checkClass: "text-lime-700",
+  },
+  {
+    name: "Enterprise Transformation",
+    price: "Custom",
+    features: [],
+    ctaLabel: "Schedule a conversation",
+    ctaHref: "mailto:info@sima360.org?subject=Enterprise%20Transformation%20Inquiry",
+    checkClass: "text-lime-700",
+  },
 ]
 
 export default function PricingImprovePage() {
@@ -42,7 +77,7 @@ export default function PricingImprovePage() {
       <PricingTabs active="improve" />
 
       <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-lime-700 mb-2">Improve with SIMA-Flow™</p>
             <h1 className="text-3xl font-bold text-slate-900 mb-4">Accelerate transformation with expert guidance</h1>
@@ -50,22 +85,12 @@ export default function PricingImprovePage() {
               Consulting engagements that apply the Core Cycle directly inside your organization.
             </p>
           </div>
-          <details className="group rounded-lg border border-slate-200 bg-white" open>
-            <summary className="flex items-center justify-between cursor-pointer list-none px-5 py-4 [&::-webkit-details-marker]:hidden">
-              <span className="font-semibold text-slate-900 text-sm">Consulting pricing</span>
-              <ChevronDown className="w-4 h-4 text-slate-400 transition-transform group-open:rotate-180" />
-            </summary>
-            <div className="px-5 pb-5 pt-0 border-t border-slate-100">
-              <div className="divide-y divide-slate-100 mt-2">
-                {flowPricing.map((row) => (
-                  <div key={row.name} className="flex items-center justify-between py-3">
-                    <span className="text-sm text-slate-700">{row.name}</span>
-                    <span className="text-sm font-semibold text-slate-900">{row.price}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </details>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            {flowPricing.map((card) => (
+              <PricingCard key={card.name} card={card} />
+            ))}
+          </div>
         </div>
       </section>
 

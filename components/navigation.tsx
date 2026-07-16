@@ -55,7 +55,7 @@ const pricingLinks = [
   { label: "Assess", href: "/pricing/assess" },
   { label: "Equip", href: "/pricing/equip" },
   { label: "Improve", href: "/pricing/improve" },
-  { label: "Learn", href: "/pricing/ascend" },
+  { label: "Learn", href: "/pricing/learn" },
 ]
 
 type SubmenuKey = "framework" | "maturity" | "toolCategories" | "perspectives" | "resources" | "pricing" | null
