@@ -50,7 +50,15 @@ const resourceLinks = [
   { label: "Take Training", href: "https://www.eventbee.com/v/sima360classes/boxoffice/", external: true },
 ]
 
-type SubmenuKey = "framework" | "maturity" | "toolCategories" | "perspectives" | "resources" | null
+const pricingLinks = [
+  { label: "Overview", href: "/pricing" },
+  { label: "Assess", href: "/pricing/assess" },
+  { label: "Equip", href: "/pricing/equip" },
+  { label: "Improve", href: "/pricing/improve" },
+  { label: "Learn", href: "/pricing/ascend" },
+]
+
+type SubmenuKey = "framework" | "maturity" | "toolCategories" | "perspectives" | "resources" | "pricing" | null
 
 export function Navigation() {
   const [isLearnMoreOpen, setIsLearnMoreOpen] = useState(false)
@@ -62,6 +70,7 @@ export function Navigation() {
   const [isMobileToolCategoriesOpen, setIsMobileToolCategoriesOpen] = useState(false)
   const [isMobilePerspectivesOpen, setIsMobilePerspectivesOpen] = useState(false)
   const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false)
+  const [isMobilePricingOpen, setIsMobilePricingOpen] = useState(false)
 
   const learnMoreTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const submenuTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -93,6 +102,7 @@ export function Navigation() {
     setIsMobileToolCategoriesOpen(false)
     setIsMobilePerspectivesOpen(false)
     setIsMobileResourcesOpen(false)
+    setIsMobilePricingOpen(false)
   }
 
   return (
@@ -269,13 +279,32 @@ export function Navigation() {
                 )}
               </div>
 
-              <Link
-                href="/pricing"
-                onClick={() => setIsLearnMoreOpen(false)}
-                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
-              >
-                Pricing
-              </Link>
+              {/* Pricing — nested submenu */}
+              <div className="relative" onMouseEnter={() => openSubmenu("pricing")} onMouseLeave={closeSubmenu}>
+                <button
+                  className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+                  aria-expanded={activeSubmenu === "pricing"}
+                  aria-haspopup="true"
+                >
+                  Pricing
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+                {activeSubmenu === "pricing" && (
+                  <div className="absolute top-0 left-full ml-1 w-44 bg-white border border-slate-200 rounded-md shadow-lg z-50">
+                    {pricingLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setIsLearnMoreOpen(false)}
+                        className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <Link
                 href="/about"
                 onClick={() => setIsLearnMoreOpen(false)}
@@ -474,13 +503,31 @@ export function Navigation() {
                     )}
                   </div>
 
-                  <Link
-                    href="/pricing"
-                    onClick={closeMobile}
-                    className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
-                  >
-                    Pricing
-                  </Link>
+                  {/* Pricing mobile submenu */}
+                  <div>
+                    <button
+                      onClick={() => setIsMobilePricingOpen(!isMobilePricingOpen)}
+                      className="flex items-center justify-between w-full pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                    >
+                      Pricing
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobilePricingOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    {isMobilePricingOpen && (
+                      <div className="bg-white">
+                        {pricingLinks.map((link) => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            onClick={closeMobile}
+                            className="block pl-11 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
                   <Link
                     href="/about"
                     onClick={closeMobile}
