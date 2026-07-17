@@ -50,8 +50,8 @@ const AdvisorsPage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            <Card className="border-l-4 border-l-blue-500">
+          <div className="grid grid-cols-1 gap-6">
+            <Card className="border-l-4 border-l-blue-500 h-full">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-lg font-semibold text-blue-600">CS</span>
@@ -61,9 +61,13 @@ const AdvisorsPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700 text-sm">
-                  Professional Scrum Trainer with Scrum.org for 14 years and author of the forthcoming book{" "}
-                  <em>The AI Rush — Too Much Too Soon!</em>, which examines the gap between AI capability and
-                  organizational maturity — the premise SIMA360 is built on.
+                  Professional Scrum Trainer with Scrum.org for 14 years, working directly with organizations
+                  navigating the shift from traditional delivery models to AI-augmented ways of working. Author of
+                  the forthcoming book <em>The AI Rush — Too Much Too Soon!</em>, which examines the gap between AI
+                  capability and organizational maturity — the premise SIMA360 is built on. Founded SIMA360 to give
+                  that argument a practical, structured form organizations can apply rather than just read about,
+                  and as Chair, sets the board's mandate to pressure-test the framework rather than simply validate
+                  it.
                 </p>
                 <a
                   href="mailto:charles.suscheck@sima360.org"
@@ -74,7 +78,7 @@ const AdvisorsPage = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-indigo-500">
+            <Card className="border-l-4 border-l-indigo-500 h-full">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-lg font-semibold text-indigo-600">MA</span>
@@ -86,10 +90,14 @@ const AdvisorsPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700 text-sm">
-                  25+ years leading enterprise transformation initiatives, with hands-on experience operationalizing
-                  AI governance principles — human approval gates, verification over assumed trust, and
-                  deterministic-vs-judgment tool selection — through building and running his own production AI
-                  system. Advises on SIMA360's Strategy dimension.
+                  25+ years leading enterprise transformation initiatives across large, complex organizations, with a
+                  practitioner's focus on turning strategic intent into disciplined execution. Gained hands-on
+                  experience operationalizing AI governance principles — human approval gates, verification over
+                  assumed trust, and deterministic-vs-judgment tool selection — not as theory but through building
+                  and running his own production AI system. As a SAFe Program Consultant, brings a structured,
+                  framework-driven lens to how organizations sequence and scale change, and advises SIMA360's
+                  Strategy dimension, pressure-testing whether the framework's guidance holds up against how
+                  transformation actually unfolds inside an enterprise.
                 </p>
                 <a
                   href="mailto:matt.anderson@sima360.org"
@@ -100,7 +108,7 @@ const AdvisorsPage = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-orange-500">
+            <Card className="border-l-4 border-l-orange-500 h-full">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-lg font-semibold text-orange-600">BT</span>
@@ -113,10 +121,13 @@ const AdvisorsPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700 text-sm">
-                  35 years in enterprise IT, including large-scale database work at IBM and Verizon, now applied to
-                  curriculum design and technology education in the College of Adult and Graduate Studies.
-                  Contributed directly to SIMA360's training and certification curriculum, and advises the People
-                  and Technology dimensions with both practitioner depth and an academic lens.
+                  35 years in enterprise IT, including large-scale database work at IBM and Verizon, giving him a
+                  firsthand view of how technology decisions play out at organizational scale over decades, not just
+                  individual projects. That practitioner background now informs his work in curriculum design and
+                  technology education in the College of Adult and Graduate Studies, where he trains the next
+                  generation of IT professionals. Contributed directly to SIMA360's training and certification
+                  curriculum, helping translate the framework into teachable, assessable material, and advises the
+                  People and Technology dimensions with both practitioner depth and an academic lens.
                 </p>
                 <a
                   href="mailto:bren.triplett@sima360.org"
@@ -127,7 +138,7 @@ const AdvisorsPage = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-purple-500">
+            <Card className="border-l-4 border-l-purple-500 h-full">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-lg font-semibold text-purple-600">KL</span>
@@ -139,9 +150,13 @@ const AdvisorsPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700 text-sm">
-                  Independent consultant and published author in additive manufacturing, advising SIMA360's
-                  Technology and Data dimensions with production-floor experience in emerging manufacturing
-                  technology adoption.
+                  Independent consultant and published author in additive manufacturing, with years of firsthand
+                  experience guiding manufacturers through the practical realities of adopting emerging production
+                  technology — where theory meets the constraints of the shop floor. That production-floor
+                  perspective informs how she advises SIMA360's Technology and Data dimensions, testing whether the
+                  framework's guidance survives contact with real operational constraints rather than idealized
+                  deployment scenarios, and giving the board a manufacturing-sector counterweight to more
+                  software-centric perspectives.
                 </p>
                 <a
                   href="mailto:kathy.lassila@sima360.org"
@@ -152,7 +167,7 @@ const AdvisorsPage = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-green-500">
+            <Card className="border-l-4 border-l-green-500 h-full">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-lg font-semibold text-green-600">AS</span>
@@ -164,9 +179,14 @@ const AdvisorsPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700 text-sm">
-                  Leads agile transformation for AEP's electric vehicle charging business unit, advising SIMA360's
-                  People and Process dimensions with enterprise-scale operational discipline drawn from one of the
-                  country's largest regulated utilities.
+                  Leads agile transformation for AEP's electric vehicle charging business unit, driving how one of
+                  the country's largest regulated utilities adapts its delivery practices to a fast-moving,
+                  infrastructure-heavy business line. That work requires balancing agility with the operational
+                  discipline and regulatory scrutiny inherent to utility-scale organizations — a tension directly
+                  relevant to how AI governance has to function inside similarly regulated environments. Advises
+                  SIMA360's People and Process dimensions, bringing enterprise-scale operational discipline drawn
+                  from a highly regulated industry where change-management failures carry real operational
+                  consequences.
                 </p>
                 <a
                   href="mailto:anita.shankar@sima360.org"
