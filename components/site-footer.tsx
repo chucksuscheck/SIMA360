@@ -51,7 +51,7 @@ export function SiteFooter() {
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about" className="hover:text-white transition-colors">About</Link>
+                <Link href="/foundation" className="hover:text-white transition-colors">About</Link>
               </li>
               <li>
                 <Link href="/start" className="hover:text-white transition-colors">Get Started</Link>

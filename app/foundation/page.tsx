@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About SIMA360™ — Framework Origin & Research Foundation",
+  title: "SIMA360 Basis — Framework Origin & Purpose | SIMA360™",
   description:
     "SIMA360 was built on two years of comparative research across nine AI maturity frameworks — Element AI, Accenture, IBM, Metascient, Ovum, BCG/MIT Sloan, Microsoft, Gartner, and Deloitte — research that revealed why organizational maturity, not tool capability, determines whether AI produces reliable outcomes. Learn how the Five Perspectives emerged from that research and why SIMA360 exists to turn a diagnosis into a trajectory.",
   alternates: {
-    canonical: "https://www.sima360.org/about",
+    canonical: "https://www.sima360.org/foundation",
   },
 }
 
@@ -15,22 +15,22 @@ import { Badge } from "@/components/ui/badge"
 import {
   ArrowRight,
   Users,
-  Target,
   Shield,
-  CheckCircle,
   BookOpen,
   AlertTriangle,
   TrendingUp,
   Eye,
-  Building2,
   Layers,
+  Building2,
   Zap,
+  CheckCircle,
+  Target,
 } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
 
-const AboutPage = () => {
+const FoundationPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
@@ -514,4 +514,4 @@ const AboutPage = () => {
   )
 }
 
-export default AboutPage
+export default FoundationPage

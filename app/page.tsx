@@ -151,7 +151,7 @@ export default function HomePage() {
               <span className="text-sm font-medium" style={{ color: "#0f172a" }}>Download Guide</span>
             </a>
             <Link
-              href="/about"
+              href="/advisors"
               className="flex flex-col items-center gap-2 rounded-lg border bg-white p-4 hover:shadow-lg transition-shadow"
               style={{ borderColor: "#e2e8f0" }}
             >

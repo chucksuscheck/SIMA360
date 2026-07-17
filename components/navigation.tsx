@@ -58,7 +58,12 @@ const pricingLinks = [
   { label: "Learn", href: "/pricing/learn" },
 ]
 
-type SubmenuKey = "framework" | "maturity" | "toolCategories" | "perspectives" | "resources" | "pricing" | null
+const aboutLinks = [
+  { label: "Who We Are", href: "/advisors" },
+  { label: "SIMA360 Basis", href: "/foundation" },
+]
+
+type SubmenuKey = "framework" | "maturity" | "toolCategories" | "perspectives" | "resources" | "pricing" | "about" | null
 
 export function Navigation() {
   const [isLearnMoreOpen, setIsLearnMoreOpen] = useState(false)
@@ -71,6 +76,7 @@ export function Navigation() {
   const [isMobilePerspectivesOpen, setIsMobilePerspectivesOpen] = useState(false)
   const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false)
   const [isMobilePricingOpen, setIsMobilePricingOpen] = useState(false)
+  const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false)
 
   const learnMoreTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const submenuTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -103,6 +109,7 @@ export function Navigation() {
     setIsMobilePerspectivesOpen(false)
     setIsMobileResourcesOpen(false)
     setIsMobilePricingOpen(false)
+    setIsMobileAboutOpen(false)
   }
 
   return (
@@ -305,13 +312,31 @@ export function Navigation() {
                 )}
               </div>
 
-              <Link
-                href="/about"
-                onClick={() => setIsLearnMoreOpen(false)}
-                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors rounded-b-md"
-              >
-                About
-              </Link>
+              {/* About — nested submenu */}
+              <div className="relative" onMouseEnter={() => openSubmenu("about")} onMouseLeave={closeSubmenu}>
+                <button
+                  className="flex items-center justify-between w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors rounded-b-md"
+                  aria-expanded={activeSubmenu === "about"}
+                  aria-haspopup="true"
+                >
+                  About
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+                {activeSubmenu === "about" && (
+                  <div className="absolute top-0 left-full ml-1 w-44 bg-white border border-slate-200 rounded-md shadow-lg z-50">
+                    {aboutLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setIsLearnMoreOpen(false)}
+                        className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors first:rounded-t-md last:rounded-b-md"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </div>
@@ -528,13 +553,30 @@ export function Navigation() {
                     )}
                   </div>
 
-                  <Link
-                    href="/about"
-                    onClick={closeMobile}
-                    className="block pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
-                  >
-                    About
-                  </Link>
+                  {/* About mobile submenu */}
+                  <div>
+                    <button
+                      onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
+                      className="flex items-center justify-between w-full pl-7 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                    >
+                      About
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileAboutOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    {isMobileAboutOpen && (
+                      <div className="bg-white">
+                        {aboutLinks.map((link) => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            onClick={closeMobile}
+                            className="block pl-11 pr-4 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
             </div>
