@@ -118,17 +118,29 @@ export default function PricingPage() {
               <thead>
                 <tr className="bg-slate-50 border-b border-slate-200">
                   <th className="px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500 align-bottom">
-                    Tier
+                    Product
                   </th>
-                  {compareColumns.map((col) => (
-                    <th key={col.stage} className="px-5 py-3 text-center align-bottom">
-                      <div className="flex items-center justify-center gap-2">
+                  {compareRows.map((row) => (
+                    <th
+                      key={row.tier}
+                      className="px-5 py-3 text-center align-bottom text-sm font-semibold text-slate-900 whitespace-nowrap"
+                    >
+                      {row.tier}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {compareColumns.map((col, i) => (
+                  <tr key={col.stage} className="border-b border-slate-100 last:border-0">
+                    <td className="px-5 py-4 align-top">
+                      <div className="flex items-center gap-2">
                         <span
                           aria-hidden="true"
                           className="w-2 h-2 rounded-full shrink-0"
                           style={{ backgroundColor: col.dot }}
                         />
-                        <span className="text-sm font-semibold text-slate-900">{col.stage}</span>
+                        <span className="text-sm font-semibold text-slate-900 whitespace-nowrap">{col.stage}</span>
                       </div>
                       <p className="text-xs text-slate-500 mt-1">{col.product}</p>
                       <Link
@@ -137,30 +149,24 @@ export default function PricingPage() {
                       >
                         View pricing <ArrowRight className="w-3 h-3" />
                       </Link>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {compareRows.map((row) => (
-                  <tr key={row.tier} className="border-b border-slate-100 last:border-0">
-                    <td className="px-5 py-4 align-top text-sm font-semibold text-slate-900 whitespace-nowrap">
-                      {row.tier}
                     </td>
-                    {row.cells.map((cell, i) => (
-                      <td key={i} className="px-5 py-4 align-top text-center">
-                        {cell ? (
-                          <>
-                            <p className="text-sm font-semibold text-slate-900 whitespace-nowrap">{cell.price}</p>
-                            {cell.descriptor && (
-                              <p className="text-sm text-slate-600 mt-1">{cell.descriptor}</p>
-                            )}
-                          </>
-                        ) : (
-                          <p className="text-sm text-slate-400">—</p>
-                        )}
-                      </td>
-                    ))}
+                    {compareRows.map((row) => {
+                      const cell = row.cells[i]
+                      return (
+                        <td key={row.tier} className="px-5 py-4 align-top text-center">
+                          {cell ? (
+                            <>
+                              <p className="text-sm font-semibold text-slate-900 whitespace-nowrap">{cell.price}</p>
+                              {cell.descriptor && (
+                                <p className="text-sm text-slate-600 mt-1">{cell.descriptor}</p>
+                              )}
+                            </>
+                          ) : (
+                            <p className="text-sm text-slate-400">—</p>
+                          )}
+                        </td>
+                      )
+                    })}
                   </tr>
                 ))}
               </tbody>
