@@ -50,7 +50,7 @@ const AdvisorsPage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             <Card className="border-l-4 border-l-blue-500">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -70,6 +70,32 @@ const AdvisorsPage = () => {
                   className="mt-3 inline-block text-sm text-blue-600 hover:text-blue-800 transition-colors"
                 >
                   charles.suscheck@sima360.org
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-indigo-500">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-lg font-semibold text-indigo-600">MA</span>
+                </div>
+                <CardTitle className="text-lg">Matt Anderson</CardTitle>
+                <CardDescription className="text-sm">
+                  Advisory Board Member — Enterprise Transformation Leader, SAFe Program Consultant (SPC)
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-700 text-sm">
+                  25+ years leading enterprise transformation initiatives, with hands-on experience operationalizing
+                  AI governance principles — human approval gates, verification over assumed trust, and
+                  deterministic-vs-judgment tool selection — through building and running his own production AI
+                  system. Advises on SIMA360's Strategy dimension.
+                </p>
+                <a
+                  href="mailto:matt.anderson@sima360.org"
+                  className="mt-3 inline-block text-sm text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  matt.anderson@sima360.org
                 </a>
               </CardContent>
             </Card>
