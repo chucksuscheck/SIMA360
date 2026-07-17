@@ -20,12 +20,7 @@ export interface PricingCardData {
 export function PricingCard({ card }: { card: PricingCardData }) {
   return (
     <div className="relative flex">
-      {card.featured && (
-        <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white z-10">
-          Most popular
-        </Badge>
-      )}
-      <Card className={`flex flex-col h-full w-full ${card.featured ? "border-2 border-blue-500 shadow-md" : ""}`}>
+      <Card className="flex flex-col h-full w-full">
         <CardHeader>
           <div className="flex items-start justify-between gap-2">
             <CardTitle className="text-xl">{card.name}</CardTitle>

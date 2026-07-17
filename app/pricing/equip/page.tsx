@@ -1,11 +1,9 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
 import { PricingTabs } from "@/components/pricing-tabs"
 import { PricingCard, type PricingCardData } from "@/components/pricing-card"
-import { CheckCircle2, ChevronDown } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Equip Pricing — SIMA-Kit™ | SIMA360™",
@@ -16,33 +14,73 @@ export const metadata: Metadata = {
   },
 }
 
-const kitAccordion: { title: string; items: string[]; note?: string }[] = [
+const pricingCards: PricingCardData[] = [
   {
-    title: "Individual resources ($19–29)",
-    items: ["Prompt checklist", "Meeting agenda", "AI project canvas", "Workshop worksheet"],
+    name: "Individual Resources",
+    price: "$19–29",
+    period: null,
+    audience: "For a single, focused resource need.",
+    features: ["Prompt checklist", "Meeting agenda", "AI project canvas", "Workshop worksheet"],
+    ctaLabel: "Browse individual resources",
+    ctaHref: "mailto:info@sima360.org?subject=Individual%20Resources%20Inquiry",
+    checkClass: "text-orange-600",
+    badge: null,
+    featured: false,
   },
   {
-    title: "Professional resources ($49–79)",
-    items: ["Governance Charter", "AI Policy Template", "Risk Register", "Data Inventory", "Stakeholder Analysis"],
+    name: "Professional Resources",
+    price: "$49–79",
+    period: null,
+    audience: "For teams standing up formal AI governance.",
+    features: ["Governance Charter", "AI Policy Template", "Risk Register", "Data Inventory", "Stakeholder Analysis"],
+    ctaLabel: "Browse professional resources",
+    ctaHref: "mailto:info@sima360.org?subject=Professional%20Resources%20Inquiry",
+    checkClass: "text-orange-600",
+    badge: null,
+    featured: false,
   },
   {
-    title: "Premium playbooks ($149–299)",
-    items: [
+    name: "Premium Playbooks",
+    price: "$149–299",
+    period: null,
+    audience: "For organizations executing a coordinated rollout.",
+    features: [
       "AI Governance Playbook",
       "Executive AI Adoption Guide",
       "Change Management Playbook",
       "AI Strategy Workbook",
     ],
+    ctaLabel: "Browse premium playbooks",
+    ctaHref: "mailto:info@sima360.org?subject=Premium%20Playbooks%20Inquiry",
+    checkClass: "text-orange-600",
+    badge: null,
+    featured: true,
   },
   {
-    title: "Domain packs ($299 each)",
-    items: ["Strategy", "Governance", "Data", "People", "Technology"],
-    note: "Each includes templates, worksheets, checklists, workshop guides, sample artifacts, and implementation guidance.",
+    name: "Domain Packs",
+    price: "$299",
+    period: "each",
+    audience:
+      "Every resource for one functional domain — templates, worksheets, checklists, workshop guides, sample artifacts, and implementation guidance.",
+    features: ["Strategy", "Governance", "Data", "People", "Technology"],
+    ctaLabel: "Browse domain packs",
+    ctaHref: "mailto:info@sima360.org?subject=Domain%20Packs%20Inquiry",
+    checkClass: "text-orange-600",
+    badge: null,
+    featured: false,
   },
   {
-    title: "Capability packs (by maturity level)",
-    items: ["Exploring Toolkit", "Applying Toolkit", "Formalizing Toolkit", "Optimizing Toolkit", "Leading Toolkit"],
-    note: "Organized by AI Maturity Level. Each toolkit contains everything required for an organization operating at that level.",
+    name: "Capability Packs",
+    price: "By maturity level",
+    period: null,
+    audience:
+      "Everything required for an organization operating at one AI Maturity Level, organized by that level.",
+    features: ["Exploring Toolkit", "Applying Toolkit", "Formalizing Toolkit", "Optimizing Toolkit", "Leading Toolkit"],
+    ctaLabel: "Browse capability packs",
+    ctaHref: "mailto:info@sima360.org?subject=Capability%20Packs%20Inquiry",
+    checkClass: "text-orange-600",
+    badge: null,
+    featured: false,
   },
 ]
 
@@ -51,26 +89,36 @@ const kitSubscriptions: PricingCardData[] = [
     name: "Starter Library",
     price: "$29",
     period: "/mo",
+    audience: "For individuals who need a steady trickle of new resources.",
     features: ["Two downloads each month", "Resource updates"],
     ctaLabel: "Start Starter Library",
     ctaHref: "mailto:info@sima360.org?subject=Start%20Starter%20Library",
     checkClass: "text-orange-600",
+    badge: null,
+    featured: false,
   },
   {
     name: "Professional Library",
     price: "$79",
     period: "/mo",
+    audience: "For teams that draw on the Kit Marketplace regularly.",
     features: ["Unlimited downloads", "New resources", "Monthly webinars", "Office hours", "Best-practice updates"],
     ctaLabel: "Start Professional Library",
     ctaHref: "mailto:info@sima360.org?subject=Start%20Professional%20Library",
     checkClass: "text-orange-600",
+    badge: null,
+    featured: false,
   },
   {
     name: "Enterprise Library",
     price: "Included",
+    period: null,
+    audience: "For organizations already on a SIMA Enterprise plan.",
     features: ["Bundled with SIMA Enterprise"],
     ctaLabel: "Included with Enterprise",
     checkClass: "text-orange-600",
+    badge: { label: "ENTERPRISE", className: "bg-slate-900 text-white" },
+    featured: false,
   },
 ]
 
@@ -94,54 +142,30 @@ export default function PricingEquipPage() {
       <PricingTabs active="equip" />
 
       <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-orange-600 mb-2">
               Equip with SIMA-Kit™
             </p>
             <h1 className="text-3xl font-bold text-slate-900 mb-4">Buy exactly the resources you need</h1>
-            <p className="text-lg text-slate-600 mb-8">
+            <p className="text-lg text-slate-600">
               No bloated bundle — organizations purchase precisely the implementation resources their maturity level
               calls for.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <a href="#kit-marketplace">Browse the Kit Marketplace</a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="mailto:info@sima360.org?subject=Kit%20Marketplace%20Inquiry">
-                  Talk to us about Kit resources
-                </a>
-              </Button>
-            </div>
           </div>
 
-          <div id="kit-marketplace" className="space-y-3 scroll-mt-24">
-            {kitAccordion.map((item, i) => (
-              <details key={item.title} className="group rounded-lg border border-slate-200 bg-white" open={i === 0}>
-                <summary className="flex items-center justify-between cursor-pointer list-none px-5 py-4 [&::-webkit-details-marker]:hidden">
-                  <span className="font-semibold text-slate-900 text-sm">{item.title}</span>
-                  <ChevronDown className="w-4 h-4 text-slate-400 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="px-5 pb-5 pt-0 border-t border-slate-100">
-                  <ul className="grid sm:grid-cols-2 gap-2 mt-4 text-sm text-slate-700">
-                    {item.items.map((entry) => (
-                      <li key={entry} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
-                        <span>{entry}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  {item.note && <p className="text-xs text-slate-500 mt-4">{item.note}</p>}
-                </div>
-              </details>
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto items-stretch">
+            {pricingCards.map((card) => (
+              <PricingCard key={card.name} card={card} />
             ))}
           </div>
 
-          <div className="mt-12">
-            <h2 className="text-xl font-semibold text-slate-900 mb-2">Kit subscriptions</h2>
-            <p className="text-sm text-slate-600 mb-6">Recurring access to the full resource library.</p>
-            <div className="grid sm:grid-cols-3 gap-6 items-stretch">
+          <div className="mt-16">
+            <div className="max-w-3xl mx-auto text-center mb-8">
+              <h2 className="text-xl font-semibold text-slate-900 mb-2">Kit subscriptions</h2>
+              <p className="text-sm text-slate-600">Recurring access to the full resource library.</p>
+            </div>
+            <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto items-stretch">
               {kitSubscriptions.map((sub) => (
                 <PricingCard key={sub.name} card={sub} />
               ))}
