@@ -48,8 +48,8 @@ const compareRows: { tier: string; cells: CompareCell[] }[] = [
     tier: "Team / Organization",
     cells: [
       { price: "$599/yr", descriptor: "Organization plan" },
-      { price: "$299+", descriptor: "Domain & Capability Packs, plus $29–79/mo subscriptions" },
-      { price: "$10,000–25,000", descriptor: "Governance Engagement" },
+      { price: "$149+", descriptor: "Premium Playbooks, Domain & Capability Packs, plus $29–79/mo subscriptions" },
+      { price: "$10,000–25,000+", descriptor: "Governance Engagement, Organizational Roadmap, or Executive Advisory retainer" },
       { price: "$995–4,995", descriptor: "Complete curriculum / instructor-led workshop" },
     ],
   },
@@ -58,17 +58,17 @@ const compareRows: { tier: string; cells: CompareCell[] }[] = [
     cells: [
       { price: "Custom" },
       { price: "Included", descriptor: "with Enterprise" },
-      { price: "Custom" },
-      { price: "Custom" },
+      { price: "Included", descriptor: "with Enterprise" },
+      { price: "Included", descriptor: "with Enterprise" },
     ],
   },
 ]
 
 const journeySteps = [
-  { stage: "Assess", goal: "Determine current maturity", primary: "SIMA-Probe™", secondary: "The Book" },
-  { stage: "Equip", goal: "Begin implementation", primary: "SIMA-Kit™", secondary: "SIMA-Flow™" },
-  { stage: "Learn", goal: "Train individuals and teams", primary: "SIMA-Ascend™", secondary: "SIMA-Kit™" },
-  { stage: "Transform", goal: "Enterprise implementation", primary: "Consulting", secondary: "Licensing" },
+  { stage: "Entry", goal: "Determine current maturity", primary: "SIMA-Probe™", secondary: "The Book" },
+  { stage: "Professional", goal: "Begin implementation", primary: "SIMA-Kit™", secondary: "SIMA-Flow™" },
+  { stage: "Team", goal: "Train individuals and teams", primary: "SIMA-Ascend™", secondary: "SIMA-Kit™" },
+  { stage: "Enterprise", goal: "Enterprise implementation", primary: "Consulting", secondary: "Licensing" },
 ]
 
 export default function PricingPage() {
@@ -117,7 +117,7 @@ export default function PricingPage() {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-slate-50 border-b border-slate-200">
-                  <th className="px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500 align-bottom">
+                  <th className="px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500 align-bottom border-r-2 border-slate-300">
                     Product
                   </th>
                   {compareRows.map((row) => (
@@ -133,7 +133,7 @@ export default function PricingPage() {
               <tbody>
                 {compareColumns.map((col, i) => (
                   <tr key={col.stage} className="border-b border-slate-100 last:border-0">
-                    <td className="px-5 py-4 align-top">
+                    <td className="px-5 py-4 align-top bg-slate-50 border-r-2 border-slate-300">
                       <div className="flex items-center gap-2">
                         <span
                           aria-hidden="true"
@@ -211,7 +211,7 @@ export default function PricingPage() {
                     </Badge>
                   </div>
                 </div>
-                {step.stage === "Transform" && (
+                {step.stage === "Enterprise" && (
                   <a
                     href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation"
                     className="mt-3 inline-block text-xs font-medium text-blue-600 hover:text-blue-800 transition-colors"
