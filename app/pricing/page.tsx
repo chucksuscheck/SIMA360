@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
+import { Fragment } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
 import { PricingTabs } from "@/components/pricing-tabs"
@@ -65,10 +65,22 @@ const compareRows: { tier: string; cells: CompareCell[] }[] = [
 ]
 
 const journeySteps = [
-  { stage: "Entry", goal: "Determine current maturity", primary: "SIMA-Probe™", secondary: "The Book" },
-  { stage: "Professional", goal: "Begin implementation", primary: "SIMA-Kit™", secondary: "SIMA-Flow™" },
-  { stage: "Team", goal: "Train individuals and teams", primary: "SIMA-Ascend™", secondary: "SIMA-Kit™" },
-  { stage: "Enterprise", goal: "Enterprise implementation", primary: "Consulting", secondary: "Licensing" },
+  {
+    stage: "Entry",
+    goal: "Determine current maturity — start free and see exactly where your organization stands before committing any budget.",
+  },
+  {
+    stage: "Professional",
+    goal: "Begin implementation — turn your assessment results into action with targeted resources, workshops, and courses.",
+  },
+  {
+    stage: "Team",
+    goal: "Train individuals and teams — build lasting internal capability so progress holds up without outside help.",
+  },
+  {
+    stage: "Enterprise",
+    goal: "Enterprise implementation — coordinate rollout, governance, and transformation across the whole organization.",
+  },
 ]
 
 export default function PricingPage() {
@@ -104,11 +116,10 @@ export default function PricingPage() {
       </section>
 
       {/* 2. Capability + price summary table */}
-      <section className="py-16 px-4 bg-white">
+      <section className="pt-8 pb-16 px-4 bg-white">
         <div className="container mx-auto max-w-5xl">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-2">Compare</p>
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Every stage, one platform</h2>
+          <div className="max-w-3xl mx-auto text-center mb-6">
+            <h2 className="text-3xl font-bold text-slate-900">Every stage, one platform</h2>
           </div>
 
           <h3 className="text-sm font-semibold text-slate-700 mb-4">Pricing by tier</h3>
@@ -120,12 +131,17 @@ export default function PricingPage() {
                   <th className="px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500 align-bottom border-r-2 border-slate-300">
                     Product
                   </th>
-                  {compareRows.map((row) => (
+                  {compareRows.map((row, i) => (
                     <th
                       key={row.tier}
                       className="px-5 py-3 text-center align-bottom text-sm font-semibold text-slate-900 whitespace-nowrap"
                     >
-                      {row.tier}
+                      <a
+                        href={`#journey-${journeySteps[i].stage.toLowerCase()}`}
+                        className="hover:text-blue-600 hover:underline transition-colors"
+                      >
+                        {row.tier}
+                      </a>
                     </th>
                   ))}
                 </tr>
@@ -179,48 +195,70 @@ export default function PricingPage() {
       <section className="py-16 px-4 bg-slate-50">
         <div className="container mx-auto max-w-6xl">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-2">Your journey</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-2">The journey</p>
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Your path through SIMA360</h2>
             <p className="text-lg text-slate-600">
-              Each stage has a primary product to buy next and a secondary product that deepens the work — six
-              purchases in sequence, each designed to lead naturally into the next.
+              Each level has a primary product to buy next and a secondary product that deepens the work — see
+              exactly what to purchase from each product as you move up.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {journeySteps.map((step, i) => (
-              <div key={step.stage} className="rounded-lg p-5 border border-slate-200 bg-white">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-slate-900 text-white text-xs font-semibold">
-                    {i + 1}
-                  </span>
-                  <h3 className="text-sm font-semibold text-slate-900">{step.stage}</h3>
-                </div>
-                <p className="text-sm text-slate-600 mb-4">{step.goal}</p>
-                <div className="space-y-1.5">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-slate-400">Primary</span>
-                    <Badge variant="outline" className="bg-slate-900 text-white border-transparent">
-                      {step.primary}
-                    </Badge>
+          <div className="flex flex-col lg:flex-row items-stretch gap-3">
+            {journeySteps.map((step, i) => {
+              const row = compareRows[i]
+              return (
+                <Fragment key={step.stage}>
+                  {i > 0 && (
+                    <div className="flex items-center justify-center text-slate-300 shrink-0">
+                      <ArrowRight className="w-5 h-5 rotate-90 lg:rotate-0" />
+                    </div>
+                  )}
+                <div
+                  id={`journey-${step.stage.toLowerCase()}`}
+                  className="flex-1 rounded-lg p-5 border border-slate-200 bg-white scroll-mt-24"
+                >
+                  <h3 className="text-sm font-semibold text-slate-900 mb-3">{step.stage}</h3>
+                  <p className="text-sm text-slate-600 mb-4">{step.goal}</p>
+                  <div className="space-y-2">
+                    {compareColumns.map((col, j) => {
+                      const cell = row.cells[j]
+                      if (!cell) return null
+                      return (
+                        <Link
+                          key={col.stage}
+                          href={col.href}
+                          className="flex items-start gap-2 text-xs group"
+                        >
+                          <span
+                            aria-hidden="true"
+                            className="w-1.5 h-1.5 rounded-full shrink-0 mt-1"
+                            style={{ backgroundColor: col.dot }}
+                          />
+                          <p className="text-slate-600 group-hover:text-blue-600 transition-colors">
+                            <span className="font-medium text-slate-800 group-hover:text-blue-600">
+                              {col.product}
+                            </span>{" "}
+                            <span className="font-semibold text-slate-900 group-hover:text-blue-600">
+                              {cell.price}
+                            </span>
+                            {cell.descriptor && <span> — {cell.descriptor}</span>}
+                          </p>
+                        </Link>
+                      )
+                    })}
                   </div>
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-slate-400">Secondary</span>
-                    <Badge variant="outline" className="text-slate-700 border-slate-300">
-                      {step.secondary}
-                    </Badge>
-                  </div>
+                  {step.stage === "Enterprise" && (
+                    <a
+                      href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation"
+                      className="mt-3 inline-block text-xs font-medium text-blue-600 hover:text-blue-800 transition-colors"
+                    >
+                      Schedule a conversation
+                    </a>
+                  )}
                 </div>
-                {step.stage === "Enterprise" && (
-                  <a
-                    href="mailto:info@sima360.org?subject=Schedule%20a%20Conversation"
-                    className="mt-3 inline-block text-xs font-medium text-blue-600 hover:text-blue-800 transition-colors"
-                  >
-                    Schedule a conversation
-                  </a>
-                )}
-              </div>
-            ))}
+                </Fragment>
+              )
+            })}
           </div>
         </div>
       </section>
