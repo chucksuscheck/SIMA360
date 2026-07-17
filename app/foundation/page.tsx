@@ -14,12 +14,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import {
   ArrowRight,
-  Users,
   Shield,
   BookOpen,
-  AlertTriangle,
-  TrendingUp,
-  Eye,
   Layers,
   Building2,
   Zap,
@@ -119,94 +115,166 @@ const FoundationPage = () => {
               mapped against SIMA360's five perspectives and six maturity levels.
             </p>
 
-            <div className="grid lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card className="border-l-4 border-l-blue-500">
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
                       <Building2 className="w-5 h-5 text-blue-600" />
                     </div>
                     <div>
-                      <CardTitle className="text-lg">General AI Maturity</CardTitle>
-                      <CardDescription className="text-sm">Enterprise-Scale Models</CardDescription>
+                      <CardTitle className="text-base">Gartner</CardTitle>
+                      <CardDescription className="text-sm">CIO's Guide to AI</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">Gartner — CIO's Guide to AI</span>
-                      <Badge variant="outline" className="text-xs">Reference Architecture</Badge>
+                  <p className="text-xs text-slate-500 mb-2">General AI Maturity</p>
+                  <Badge variant="outline" className="text-xs">Reference Architecture</Badge>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-blue-500">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
+                      <Building2 className="w-5 h-5 text-blue-600" />
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">Element AI — AI Maturity Model</span>
-                      <Badge variant="outline" className="text-xs">Stage Granularity</Badge>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">Accenture — Art of AI Maturity</span>
-                      <Badge variant="outline" className="text-xs">Strategy & Culture</Badge>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">Deloitte — State of AI in the Enterprise</span>
-                      <Badge variant="outline" className="text-xs">Risk & Process</Badge>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">Metascient — AI Transformation Model</span>
-                      <Badge variant="outline" className="text-xs">Behavioral Labels</Badge>
+                    <div>
+                      <CardTitle className="text-base">Element AI</CardTitle>
+                      <CardDescription className="text-sm">AI Maturity Model</CardDescription>
                     </div>
                   </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-xs text-slate-500 mb-2">General AI Maturity</p>
+                  <Badge variant="outline" className="text-xs">Stage Granularity</Badge>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-blue-500">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
+                      <Building2 className="w-5 h-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-base">Accenture</CardTitle>
+                      <CardDescription className="text-sm">Art of AI Maturity</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-xs text-slate-500 mb-2">General AI Maturity</p>
+                  <Badge variant="outline" className="text-xs">Strategy & Culture</Badge>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-blue-500">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
+                      <Building2 className="w-5 h-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-base">Deloitte</CardTitle>
+                      <CardDescription className="text-sm">State of AI in the Enterprise</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-xs text-slate-500 mb-2">General AI Maturity</p>
+                  <Badge variant="outline" className="text-xs">Risk & Process</Badge>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-blue-500">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
+                      <Building2 className="w-5 h-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-base">Metascient</CardTitle>
+                      <CardDescription className="text-sm">AI Transformation Model</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-xs text-slate-500 mb-2">General AI Maturity</p>
+                  <Badge variant="outline" className="text-xs">Behavioral Labels</Badge>
                 </CardContent>
               </Card>
 
               <Card className="border-l-4 border-l-green-500">
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center shrink-0">
                       <Shield className="w-5 h-5 text-green-600" />
                     </div>
                     <div>
-                      <CardTitle className="text-lg">Responsible AI</CardTitle>
-                      <CardDescription className="text-sm">Governance & Ethics</CardDescription>
+                      <CardTitle className="text-base">Microsoft</CardTitle>
+                      <CardDescription className="text-sm">Responsible AI Maturity Model</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">Microsoft — Responsible AI Maturity Model</span>
-                      <Badge variant="outline" className="text-xs">Accountability</Badge>
+                  <p className="text-xs text-slate-500 mb-2">Responsible AI</p>
+                  <Badge variant="outline" className="text-xs">Accountability</Badge>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-green-500">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center shrink-0">
+                      <Shield className="w-5 h-5 text-green-600" />
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">BCG / MIT Sloan — Overestimating RAI Maturity</span>
-                      <Badge variant="outline" className="text-xs">Structure vs. Behavior</Badge>
+                    <div>
+                      <CardTitle className="text-base">BCG / MIT Sloan</CardTitle>
+                      <CardDescription className="text-sm">Overestimating RAI Maturity</CardDescription>
                     </div>
                   </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-xs text-slate-500 mb-2">Responsible AI</p>
+                  <Badge variant="outline" className="text-xs">Structure vs. Behavior</Badge>
                 </CardContent>
               </Card>
 
               <Card className="border-l-4 border-l-purple-500">
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center shrink-0">
                       <Zap className="w-5 h-5 text-purple-600" />
                     </div>
                     <div>
-                      <CardTitle className="text-lg">Technology & Industry-Specific</CardTitle>
-                      <CardDescription className="text-sm">Platform & Deployment</CardDescription>
+                      <CardTitle className="text-base">IBM</CardTitle>
+                      <CardDescription className="text-sm">The AI Ladder</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">IBM — The AI Ladder</span>
-                      <Badge variant="outline" className="text-xs">MLOps Depth</Badge>
+                  <p className="text-xs text-slate-500 mb-2">Technology & Industry-Specific</p>
+                  <Badge variant="outline" className="text-xs">MLOps Depth</Badge>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-purple-500">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center shrink-0">
+                      <Zap className="w-5 h-5 text-purple-600" />
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-slate-700">Ovum (Omdia) — AI Maturity for CSPs</span>
-                      <Badge variant="outline" className="text-xs">Deployment Context</Badge>
+                    <div>
+                      <CardTitle className="text-base">Ovum (Omdia)</CardTitle>
+                      <CardDescription className="text-sm">AI Maturity for CSPs</CardDescription>
                     </div>
                   </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-xs text-slate-500 mb-2">Technology & Industry-Specific</p>
+                  <Badge variant="outline" className="text-xs">Deployment Context</Badge>
                 </CardContent>
               </Card>
             </div>
@@ -225,25 +293,25 @@ const FoundationPage = () => {
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
                     <p className="text-slate-700 text-sm">
-                      <strong>Gartner's five-stage progression</strong> — Provided the reference architecture for SIMA360's maturity-level naming
+                      <strong>A five-stage progression model</strong> — Provided the reference architecture for SIMA360's maturity-level naming
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0" />
                     <p className="text-slate-700 text-sm">
-                      <strong>Element AI's stage-by-stage mapping</strong> — The most operationally useful template for describing what each maturity level looks like
+                      <strong>Stage-by-stage mapping</strong> — The most operationally useful template for describing what each maturity level looks like
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
                     <p className="text-slate-700 text-sm">
-                      <strong>Accenture's foundational-vs-differentiation finding</strong> — Directly informed SIMA360's weakest-constraint principle
+                      <strong>A foundational-vs-differentiation finding</strong> — Directly informed SIMA360's weakest-constraint principle
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0" />
                     <p className="text-slate-700 text-sm">
-                      <strong>Microsoft and BCG's governance depth</strong> — Informed the distinction between governance that exists formally and governance that functions operationally
+                      <strong>Governance-depth analysis</strong> — Informed the distinction between governance that exists formally and governance that functions operationally
                     </p>
                   </div>
                 </div>
@@ -298,8 +366,8 @@ const FoundationPage = () => {
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
               Every framework analyzed in the foundational research describes organizational AI maturity at various
               stages. None of them explains how to get from one stage to the next. They produce assessments. They do not
-              produce improvement paths. Organizations completing a Gartner or Deloitte AI maturity assessment know
-              where they stand. They do not know what to do operationally to change their standing.
+              produce improvement paths. Organizations completing an AI maturity assessment know where they stand.
+              They do not know what to do operationally to change their standing.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
               That gap shows up the same way in practice: organizations work through the framework's diagnostic
@@ -353,131 +421,7 @@ const FoundationPage = () => {
         </div>
       </section>
 
-      {/* 5. Why AI Implementation Fails */}
-      <section className="py-16 px-4 bg-slate-50">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">What the Book's Case Studies Show</h2>
-            <p className="text-lg text-slate-600">
-              <em>The AI Rush</em> traces its argument through real organizational failures — not because the
-              technology broke, but because the conditions surrounding it weren't mature enough to catch drift before
-              it compounded. Two of those cases illustrate the pattern this book calls synthetic confidence.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8 mb-12">
-            <Card className="border-l-4 border-l-red-500 bg-white">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-red-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl text-red-800">Zillow's Home-Buying Algorithm</CardTitle>
-                    <CardDescription className="text-sm text-red-600">Coherent Doesn't Mean Correct</CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3 text-slate-700">
-                  <p>
-                    <strong>The Vision:</strong> Use pricing models to buy homes directly at scale, moving faster than
-                    any team of human analysts could.
-                  </p>
-                  <p>
-                    <strong>The Reality:</strong> The model's individual pricing decisions were defensible one at a
-                    time. Thousands of them, leaning the same direction at once, produced a billions-of-dollars
-                    exposure nobody was positioned to see until it was already there.
-                  </p>
-                  <p>
-                    <strong>The Root Cause:</strong> The organization trusted the model because it was coherent, fast,
-                    and consistent with what it already believed — not because anyone kept testing it against reality.
-                    A single point of control watched one number while five other perspectives moved unmonitored.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-l-4 border-l-orange-500 bg-white">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-                    <AlertTriangle className="w-5 h-5 text-orange-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl text-orange-800">Microsoft's Tay Chatbot</CardTitle>
-                    <CardDescription className="text-sm text-orange-600">
-                      Shipping Isn't Governing
-                    </CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3 text-slate-700">
-                  <p>
-                    <strong>The Vision:</strong> An AI personality that would learn to sound more natural through real
-                    conversations with people on social media.
-                  </p>
-                  <p>
-                    <strong>The Reality:</strong> Coordinated users shaped Tay's responses within hours. Microsoft
-                    pulled it offline sixteen hours after launch.
-                  </p>
-                  <p>
-                    <strong>The Root Cause:</strong> The technology worked exactly as designed — it learned from what
-                    people fed it. What was missing was a way to watch what it was learning in real time, decide how
-                    much drift was tolerable, and pull it back the moment reality stopped matching the plan. A rollout
-                    plan is not a governance plan.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="bg-white border border-slate-200 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center">The Pattern Is Clear</h3>
-            <div className="grid md:grid-cols-4 gap-6 text-center">
-              <div>
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Eye className="w-6 h-6 text-red-600" />
-                </div>
-                <h4 className="font-semibold text-slate-900 mb-2">Synthetic Confidence</h4>
-                <p className="text-sm text-slate-600">
-                  Trusting an output because it's coherent and consistent with belief — not because anyone tested it
-                </p>
-              </div>
-              <div>
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Shield className="w-6 h-6 text-red-600" />
-                </div>
-                <h4 className="font-semibold text-slate-900 mb-2">One Control Point</h4>
-                <p className="text-sm text-slate-600">
-                  A single dashboard or owner watching one number while four other perspectives go unmonitored
-                </p>
-              </div>
-              <div>
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <AlertTriangle className="w-6 h-6 text-red-600" />
-                </div>
-                <h4 className="font-semibold text-slate-900 mb-2">Shipping Without Governing</h4>
-                <p className="text-sm text-slate-600">
-                  A rollout plan for how a system meets the world, with no plan for who watches it once it's there
-                </p>
-              </div>
-              <div>
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Users className="w-6 h-6 text-red-600" />
-                </div>
-                <h4 className="font-semibold text-slate-900 mb-2">Capability Outrunning Maturity</h4>
-                <p className="text-sm text-slate-600">
-                  Expanding what AI is allowed to do faster than the organization can actually oversee it
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Closing CTA */}
+      {/* 5. Closing CTA */}
       <section className="py-16 px-4 bg-slate-900 text-white">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Start with the Framework</h2>

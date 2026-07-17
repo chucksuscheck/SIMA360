@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Shield, Users } from "lucide-react"
+import { Shield } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { SiteFooter } from "@/components/site-footer"
@@ -52,16 +52,12 @@ const AdvisorsPage = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="border-l-4 border-l-blue-500">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Users className="w-5 h-5 text-blue-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-lg">Dr. Charles (Chuck) Suscheck</CardTitle>
-                    <CardDescription className="text-sm">Founder & Advisory Board Chair</CardDescription>
-                  </div>
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-lg font-semibold text-blue-600">CS</span>
                 </div>
+                <CardTitle className="text-lg">Dr. Charles (Chuck) Suscheck</CardTitle>
+                <CardDescription className="text-sm">Founder & Advisory Board Chair</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700 text-sm">
@@ -69,76 +65,89 @@ const AdvisorsPage = () => {
                   <em>The AI Rush — Too Much Too Soon!</em>, which examines the gap between AI capability and
                   organizational maturity — the premise SIMA360 is built on.
                 </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-l-4 border-l-green-500">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                    <Users className="w-5 h-5 text-green-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-lg">Anita Shankar</CardTitle>
-                    <CardDescription className="text-sm">
-                      Advisory Board Member — Agile Leader, AEP Charge (American Electric Power)
-                    </CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-700 text-sm">
-                  Leads agile transformation for AEP's electric vehicle charging business unit, bringing
-                  enterprise-scale operational discipline from one of the country's largest regulated utilities to
-                  SIMA360's People and Process dimensions.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-l-4 border-l-purple-500">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
-                    <Users className="w-5 h-5 text-purple-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-lg">Kathy S. Lassila</CardTitle>
-                    <CardDescription className="text-sm">
-                      Advisory Board Member — Consultant and Author, Additive Manufacturing
-                    </CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-700 text-sm">
-                  Independent consultant and published author in additive manufacturing, bringing production-floor
-                  experience in emerging manufacturing technology adoption to SIMA360's Technology and Data
-                  dimensions.
-                </p>
+                <a
+                  href="mailto:charles.suscheck@sima360.org"
+                  className="mt-3 inline-block text-sm text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  charles.suscheck@sima360.org
+                </a>
               </CardContent>
             </Card>
 
             <Card className="border-l-4 border-l-orange-500">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-                    <Users className="w-5 h-5 text-orange-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-lg">Bren Triplett</CardTitle>
-                    <CardDescription className="text-sm">
-                      Advisory Board Member — Director, Information Technology Program & Assistant Professor,
-                      Colorado Christian University
-                    </CardDescription>
-                  </div>
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-lg font-semibold text-orange-600">BT</span>
                 </div>
+                <CardTitle className="text-lg">Bren Triplett</CardTitle>
+                <CardDescription className="text-sm">
+                  Advisory Board Member — Director, Information Technology Program & Assistant Professor, Colorado
+                  Christian University
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700 text-sm">
                   35 years in enterprise IT, including large-scale database work at IBM and Verizon, now applied to
-                  curriculum design and technology education in the College of Adult and Graduate Studies — brings
-                  both practitioner depth and an academic lens to SIMA360's People and Technology dimensions.
+                  curriculum design and technology education in the College of Adult and Graduate Studies.
+                  Contributed directly to SIMA360's training and certification curriculum, and advises the People
+                  and Technology dimensions with both practitioner depth and an academic lens.
                 </p>
+                <a
+                  href="mailto:bren.triplett@sima360.org"
+                  className="mt-3 inline-block text-sm text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  bren.triplett@sima360.org
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-purple-500">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-lg font-semibold text-purple-600">KL</span>
+                </div>
+                <CardTitle className="text-lg">Dr. Kathy S. Lassila, Ph.D.</CardTitle>
+                <CardDescription className="text-sm">
+                  Advisory Board Member — Consultant and Author, Additive Manufacturing
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-700 text-sm">
+                  Independent consultant and published author in additive manufacturing, advising SIMA360's
+                  Technology and Data dimensions with production-floor experience in emerging manufacturing
+                  technology adoption.
+                </p>
+                <a
+                  href="mailto:kathy.lassila@sima360.org"
+                  className="mt-3 inline-block text-sm text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  kathy.lassila@sima360.org
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-green-500">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-lg font-semibold text-green-600">AS</span>
+                </div>
+                <CardTitle className="text-lg">Anita Shankar</CardTitle>
+                <CardDescription className="text-sm">
+                  Advisory Board Member — Agile Leader, AEP Charge (American Electric Power)
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-700 text-sm">
+                  Leads agile transformation for AEP's electric vehicle charging business unit, advising SIMA360's
+                  People and Process dimensions with enterprise-scale operational discipline drawn from one of the
+                  country's largest regulated utilities.
+                </p>
+                <a
+                  href="mailto:anita.shankar@sima360.org"
+                  className="mt-3 inline-block text-sm text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  anita.shankar@sima360.org
+                </a>
               </CardContent>
             </Card>
           </div>
