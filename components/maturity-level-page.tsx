@@ -89,7 +89,7 @@ export function MaturityLevelPage({ slug }: { slug: string }) {
             <h2 className="text-xl font-semibold text-slate-900 mb-6">Tool Categories at This Level</h2>
             <div className="grid sm:grid-cols-2 gap-2 max-w-3xl">
               {toolCategories.map((cat) => {
-                const status = cat.maturityRelationship.find((r) => r.level === lvl.name)!.status
+                const { status, reason } = cat.maturityRelationship.find((r) => r.level === lvl.name)!
                 return (
                   <div
                     key={cat.slug}
@@ -101,9 +101,21 @@ export function MaturityLevelPage({ slug }: { slug: string }) {
                     >
                       {cat.name}
                     </Link>
-                    <Badge variant="outline" className={maturityStatusClass[status]}>
-                      {status}
-                    </Badge>
+                    <span className="group relative inline-flex">
+                      <Badge
+                        variant="outline"
+                        tabIndex={0}
+                        className={`cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 ${maturityStatusClass[status]}`}
+                      >
+                        {status}
+                      </Badge>
+                      <span
+                        role="tooltip"
+                        className="pointer-events-none absolute bottom-full right-0 z-50 mb-2 w-56 rounded border border-slate-200 bg-white px-3 py-2 text-xs leading-relaxed text-slate-600 shadow-md opacity-0 transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100"
+                      >
+                        {reason}
+                      </span>
+                    </span>
                   </div>
                 )
               })}

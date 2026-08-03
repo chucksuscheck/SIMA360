@@ -11,6 +11,7 @@ import { PerspectiveScoreCard } from '@/components/sima-probe/perspective-score-
 import { RiskFlagCard } from '@/components/sima-probe/risk-flag-card'
 import { NextStepsCard } from '@/components/sima-probe/next-steps-card'
 import { ConstraintUpsellCard } from '@/components/sima-probe/constraint-upsell-card'
+import { InfoTooltip } from '@/components/ui/info-tooltip'
 import type { AssessmentSession, ScoringResult } from '@/lib/sima-probe/types'
 import { scoreAssessment, getConstrainingPerspective } from '@/lib/sima-probe/scoring'
 import { PERSPECTIVE_ORDER } from '@/lib/sima-probe/questions'
@@ -116,9 +117,10 @@ export default function ResultsPage() {
           </p>
           <h1 className="text-3xl font-bold text-slate-900">AI Operational Maturity Assessment</h1>
           <p className="text-slate-500 mt-2 text-sm max-w-2xl">
-            Scores reflect orientation-level findings based on 30 questions across 5 perspectives.
-            All scores carry a ±1.0 confidence band — this is expected at the free tier.
-            Use these results to identify where to focus deeper investigation.
+            Based on your 30 answers across five areas — Governance, Strategy, Data, People, and
+            Technology — here's a directional read on how consistently your organization can rely
+            on AI-supported decisions today. This is a quick, free-tier check: treat the numbers
+            below as a starting point for where to look closer, not a precise measurement.
           </p>
         </div>
 
@@ -185,9 +187,11 @@ export default function ResultsPage() {
             <div>
               <p className="text-sm font-semibold text-slate-900">Want deeper analysis?</p>
               <p className="text-xs text-slate-500 mt-0.5">
-                The Insight tier adds 100+ questions, capability-level breakdowns, and a
-                downloadable PDF report. The Advisory tier includes full SIMA-Kit™ access and
-                training recommendations.
+                The Insight tier adds 100+ questions, a breakdown of every practice we checked, and a
+                downloadable PDF report. The Advisory tier includes full access to our step-by-step
+                improvement guidance
+                <InfoTooltip text="Branded on this site as “SIMA-Kit™” — level-specific, practical guidance for closing the gaps this assessment found." className="mx-0.5 -translate-y-px" />
+                and training recommendations.
               </p>
             </div>
             <Link
@@ -200,22 +204,32 @@ export default function ResultsPage() {
         </section>
 
         {/* Scoring methodology note */}
-        <section className="mb-10 text-xs text-slate-400 border-t border-slate-100 pt-6 space-y-1">
-          <p className="font-semibold text-slate-500">Scoring methodology</p>
+        <section className="mb-10 text-xs text-slate-400 border-t border-slate-100 pt-6 space-y-2">
+          <p className="font-semibold text-slate-500">How these scores are calculated</p>
           <p>
-            Perspective scores are weighted averages of capability scores within each perspective, using
-            the relative weights defined in the SIMA360™ framework. Anchor capabilities below
-            Applying (2.0) cap the perspective at Applying. Perspectives with fewer than 3 evidence
-            responses are also capped at Applying. Per the book's weakest-constraint principle
-            (Chapter 10), the enterprise score is <em>not</em> an average of the five perspective
-            scores — it is the lowest of the five. The system behaves at the level of its least
-            mature perspective, not its most advanced one, regardless of how far ahead the other
-            four have gotten.
+            Each perspective's score is built from several specific, testable practices we asked
+            about
+            <InfoTooltip text="We call each one a 'capability' elsewhere on this page — e.g. 'named decision owners' under Governance. A perspective score is built from several of these." />
+            , not weighted equally — some practices matter more to that perspective than others.
+            A handful of those practices are foundational
+            <InfoTooltip text="We call these 'anchor' capabilities elsewhere on this page — the darkest bars in each perspective card." />
+            : if one hasn't been established yet, the whole perspective is capped at "Applying"
+            regardless of how well everything else scored, since claiming advanced practices
+            without the basics in place isn't credible. The same cap applies if we didn't get
+            enough answers in a perspective to be confident about it.
           </p>
           <p>
-            Contradictions (e.g., an unestablished anchor alongside high scores elsewhere) trigger
-            a 40% reduction on affected capabilities and are flagged in results. All free-tier
-            scores carry a ±1.0 confidence band.
+            Your overall score is <em>not</em> an average of the five perspective scores — it's
+            the lowest one. An organization behaves at the level of its least mature area, not its
+            most advanced, no matter how far ahead the other four have gotten.
+          </p>
+          <p>
+            When an answer claims strong practice in an area but a related foundational question
+            says that practice isn't actually in place, that's a contradiction — the affected
+            scores get reduced and it's called out in your results, since the claim doesn't hold up
+            once checked. All free-tier scores also carry a margin of uncertainty (shown as
+            "Estimated range" above) because this quick assessment asks fewer questions than a full
+            review would.
           </p>
         </section>
       </div>

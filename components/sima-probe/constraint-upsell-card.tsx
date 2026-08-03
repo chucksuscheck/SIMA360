@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import type { Perspective, MaturityLevel } from '@/lib/sima-probe/types'
 import { PERSPECTIVE_META } from '@/lib/sima-probe/questions'
+import { InfoTooltip } from '@/components/ui/info-tooltip'
 
 type NextTier = 'insight' | 'advisory'
 
@@ -51,8 +52,10 @@ export function ConstraintUpsellCard({ perspective, maturityLevel, nextTier }: C
   return (
     <div className="rounded-xl border border-blue-200 bg-blue-50/60 p-6">
       <p className="text-sm text-slate-800 leading-relaxed">
-        Your <strong>{meta.label}</strong> perspective scored <strong>{maturityLevel}</strong> — the constraint on
-        your entire system right now. {coverage}
+        Your <strong>{meta.label}</strong> perspective scored <strong>{maturityLevel}</strong> — it's the weakest
+        of your five scores, so it's what's holding your overall score down right now
+        <InfoTooltip text="Your overall score always equals your lowest-scoring perspective, so this is the single area where improvement would raise your overall score fastest." />
+        . {coverage}
       </p>
       <Link
         href="/pricing"

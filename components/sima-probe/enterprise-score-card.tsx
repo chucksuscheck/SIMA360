@@ -1,5 +1,7 @@
+import Link from 'next/link'
 import type { MaturityLevel } from '@/lib/sima-probe/types'
 import { MATURITY_DESCRIPTIONS } from '@/lib/sima-probe/scoring'
+import { InfoTooltip } from '@/components/ui/info-tooltip'
 import { cn } from '@/lib/utils'
 
 interface EnterpriseScoreCardProps {
@@ -33,8 +35,9 @@ export function EnterpriseScoreCard({
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
       {/* Label */}
-      <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-6">
-        Enterprise AI Maturity Score
+      <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-6 inline-flex items-center gap-1.5">
+        Overall AI Maturity Score
+        <InfoTooltip text="This is not an average of your five perspective scores — it's the lowest one. An organization only operates as reliably as its weakest area, no matter how far ahead the other four have gotten." />
       </p>
 
       {/* Score row */}
@@ -43,15 +46,26 @@ export function EnterpriseScoreCard({
           {score.toFixed(1)}
         </span>
         <div className="pb-2">
-          <span className={cn('text-sm font-semibold px-3 py-1.5 rounded-full', style.pill)}>
+          <Link
+            href={`/maturity/${maturityLevel.toLowerCase()}`}
+            className={cn(
+              'text-sm font-semibold px-3 py-1.5 rounded-full transition-colors hover:underline underline-offset-2',
+              style.pill
+            )}
+          >
             {maturityLevel}
-          </span>
+          </Link>
         </div>
       </div>
 
       {/* Descriptor */}
       <p className="text-sm text-slate-500 mb-1">{style.label}</p>
-      <p className="text-xs text-slate-400 mb-6">{MATURITY_DESCRIPTIONS[maturityLevel]}</p>
+      <p className="text-xs text-slate-400 mb-6">
+        {MATURITY_DESCRIPTIONS[maturityLevel]}{' '}
+        <Link href={`/maturity/${maturityLevel.toLowerCase()}`} className="text-slate-500 underline underline-offset-2 hover:text-slate-700">
+          Learn more about this level →
+        </Link>
+      </p>
 
       {/* Score bar */}
       <div className="relative mb-2">
@@ -87,8 +101,16 @@ export function EnterpriseScoreCard({
       </div>
 
       {/* Confidence band note */}
-      <p className="text-xs text-slate-400 mt-3">
-        Free-tier confidence band: {confidenceLow.toFixed(1)} – {confidenceHigh.toFixed(1)} &nbsp;·&nbsp; Weakest-constraint principle: lowest perspective score sets the operating level
+      <p className="text-xs text-slate-400 mt-3 inline-flex items-center gap-1.5 flex-wrap">
+        <span className="inline-flex items-center gap-1">
+          Estimated range: {confidenceLow.toFixed(1)} – {confidenceHigh.toFixed(1)}
+          <InfoTooltip text="This free-tier assessment uses a small number of questions, so the true score could fall anywhere in this range." />
+        </span>
+        <span className="text-slate-300">·</span>
+        <span className="inline-flex items-center gap-1">
+          Set by your weakest perspective, not an average
+          <InfoTooltip text="If four of your five perspectives score well but one is still Initial, your overall score is Initial. A system behaves at the level of its least mature part, not its most advanced one." align="right" />
+        </span>
       </p>
     </div>
   )

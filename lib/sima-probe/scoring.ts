@@ -9,7 +9,7 @@ import type {
   NextPriority,
   ScoringResult,
 } from './types'
-import { QUESTIONS, PERSPECTIVE_ORDER } from './questions'
+import { QUESTIONS, PERSPECTIVE_ORDER, PERSPECTIVE_META } from './questions'
 
 // Enterprise-level perspective weights (sum to 1.0)
 const PERSPECTIVE_WEIGHTS: Record<Perspective, number> = {
@@ -280,17 +280,18 @@ function buildNextPriorities(perspectiveResults: Record<Perspective, Perspective
 }
 
 function buildPriorityReason(cap: CapabilityScore, result: PerspectiveResult): string {
+  const perspectiveLabel = PERSPECTIVE_META[result.perspective].label
   if (cap.type === 'anchor' && cap.adjustedScore < 2.0) {
-    return `Anchor below Applying — caps the entire ${result.perspective} perspective at ${result.score.toFixed(1)}. Resolving this unlocks the perspective ceiling.`
+    return `This is a foundational practice for ${perspectiveLabel} that hasn't been established yet, so it's holding the entire perspective's score down at ${result.score.toFixed(1)} regardless of how well anything else in that area scores. Putting this one practice in place raises the ceiling for the whole perspective.`
   }
   if (cap.type === 'anchor' && cap.adjustedScore < 3.0) {
-    return `Anchor at ${cap.adjustedScore.toFixed(1)} — highest-weight capability in this perspective. Improvement here has the most direct effect on the perspective score.`
+    return `This is a foundational practice for ${perspectiveLabel}, currently scoring ${cap.adjustedScore.toFixed(1)}. Because everything else in this perspective is built on it, improving it moves the perspective's score more than almost anything else you could work on.`
   }
   if (cap.adjustedScore < 1.0) {
-    return `Scored Initial (${cap.adjustedScore.toFixed(1)}) — no capability established. A foundational gap; fixing it has the most direct effect on this perspective.`
+    return `This practice scored close to zero — essentially nothing is in place for it yet. It's an easy, high-impact place to start, since any improvement here is a real gain from a very low baseline.`
   }
   const perspectiveWeight = Math.round(PERSPECTIVE_WEIGHTS[result.perspective] * 100)
-  return `High-weight capability (${cap.weight}%) in a ${perspectiveWeight}%-weighted perspective. Small improvements here compound into enterprise score gains.`
+  return `This practice carries above-average weight within ${perspectiveLabel} (${cap.weight}% of that perspective's score), and ${perspectiveLabel} itself counts for ${perspectiveWeight}% of your overall score. Improving it here has an outsized effect on your results.`
 }
 
 // Weakest-constraint principle (Chapter 10): the system behaves at the level of

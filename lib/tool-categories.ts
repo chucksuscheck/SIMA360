@@ -3,6 +3,7 @@ export type MaturityStatus = "Safe" | "Risky" | "Avoid"
 export interface MaturityRelationshipEntry {
   level: string
   status: MaturityStatus
+  reason: string
 }
 
 export interface ToolExample {
@@ -54,12 +55,36 @@ export const toolCategories: ToolCategory[] = [
     ],
     characteristics: "Low autonomy, high guidance, static knowledge bases",
     maturityRelationship: [
-      { level: "Initial", status: "Safe" },
-      { level: "Exploring", status: "Safe" },
-      { level: "Applying", status: "Safe" },
-      { level: "Formalizing", status: "Safe" },
-      { level: "Optimizing", status: "Safe" },
-      { level: "Leading", status: "Safe" },
+      {
+        level: "Initial",
+        status: "Safe",
+        reason: "No autonomy and no standing guidance required — safe even before anything else has been coordinated.",
+      },
+      {
+        level: "Exploring",
+        status: "Safe",
+        reason: "Static, human-initiated tools don't need the shared definitions still missing across disconnected efforts.",
+      },
+      {
+        level: "Applying",
+        status: "Safe",
+        reason: "Requires no cross-team standardization to stay safe, unlike tools whose value depends on generalizing.",
+      },
+      {
+        level: "Formalizing",
+        status: "Safe",
+        reason: "Nothing here would be exposed if the organization's structure were pressure-tested — there's no autonomy to test.",
+      },
+      {
+        level: "Optimizing",
+        status: "Safe",
+        reason: "Contributes little for continuous testing to improve on, but carries no risk either.",
+      },
+      {
+        level: "Leading",
+        status: "Safe",
+        reason: "Stays safe without needing the deliberate stewardship this level applies elsewhere.",
+      },
     ],
   },
   {
@@ -93,12 +118,36 @@ export const toolCategories: ToolCategory[] = [
     ],
     characteristics: "Dynamic support, task-specific boundaries",
     maturityRelationship: [
-      { level: "Initial", status: "Risky" },
-      { level: "Exploring", status: "Safe" },
-      { level: "Applying", status: "Safe" },
-      { level: "Formalizing", status: "Safe" },
-      { level: "Optimizing", status: "Safe" },
-      { level: "Leading", status: "Safe" },
+      {
+        level: "Initial",
+        status: "Risky",
+        reason: "AI interest is real, but without any shared sense of when to use these tools, outputs get relied on inconsistently.",
+      },
+      {
+        level: "Exploring",
+        status: "Safe",
+        reason: "Basic role awareness is starting to form — enough for a human-in-the-loop tool to be used safely.",
+      },
+      {
+        level: "Applying",
+        status: "Safe",
+        reason: "The human stays in the loop, so it doesn't need the cross-team generalization other tools are still missing.",
+      },
+      {
+        level: "Formalizing",
+        status: "Safe",
+        reason: "Human oversight absorbs the kind of pressure-tested edge cases that trip up less-supervised tools here.",
+      },
+      {
+        level: "Optimizing",
+        status: "Safe",
+        reason: "Continuous feedback further sharpens how these tools get used, keeping the human-in-the-loop pattern reliable.",
+      },
+      {
+        level: "Leading",
+        status: "Safe",
+        reason: "Interpretation itself is now a source of improvement, reinforcing this category's built-in oversight.",
+      },
     ],
   },
   {
@@ -130,12 +179,36 @@ export const toolCategories: ToolCategory[] = [
     ],
     characteristics: "Rule-based logic, deterministic outcomes",
     maturityRelationship: [
-      { level: "Initial", status: "Avoid" },
-      { level: "Exploring", status: "Risky" },
-      { level: "Applying", status: "Safe" },
-      { level: "Formalizing", status: "Safe" },
-      { level: "Optimizing", status: "Safe" },
-      { level: "Leading", status: "Safe" },
+      {
+        level: "Initial",
+        status: "Avoid",
+        reason: "Automating a workflow locks in assumptions before anyone has coordinated what those assumptions should be.",
+      },
+      {
+        level: "Exploring",
+        status: "Risky",
+        reason: "Efforts are still disconnected, so automated rules risk encoding one team's undocumented logic as the standard.",
+      },
+      {
+        level: "Applying",
+        status: "Safe",
+        reason: "Individual workflows now work reliably enough on their own terms to automate safely.",
+      },
+      {
+        level: "Formalizing",
+        status: "Safe",
+        reason: "Rule-based logic holds up well even where structure elsewhere hasn't yet been pressure-tested.",
+      },
+      {
+        level: "Optimizing",
+        status: "Safe",
+        reason: "Continuous testing catches drift in automated rules before it compounds.",
+      },
+      {
+        level: "Leading",
+        status: "Safe",
+        reason: "Automation keeps pace as improvement becomes part of daily operation rather than a periodic fix.",
+      },
     ],
   },
   {
@@ -167,12 +240,36 @@ export const toolCategories: ToolCategory[] = [
     ],
     characteristics: "Predictive modeling, evidence-based recommendations",
     maturityRelationship: [
-      { level: "Initial", status: "Avoid" },
-      { level: "Exploring", status: "Avoid" },
-      { level: "Applying", status: "Risky" },
-      { level: "Formalizing", status: "Safe" },
-      { level: "Optimizing", status: "Safe" },
-      { level: "Leading", status: "Safe" },
+      {
+        level: "Initial",
+        status: "Avoid",
+        reason: "Shaping judgment calls requires decisions and data that haven't been identified yet at this level.",
+      },
+      {
+        level: "Exploring",
+        status: "Avoid",
+        reason: "Predictive tools need shared definitions to trust — definitions that still vary team to team here.",
+      },
+      {
+        level: "Applying",
+        status: "Risky",
+        reason: "Works within the context that produced it, but recommendations don't yet generalize to decisions elsewhere.",
+      },
+      {
+        level: "Formalizing",
+        status: "Safe",
+        reason: "Documented, explicit decision paths give these tools' recommendations something concrete to be checked against.",
+      },
+      {
+        level: "Optimizing",
+        status: "Safe",
+        reason: "Outcomes are tested continuously, so the model's influence on judgment can be verified and corrected.",
+      },
+      {
+        level: "Leading",
+        status: "Safe",
+        reason: "Decision strategy anticipates where the model will fall short before it's asked to handle a new decision.",
+      },
     ],
   },
   {
@@ -205,12 +302,36 @@ export const toolCategories: ToolCategory[] = [
     ],
     characteristics: "Full autonomy, continuous learning, self-regulation",
     maturityRelationship: [
-      { level: "Initial", status: "Avoid" },
-      { level: "Exploring", status: "Avoid" },
-      { level: "Applying", status: "Avoid" },
-      { level: "Formalizing", status: "Risky" },
-      { level: "Optimizing", status: "Safe" },
-      { level: "Leading", status: "Safe" },
+      {
+        level: "Initial",
+        status: "Avoid",
+        reason: "No coordination exists yet to catch a fully autonomous system's failures before they cause harm.",
+      },
+      {
+        level: "Exploring",
+        status: "Avoid",
+        reason: "Disconnected efforts and inconsistent ownership can't reliably supervise a system acting without a human in the loop.",
+      },
+      {
+        level: "Applying",
+        status: "Avoid",
+        reason: "Even proven individual efforts don't generalize yet — too narrow a foundation for unattended autonomy.",
+      },
+      {
+        level: "Formalizing",
+        status: "Risky",
+        reason: "Governance looks complete on paper, but this is exactly the kind of pressure this level hasn't been tested under.",
+      },
+      {
+        level: "Optimizing",
+        status: "Safe",
+        reason: "Continuous testing and fast feedback loops can catch autonomous failures before they compound.",
+      },
+      {
+        level: "Leading",
+        status: "Safe",
+        reason: "Governance evolves alongside the system, anticipating new risks before autonomous failures surface.",
+      },
     ],
   },
 ]
