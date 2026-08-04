@@ -64,12 +64,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
               <div>
-                <div className="flex items-center gap-2">
-                  <h1 className="text-xl font-bold" style={{ color: "#0f172a" }}>SIMA360™</h1>
-                  <span className="text-[10px] font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded bg-red-100 text-red-700">
-                    Production
-                  </span>
-                </div>
+                <h1 className="text-xl font-bold" style={{ color: "#0f172a" }}>SIMA360™</h1>
                 <p className="text-sm" style={{ color: "#475569" }}>Structured AI Maturity Accelerator</p>
               </div>
             </Link>
