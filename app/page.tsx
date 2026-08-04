@@ -80,21 +80,27 @@ export default function HomePage() {
             SIMA360™ — Structured AI Maturity Accelerator
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight" style={{ color: "#0f172a" }}>
-            Is AI improving your business or only providing more output?
+            Is AI improving your business or only generating more output?
           </h1>
-
-          <div className="space-y-2 text-base leading-snug text-center" style={{ color: "#475569" }}>
-            <p>Capability is what a system can do. Maturity is whether you can handle what it&rsquo;s doing.</p>
-            <p>
-              Assess your organization&rsquo;s AI maturity across five perspectives in about 15 minutes.
-            </p>
-          </div>
         </div>
       </section>
 
       {/* 3. Diagram — the visual centerpiece: bigger, elevated, colorfully framed */}
       <section className="pt-4 pb-14 px-4">
         <div className="container mx-auto max-w-6xl text-center mb-6">
+          <p
+            className="text-lg sm:text-xl font-semibold max-w-2xl mx-auto mb-6 leading-snug"
+            style={{ color: "#0f172a" }}
+          >
+            SIMA360 is the structured framework that diagnoses where AI maturity is holding your organization
+            back — and gives you the roadmap, tools, and training to close the gap and build AI that stays
+            reliable and low-risk for the long run.
+          </p>
+          <div className="space-y-2 text-base leading-snug mb-6" style={{ color: "#475569" }}>
+            <p>
+              Assess your organization&rsquo;s AI maturity across five perspectives in about 15 minutes.
+            </p>
+          </div>
           <Button
             size="lg"
             asChild
