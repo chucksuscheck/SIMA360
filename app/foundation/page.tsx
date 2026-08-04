@@ -399,7 +399,7 @@ const FoundationPage = () => {
             </div>
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
               The five perspectives, six maturity levels, FLAI methodology, and diagnostic principles in SIMA360 are
-              grounded in the book <em>The AI Rush: Too Much. Too Soon.</em> The book establishes the conceptual
+              grounded in the book <em>The AI Rush — Too Much Too Soon!</em> The book establishes the conceptual
               argument. SIMA360 operationalizes it. Organizations that want to understand why the framework is
               structured the way it is should start with the book.
             </p>

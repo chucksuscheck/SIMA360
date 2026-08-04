@@ -270,7 +270,7 @@ export default function OverviewPage() {
                   <p className="text-slate-700 leading-relaxed mb-4">
                     SIMA360 is grounded in the research and maturity architecture established in{" "}
                     <Link href="/the-book" className="text-blue-600 hover:text-blue-800 underline">
-                      <em>The AI Rush: Too Much. Too Soon.</em>
+                      <em>The AI Rush — Too Much Too Soon!</em>
                     </Link>{" "}
                     by Dr. Charles Suscheck. The framework's five perspectives, six maturity levels, and improvement cycle
                     design come directly from that foundation — not from consulting convention.

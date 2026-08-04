@@ -10,7 +10,7 @@ import { SiteFooter } from "@/components/site-footer"
 export const metadata: Metadata = {
   title: "The AI Rush — The Book Behind SIMA360™",
   description:
-    "The AI Rush: Too Much. Too Soon. is the intellectual origin of the SIMA360 framework — the source of its five perspectives, six maturity levels, and FLAI methodology.",
+    "The AI Rush — Too Much Too Soon! is the intellectual origin of the SIMA360 framework — the source of its five perspectives, six maturity levels, and FLAI methodology.",
   alternates: {
     canonical: "https://www.sima360.org/the-book",
   },
@@ -46,7 +46,7 @@ export default function TheBookPage() {
             <div className="flex-1 text-center md:text-left">
               <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
                 The AI Rush —
-                <span className="text-indigo-600 block">Too Much. Too Soon.</span>
+                <span className="text-indigo-600 block">Too Much Too Soon!</span>
               </h1>
               <p className="text-xl text-slate-600 mb-8">
                 The five perspectives, six maturity levels, FLAI methodology, and diagnostic principles that define
@@ -75,7 +75,7 @@ export default function TheBookPage() {
             <div className="flex-shrink-0">
               <Image
                 src="/images/book-cover.png"
-                alt="The AI Rush: Too Much. Too Soon. — book cover"
+                alt="The AI Rush — Too Much Too Soon! — book cover"
                 width={280}
                 height={380}
                 className="rounded-lg shadow-2xl"

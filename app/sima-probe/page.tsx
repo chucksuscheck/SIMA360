@@ -105,11 +105,16 @@ export default function SIMAProbe() {
               not its most advanced one. Knowing which perspective is the constraint is what makes improvement
               sequencing possible.
             </p>
-            <p className="text-lg text-slate-700 leading-relaxed">
+            <p className="text-lg text-slate-700 leading-relaxed mb-8">
               The result isn't a score to interpret on your own. Each Maturity Level determination connects directly
               into the Set Groundwork phase of the SIMA-Flow™ Core Cycle — triggering the entrance criteria, goals,
               strategies, and exit criteria SIMA-Kit™ provides for the actual level and perspective the organization
               is operating in.
+            </p>
+            <p className="text-base text-slate-500 leading-relaxed">
+              The free assessment below is the Foundation tier: a fixed set of 30 questions, self-scored on a
+              6-point scale — a fast, honest starting point. Adaptive question flow and AI-analyzed responses are
+              unlocked starting at the Insight tier.
             </p>
           </div>
         </div>

@@ -10,7 +10,7 @@ import { SiteFooter } from "@/components/site-footer"
 export const metadata: Metadata = {
   title: "Publication Pending — The AI Rush | SIMA360™",
   description:
-    "The AI Rush: Too Much. Too Soon. by Dr. Charles Suscheck publishes mid-August 2026. Check back here for retail availability.",
+    "The AI Rush — Too Much Too Soon! by Dr. Charles Suscheck publishes mid-August 2026. Check back here for retail availability.",
   alternates: {
     canonical: "https://www.sima360.org/the-book/publication-pending",
   },
@@ -42,7 +42,7 @@ export default function PublicationPendingPage() {
             <div className="flex-shrink-0">
               <Image
                 src="/images/book-cover.png"
-                alt="The AI Rush: Too Much. Too Soon. — book cover"
+                alt="The AI Rush — Too Much Too Soon! — book cover"
                 width={280}
                 height={380}
                 className="rounded-lg shadow-2xl"
@@ -58,10 +58,10 @@ export default function PublicationPendingPage() {
               </Badge>
               <h1 className="text-4xl font-bold text-slate-900 mb-6 leading-tight">
                 The AI Rush —
-                <span className="text-indigo-600 block">Too Much. Too Soon.</span>
+                <span className="text-indigo-600 block">Too Much Too Soon!</span>
               </h1>
               <p className="text-lg text-slate-600 mb-8">
-                <em>The AI Rush: Too Much. Too Soon.</em> by Dr. Charles Suscheck is not yet available for purchase.
+                <em>The AI Rush — Too Much Too Soon!</em> by Dr. Charles Suscheck is not yet available for purchase.
                 The book is expected to publish in mid-August 2026 — retail availability will be announced here as
                 soon as it's live. In the meantime, explore the framework the book gives rise to below.
               </p>

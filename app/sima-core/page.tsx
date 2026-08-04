@@ -62,7 +62,7 @@ export default function SimaCorePage() {
             SIMA Core™ is the static structural foundation consisting of three core models: the Strategic
             Perspectives model, the AI Maturity Levels model, and the AI Tool Categories model. It provides the
             organizing principles for effective and responsible AI maturity — the same three models developed
-            throughout <em>The AI Rush: Too Much. Too Soon.</em>
+            throughout <em>The AI Rush — Too Much Too Soon!</em>
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" asChild className="bg-blue-500 hover:bg-blue-600">
