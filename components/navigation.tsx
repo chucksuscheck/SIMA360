@@ -316,6 +316,13 @@ export function Navigation() {
           )}
         </div>
 
+        <Link
+          href="/faq"
+          className="px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded transition-colors"
+        >
+          FAQ
+        </Link>
+
         <Button asChild size="sm">
           <Link href="/sima-probe/assessment">Free Assessment</Link>
         </Button>
@@ -538,6 +545,14 @@ export function Navigation() {
                 </div>
               )}
             </div>
+
+            <Link
+              href="/faq"
+              onClick={closeMobile}
+              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
+            >
+              FAQ
+            </Link>
 
             <Link
               href="/sima-probe/assessment"

@@ -8,7 +8,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { Button } from "@/components/ui/button"
 
 const HOMEPAGE_DESCRIPTION =
-  "AI increases organizational capability and scales inconsistency. Whether it produces reliable outcomes depends on organizational maturity. SIMA360 diagnoses and builds that maturity — five perspectives, six Maturity Levels."
+  "AI can make your organization faster and more capable — but it can also scale inconsistency and poor decisions. SIMA360 assesses five critical areas — Strategy, Governance, Data, People, and Technology — to reveal where organizational maturity is limiting AI results, then turns that diagnosis into practical corrective action."
 
 export const metadata: Metadata = {
   title: "SIMA360™ — Structured AI Maturity Accelerator",
@@ -80,8 +80,13 @@ export default function HomePage() {
             SIMA360™ — Structured AI Maturity Accelerator
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight" style={{ color: "#0f172a" }}>
-            Is AI improving your business or only generating more output?
+            AI can make your organization faster and more capable — but it can also scale inconsistency and
+            poor decisions.
           </h1>
+          <p className="text-lg leading-snug" style={{ color: "#475569" }}>
+            SIMA360 helps you find organizational weaknesses before AI magnifies them — and build the
+            organizational foundation for reliable AI.
+          </p>
         </div>
       </section>
 
@@ -92,13 +97,12 @@ export default function HomePage() {
             className="text-lg sm:text-xl font-semibold max-w-2xl mx-auto mb-6 leading-snug"
             style={{ color: "#0f172a" }}
           >
-            SIMA360 is the structured framework that diagnoses where AI maturity is holding your organization
-            back — and gives you the roadmap, tools, and training to close the gap and build AI that stays
-            reliable and low-risk for the long run.
+            It assesses five critical areas of your organizational maturity to reveal where AI may be putting
+            you at risk. Then it turns that diagnosis into practical corrective action.
           </p>
           <div className="space-y-2 text-base leading-snug mb-6" style={{ color: "#475569" }}>
             <p>
-              Assess your organization&rsquo;s AI maturity across five perspectives in about 15 minutes.
+              Don&rsquo;t just ask what your AI can do. Ask whether your organization is ready for what it can do.
             </p>
           </div>
           <Button
@@ -106,10 +110,10 @@ export default function HomePage() {
             asChild
             className="mb-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
           >
-            <Link href="/sima-probe/assessment">Begin free assessment</Link>
+            <Link href="/sima-probe/assessment">Find out if you&rsquo;re at risk in 15 minutes</Link>
           </Button>
-          <p className="text-sm" style={{ color: "#64748b" }}>
-            Click below to explore full ecosystem
+          <p className="text-sm font-semibold tracking-wide" style={{ color: "#64748b" }}>
+            SIMA360. Assess. Diagnose. Improve.
           </p>
         </div>
         <div
