@@ -110,7 +110,7 @@ export default function HomePage() {
             asChild
             className="mb-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
           >
-            <Link href="/sima-probe/assessment">Find out if you&rsquo;re at risk in 15 minutes</Link>
+            <Link href="/sima-probe/assessment">Take the sample assessment in 15 minutes and see where you stand</Link>
           </Button>
           <p className="text-sm font-semibold tracking-wide" style={{ color: "#64748b" }}>
             SIMA360. Assess. Diagnose. Improve.
