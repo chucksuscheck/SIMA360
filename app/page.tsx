@@ -8,7 +8,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { Button } from "@/components/ui/button"
 
 const HOMEPAGE_DESCRIPTION =
-  "AI can make your organization faster and more capable — but it can also scale inconsistency and poor decisions. SIMA360 assesses five critical areas — Strategy, Governance, Data, People, and Technology — to reveal where organizational maturity is limiting AI results, then turns that diagnosis into practical corrective action."
+  "AI risk doesn't always announce itself as failure. Sometimes it emerges quietly as drift — and AI gives that drift the ability to scale. SIMA360 assesses five critical areas — Strategy, Governance, Data, People, and Technology — to reveal where organizational maturity is limiting AI results, then turns that diagnosis into practical corrective action."
 
 export const metadata: Metadata = {
   title: "SIMA360™ — Structured AI Maturity Accelerator",
@@ -80,8 +80,8 @@ export default function HomePage() {
             SIMA360™ — Structured AI Maturity Accelerator
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight" style={{ color: "#0f172a" }}>
-            AI can make your organization faster and more capable — but it can also scale inconsistency and
-            poor decisions.
+            AI risk doesn&rsquo;t always announce itself as failure. Sometimes it emerges quietly as drift — and
+            AI gives that drift the ability to scale.
           </h1>
           <p className="text-lg leading-snug" style={{ color: "#475569" }}>
             SIMA360 helps you find organizational weaknesses before AI magnifies them — and build the
@@ -110,7 +110,7 @@ export default function HomePage() {
             asChild
             className="mb-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
           >
-            <Link href="/sima-probe/assessment">Find out if you&rsquo;re at risk in 15 minutes</Link>
+            <Link href="/sima-probe/assessment">Take the sample assessment in 15 minutes and see where you stand</Link>
           </Button>
           <p className="text-sm font-semibold tracking-wide" style={{ color: "#64748b" }}>
             SIMA360. Assess. Diagnose. Improve.

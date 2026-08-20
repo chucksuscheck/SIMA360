@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "SIMA360 Basis — Framework Origin & Purpose | SIMA360™",
   description:
-    "SIMA360 was built on two years of comparative research across nine AI maturity frameworks — Element AI, Accenture, IBM, Metascient, Ovum, BCG/MIT Sloan, Microsoft, Gartner, and Deloitte — research that revealed why organizational maturity, not tool capability, determines whether AI produces reliable outcomes. Learn how the Five Perspectives emerged from that research and why SIMA360 exists to turn a diagnosis into a trajectory.",
+    "SIMA360 was developed by Dr. Charles Suscheck and built on twelve months of focused research across nine AI maturity frameworks — Element AI, Accenture, IBM, Metascient, Ovum, BCG/MIT Sloan, Microsoft, Gartner, and Deloitte — research that revealed why organizational maturity, not tool capability, determines whether AI produces reliable outcomes. Learn how the Five Perspectives emerged from that research and why SIMA360 exists to turn a diagnosis into a trajectory.",
   alternates: {
     canonical: "https://www.sima360.org/foundation",
   },
@@ -55,10 +55,11 @@ const FoundationPage = () => {
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
               Most organizations that adopt AI don't fail because the technology breaks. They fail because AI
               amplifies whatever was already unclear, inconsistent, or unmonitored in the organization around it —
-              and capability and maturity are not the same thing. SIMA360 emerged from two years of comparative
-              analysis across nine leading AI maturity frameworks, built to answer the question those frameworks
-              left open: not just where an organization stands, but what to do next, and why organizational
-              maturity — not tool capability — is what actually determines whether AI produces reliable outcomes.
+              and capability and maturity are not the same thing. SIMA360 emerged from twelve months of focused
+              comparative analysis across nine leading AI maturity frameworks, built to answer the question those
+              frameworks left open: not just where an organization stands, but what to do next, and why
+              organizational maturity — not tool capability — is what actually determines whether AI produces
+              reliable outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-blue-500 hover:bg-blue-600">
@@ -88,8 +89,13 @@ const FoundationPage = () => {
               Research Foundation
             </Badge>
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Built on the Foundation of 9 Leading AI Maturity Models and 2 Years of Research
+              Built on the Foundation of 9 Leading AI Maturity Models and 12 Months of Research
             </h2>
+            <p className="text-lg text-slate-600 mb-4">
+              SIMA360 was developed by Dr. Charles Suscheck, drawing together nine industry-leading evaluation
+              frameworks and twelve months of focused research into how organizations actually govern complex
+              technology at scale.
+            </p>
             <p className="text-lg text-slate-600 mb-4">
               SIMA360 did not emerge in isolation and does not claim to have invented AI maturity thinking. It
               synthesized what the existing research got right, identified what it consistently missed, and built the
