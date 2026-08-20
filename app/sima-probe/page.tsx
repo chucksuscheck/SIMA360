@@ -79,6 +79,11 @@ export default function SIMAProbe() {
             <Button size="lg" variant="outline" asChild>
               <Link href="#what-you-get">See What You Get</Link>
             </Button>
+            <Button size="lg" variant="outline" asChild>
+              <a href="/SIMA360_Sample_Report.pdf" target="_blank" rel="noopener noreferrer">
+                See a Sample Report
+              </a>
+            </Button>
           </div>
         </div>
       </section>
