@@ -1,8 +1,9 @@
 <?php
 // Increments (POST, unauthenticated — called by every visitor who finishes
 // the assessment) or reads (GET, token-gated) the assessment-completion
-// counter. Storage lives in assessment-data/, which the deploy workflow
-// excludes from sync so redeploys never overwrite the count or the token.
+// counter. count.txt lives only on the server (deploy workflow excludes it
+// from sync); token.txt is written fresh on every deploy from the
+// COUNTER_TOKEN GitHub secret.
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: https://www.sima360.org');

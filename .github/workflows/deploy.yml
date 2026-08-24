@@ -24,6 +24,14 @@ jobs:
       - name: Build static export
         run: npm run build
 
+      - name: Write counter token
+        # counter.php (GET) and counterreset.php both require this file's
+        # contents as ?token=. Sourced from a GitHub secret so the value
+        # never appears in this public repo's source.
+        run: |
+          mkdir -p out/assessment-data
+          printf '%s' "${{ secrets.COUNTER_TOKEN }}" > out/assessment-data/token.txt
+
       - name: Deploy to Namecheap via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -33,9 +41,11 @@ jobs:
           protocol: ftps
           local-dir: ./out/
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
-          # assessment-data/ holds the counter.php-managed completion count,
-          # which lives only on the server. Excluding it stops each deploy
-          # from deleting it (the action mirrors ./out/, which never
-          # contains this server-generated file).
+          # count.txt holds the live completion count, written by
+          # counter.php on the server — it has no local counterpart, so
+          # excluding it stops each deploy from deleting it (the action
+          # otherwise mirrors ./out/ exactly). token.txt is NOT excluded:
+          # it should sync fresh from the "Write counter token" step above
+          # on every deploy.
           exclude: |
-            **/assessment-data/**
+            **/assessment-data/count.txt

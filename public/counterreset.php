@@ -1,10 +1,10 @@
 <?php
 // Resets the assessment-completion counter to 0. Requires a ?token= query
 // param matching assessment-data/token.txt — the same shared token
-// counter.php's GET uses to read the count. That file lives only on the
-// server (never committed to git, never overwritten by deploys — see the
-// assessment-data/ exclude in .github/workflows/deploy.yml). Create it
-// yourself via FTP/cPanel before this endpoint will do anything.
+// counter.php's GET uses to read the count. token.txt is written fresh on
+// every deploy from the COUNTER_TOKEN GitHub secret (see
+// .github/workflows/deploy.yml), so its value never appears in this
+// public repo's source.
 
 header('Content-Type: application/json');
 
