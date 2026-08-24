@@ -1,14 +1,27 @@
 <?php
-// Increments (POST) or reads (GET) the assessment-completion counter.
-// Not linked from the site; the results flow calls this once per completed
-// assessment. Storage lives in assessment-data/, which the deploy workflow
-// excludes from sync so redeploys never overwrite the count.
+// Increments (POST, unauthenticated — called by every visitor who finishes
+// the assessment) or reads (GET, token-gated) the assessment-completion
+// counter. Storage lives in assessment-data/, which the deploy workflow
+// excludes from sync so redeploys never overwrite the count or the token.
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: https://www.sima360.org');
 
 $dataDir = __DIR__ . '/assessment-data';
 $dataFile = $dataDir . '/count.txt';
+$tokenFile = $dataDir . '/token.txt';
+
+$isPost = $_SERVER['REQUEST_METHOD'] === 'POST';
+
+if (!$isPost) {
+    $expected = is_file($tokenFile) ? trim(file_get_contents($tokenFile)) : '';
+    $provided = isset($_GET['token']) ? trim($_GET['token']) : '';
+    if ($expected === '' || !hash_equals($expected, $provided)) {
+        http_response_code(403);
+        echo json_encode(['error' => 'invalid token']);
+        exit;
+    }
+}
 
 if (!is_dir($dataDir)) {
     mkdir($dataDir, 0755, true);
@@ -24,7 +37,7 @@ if (!$fp) {
 flock($fp, LOCK_EX);
 $count = (int) fread($fp, 1024);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($isPost) {
     $count++;
     ftruncate($fp, 0);
     rewind($fp);
