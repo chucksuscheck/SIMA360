@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { ArrowLeft, RotateCcw } from 'lucide-react'
 import { Navigation } from '@/components/navigation'
-import { SiteFooter } from '@/components/site-footer'
 import { EnterpriseScoreCard } from '@/components/sima-probe/enterprise-score-card'
 import { PerspectiveScoreCard } from '@/components/sima-probe/perspective-score-card'
 import { RiskFlagCard } from '@/components/sima-probe/risk-flag-card'
@@ -234,7 +233,6 @@ export default function ResultsPage() {
         </section>
       </div>
 
-      <SiteFooter />
     </div>
   )
 }

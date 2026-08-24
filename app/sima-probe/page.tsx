@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Navigation } from "@/components/navigation"
 import { ModuleTabs } from "@/components/module-tabs"
-import { SiteFooter } from "@/components/site-footer"
 import { SubscriptionLevels } from "@/components/sima-probe/subscription-levels"
 import {
   Target,
@@ -481,7 +480,6 @@ export default function SIMAProbe() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

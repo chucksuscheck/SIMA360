@@ -4,7 +4,6 @@ import path from "node:path"
 import Link from "next/link"
 import { BookOpen, ClipboardCheck, Download, Layers, Info } from "lucide-react"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 import { Button } from "@/components/ui/button"
 
 const HOMEPAGE_DESCRIPTION =
@@ -180,7 +179,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

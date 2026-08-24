@@ -14,7 +14,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { ArrowRight, Target, Shield, Database, Users, Cog } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 import { PerspectiveTabs } from "@/components/perspective-tabs"
 
 const perspectives = [
@@ -180,7 +179,6 @@ export default function PerspectivesPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

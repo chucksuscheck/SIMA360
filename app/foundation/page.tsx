@@ -24,7 +24,6 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 
 const FoundationPage = () => {
   return (
@@ -459,7 +458,6 @@ const FoundationPage = () => {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

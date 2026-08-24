@@ -14,7 +14,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { ArrowRight, Shield, AlertCircle, FileText, Scale, Eye, RefreshCw, Users } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 import { PerspectiveTabs } from "@/components/perspective-tabs"
 import { MaturityProgression } from "@/components/sima-core/maturity-progression"
 import { PerspectiveSymptoms } from "@/components/sima-core/perspective-symptoms"
@@ -390,7 +389,6 @@ export default function GovernancePerspectivePage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

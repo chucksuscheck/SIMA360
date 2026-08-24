@@ -25,7 +25,6 @@ import {
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { ModuleTabs } from "@/components/module-tabs"
-import { SiteFooter } from "@/components/site-footer"
 
 const SIMAKitPage = () => {
   return (
@@ -416,7 +415,6 @@ const SIMAKitPage = () => {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 import { PricingTabs } from "@/components/pricing-tabs"
 import { PricingCard, type PricingCardData } from "@/components/pricing-card"
 
@@ -139,7 +138,6 @@ export default function PricingImprovePage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

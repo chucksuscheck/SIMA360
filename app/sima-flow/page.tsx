@@ -26,7 +26,6 @@ import {
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { ModuleTabs } from "@/components/module-tabs"
-import { SiteFooter } from "@/components/site-footer"
 
 export default function SimaFlowPage() {
   return (
@@ -531,7 +530,6 @@ export default function SimaFlowPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

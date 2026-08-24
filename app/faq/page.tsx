@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 
 export const metadata: Metadata = {
   title: "FAQ | SIMA360™",
@@ -580,7 +579,6 @@ export default function FaqPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

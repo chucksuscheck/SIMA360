@@ -86,6 +86,7 @@ export default function AssessmentPage() {
         completedAt: new Date().toISOString(),
         answers,
       })
+      fetch('/counter.php', { method: 'POST' }).catch(() => {})
       router.push('/sima-probe/results')
     } else {
       setCurrentIndex(i => i + 1)

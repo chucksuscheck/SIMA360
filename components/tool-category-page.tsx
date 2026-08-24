@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 import { toolCategories, type MaturityStatus } from "@/lib/tool-categories"
 import { ToolCategoryTabs, type ToolCategoryKey } from "@/components/tool-category-tabs"
 
@@ -182,7 +181,6 @@ export function ToolCategoryPage({ slug }: { slug: string }) {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

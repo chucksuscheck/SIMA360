@@ -5,7 +5,6 @@ import { ArrowRight, BookOpen, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 
 export const metadata: Metadata = {
   title: "The AI Rush — The Book Behind SIMA360™",
@@ -224,7 +223,6 @@ export default function TheBookPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

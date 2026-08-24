@@ -32,7 +32,6 @@ import {
 } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { ModuleTabs } from "@/components/module-tabs"
-import { SiteFooter } from "@/components/site-footer"
 
 export default function SimaAscendPage() {
   return (
@@ -604,7 +603,6 @@ export default function SimaAscendPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

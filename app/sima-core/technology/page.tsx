@@ -14,7 +14,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { ArrowRight, Cog, Server, Wrench, GitBranch, Lock, Zap, Eye } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 import { PerspectiveTabs } from "@/components/perspective-tabs"
 import { MaturityProgression } from "@/components/sima-core/maturity-progression"
 import { PerspectiveSymptoms } from "@/components/sima-core/perspective-symptoms"
@@ -392,7 +391,6 @@ export default function TechnologyPerspectivePage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

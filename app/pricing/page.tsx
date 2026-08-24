@@ -3,7 +3,6 @@ import { Fragment } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 import { PricingTabs } from "@/components/pricing-tabs"
 import { ArrowRight } from "lucide-react"
 
@@ -288,7 +287,6 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

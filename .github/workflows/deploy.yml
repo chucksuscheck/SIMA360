@@ -33,3 +33,9 @@ jobs:
           protocol: ftps
           local-dir: ./out/
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          # assessment-data/ holds the counter.php-managed completion count,
+          # which lives only on the server. Excluding it stops each deploy
+          # from deleting it (the action mirrors ./out/, which never
+          # contains this server-generated file).
+          exclude: |
+            **/assessment-data/**

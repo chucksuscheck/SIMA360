@@ -14,7 +14,6 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 import { maturityLevels } from "@/lib/maturity-levels"
 import { MaturityTabs } from "@/components/maturity-tabs"
 
@@ -101,7 +100,6 @@ export default function MaturityPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

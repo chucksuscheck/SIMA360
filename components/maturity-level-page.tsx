@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, ArrowRight, Target, Shield, Database, Users, Cog } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 import { maturityLevels } from "@/lib/maturity-levels"
 import { MaturityTabs, type MaturityLevelKey } from "@/components/maturity-tabs"
 import { toolCategories, type MaturityStatus } from "@/lib/tool-categories"
@@ -208,7 +207,6 @@ export function MaturityLevelPage({ slug }: { slug: string }) {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

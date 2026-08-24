@@ -27,7 +27,6 @@ import {
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { ModuleTabs } from "@/components/module-tabs"
-import { SiteFooter } from "@/components/site-footer"
 
 export default function SimaCorePage() {
   return (
@@ -686,7 +685,6 @@ export default function SimaCorePage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

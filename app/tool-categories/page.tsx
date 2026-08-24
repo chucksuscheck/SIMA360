@@ -14,7 +14,6 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Eye, Users, Cog, Target, Zap } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 import { ToolCategoryTabs } from "@/components/tool-category-tabs"
 import { toolCategories } from "@/lib/tool-categories"
 
@@ -118,7 +117,6 @@ export default function ToolCategoriesPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

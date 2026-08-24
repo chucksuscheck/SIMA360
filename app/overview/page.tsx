@@ -28,7 +28,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowRight, Brain, Zap, Target, BookOpen, CheckCircle, BarChart3 } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 import { FrameworkMap } from "@/components/framework-map"
 import { ECOSYSTEM_COMPONENTS, type EcosystemComponent } from "@/lib/sima-ecosystem"
 
@@ -358,7 +357,6 @@ export default function OverviewPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }

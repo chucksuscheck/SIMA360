@@ -13,7 +13,6 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { SiteFooter } from "@/components/site-footer"
 
 export const metadata: Metadata = {
   title: "Get Started — Find Your Entry Point | SIMA360™",
@@ -174,7 +173,6 @@ export default function StartPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   )
 }
