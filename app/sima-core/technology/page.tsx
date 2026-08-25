@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Technology Perspective — AI Perspectives | SIMA360™",
   description:
-    "The Technology Perspective determines whether the organization can change the model, the environment, or the data underneath it without renegotiating everything built around it. Six components, each answered for both the people and the AI system.",
+    "The Technology Perspective determines whether the business can change the model, the environment, or the data underneath it without renegotiating everything built around it. Six components, each answered for both the people and the AI system.",
   alternates: {
     canonical: "https://www.sima360.org/sima-core/technology",
   },
@@ -24,7 +24,7 @@ const maturityLevels = [
     name: "Initial",
     color: "slate",
     description:
-      "Technology hasn't formed into a real AI operating environment — tools get tested informally with no stable pattern of organizational use. The work is identifying where AI use should begin and what basic conditions need to exist first.",
+      "Technology hasn't formed into a real AI operating environment — tools get tested informally with no stable pattern of business use. The work is identifying where AI use should begin and what basic conditions need to exist first.",
   },
   {
     level: 2,
@@ -113,7 +113,7 @@ export default function TechnologyPerspectivePage() {
           </div>
 
           <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
-            Technology determines whether the organization can change the model, the environment, or the data
+            Technology determines whether the business can change the model, the environment, or the data
             underneath it — separately, and not always at the same pace — without renegotiating everything built
             around it.
           </p>
@@ -169,7 +169,7 @@ export default function TechnologyPerspectivePage() {
                 </div>
                 <CardTitle className="text-base">Integration</CardTitle>
                 <CardDescription>
-                  AI that doesn't connect to the rest of the organization stays a demo.
+                  AI that doesn't connect to the rest of the business stays a demo.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -225,7 +225,7 @@ export default function TechnologyPerspectivePage() {
                 </div>
                 <CardTitle className="text-base">AI Operations and Automation</CardTitle>
                 <CardDescription>
-                  Deploying a model is the easy part. Maintaining it is where most organizations get surprised.
+                  Deploying a model is the easy part. Maintaining it is where most businesses get surprised.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -266,7 +266,7 @@ export default function TechnologyPerspectivePage() {
               <CardContent>
                 <p className="text-sm text-slate-700">
                   A powerful model bolted onto infrastructure that was never built to carry it is a jet engine on a
-                  horse-drawn wagon. Organizations that avoid this assume from day one that the model, the technology
+                  horse-drawn wagon. Businesses that avoid this assume from day one that the model, the technology
                   around it, and the data flowing through it will all keep moving — separately, and not always at the
                   same pace — and build for replaceability instead of permanence.
                 </p>

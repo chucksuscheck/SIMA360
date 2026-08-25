@@ -37,7 +37,7 @@ export function EnterpriseScoreCard({
       {/* Label */}
       <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-6 inline-flex items-center gap-1.5">
         Overall AI Maturity Score
-        <InfoTooltip text="This is not an average of your five perspective scores — it's the lowest one. An organization only operates as reliably as its weakest area, no matter how far ahead the other four have gotten." />
+        <InfoTooltip text="This is not an average of your five perspective scores — it's the lowest one. A business only operates as reliably as its weakest area, no matter how far ahead the other four have gotten." />
       </p>
 
       {/* Score row */}

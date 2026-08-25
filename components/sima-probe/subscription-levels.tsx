@@ -28,7 +28,7 @@ export function SubscriptionLevels() {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">Subscription Levels</h2>
             <p className="text-lg text-slate-700 mb-12 text-center">
-              Choose the level that matches your organization's needs
+              Choose the level that matches your business's needs
             </p>
 
             <Tabs
@@ -57,7 +57,7 @@ export function SubscriptionLevels() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-slate-700">
-                      The minimal viable product level, designed for small organizations, individuals exploring
+                      The minimal viable product level, designed for small businesses, individuals exploring
                       SIMA-Probe capabilities, or those at the Initial or early Exploring stage.
                     </p>
                     <div className="space-y-2">
@@ -100,7 +100,7 @@ export function SubscriptionLevels() {
                     <div className="pt-4">
                       <p className="text-sm font-semibold text-slate-900 mb-2">Ideal For:</p>
                       <p className="text-slate-700">
-                        Organizations conducting initial feasibility assessment, small teams (fewer than 50 people), or
+                        Businesses conducting initial feasibility assessment, small teams (fewer than 50 people), or
                         those seeking a quick maturity snapshot.
                       </p>
                     </div>
@@ -129,8 +129,8 @@ export function SubscriptionLevels() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-slate-700">
-                      Designed for organizations actively engaging with AI at the Exploring or Applying stages,
-                      typically small to medium-sized organizations using SIMA-Probe to guide AI readiness and
+                      Designed for businesses actively engaging with AI at the Exploring or Applying stages,
+                      typically small to medium-sized businesses using SIMA-Probe to guide AI readiness and
                       improvement planning.
                     </p>
                     <div className="space-y-2">
@@ -176,7 +176,7 @@ export function SubscriptionLevels() {
                     <div className="pt-4">
                       <p className="text-sm font-semibold text-slate-900 mb-2">Ideal For:</p>
                       <p className="text-slate-700">
-                        Organizations piloting AI initiatives, mid-sized teams, or those needing detailed
+                        Businesses piloting AI initiatives, mid-sized teams, or those needing detailed
                         cross-perspective visibility for strategic planning.
                       </p>
                     </div>
@@ -205,7 +205,7 @@ export function SubscriptionLevels() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-slate-700">
-                      The same Insight diagnostic as Level 2, sized for organizations running assessments more than
+                      The same Insight diagnostic as Level 2, sized for businesses running assessments more than
                       a few times a month — multiple business units, recurring re-assessment cadences, or evaluating
                       several teams in parallel.
                     </p>
@@ -252,7 +252,7 @@ export function SubscriptionLevels() {
                     <div className="pt-4">
                       <p className="text-sm font-semibold text-slate-900 mb-2">Ideal For:</p>
                       <p className="text-slate-700">
-                        Organizations assessing multiple business units, or running a recurring re-assessment
+                        Businesses assessing multiple business units, or running a recurring re-assessment
                         cadence that a 5-execution monthly cap wouldn't cover.
                       </p>
                     </div>
@@ -266,7 +266,7 @@ export function SubscriptionLevels() {
                     <div className="flex items-center justify-between">
                       <div>
                         <CardTitle className="text-2xl">Level 3 – Advisory</CardTitle>
-                        <CardDescription className="text-lg mt-2">Organizational Subscription</CardDescription>
+                        <CardDescription className="text-lg mt-2">Business Subscription</CardDescription>
                         <p className="text-sm font-semibold text-slate-500 mt-1">Pricing: Pending Announcement</p>
                       </div>
                       <Badge className="bg-purple-100 text-purple-700 text-lg px-4 py-2">PREMIUM</Badge>
@@ -274,7 +274,7 @@ export function SubscriptionLevels() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-slate-700">
-                      The comprehensive level for organizations at the Formalizing stage or higher, requiring full
+                      The comprehensive level for businesses at the Formalizing stage or higher, requiring full
                       visibility into AI implementation readiness and detailed, actionable guidance.
                     </p>
                     <div className="space-y-2">
@@ -321,7 +321,7 @@ export function SubscriptionLevels() {
                     <div className="pt-4">
                       <p className="text-sm font-semibold text-slate-900 mb-2">Ideal For:</p>
                       <p className="text-slate-700">
-                        Enterprise deployments, organizations at Formalizing stage or higher, or those requiring
+                        Enterprise deployments, businesses at Formalizing stage or higher, or those requiring
                         comprehensive governance documentation and training integration.
                       </p>
                     </div>
@@ -346,7 +346,7 @@ export function SubscriptionLevels() {
                   <CardContent className="space-y-4">
                     <p className="text-slate-700">
                       An enhancement to Level 3 that includes tailored consulting support, interview-based evaluation,
-                      and customized organizational guidance.
+                      and customized business guidance.
                     </p>
                     <div className="space-y-2">
                       <h4 className="font-semibold">Features:</h4>
@@ -369,7 +369,7 @@ export function SubscriptionLevels() {
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
-                          <span>Custom organizational reports and dashboards</span>
+                          <span>Custom business reports and dashboards</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
@@ -388,7 +388,7 @@ export function SubscriptionLevels() {
                     <div className="pt-4">
                       <p className="text-sm font-semibold text-slate-900 mb-2">Ideal For:</p>
                       <p className="text-slate-700">
-                        Organizations requiring hands-on consulting support, complex multi-unit enterprises, or those
+                        Businesses requiring hands-on consulting support, complex multi-unit enterprises, or those
                         undertaking major AI transformation initiatives.
                       </p>
                     </div>
@@ -425,7 +425,7 @@ export function SubscriptionLevels() {
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <p className="text-slate-700">
-                      The AI dynamically adjusts question sets and examples based on organizational context such as
+                      The AI dynamically adjusts question sets and examples based on business context such as
                       industry, size, and operational maturity.
                     </p>
                     <ul className="space-y-2 text-sm text-slate-600">
@@ -452,7 +452,7 @@ export function SubscriptionLevels() {
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <p className="text-slate-700">
-                      AI analyzes uploaded organizational materials to pre-populate or validate answers, transforming the
+                      AI analyzes uploaded business materials to pre-populate or validate answers, transforming the
                       evaluation into a hybrid evidence-based process.
                     </p>
                     <ul className="space-y-2 text-sm text-slate-600">

@@ -117,7 +117,7 @@ export default function ResultsPage() {
           <h1 className="text-3xl font-bold text-slate-900">AI Operational Maturity Assessment</h1>
           <p className="text-slate-500 mt-2 text-sm max-w-2xl">
             Based on your 30 answers across five areas — Governance, Strategy, Data, People, and
-            Technology — here's a directional read on how consistently your organization can rely
+            Technology — here's a directional read on how consistently your business can rely
             on AI-supported decisions today. This is a quick, free-tier check: treat the numbers
             below as a starting point for where to look closer, not a precise measurement.
           </p>
@@ -219,7 +219,7 @@ export default function ResultsPage() {
           </p>
           <p>
             Your overall score is <em>not</em> an average of the five perspective scores — it's
-            the lowest one. An organization behaves at the level of its least mature area, not its
+            the lowest one. A business behaves at the level of its least mature area, not its
             most advanced, no matter how far ahead the other four have gotten.
           </p>
           <p>

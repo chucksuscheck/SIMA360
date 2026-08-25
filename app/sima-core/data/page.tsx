@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Data Perspective — AI Perspectives | SIMA360™",
   description:
-    "The Data Perspective determines whether the organization keeps learning from the world or starts learning from itself — and whether data can still be trusted once it's in motion, not just on arrival. Eight components, each answered for both the people and the AI system.",
+    "The Data Perspective determines whether the business keeps learning from the world or starts learning from itself — and whether data can still be trusted once it's in motion, not just on arrival. Eight components, each answered for both the people and the AI system.",
   alternates: {
     canonical: "https://www.sima360.org/sima-core/data",
   },
@@ -45,21 +45,21 @@ const maturityLevels = [
     name: "Formalizing",
     color: "emerald",
     description:
-      "Definitions are standardized and governed across the organization — which creates a new blind spot. The system can't tell a quality failure from representational drift: data that passes every check while no longer representing reality.",
+      "Definitions are standardized and governed across the business — which creates a new blind spot. The system can't tell a quality failure from representational drift: data that passes every check while no longer representing reality.",
   },
   {
     level: 5,
     name: "Optimizing",
     color: "green",
     description:
-      "Feedback loops are operational rather than theoretical. When a decision fails, the organization can trace whether the cause was completeness, timeliness, relevance, or drift, and correct it. The temptation is expanding faster than feedback can keep up.",
+      "Feedback loops are operational rather than theoretical. When a decision fails, the business can trace whether the cause was completeness, timeliness, relevance, or drift, and correct it. The temptation is expanding faster than feedback can keep up.",
   },
   {
     level: 6,
     name: "Leading",
     color: "cyan",
     description:
-      "Data strategy is tied directly to decision strategy — the organization anticipates where current data will fall short before a new decision gets introduced, rather than waiting for the failure.",
+      "Data strategy is tied directly to decision strategy — the business anticipates where current data will fall short before a new decision gets introduced, rather than waiting for the failure.",
   },
 ]
 
@@ -111,7 +111,7 @@ export default function DataPerspectivePage() {
           </div>
 
           <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
-            Data determines whether the organization keeps learning from the world or starts learning from itself
+            Data determines whether the business keeps learning from the world or starts learning from itself
             — and whether data can still be trusted once it's in motion, not just on arrival.
           </p>
 
@@ -303,7 +303,7 @@ export default function DataPerspectivePage() {
                   The Boston Housing dataset passed every check anyone ran against it for decades and was still
                   teaching something false the entire time, because nobody was watching after the day it got
                   approved. Once a system starts generating its own data — recommendations, summaries, decisions —
-                  the organization's record of "what happened" starts turning into a record of what the system did.
+                  the business's record of "what happened" starts turning into a record of what the system did.
                 </p>
               </CardContent>
             </Card>

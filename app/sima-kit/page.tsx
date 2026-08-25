@@ -56,9 +56,9 @@ const SIMAKitPage = () => {
             </h1>
           </div>
           <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
-            SIMA Kit™ doesn't run the improvement cycle — Flow does. It answers the question every organization
+            SIMA Kit™ doesn't run the improvement cycle — Flow does. It answers the question every business
             hits right after an honest SIMA-Probe™ assessment: now what? Entrance criteria, goals, strategies, and
-            exit criteria, specific to the Maturity Level and perspective the organization is actually in.
+            exit criteria, specific to the Maturity Level and perspective the business is actually in.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" asChild className="bg-purple-500 hover:bg-purple-600">
@@ -86,7 +86,7 @@ const SIMAKitPage = () => {
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Turns a Diagnosis Into Structured Work</h2>
             <p className="text-lg text-slate-600">
-              SIMA-Probe identifies where the organization stands and which perspective is the constraint. What
+              SIMA-Probe identifies where the business stands and which perspective is the constraint. What
               SIMA-Kit supplies next is what SIMA-Flow's cycles actually need to act on that finding, matched to the
               exact Maturity Level and perspective in play.
             </p>
@@ -102,7 +102,7 @@ const SIMAKitPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 text-sm">
-                  Targeted improvement approaches for the perspective SIMA-Probe identifies as the organization's
+                  Targeted improvement approaches for the perspective SIMA-Probe identifies as the business's
                   current constraint
                 </p>
               </CardContent>
@@ -332,7 +332,7 @@ const SIMAKitPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 text-sm">
-                  Keeps effort at the Maturity Level the organization is actually ready for, not the one it wishes it
+                  Keeps effort at the Maturity Level the business is actually ready for, not the one it wishes it
                   were at
                 </p>
               </CardContent>
@@ -347,7 +347,7 @@ const SIMAKitPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 text-sm">
-                  Keeps every FLAI cycle grounded in guidance matched to where the organization actually stands
+                  Keeps every FLAI cycle grounded in guidance matched to where the business actually stands
                 </p>
               </CardContent>
             </Card>

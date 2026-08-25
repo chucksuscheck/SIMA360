@@ -35,7 +35,7 @@ export const MATURITY_DESCRIPTIONS: Record<MaturityLevel, string> = {
   Applying: "Individual efforts work and can be defended on their own terms, but they don't generalize past the context that produced them.",
   Formalizing: 'Structure exists and holds under normal conditions. The gap shows up when something is contested, urgent, or the world changes underneath it.',
   Optimizing: "The system is tested against outcomes continuously, and what's learned changes what happens next — not just what gets documented.",
-  Leading: 'Improvement is built into how the organization operates day to day, rather than something applied to it periodically.',
+  Leading: 'Improvement is built into how the business operates day to day, rather than something applied to it periodically.',
 }
 
 function round1(n: number): number {

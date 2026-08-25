@@ -97,7 +97,7 @@ export function FrameworkMap() {
             The SIMA360™ Operating Architecture
           </h2>
           <p className="text-slate-500 max-w-lg mx-auto text-sm leading-relaxed">
-            Five integrated components. Five organizational perspectives. Six maturity levels.
+            Five integrated components. Five business perspectives. Six maturity levels.
             One structured path to AI maturity.
           </p>
         </div>

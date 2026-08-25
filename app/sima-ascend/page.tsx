@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "SIMA-Ascend — Practitioner Development & Certification | SIMA360™",
   description:
-    "SIMA-Ascend builds organizational capability through education, shared understanding, and improved decision-making — not through training completion alone. Structured programs and three-level certification pathways for practitioners who ground their work in SIMA-Probe findings and run FLAI cycles as disciplined learning.",
+    "SIMA-Ascend builds business capability through education, shared understanding, and improved decision-making — not through training completion alone. Structured programs and three-level certification pathways for practitioners who ground their work in SIMA-Probe findings and run FLAI cycles as disciplined learning.",
   alternates: {
     canonical: "https://www.sima360.org/sima-ascend",
   },
@@ -63,14 +63,14 @@ export default function SimaAscendPage() {
             </h1>
           </div>
           <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
-            Organizations don't mature because employees complete training. They mature when employees know when
+            Businesses don't mature because employees complete training. They mature when employees know when
             to trust an AI output, when to challenge it, and when to set it aside — and when that judgment holds
-            up under real operational pressure, not just on a certification exam. Organizations can have
+            up under real operational pressure, not just on a certification exam. Businesses can have
             sophisticated AI tools, mature data infrastructure, and formal governance policies and still fail to
             produce reliable outcomes if the people running those systems lack that judgment. SIMA-Ascend exists to
             build it: the skill to ground work in a SIMA-Probe™ assessment rather than aspiration, to run FLAI
-            cycles as disciplined organizational learning, and to develop that shared understanding across an
-            organization.
+            cycles as disciplined business learning, and to develop that shared understanding across an
+            business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" asChild className="bg-orange-500 hover:bg-orange-600">
@@ -99,7 +99,7 @@ export default function SimaAscendPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Why SIMA-Ascend?</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               SIMA-Ascend courses aren't just certification preparation — they're standalone learning experiences
-              that deliver practical, real-world guidance applicable across industries and organizations. All courses are led by certified trainers or asynchronously online.
+              that deliver practical, real-world guidance applicable across industries and businesses. All courses are led by certified trainers or asynchronously online.
             </p>
           </div>
 
@@ -156,8 +156,8 @@ export default function SimaAscendPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4">SIMA-Ascend Certification Pathways</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               SIMA-Ascend certifications validate an individual's ability to apply the SIMA360™ framework with
-              increasing levels of complexity and leadership — practitioner capability, not organizational maturity.
-              An organization's Maturity Level is what SIMA-Probe™ measures; certification measures whether the
+              increasing levels of complexity and leadership — practitioner capability, not business maturity.
+              A business's Maturity Level is what SIMA-Probe™ measures; certification measures whether the
               people running the improvement cycles can apply the framework consistently once that finding is in
               hand. Each certification is achieved through online assessments. In order to become a SIMA360
               instructor, the candidate must participate in the respective courses and pass AI Solutions Agent
@@ -180,7 +180,7 @@ export default function SimaAscendPage() {
               <CardContent>
                 <p className="text-sm text-slate-600 mb-4">
                   Equips individuals to do the actual work: conducting FLAI cycles, applying SIMA-Kit™ guidance at
-                  the project level, and grounding that work in the organization's current Maturity Level — not in
+                  the project level, and grounding that work in the business's current Maturity Level — not in
                   aspirational assumptions about where it should be.
                 </p>
                 <div className="space-y-2 mb-6">
@@ -258,7 +258,7 @@ export default function SimaAscendPage() {
                   </Badge>
                 </div>
                 <CardTitle className="text-xl">AI Solutions Strategist</CardTitle>
-                <CardDescription>Enterprise leadership and organizational transformation</CardDescription>
+                <CardDescription>Enterprise leadership and business transformation</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600 mb-4">
@@ -320,7 +320,7 @@ export default function SimaAscendPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  Prepares individuals to evaluate organizational readiness, identify foundational gaps, and introduce
+                  Prepares individuals to evaluate business readiness, identify foundational gaps, and introduce
                   structured AI practices with minimal risk.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -328,7 +328,7 @@ export default function SimaAscendPage() {
                     <h4 className="font-semibold text-slate-900 mb-2">Key Topics Covered:</h4>
                     <ul className="text-sm text-slate-600 space-y-1">
                       <li>• The AI Implementation Spectrum</li>
-                      <li>• Analyzing Organizational AI Capabilities</li>
+                      <li>• Analyzing Business AI Capabilities</li>
                       <li>• AI Governance and Oversight</li>
                       <li>• Executing AI Projects with Control</li>
                     </ul>
@@ -360,7 +360,7 @@ export default function SimaAscendPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  Enables practitioners to run FLAI cycles as disciplined organizational learning — framing a
+                  Enables practitioners to run FLAI cycles as disciplined business learning — framing a
                   specific operational condition, introducing a controlled intervention, and deciding what's next
                   from what was actually observed. A controlled study, not a project rollout.
                 </p>
@@ -418,7 +418,7 @@ export default function SimaAscendPage() {
                       <li>• Coordinate cross-functional projects</li>
                       <li>• Use feedback loops and KPIs</li>
                       <li>• Review aggregate outcomes</li>
-                      <li>• Refine organizational practices</li>
+                      <li>• Refine business practices</li>
                     </ul>
                   </div>
                 </div>
@@ -430,7 +430,7 @@ export default function SimaAscendPage() {
                 <div className="flex items-center mb-2">
                   <Target className="w-8 h-8 text-orange-600 mr-3" />
                   <div>
-                    <CardTitle className="text-xl">Developing Organizational AI Strategies</CardTitle>
+                    <CardTitle className="text-xl">Developing Business AI Strategies</CardTitle>
                     <CardDescription>
                       Enterprise-level framework customization and governance integration
                     </CardDescription>
@@ -447,7 +447,7 @@ export default function SimaAscendPage() {
                     <h4 className="font-semibold text-slate-900 mb-2">Key Topics Covered:</h4>
                     <ul className="text-sm text-slate-600 space-y-1">
                       <li>• Customizing Implementation Frameworks</li>
-                      <li>• Sequencing FLAI Cycles Across the Organization</li>
+                      <li>• Sequencing FLAI Cycles Across the Business</li>
                       <li>• Strategy Deployment Management</li>
                       <li>• Governance Evolution</li>
                     </ul>
@@ -457,7 +457,7 @@ export default function SimaAscendPage() {
                     <ul className="text-sm text-slate-600 space-y-1">
                       <li>• Tailor framework to enterprise needs</li>
                       <li>• Keep governance and funding paced to Maturity Level advancement</li>
-                      <li>• Sequence FLAI cycles across the organization's constraints</li>
+                      <li>• Sequence FLAI cycles across the business's constraints</li>
                       <li>• Drive strategic alignment</li>
                     </ul>
                   </div>
@@ -494,7 +494,7 @@ export default function SimaAscendPage() {
                     <h4 className="font-semibold text-slate-900 mb-2">Learning Outcomes:</h4>
                     <ul className="text-sm text-slate-600 space-y-1">
                       <li>• Craft compelling business cases</li>
-                      <li>• Design organizational roles</li>
+                      <li>• Design business roles</li>
                       <li>• Develop enablement programs</li>
                       <li>• Provide guidance and mentorship</li>
                     </ul>

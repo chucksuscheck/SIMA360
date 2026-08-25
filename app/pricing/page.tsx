@@ -44,11 +44,11 @@ const compareRows: { tier: string; cells: CompareCell[] }[] = [
     ],
   },
   {
-    tier: "Team / Organization",
+    tier: "Team / Business",
     cells: [
-      { price: "$599/yr", descriptor: "Organization plan" },
+      { price: "$599/yr", descriptor: "Business plan" },
       { price: "$149+", descriptor: "Premium Playbooks, Domain & Capability Packs, plus $29–79/mo subscriptions" },
-      { price: "$10,000–25,000+", descriptor: "Governance Engagement, Organizational Roadmap, or Executive Advisory retainer" },
+      { price: "$10,000–25,000+", descriptor: "Governance Engagement, Business Roadmap, or Executive Advisory retainer" },
       { price: "$995–4,995", descriptor: "Complete curriculum / instructor-led workshop" },
     ],
   },
@@ -66,7 +66,7 @@ const compareRows: { tier: string; cells: CompareCell[] }[] = [
 const journeySteps = [
   {
     stage: "Entry",
-    goal: "Determine current maturity — start free and see exactly where your organization stands before committing any budget.",
+    goal: "Determine current maturity — start free and see exactly where your business stands before committing any budget.",
   },
   {
     stage: "Professional",
@@ -78,7 +78,7 @@ const journeySteps = [
   },
   {
     stage: "Enterprise",
-    goal: "Enterprise implementation — coordinate rollout, governance, and transformation across the whole organization.",
+    goal: "Enterprise implementation — coordinate rollout, governance, and transformation across the whole business.",
   },
 ]
 
@@ -265,7 +265,7 @@ export default function PricingPage() {
       {/* 4. Closing CTA */}
       <section className="py-16 px-4 bg-slate-900 text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">See where your organization stands today.</h2>
+          <h2 className="text-3xl font-bold mb-4">See where your business stands today.</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             Start with a free assessment — no account required.
           </p>

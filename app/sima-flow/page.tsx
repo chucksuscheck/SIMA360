@@ -59,7 +59,7 @@ export default function SimaFlowPage() {
           <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
             SIMA Flow™ serves as the execution engine, tying SIMA Core™ models to SIMA Kit™ resourced through two
             cycles that run simultaneously: the macro Core Cycle (Assess Capabilities → Set Groundwork → Execute)
-            for organizational advancement, and the project-level FLAI Cycle for execution within it.
+            for business advancement, and the project-level FLAI Cycle for execution within it.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" asChild className="bg-green-500 hover:bg-green-600">
@@ -87,7 +87,7 @@ export default function SimaFlowPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Two Interconnected Cycles</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              SIMA Flow™ operates through two complementary cycles — one for organizational alignment, one for
+              SIMA Flow™ operates through two complementary cycles — one for business alignment, one for
               disciplined, evidence-based learning
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function SimaFlowPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-900">Set Groundwork</h4>
-                      <p className="text-sm text-slate-600">Prepare organization for execution using SIMA Kit™</p>
+                      <p className="text-sm text-slate-600">Prepare business for execution using SIMA Kit™</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -125,7 +125,7 @@ export default function SimaFlowPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-900">Execute</h4>
-                      <p className="text-sm text-slate-600">Run FLAI cycles as disciplined organizational learning</p>
+                      <p className="text-sm text-slate-600">Run FLAI cycles as disciplined business learning</p>
                     </div>
                   </div>
                 </div>
@@ -136,7 +136,7 @@ export default function SimaFlowPage() {
               <CardHeader>
                 <RefreshCw className="w-8 h-8 text-emerald-600 mb-2" />
                 <CardTitle>FLAI Cycle (Micro)</CardTitle>
-                <CardDescription>Project-level improvement, run as organizational learning — not delivery</CardDescription>
+                <CardDescription>Project-level improvement, run as business learning — not delivery</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -293,7 +293,7 @@ export default function SimaFlowPage() {
                   <h3 className="text-2xl font-bold text-slate-900">Set Groundwork</h3>
                 </div>
                 <p className="text-slate-600 mb-4">
-                  Prepare the organization for execution using SIMA Kit™ tools and templates aligned to current
+                  Prepare the business for execution using SIMA Kit™ tools and templates aligned to current
                   maturity levels and perspectives.
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
@@ -315,7 +315,7 @@ export default function SimaFlowPage() {
                   <h3 className="text-2xl font-bold text-slate-900">Execute</h3>
                 </div>
                 <p className="text-slate-600 mb-4">
-                  Run FLAI as disciplined organizational learning, not project delivery — each cycle targets
+                  Run FLAI as disciplined business learning, not project delivery — each cycle targets
                   whichever perspective is currently the constraint, with what the cycle studies shifting as maturity
                   increases: clarity first, then consistency, then adaptability.
                 </p>
@@ -356,8 +356,8 @@ export default function SimaFlowPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">FLAI: The Learning Cycle</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              A structured method for examining how AI operates inside the organization and whether that operation
-              produces reliable outcomes over time. Improvement here is an organizational learning problem, not a
+              A structured method for examining how AI operates inside the business and whether that operation
+              produces reliable outcomes over time. Improvement here is a business learning problem, not a
               delivery effort — something implemented, rolled out, and closed. FLAI treats each cycle as a controlled
               study, not a project plan.
             </p>
@@ -442,9 +442,9 @@ export default function SimaFlowPage() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">Why FLAI vs. PDIA (Plan–Do–Inspect–Adapt)?</h3>
                 <p className="text-slate-600">
-                  PDIA is the established empirical cycle for defined execution work — it assumes the organization
+                  PDIA is the established empirical cycle for defined execution work — it assumes the business
                   already knows what outcome it's pursuing. AI maturity improvement, especially at the ambiguous
-                  early levels, often doesn't meet that assumption: the organization has to learn its way to the
+                  early levels, often doesn't meet that assumption: the business has to learn its way to the
                   answer. Renaming the verbs isn't cosmetic. Plan assumes a known objective; Frame acknowledges the
                   objective must be discovered through careful constraint definition. Do assumes execution toward a
                   known outcome; Learn treats the intervention as an experiment. Inspect evaluates conformance to a
@@ -477,7 +477,7 @@ export default function SimaFlowPage() {
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-2">Prevents Overreach</h3>
               <p className="text-slate-600">
-                Assessment ensures AI projects align with organizational maturity, avoiding both underperformance and
+                Assessment ensures AI projects align with business maturity, avoiding both underperformance and
                 overreach
               </p>
             </div>

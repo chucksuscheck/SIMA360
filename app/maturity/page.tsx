@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "AI Maturity Levels — SIMA360™",
   description:
-    "The six SIMA360 maturity levels — Initial through Leading — and what each level looks like across the five organizational perspectives: Strategy, Governance, Data, People, and Technology.",
+    "The six SIMA360 maturity levels — Initial through Leading — and what each level looks like across the five business perspectives: Strategy, Governance, Data, People, and Technology.",
   alternates: {
     canonical: "https://www.sima360.org/maturity",
   },
@@ -43,7 +43,7 @@ export default function MaturityPage() {
             The Six Maturity Levels
           </h1>
           <p className="text-xl text-slate-600 mb-4 max-w-3xl mx-auto">
-            SIMA360 measures AI maturity across six progressive maturity levels — from Initial through Leading. Each level describes where an organization stands across all five perspectives: Strategy, Governance, Data, People, and Technology.
+            SIMA360 measures AI maturity across six progressive maturity levels — from Initial through Leading. Each level describes where a business stands across all five perspectives: Strategy, Governance, Data, People, and Technology.
           </p>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto">
             The goal is not to reach Level 6. The goal is to know where you are, understand what it means, and advance deliberately.
@@ -83,7 +83,7 @@ export default function MaturityPage() {
       {/* CTA */}
       <section className="py-16 px-4 bg-slate-900 text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Find Out Where Your Organization Stands</h2>
+          <h2 className="text-3xl font-bold mb-4">Find Out Where Your Business Stands</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             SIMA-Probe measures your current maturity level across all five perspectives and tells you exactly what to address next.
           </p>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 const HOMEPAGE_DESCRIPTION =
-  "AI increases organizational capability and scales inconsistency. Whether it produces reliable outcomes depends on organizational maturity. SIMA360 diagnoses and builds that maturity — five perspectives, six Maturity Levels."
+  "AI increases business capability and scales inconsistency. Whether it produces reliable outcomes depends on business maturity. SIMA360 diagnoses and builds that maturity — five perspectives, six Maturity Levels."
 
 export const metadata: Metadata = {
   title: "SIMA360 Overview | SIMA360™",
@@ -57,7 +57,7 @@ export default function OverviewPage() {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight max-w-4xl mx-auto">
-            Most organizations have deployed AI. Few have developed the maturity to support it.
+            Most businesses have deployed AI. Few have developed the maturity to support it.
           </h1>
           <div className="text-left max-w-3xl mx-auto space-y-5 text-lg text-slate-600 leading-relaxed mb-10">
             <p>
@@ -65,42 +65,42 @@ export default function OverviewPage() {
               AI gives that drift the ability to scale.
             </p>
             <p>
-              It can be thousands of reasonable-looking decisions gradually moving the organization in the wrong
+              It can be thousands of reasonable-looking decisions gradually moving the business in the wrong
               direction. Individual AI errors may be manageable. At scale, they may not be.
             </p>
             <p>
-              The key question becomes: Does your organization have the foundation to reliably control what AI can
+              The key question becomes: Does your business have the foundation to reliably control what AI can
               do — while allowing AI the flexibility to create value?
             </p>
             <p>
-              The goal is an organizational foundation that keeps AI aligned with intent, detects drift early, and
+              The goal is a business foundation that keeps AI aligned with intent, detects drift early, and
               enables corrective action before small deviations become systemic problems.
             </p>
             <p>
               That&rsquo;s where SIMA360 comes in. SIMA360 provides the framework for building that foundation —
-              giving your organization the steering, brakes, and instrumentation to remain in control, and the
+              giving your business the steering, brakes, and instrumentation to remain in control, and the
               trained driver who knows how to use them, without limiting AI&rsquo;s potential.
             </p>
             <p>
-              SIMA360 assesses Strategy, Governance, Data, People, and Technology to identify organizational
+              SIMA360 assesses Strategy, Governance, Data, People, and Technology to identify business
               weaknesses and, more importantly, help you determine what to do about them — making AI-enabled
               outcomes more deliberate, explainable, consistent, and controllable.
             </p>
             <p>
               This isn&rsquo;t a generic maturity checklist. SIMA360 was developed by Dr. Charles Suscheck, a
               leading expert in software development and organizational behavior, drawing together nine
-              industry-leading evaluation frameworks and twelve months of focused research into how organizations
+              industry-leading evaluation frameworks and twelve months of focused research into how businesses
               actually govern complex technology at scale.
             </p>
             <p>
-              Because when AI participates in decisions that can harm people — or threaten the organization itself
+              Because when AI participates in decisions that can harm people — or threaten the business itself
               — control isn&rsquo;t optional. It&rsquo;s the responsibility that comes with using the technology.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
               <Link href="/sima-probe/assessment">
-                Take the sample assessment in 15 minutes and see where you stand <ArrowRight className="ml-2 w-4 h-4" />
+                Take the free basic assessment in 15 minutes and see where you stand <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
@@ -118,7 +118,7 @@ export default function OverviewPage() {
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-slate-900 mb-3">Who It's For</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              If any of these describe your organization, SIMA360 was built for you.
+              If any of these sound like you, your team, or your business, SIMA360 was built for you.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -128,7 +128,7 @@ export default function OverviewPage() {
               </div>
               <h3 className="font-semibold text-slate-900 mb-2">Leaders</h3>
               <p className="text-sm text-slate-600">
-                Need to move from AI experimentation to organizational capability
+                Need to move from AI experimentation to business capability
               </p>
             </div>
 
@@ -156,7 +156,7 @@ export default function OverviewPage() {
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Building2 className="w-6 h-6 text-blue-600" />
               </div>
-              <h3 className="font-semibold text-slate-900 mb-2">Organizations</h3>
+              <h3 className="font-semibold text-slate-900 mb-2">AI Adopters</h3>
               <p className="text-sm text-slate-600">
                 Have deployed AI but aren't producing reliable outcomes from it
               </p>
@@ -273,11 +273,11 @@ export default function OverviewPage() {
             <p className="text-lg text-slate-700 leading-relaxed">
               SIMA-Core defines the framework's vocabulary: the five perspectives, <Link href="/maturity" className="text-blue-600 hover:text-blue-800 underline">six maturity levels</Link>, and tool
               categories that every other component operates within. SIMA-Probe applies that vocabulary diagnostically,
-              measuring where the organization actually stands across all five perspectives. SIMA-Flow provides the
+              measuring where the business actually stands across all five perspectives. SIMA-Flow provides the
               improvement cycle architecture — the structured process for moving from current state to target state
               through disciplined, evidence-based iterations. SIMA-Kit supplies the level-specific guidance — entrance
               criteria, goals, strategies, exit criteria — those cycles require at every Maturity Level. SIMA-Ascend builds the practitioner
-              capability organizations need to run the system consistently and advance it over time.
+              capability businesses need to run the system consistently and advance it over time.
             </p>
           </div>
           <div className="text-center">
@@ -308,7 +308,7 @@ export default function OverviewPage() {
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-2">Starts Where You Actually Are</h3>
               <p className="text-slate-600">
-                Capability is what a system can do. Maturity is whether the organization can handle what it's doing.
+                Capability is what a system can do. Maturity is whether the business can handle what it's doing.
                 SIMA360 measures the second one first — five perspectives, six Maturity Levels — so improvement is
                 grounded in evidence, not assumption.
               </p>
@@ -321,7 +321,7 @@ export default function OverviewPage() {
               <h3 className="text-xl font-semibold text-slate-900 mb-2">No Single Point of Control</h3>
               <p className="text-slate-600">
                 AI touches strategy, governance, data, people, and technology at once — not one part of the
-                organization in isolation. A model can be flawless and still fail if nobody defined which decisions
+                business in isolation. A model can be flawless and still fail if nobody defined which decisions
                 it's allowed to influence, so SIMA360 tracks all five perspectives independently: the weakest one
                 determines whether the system holds up.
               </p>

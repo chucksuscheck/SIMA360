@@ -7,7 +7,7 @@ import { PricingCard } from "@/components/pricing-card"
 export const metadata: Metadata = {
   title: "Assess Pricing — SIMA-Probe™ | SIMA360™",
   description:
-    "SIMA-Probe pricing — start free with a basic assessment, then scale into adaptive assessments, AI-generated interpretation, and organization-wide plans.",
+    "SIMA-Probe pricing — start free with a basic assessment, then scale into adaptive assessments, AI-generated interpretation, and business-wide plans.",
   alternates: {
     canonical: "https://www.sima360.org/pricing/assess",
   },
@@ -71,20 +71,20 @@ const pricingCards = [
     featured: true,
   },
   {
-    name: "SIMA Organization",
+    name: "SIMA Business",
     price: "$599",
     period: "/year" as string | null,
-    audience: "Designed for departments and small organizations.",
+    audience: "Designed for departments and small businesses.",
     features: [
       "Multiple users",
       "Unlimited reassessments",
       "Historical trends",
       "AI recommendations",
-      "Organization dashboard",
+      "Business dashboard",
       "Ten SIMA-Kit downloads each year",
     ],
-    ctaLabel: "Start organization plan",
-    ctaHref: "mailto:info@sima360.org?subject=Start%20SIMA%20Organization%20Plan",
+    ctaLabel: "Start business plan",
+    ctaHref: "mailto:info@sima360.org?subject=Start%20SIMA%20Business%20Plan",
     checkClass: "text-indigo-600",
     badge: null,
     featured: false,

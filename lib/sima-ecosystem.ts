@@ -28,7 +28,7 @@ export const ECOSYSTEM_COMPONENTS: EcosystemComponent[] = [
     name: "SIMA-Flow™",
     href: "/sima-flow",
     description:
-      "The execution engine — the macro Core Cycle for organizational advancement and the FLAI cycle for disciplined, project-level learning within it.",
+      "The execution engine — the macro Core Cycle for business advancement and the FLAI cycle for disciplined, project-level learning within it.",
   },
   {
     slug: "sima-kit",

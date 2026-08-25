@@ -33,7 +33,7 @@ export const toolCategories: ToolCategory[] = [
     name: "Baseline",
     tagline: "Foundational tier with passive AI tools requiring human initiation.",
     shortDescription:
-      "Low autonomy, high guidance, static knowledge bases. The entry point — every organization already has some of these in place.",
+      "Low autonomy, high guidance, static knowledge bases. The entry point — every business already has some of these in place.",
     borderClass: "border-slate-400",
     badgeClass: "bg-slate-100 text-slate-800 border-slate-300",
     bgGradientClass: "bg-gradient-to-br from-slate-50 to-gray-100",
@@ -73,7 +73,7 @@ export const toolCategories: ToolCategory[] = [
       {
         level: "Formalizing",
         status: "Safe",
-        reason: "Nothing here would be exposed if the organization's structure were pressure-tested — there's no autonomy to test.",
+        reason: "Nothing here would be exposed if the business's structure were pressure-tested — there's no autonomy to test.",
       },
       {
         level: "Optimizing",
@@ -276,7 +276,7 @@ export const toolCategories: ToolCategory[] = [
     number: 5,
     slug: "autonomous-execution",
     name: "Autonomous Execution",
-    tagline: "The most advanced AI systems, operating independently across the organization.",
+    tagline: "The most advanced AI systems, operating independently across the business.",
     shortDescription:
       "Full autonomy, continuous learning, self-regulation. The highest-risk, highest-capability tier — and the one that demands the most governance.",
     borderClass: "border-sky-400",

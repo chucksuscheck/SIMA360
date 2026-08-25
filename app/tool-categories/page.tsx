@@ -55,7 +55,7 @@ export default function ToolCategoriesPage() {
             strategic, independent actors.
           </p>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto">
-            The goal isn't to use every category. It's matching tool autonomy to organizational maturity — using
+            The goal isn't to use every category. It's matching tool autonomy to business maturity — using
             complex tools at low maturity levels is ill-advised.
           </p>
         </div>
@@ -99,7 +99,7 @@ export default function ToolCategoriesPage() {
       {/* CTA */}
       <section className="py-16 px-4 bg-slate-900 text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Find Out Where Your Organization Stands</h2>
+          <h2 className="text-3xl font-bold mb-4">Find Out Where Your Business Stands</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             SIMA-Probe measures your current maturity level and tells you which tool categories are safe to adopt
             next.

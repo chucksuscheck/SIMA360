@@ -5,7 +5,7 @@ import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 
 const HOMEPAGE_DESCRIPTION =
-  "AI risk doesn't always announce itself as failure. Sometimes it emerges quietly as drift — and AI gives that drift the ability to scale. SIMA360 assesses five critical areas — Strategy, Governance, Data, People, and Technology — to reveal where organizational maturity is limiting AI results, then turns that diagnosis into practical corrective action."
+  "AI risk doesn't always announce itself as failure. Sometimes it emerges quietly as drift — and AI gives that drift the ability to scale. SIMA360 assesses five critical areas — Strategy, Governance, Data, People, and Technology — to reveal where business maturity is limiting AI results, then turns that diagnosis into practical corrective action."
 
 export const metadata: Metadata = {
   title: "SIMA360™ — Structured AI Maturity Accelerator",
@@ -40,7 +40,7 @@ const STEPS = [
   {
     icon: ClipboardCheck,
     title: "Assess",
-    description: "A structured, 15-minute assessment across five organizational areas.",
+    description: "A free, basic 15-minute assessment across five business areas.",
   },
   {
     icon: Search,
@@ -87,8 +87,8 @@ export default function HomePage() {
             AI gives that drift the ability to scale.
           </h1>
           <p className="text-lg leading-snug" style={{ color: "#475569" }}>
-            SIMA360 finds the gaps in your organization&rsquo;s readiness for AI — before AI magnifies them —
-            and builds the foundation for reliable AI.
+            SIMA360 finds the gaps in your business&rsquo;s readiness for AI — before AI magnifies them —
+            and helps you build the foundation for reliable AI.
           </p>
         </div>
       </section>
@@ -99,7 +99,7 @@ export default function HomePage() {
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold" style={{ color: "#0f172a" }}>Who It's For</h2>
             <p className="text-lg max-w-2xl mx-auto mt-3" style={{ color: "#475569" }}>
-              If any of these describe your organization, SIMA360 was built for you.
+              If any of these sound like you, your team, or your business, SIMA360 was built for you.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -109,7 +109,7 @@ export default function HomePage() {
               </div>
               <h3 className="font-semibold mb-2" style={{ color: "#0f172a" }}>Leaders</h3>
               <p className="text-sm" style={{ color: "#475569" }}>
-                Need to move from AI experimentation to organizational capability
+                Need to move from AI experimentation to business capability
               </p>
             </div>
 
@@ -137,7 +137,7 @@ export default function HomePage() {
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Building2 className="w-6 h-6 text-blue-600" />
               </div>
-              <h3 className="font-semibold mb-2" style={{ color: "#0f172a" }}>Organizations</h3>
+              <h3 className="font-semibold mb-2" style={{ color: "#0f172a" }}>AI Adopters</h3>
               <p className="text-sm" style={{ color: "#475569" }}>
                 Have deployed AI but aren't producing reliable outcomes from it
               </p>
@@ -153,12 +153,12 @@ export default function HomePage() {
             className="text-lg sm:text-xl font-semibold max-w-2xl mx-auto mb-6 leading-snug"
             style={{ color: "#0f172a" }}
           >
-            It assesses five critical areas of your organizational maturity to reveal where AI may be putting
+            It assesses five critical areas of your business maturity to reveal where AI may be putting
             you at risk. Then it turns that diagnosis into practical corrective action.
           </p>
           <div className="space-y-2 text-base leading-snug mb-6" style={{ color: "#475569" }}>
             <p>
-              Don&rsquo;t just ask what your AI can do. Ask whether your organization is ready for what it can do.
+              Don&rsquo;t just ask what your AI can do. Ask whether your business is ready for what it can do.
             </p>
           </div>
           <Button
@@ -166,7 +166,7 @@ export default function HomePage() {
             asChild
             className="mb-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
           >
-            <Link href="/sima-probe/assessment">Take the sample assessment in 15 minutes and see where you stand</Link>
+            <Link href="/sima-probe/assessment">Take the free basic assessment in 15 minutes and see where you stand</Link>
           </Button>
           <p className="text-sm font-semibold tracking-wide mb-10" style={{ color: "#64748b" }}>
             SIMA360. Assess. Diagnose. Improve.

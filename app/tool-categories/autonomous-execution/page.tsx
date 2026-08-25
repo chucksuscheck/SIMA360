@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Autonomous Execution — AI Tool Categories | SIMA360™",
   description:
-    "Autonomous Execution: the most advanced AI systems, operating independently across the organization. Full autonomy, continuous learning, self-regulation.",
+    "Autonomous Execution: the most advanced AI systems, operating independently across the business. Full autonomy, continuous learning, self-regulation.",
   alternates: {
     canonical: "https://www.sima360.org/tool-categories/autonomous-execution",
   },

@@ -186,7 +186,7 @@ export const QUESTIONS: Question[] = [
     capability: 'Value Realization',
     type: 'supporting',
     weight: 7,
-    text: 'What operational outcome metric — not a usage metric — did the organization review for AI in the last 90 days?',
+    text: 'What operational outcome metric — not a usage metric — did the business review for AI in the last 90 days?',
     options: [
       { value: 0, label: 'None — success is deployment' },
       { value: 1, label: 'Usage counts only' },
@@ -236,7 +236,7 @@ export const QUESTIONS: Question[] = [
     capability: 'Representational Stability',
     type: 'core',
     weight: 15,
-    text: 'When did your organization last refresh the information your most important AI system learned from, and what caused that refresh to happen?',
+    text: 'When did your business last refresh the information your most important AI system learned from, and what caused that refresh to happen?',
     options: [
       { value: 0, label: 'Never updated, or we do not know' },
       { value: 1, label: 'Updated only when something visibly goes wrong' },
@@ -252,7 +252,7 @@ export const QUESTIONS: Question[] = [
     capability: 'Feedback Loop Detection',
     type: 'core',
     weight: 13,
-    text: 'If AI-written content quietly worked its way into the data your organization treats as authoritative — the records or datasets other decisions get built on — would anyone know?',
+    text: 'If AI-written content quietly worked its way into the data your business treats as authoritative — the records or datasets other decisions get built on — would anyone know?',
     options: [
       { value: 0, label: 'We have not considered this a risk' },
       { value: 1, label: 'We know it is a risk but do not check for it' },
@@ -388,7 +388,7 @@ export const QUESTIONS: Question[] = [
       { value: 1, label: 'Tracked informally, not with real numbers' },
       { value: 2, label: 'Measured for one specific decision process' },
       { value: 3, label: 'Measured for all our key decision processes' },
-      { value: 4, label: 'Measured consistently across the organization, with a formal framework' },
+      { value: 4, label: 'Measured consistently across the business, with a formal framework' },
       { value: 5, label: 'These measurements actively drive ongoing improvements' },
     ],
   },
@@ -464,7 +464,7 @@ export const QUESTIONS: Question[] = [
     capability: 'Vendor & Dependency Management',
     type: 'supporting',
     weight: 8,
-    text: 'If the outside AI service your organization depends on changed how it behaves overnight — without warning — what would actually happen?',
+    text: 'If the outside AI service your business depends on changed how it behaves overnight — without warning — what would actually happen?',
     options: [
       { value: 0, label: 'We would find out when something breaks' },
       { value: 1, label: 'We would notice eventually' },

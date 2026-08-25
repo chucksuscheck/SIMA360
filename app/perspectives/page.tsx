@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "AI Perspectives — SIMA360™",
   description:
-    "The five SIMA360 perspectives — Strategy, Governance, Data, People, and Technology — the organizing principles for assessing organizational readiness and implementing AI in a scalable, ethical, and value-generating manner.",
+    "The five SIMA360 perspectives — Strategy, Governance, Data, People, and Technology — the organizing principles for assessing business readiness and implementing AI in a scalable, ethical, and value-generating manner.",
   alternates: {
     canonical: "https://www.sima360.org/perspectives",
   },
@@ -51,7 +51,7 @@ const perspectives = [
     name: "Data",
     href: "/sima-core/data",
     color: "text-cyan-600",
-    description: "Determines whether the organization keeps learning from the world or from itself",
+    description: "Determines whether the business keeps learning from the world or from itself",
     components: [
       "Accuracy and Completeness",
       "Relevance and Representativeness",
@@ -162,7 +162,7 @@ export default function PerspectivesPage() {
       {/* CTA */}
       <section className="py-16 px-4 bg-slate-900 text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Find Out Where Your Organization Stands</h2>
+          <h2 className="text-3xl font-bold mb-4">Find Out Where Your Business Stands</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             SIMA-Probe measures your current maturity level across all five perspectives and tells you exactly what to address next.
           </p>

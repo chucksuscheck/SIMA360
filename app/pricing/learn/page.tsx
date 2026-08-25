@@ -69,7 +69,7 @@ const ascendPricing: PricingCardData[] = [
     name: "Enterprise training",
     price: "Included",
     period: null,
-    audience: "For organizations already on a SIMA Enterprise plan.",
+    audience: "For businesses already on a SIMA Enterprise plan.",
     features: [
       "Bundled with SIMA Enterprise",
       "Custom cohort scheduling",

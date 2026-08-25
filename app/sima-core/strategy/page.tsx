@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Strategy Perspective — AI Perspectives | SIMA360™",
   description:
-    "The Strategy Perspective determines which decisions AI is actually supposed to improve — and what the organization holds constant while it finds out. Eight components, each answered for both the people and the AI system.",
+    "The Strategy Perspective determines which decisions AI is actually supposed to improve — and what the business holds constant while it finds out. Eight components, each answered for both the people and the AI system.",
   alternates: {
     canonical: "https://www.sima360.org/sima-core/strategy",
   },
@@ -59,7 +59,7 @@ const maturityLevels = [
     name: "Leading",
     color: "blue",
     description:
-      "Strategy isn't separate from operations — it's the mechanism decisions improve through. The organization anticipates where its approach will fail and adjusts before degradation shows up.",
+      "Strategy isn't separate from operations — it's the mechanism decisions improve through. The business anticipates where its approach will fail and adjusts before degradation shows up.",
   },
 ]
 
@@ -111,7 +111,7 @@ export default function StrategyPerspectivePage() {
           </div>
 
           <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
-            Strategy determines which decisions AI is actually supposed to improve, and what the organization holds
+            Strategy determines which decisions AI is actually supposed to improve, and what the business holds
             constant while it finds out. It runs on two tracks at once — a Human-Direction System for aligning
             people, and an AI-Application System for applying, watching, and growing the AI itself.
           </p>
@@ -302,7 +302,7 @@ export default function StrategyPerspectivePage() {
                 <p className="text-sm text-blue-800">
                   Strategy sets the target the other four perspectives have to hit — pull on any one perspective and
                   the other four move. Governance rigor, clean data, calibrated judgment, and technology readiness are
-                  all wasted if the organization never named which decisions AI is actually supposed to improve.
+                  all wasted if the business never named which decisions AI is actually supposed to improve.
                 </p>
               </CardContent>
             </Card>
@@ -334,7 +334,7 @@ export default function StrategyPerspectivePage() {
           },
           {
             symptom:
-              "Model accuracy climbs while customer trust erodes, or escalations get worse — the AI's numbers and the organization's actual outcomes stop matching up.",
+              "Model accuracy climbs while customer trust erodes, or escalations get worse — the AI's numbers and the business's actual outcomes stop matching up.",
             explanation:
               "Traces to Measures of Success and Learning and Adaptation breaking down together — the metrics were tracked, but nothing fed what they showed back into how either system operates.",
           },

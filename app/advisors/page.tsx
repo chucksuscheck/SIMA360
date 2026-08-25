@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Who We Are — Advisory Board | SIMA360™",
   description:
-    "Meet the SIMA360 advisory board — practitioners and researchers with direct experience in AI governance, enterprise risk, and organizational transformation who pressure-test the framework against real-world implementation.",
+    "Meet the SIMA360 advisory board — practitioners and researchers with direct experience in AI governance, enterprise risk, and business transformation who pressure-test the framework against real-world implementation.",
   alternates: {
     canonical: "https://www.sima360.org/advisors",
   },
@@ -44,7 +44,7 @@ const AdvisorsPage = () => {
             <h1 className="text-4xl font-bold text-slate-900 mb-6">Advisory Board</h1>
             <p className="text-lg text-slate-600">
               SIMA360™ is guided by an advisory board of practitioners and researchers with direct experience in AI
-              governance, enterprise risk, and organizational transformation. Their role is to pressure-test the
+              governance, enterprise risk, and business transformation. Their role is to pressure-test the
               framework against real-world implementation — not to rubber-stamp it.
             </p>
           </div>
@@ -60,11 +60,11 @@ const AdvisorsPage = () => {
                     <CardTitle className="text-lg">Dr. Charles (Chuck) Suscheck</CardTitle>
                     <CardDescription className="text-sm mt-0.5">Founder & Advisory Board Chair</CardDescription>
                     <p className="text-slate-700 text-sm mt-3">
-                      Professional Scrum Trainer with Scrum.org for 14 years, working directly with organizations
+                      Professional Scrum Trainer with Scrum.org for 14 years, working directly with businesses
                       navigating the shift from traditional delivery models to AI-augmented ways of working. Author
                       of the forthcoming book <em>The AI Rush — Too Much Too Soon!</em>, which examines the gap
-                      between AI capability and organizational maturity — the premise SIMA360 is built on. Founded
-                      SIMA360 to give that argument a practical, structured form organizations can apply rather than
+                      between AI capability and business maturity — the premise SIMA360 is built on. Founded
+                      SIMA360 to give that argument a practical, structured form businesses can apply rather than
                       just read about, and as Chair, sets the board's mandate to pressure-test the framework rather
                       than simply validate it.
                     </p>
@@ -91,12 +91,12 @@ const AdvisorsPage = () => {
                       Advisory Board Member — Enterprise Transformation Leader, SAFe Program Consultant (SPC)
                     </CardDescription>
                     <p className="text-slate-700 text-sm mt-3">
-                      25+ years leading enterprise transformation initiatives across large, complex organizations,
+                      25+ years leading enterprise transformation initiatives across large, complex businesses,
                       with a practitioner's focus on turning strategic intent into disciplined execution. Gained
                       hands-on experience operationalizing AI governance principles — human approval gates,
                       verification over assumed trust, and deterministic-vs-judgment tool selection — not as theory
                       but through building and running his own production AI system. As a SAFe Program Consultant,
-                      brings a structured, framework-driven lens to how organizations sequence and scale change, and
+                      brings a structured, framework-driven lens to how businesses sequence and scale change, and
                       advises SIMA360's Strategy dimension, pressure-testing whether the framework's guidance holds
                       up against how transformation actually unfolds inside an enterprise.
                     </p>
@@ -125,7 +125,7 @@ const AdvisorsPage = () => {
                     </CardDescription>
                     <p className="text-slate-700 text-sm mt-3">
                       35 years in enterprise IT, including large-scale database work at IBM and Verizon, giving him
-                      a firsthand view of how technology decisions play out at organizational scale over decades,
+                      a firsthand view of how technology decisions play out at business scale over decades,
                       not just individual projects. That practitioner background now informs his work in curriculum
                       design and technology education in the College of Adult and Graduate Studies, where he trains
                       the next generation of IT professionals. Contributed directly to SIMA360's training and
@@ -190,7 +190,7 @@ const AdvisorsPage = () => {
                       Leads agile transformation for AEP's electric vehicle charging business unit, driving how one
                       of the country's largest regulated utilities adapts its delivery practices to a fast-moving,
                       infrastructure-heavy business line. That work requires balancing agility with the operational
-                      discipline and regulatory scrutiny inherent to utility-scale organizations — a tension
+                      discipline and regulatory scrutiny inherent to utility-scale businesses — a tension
                       directly relevant to how AI governance has to function inside similarly regulated
                       environments. Advises SIMA360's People and Process dimensions, bringing enterprise-scale
                       operational discipline drawn from a highly regulated industry where change-management failures

@@ -48,7 +48,7 @@ export default function TheBookPage() {
               <p className="text-xl text-slate-600 mb-8">
                 The five perspectives, six maturity levels, FLAI methodology, and diagnostic principles that define
                 SIMA360 did not emerge in isolation. They are the intellectual foundation of this book — developed to
-                explain why organizations consistently fail to convert AI activity into organizational maturity.
+                explain why businesses consistently fail to convert AI activity into business maturity.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600" asChild>
@@ -89,15 +89,15 @@ export default function TheBookPage() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">The Problem the Book Addresses</h2>
             <p className="text-lg text-slate-700 mb-6 leading-relaxed">
-              Most organizations evaluate AI maturity by measuring deployment activity: how many tools are in use, how
+              Most businesses evaluate AI maturity by measuring deployment activity: how many tools are in use, how
               many projects are running, how many employees have been trained. This is the wrong diagnostic. Activity
-              does not produce capability. Capability does not produce maturity. Organizational AI maturity is
-              determined by the quality of the operational conditions surrounding AI — and most organizations have
+              does not produce capability. Capability does not produce maturity. Business AI maturity is
+              determined by the quality of the operational conditions surrounding AI — and most businesses have
               significant, measurable gaps in those conditions regardless of how much AI they have deployed.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
               The book names this the maturity gap. It explains why it exists, how to diagnose it across five
-              organizational perspectives, and how to close it through disciplined improvement cycles. SIMA360 is the
+              business perspectives, and how to close it through disciplined improvement cycles. SIMA360 is the
               operational system built to apply those ideas.
             </p>
           </div>
@@ -184,7 +184,7 @@ export default function TheBookPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-6">Start Here</h2>
             <p className="text-lg text-slate-700 mb-8 leading-relaxed">
               The book is the recommended starting point before engaging any SIMA360 tool, assessment, or training
-              program. Organizations that complete the book will have a clear diagnostic framework, a vocabulary for
+              program. Businesses that complete the book will have a clear diagnostic framework, a vocabulary for
               describing their maturity condition, and a basis for deciding which SIMA360 components address their most
               significant gaps.
             </p>
@@ -203,7 +203,7 @@ export default function TheBookPage() {
           <h2 className="text-3xl font-bold mb-4">Ready to operationalize the framework?</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             SIMA360 provides the tools, assessments, and practitioner development programs to apply the book's ideas at
-            the organizational level.
+            the business level.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="bg-white text-slate-900 hover:bg-slate-100" asChild>
@@ -217,7 +217,7 @@ export default function TheBookPage() {
               className="border-slate-400 text-slate-200 hover:bg-slate-800 bg-transparent"
               asChild
             >
-              <Link href="/sima-probe/assessment">Assess Your Organization</Link>
+              <Link href="/sima-probe/assessment">Assess Your Business</Link>
             </Button>
           </div>
         </div>

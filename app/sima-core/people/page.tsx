@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "People Perspective — AI Perspectives | SIMA360™",
   description:
-    "The People Perspective determines how AI outputs get interpreted, trusted, challenged, or waved through — and whether the organization is building calibrated judgment or just moving fast. Five components, each answered for both the people and the AI system.",
+    "The People Perspective determines how AI outputs get interpreted, trusted, challenged, or waved through — and whether the business is building calibrated judgment or just moving fast. Five components, each answered for both the people and the AI system.",
   alternates: {
     canonical: "https://www.sima360.org/sima-core/people",
   },
@@ -131,7 +131,7 @@ export default function PeoplePerspectivePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Five Components</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Five components build calibrated judgment across an organization — and they only work as one connected
+              Five components build calibrated judgment across a business — and they only work as one connected
               system, not five separate activities.
             </p>
           </div>
@@ -150,7 +150,7 @@ export default function PeoplePerspectivePage() {
               <CardContent>
                 <p className="text-sm text-slate-600">
                   Not a rigid manual — just explicit enough that no team is left inventing its own rules. Can your
-                  organization say, in one sentence, why the same recommendation got followed by one team last week
+                  business say, in one sentence, why the same recommendation got followed by one team last week
                   and ignored by another?
                 </p>
               </CardContent>
@@ -304,7 +304,7 @@ export default function PeoplePerspectivePage() {
               {
                 component: "SIMA-Flow™",
                 href: "/sima-flow",
-                role: "Structures improvement cycles for building calibrated judgment — from closing a specific interpretation gap to building organization-wide guarding against overtrust.",
+                role: "Structures improvement cycles for building calibrated judgment — from closing a specific interpretation gap to building business-wide guarding against overtrust.",
               },
               {
                 component: "SIMA-Kit™",
@@ -314,7 +314,7 @@ export default function PeoplePerspectivePage() {
               {
                 component: "SIMA-Ascend™",
                 href: "/sima-ascend",
-                role: "Is the People perspective's primary delivery mechanism — structured training programs that build AI literacy, responsible AI competency, and practitioner capability at every level of the organization.",
+                role: "Is the People perspective's primary delivery mechanism — structured training programs that build AI literacy, responsible AI competency, and practitioner capability at every level of the business.",
               },
             ].map((item) => (
               <Card key={item.component} className="hover:shadow-md transition-shadow">

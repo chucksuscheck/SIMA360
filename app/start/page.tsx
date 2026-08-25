@@ -17,7 +17,7 @@ import { Navigation } from "@/components/navigation"
 export const metadata: Metadata = {
   title: "Get Started — Find Your Entry Point | SIMA360™",
   description:
-    "New to SIMA360, running an AI project, or building practitioner capability? Find the right starting point for your organization.",
+    "New to SIMA360, running an AI project, or building practitioner capability? Find the right starting point for your business.",
   alternates: {
     canonical: "https://www.sima360.org/start",
   },
@@ -47,8 +47,8 @@ const entryPoints = [
     badgeColor: "bg-blue-100 text-blue-800 border-blue-200",
     borderColor: "border-t-blue-500",
     label: "Measure Where You Are",
-    heading: "Assess Your Organization",
-    body: "If you want to understand your organization's current AI maturity across all five perspectives, start with SIMA-Probe. The Foundation tier is free.",
+    heading: "Assess Your Business",
+    body: "If you want to understand your business's current AI maturity across all five perspectives, start with SIMA-Probe. The Foundation tier is free.",
     primaryLabel: "Start Free Assessment",
     primaryHref: "/sima-probe/assessment",
     primaryExternal: false,
@@ -132,7 +132,7 @@ export default function StartPage() {
               Where Do You Want to Start?
             </h1>
             <p className="text-xl text-slate-600">
-              SIMA360 has multiple entry points depending on where your organization is and what you need. Choose the
+              SIMA360 has multiple entry points depending on where your business is and what you need. Choose the
               path that fits.
             </p>
           </div>

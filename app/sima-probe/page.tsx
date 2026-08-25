@@ -22,7 +22,7 @@ import {
 export const metadata: Metadata = {
   title: "SIMA-Probe — AI Maturity Assessment | SIMA360™",
   description:
-    "SIMA-Probe is SIMA360's behavioral diagnostic instrument — evaluating organizational AI maturity across the five Perspectives through evidence of how decisions actually hold up under pressure, revealing which perspective is the organization's current constraint.",
+    "SIMA-Probe is SIMA360's behavioral diagnostic instrument — evaluating business AI maturity across the five Perspectives through evidence of how decisions actually hold up under pressure, revealing which perspective is the business's current constraint.",
   alternates: {
     canonical: "https://www.sima360.org/sima-probe",
   },
@@ -57,7 +57,7 @@ export default function SIMAProbe() {
             </h1>
           </div>
           <p className="text-lg text-slate-700 leading-relaxed mb-12 max-w-3xl">
-            Diagnose your organization's AI maturity across the five Perspectives — behavioral evidence of how
+            Diagnose your business's AI maturity across the five Perspectives — behavioral evidence of how
             decisions actually hold up, not a checklist of what's documented
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -103,16 +103,16 @@ export default function SIMAProbe() {
               The assessment evaluates each of the five Perspectives — <strong>Strategy</strong>,{" "}
               <strong>Governance</strong>, <strong>Data</strong>, <strong>People</strong>, and{" "}
               <strong>Technology</strong> — independently against the six Maturity Levels, producing a
-              perspective-by-perspective maturity profile rather than a single organizational score. That
+              perspective-by-perspective maturity profile rather than a single business score. That
               differentiation is the point: it reveals which perspective is currently constraining the
-              organization's AI reliability, since the system behaves at the level of its least mature perspective,
+              business's AI reliability, since the system behaves at the level of its least mature perspective,
               not its most advanced one. Knowing which perspective is the constraint is what makes improvement
               sequencing possible.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed mb-8">
               The result isn't a score to interpret on your own. Each Maturity Level determination connects directly
               into the Set Groundwork phase of the SIMA-Flow™ Core Cycle — triggering the entrance criteria, goals,
-              strategies, and exit criteria SIMA-Kit™ provides for the actual level and perspective the organization
+              strategies, and exit criteria SIMA-Kit™ provides for the actual level and perspective the business
               is operating in.
             </p>
             <p className="text-base text-slate-500 leading-relaxed">
@@ -189,7 +189,7 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600">
-                    Triggers appropriate recommendations from SIMA-Kit™, matched to organizational readiness
+                    Triggers appropriate recommendations from SIMA-Kit™, matched to business readiness
                   </p>
                 </CardContent>
               </Card>
@@ -238,7 +238,7 @@ export default function SIMAProbe() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">The SIMA360 Maturity Levels</h2>
             <p className="text-lg text-slate-700 mb-4 text-center leading-relaxed">
-              SIMA-Probe evaluates organizational readiness across all Perspectives to determine which maturity level
+              SIMA-Probe evaluates business readiness across all Perspectives to determine which maturity level
               accurately reflects current maturity.
             </p>
             <p className="text-center mb-12">
@@ -289,7 +289,7 @@ export default function SIMAProbe() {
                 <CardContent>
                   <p className="text-slate-700">
                     Individual efforts work and can be defended on their own terms, but they don't generalize past the
-                    specific context that produced them. The organization is productive in ways that don't add up —
+                    specific context that produced them. The business is productive in ways that don't add up —
                     opportunism, not architecture, is driving outcomes.
                   </p>
                 </CardContent>
@@ -336,7 +336,7 @@ export default function SIMAProbe() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-700">
-                    Improvement is built into how the organization operates day to day, rather than something applied
+                    Improvement is built into how the business operates day to day, rather than something applied
                     to it periodically. This isn't the final destination — it's the beginning of stewardship.
                   </p>
                 </CardContent>
@@ -434,7 +434,7 @@ export default function SIMAProbe() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Assessment results visible only to authorized users within your organization</span>
+                    <span>Assessment results visible only to authorized users within your business</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />

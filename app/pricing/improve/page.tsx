@@ -7,7 +7,7 @@ import { PricingCard, type PricingCardData } from "@/components/pricing-card"
 export const metadata: Metadata = {
   title: "Improve Pricing — SIMA-Flow™ | SIMA360™",
   description:
-    "SIMA-Flow consulting pricing — Assessment Workshops, Governance Engagements, Organizational Roadmaps, Executive Advisory retainers, and Enterprise Transformation engagements.",
+    "SIMA-Flow consulting pricing — Assessment Workshops, Governance Engagements, Business Roadmaps, Executive Advisory retainers, and Enterprise Transformation engagements.",
   alternates: {
     canonical: "https://www.sima360.org/pricing/improve",
   },
@@ -35,7 +35,7 @@ const flowPricing: PricingCardData[] = [
     name: "Governance Engagement",
     price: "$10,000–25,000",
     period: null,
-    audience: "For organizations establishing policy and compliance ahead of AI execution.",
+    audience: "For businesses establishing policy and compliance ahead of AI execution.",
     features: [
       "Perspective-specific preparation activities",
       "Governance and compliance framework setup",
@@ -49,10 +49,10 @@ const flowPricing: PricingCardData[] = [
     featured: true,
   },
   {
-    name: "Organizational Roadmap",
+    name: "Business Roadmap",
     price: "$25,000+",
     period: null,
-    audience: "For organizations translating an assessment into a sequenced, org-wide execution plan.",
+    audience: "For businesses translating an assessment into a sequenced, org-wide execution plan.",
     features: [
       "Multi-perspective execution roadmap",
       "FLAI cycle sequencing across teams",
@@ -60,7 +60,7 @@ const flowPricing: PricingCardData[] = [
       "Progress checkpoints tied to reassessment",
     ],
     ctaLabel: "Schedule a conversation",
-    ctaHref: "mailto:info@sima360.org?subject=Organizational%20Roadmap%20Inquiry",
+    ctaHref: "mailto:info@sima360.org?subject=Business%20Roadmap%20Inquiry",
     checkClass: "text-lime-700",
     badge: null,
     featured: false,
@@ -86,7 +86,7 @@ const flowPricing: PricingCardData[] = [
     name: "Enterprise Transformation",
     price: "Included",
     period: null,
-    audience: "For organizations already on a SIMA Enterprise plan.",
+    audience: "For businesses already on a SIMA Enterprise plan.",
     features: [
       "Bundled with SIMA Enterprise",
       "Embedded practitioner support",
@@ -126,7 +126,7 @@ export default function PricingImprovePage() {
             <p className="text-xs font-semibold uppercase tracking-widest text-lime-700 mb-2">Improve with SIMA-Flow™</p>
             <h1 className="text-3xl font-bold text-slate-900 mb-4">Accelerate transformation with expert guidance</h1>
             <p className="text-lg text-slate-600">
-              Consulting engagements that apply the Core Cycle directly inside your organization.
+              Consulting engagements that apply the Core Cycle directly inside your business.
             </p>
           </div>
 

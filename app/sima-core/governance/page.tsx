@@ -38,7 +38,7 @@ const maturityLevels = [
     name: "Applying",
     color: "purple",
     description:
-      "Governance exists in parts of the organization — some decisions are well-controlled, others aren't, and similar decisions get handled differently across teams. The work is extension: making it consistent everywhere.",
+      "Governance exists in parts of the business — some decisions are well-controlled, others aren't, and similar decisions get handled differently across teams. The work is extension: making it consistent everywhere.",
   },
   {
     level: 4,

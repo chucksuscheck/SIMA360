@@ -42,7 +42,7 @@ const pricingCards: PricingCardData[] = [
     name: "Premium Playbooks",
     price: "$149–299",
     period: null,
-    audience: "For organizations executing a coordinated rollout.",
+    audience: "For businesses executing a coordinated rollout.",
     features: [
       "AI Governance Playbook",
       "Executive AI Adoption Guide",
@@ -73,7 +73,7 @@ const pricingCards: PricingCardData[] = [
     price: "By maturity level",
     period: null,
     audience:
-      "Everything required for an organization operating at one AI Maturity Level, organized by that level.",
+      "Everything required for a business operating at one AI Maturity Level, organized by that level.",
     features: ["Exploring Toolkit", "Applying Toolkit", "Formalizing Toolkit", "Optimizing Toolkit", "Leading Toolkit"],
     ctaLabel: "Browse capability packs",
     ctaHref: "mailto:info@sima360.org?subject=Capability%20Packs%20Inquiry",
@@ -112,7 +112,7 @@ const kitSubscriptions: PricingCardData[] = [
     name: "Enterprise Library",
     price: "Included",
     period: null,
-    audience: "For organizations already on a SIMA Enterprise plan.",
+    audience: "For businesses already on a SIMA Enterprise plan.",
     features: ["Bundled with SIMA Enterprise"],
     ctaLabel: "Included with Enterprise",
     checkClass: "text-orange-600",
@@ -148,7 +148,7 @@ export default function PricingEquipPage() {
             </p>
             <h1 className="text-3xl font-bold text-slate-900 mb-4">Buy exactly the resources you need</h1>
             <p className="text-lg text-slate-600">
-              No bloated bundle — organizations purchase precisely the implementation resources their maturity level
+              No bloated bundle — businesses purchase precisely the implementation resources their maturity level
               calls for.
             </p>
           </div>

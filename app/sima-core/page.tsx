@@ -92,7 +92,7 @@ export default function SimaCorePage() {
               SIMA-Core is the vocabulary layer of the SIMA360 framework. It defines the terms, structures, and
               categories that every other component operates within. It does not prescribe action — that is
               SIMA-Flow's role. It does not supply implementation resources — that is SIMA-Kit's role. It does not
-              assess your organization — that is SIMA-Probe's role. It does not build practitioner capability — that
+              assess your business — that is SIMA-Probe's role. It does not build practitioner capability — that
               is SIMA-Ascend's role.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
@@ -129,7 +129,7 @@ export default function SimaCorePage() {
               <CardContent>
                 <p className="text-sm text-slate-600 mb-4">
                   Strategy, Governance, Data, People, and Technology perspectives serve as organizing principles for
-                  assessing organizational readiness.
+                  assessing business readiness.
                 </p>
               </CardContent>
             </Card>
@@ -175,7 +175,7 @@ export default function SimaCorePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Strategic Perspectives Model</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Five perspectives that serve as organizing principles for assessing organizational readiness and
+              Five perspectives that serve as organizing principles for assessing business readiness and
               implementing AI in a scalable, ethical, and value-generating manner
             </p>
           </div>
@@ -226,7 +226,7 @@ export default function SimaCorePage() {
               <CardHeader>
                 <Database className="w-8 h-8 text-cyan-600 mb-2" />
                 <CardTitle>Data Perspective</CardTitle>
-                <CardDescription>Determines whether the organization keeps learning from the world or from itself</CardDescription>
+                <CardDescription>Determines whether the business keeps learning from the world or from itself</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="text-sm text-slate-600 space-y-2 mb-4">
@@ -355,7 +355,7 @@ export default function SimaCorePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600">
-                  The organization is productive in ways that don't add up — opportunism, not architecture, is
+                  The business is productive in ways that don't add up — opportunism, not architecture, is
                   driving outcomes.
                 </p>
               </CardContent>
@@ -410,7 +410,7 @@ export default function SimaCorePage() {
                   <CardTitle className="text-lg"><Link href="/maturity/leading" className="hover:text-blue-600 hover:underline transition-colors">Leading</Link></CardTitle>
                 </div>
                 <CardDescription>
-                  Improvement is built into how the organization operates day to day.
+                  Improvement is built into how the business operates day to day.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -543,7 +543,7 @@ export default function SimaCorePage() {
                 </div>
                 <CardTitle className="text-center">Autonomous Execution</CardTitle>
                 <CardDescription className="text-center">
-                  Most advanced AI systems operating independently across the organization
+                  Most advanced AI systems operating independently across the business
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -574,7 +574,7 @@ export default function SimaCorePage() {
           <div className="mt-6 p-6 bg-blue-50 border border-blue-200 rounded-lg">
             <h3 className="text-lg font-semibold text-blue-900 mb-2">Relationship to AI Maturity Levels</h3>
             <p className="text-blue-800">
-              The AI Tool Categories roughly parallel the AI Maturity Levels — organizations at earlier Levels are
+              The AI Tool Categories roughly parallel the AI Maturity Levels — businesses at earlier Levels are
               generally better served by lower-autonomy categories, while higher Levels create the governance and
               oversight needed to safely adopt higher-autonomy categories. The relationship is directional, not
               one-to-one: with five categories and six Levels, maturity is the gating condition for tool adoption,
@@ -619,7 +619,7 @@ export default function SimaCorePage() {
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">Risk-Based Approach</h3>
                 <p className="text-slate-600 text-sm mb-4">
-                  As organizations mature, they can safely enact AI tools at higher levels with controlled risk.
+                  As businesses mature, they can safely enact AI tools at higher levels with controlled risk.
                   Starting with lower-level tools enhances learning in a less impactful environment.
                 </p>
               </CardContent>
@@ -665,7 +665,7 @@ export default function SimaCorePage() {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Implement SIMA Core™?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Transform your organization with the structural foundation of strategic intelligence management architecture
+            Transform your business with the structural foundation of strategic intelligence management architecture
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild className="bg-white text-blue-900 hover:bg-blue-50">
