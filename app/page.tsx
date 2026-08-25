@@ -44,6 +44,7 @@ const SYSTEM_PARTS = [
     icon: BarChart3,
     color: "text-blue-600",
     bg: "bg-blue-100",
+    href: "/sima-probe",
   },
   {
     name: "SIMA-Core™",
@@ -52,6 +53,7 @@ const SYSTEM_PARTS = [
     icon: Brain,
     color: "text-indigo-600",
     bg: "bg-indigo-100",
+    href: "/sima-core",
   },
   {
     name: "SIMA-Kit™",
@@ -60,6 +62,7 @@ const SYSTEM_PARTS = [
     icon: Target,
     color: "text-purple-600",
     bg: "bg-purple-100",
+    href: "/sima-kit",
   },
   {
     name: "SIMA-Flow™",
@@ -68,6 +71,7 @@ const SYSTEM_PARTS = [
     icon: Zap,
     color: "text-green-600",
     bg: "bg-green-100",
+    href: "/sima-flow",
   },
   {
     name: "SIMA-Ascend™",
@@ -76,6 +80,7 @@ const SYSTEM_PARTS = [
     icon: BookOpen,
     color: "text-orange-600",
     bg: "bg-orange-100",
+    href: "/sima-ascend",
   },
 ]
 
@@ -125,6 +130,9 @@ export default function HomePage() {
           <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#64748b" }}>
             SIMA360™ — Structured AI Maturity Accelerator
           </p>
+          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#3b82f6" }}>
+            The Problem
+          </p>
           <h1 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight" style={{ color: "#0f172a" }}>
             AI rarely fails with a bang — it drifts. Small errors go unnoticed, then get repeated and scaled
             across your business.
@@ -143,7 +151,7 @@ export default function HomePage() {
       <section className="py-14 px-4 bg-slate-50">
         <div className="container mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold" style={{ color: "#0f172a" }}>Who It's For</h2>
+            <h2 className="text-xs font-bold uppercase tracking-widest" style={{ color: "#3b82f6" }}>Who This Helps</h2>
             <p className="text-lg max-w-2xl mx-auto mt-3" style={{ color: "#475569" }}>
               If any of these sound like you, your team, or your business, SIMA360 was built for you —
               especially small and mid-size businesses early in AI adoption.
@@ -197,15 +205,17 @@ export default function HomePage() {
       <section className="py-14 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold mb-3" style={{ color: "#0f172a" }}>One System, Five Parts</h2>
+            <h2 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#3b82f6" }}>What It Is: One System, Five Parts</h2>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: "#475569" }}>
-              SIMA360 isn&rsquo;t one tool — it&rsquo;s a complete system for building AI maturity.
+              SIMA360 isn&rsquo;t one tool — it&rsquo;s a complete system for building AI maturity. You don&rsquo;t
+              need to use all of it — start with the free evaluation.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {SYSTEM_PARTS.map((part) => (
-              <div
+              <Link
                 key={part.name}
+                href={part.href}
                 className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow"
               >
                 <div className={`w-12 h-12 ${part.bg} rounded-full flex items-center justify-center mx-auto mb-4`}>
@@ -214,7 +224,7 @@ export default function HomePage() {
                 <h3 className="font-semibold mb-1 leading-snug" style={{ color: "#0f172a" }}>{part.role}</h3>
                 <p className={`text-xs font-bold uppercase tracking-wide mb-2 ${part.color}`}>{part.name}</p>
                 <p className="text-sm leading-snug" style={{ color: "#475569" }}>{part.description}</p>
-              </div>
+              </Link>
             ))}
           </div>
           <p className="text-center text-base mt-10 max-w-2xl mx-auto" style={{ color: "#475569" }}>
@@ -226,6 +236,9 @@ export default function HomePage() {
       {/* 3. Three-step visual — Assess → Diagnose → Improve */}
       <section className="pt-4 pb-14 px-4">
         <div className="container mx-auto max-w-6xl text-center mb-6">
+          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#3b82f6" }}>
+            What You Get
+          </p>
           <p
             className="text-lg sm:text-xl font-semibold max-w-2xl mx-auto mb-6 leading-snug"
             style={{ color: "#0f172a" }}
@@ -238,16 +251,16 @@ export default function HomePage() {
               Don&rsquo;t just ask what your AI can do. Ask whether your business is ready for what it can do.
             </p>
           </div>
+          <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#3b82f6" }}>
+            How Much Does It Cost?
+          </p>
           <Button
             size="lg"
             asChild
-            className="mb-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
+            className="mb-10 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
           >
-            <Link href="/sima-probe/assessment">Take the free basic assessment in 15 minutes and see where you stand</Link>
+            <Link href="/sima-probe/assessment">Start the free basic assessment. In 15 minutes, see where you stand.</Link>
           </Button>
-          <p className="text-sm font-semibold tracking-wide mb-10" style={{ color: "#64748b" }}>
-            SIMA360. Assess. Diagnose. Improve.
-          </p>
         </div>
         <div className="container mx-auto max-w-4xl">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
