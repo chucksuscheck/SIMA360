@@ -87,8 +87,8 @@ export default function HomePage() {
             AI gives that drift the ability to scale.
           </h1>
           <p className="text-lg leading-snug" style={{ color: "#475569" }}>
-            SIMA360 helps you find organizational weaknesses before AI magnifies them — and build the
-            organizational foundation for reliable AI.
+            SIMA360 finds the gaps in your organization&rsquo;s readiness for AI — before AI magnifies them —
+            and builds the foundation for reliable AI.
           </p>
         </div>
       </section>
