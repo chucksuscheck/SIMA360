@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { BookOpen, ClipboardCheck, Download, Layers, Info, Search, TrendingUp, ArrowRight, ChevronDown, Users, Shield, Wrench, Building2 } from "lucide-react"
+import { BookOpen, ClipboardCheck, Download, Layers, Info, Search, TrendingUp, ArrowRight, ChevronDown, Users, Shield, Wrench, Building2, BarChart3, Brain, Target, Zap } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 
@@ -35,6 +35,49 @@ const JSON_LD = {
   url: "https://www.sima360.org",
   description: HOMEPAGE_DESCRIPTION,
 }
+
+const SYSTEM_PARTS = [
+  {
+    name: "SIMA-Probe™",
+    role: "An Evaluation Tool",
+    description: "A structured assessment that shows exactly where your business stands with AI today.",
+    icon: BarChart3,
+    color: "text-blue-600",
+    bg: "bg-blue-100",
+  },
+  {
+    name: "SIMA-Core™",
+    role: "A Diagnostic Engine",
+    description: "Analyzes your results and pinpoints where the real gaps are.",
+    icon: Brain,
+    color: "text-indigo-600",
+    bg: "bg-indigo-100",
+  },
+  {
+    name: "SIMA-Kit™",
+    role: "A Set of Supporting Resources",
+    description: "Templates, guides, and tools to put the plan into action.",
+    icon: Target,
+    color: "text-purple-600",
+    bg: "bg-purple-100",
+  },
+  {
+    name: "SIMA-Flow™",
+    role: "A Structured Improvement Process",
+    description: "A repeatable cycle that moves you from diagnosis to progress.",
+    icon: Zap,
+    color: "text-green-600",
+    bg: "bg-green-100",
+  },
+  {
+    name: "SIMA-Ascend™",
+    role: "Training & Consulting",
+    description: "Human expertise that accelerates every other part of the system.",
+    icon: BookOpen,
+    color: "text-orange-600",
+    bg: "bg-orange-100",
+  },
+]
 
 const STEPS = [
   {
@@ -147,6 +190,36 @@ export default function HomePage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 2.5 One System, Five Parts — placed directly below Who It's For */}
+      <section className="py-14 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold mb-3" style={{ color: "#0f172a" }}>One System, Five Parts</h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: "#475569" }}>
+              SIMA360 isn&rsquo;t one tool — it&rsquo;s a complete system for building AI maturity.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {SYSTEM_PARTS.map((part) => (
+              <div
+                key={part.name}
+                className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow"
+              >
+                <div className={`w-12 h-12 ${part.bg} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <part.icon className={`w-6 h-6 ${part.color}`} />
+                </div>
+                <h3 className="font-semibold mb-1 leading-snug" style={{ color: "#0f172a" }}>{part.role}</h3>
+                <p className={`text-xs font-bold uppercase tracking-wide mb-2 ${part.color}`}>{part.name}</p>
+                <p className="text-sm leading-snug" style={{ color: "#475569" }}>{part.description}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-base mt-10 max-w-2xl mx-auto" style={{ color: "#475569" }}>
+            Together, they turn scattered AI use into a managed, improving system.
+          </p>
         </div>
       </section>
 
