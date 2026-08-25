@@ -1,8 +1,6 @@
 import type { Metadata } from "next"
-import fs from "node:fs"
-import path from "node:path"
 import Link from "next/link"
-import { BookOpen, ClipboardCheck, Download, Layers, Info } from "lucide-react"
+import { BookOpen, ClipboardCheck, Download, Layers, Info, Search, TrendingUp, ArrowRight, ChevronDown, Users, Shield, Wrench, Building2 } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 
@@ -38,19 +36,25 @@ const JSON_LD = {
   description: HOMEPAGE_DESCRIPTION,
 }
 
-// The source SVG links to absolute https://www.sima360.org/... URLs (correct for
-// production, but they'd bounce a local/staging session off to the live site).
-// Rewritten to relative paths here to match how every other internal link on
-// this site is written — swap this out if the SVG is regenerated with different hrefs.
-function loadDiagramSvg(): string {
-  const filePath = path.join(process.cwd(), "public", "sima360-diagram.svg")
-  const raw = fs.readFileSync(filePath, "utf8")
-  return raw.replace(/https:\/\/www\.sima360\.org/g, "")
-}
+const STEPS = [
+  {
+    icon: ClipboardCheck,
+    title: "Assess",
+    description: "A structured, 15-minute assessment across five organizational areas.",
+  },
+  {
+    icon: Search,
+    title: "Diagnose",
+    description: "See exactly where AI risk is concentrated — and why.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Improve",
+    description: "Follow a structured path to close the gaps that matter most.",
+  },
+]
 
 export default function HomePage() {
-  const diagramSvg = loadDiagramSvg()
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 to-cyan-50">
       <script
@@ -89,7 +93,60 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Diagram — the visual centerpiece: bigger, elevated, colorfully framed */}
+      {/* 2. Who It's For — placed right under the hero so visitors self-identify early */}
+      <section className="py-14 px-4 bg-slate-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold" style={{ color: "#0f172a" }}>Who It's For</h2>
+            <p className="text-lg max-w-2xl mx-auto mt-3" style={{ color: "#475569" }}>
+              If any of these describe your organization, SIMA360 was built for you.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="font-semibold mb-2" style={{ color: "#0f172a" }}>Leaders</h3>
+              <p className="text-sm" style={{ color: "#475569" }}>
+                Need to move from AI experimentation to organizational capability
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="font-semibold mb-2" style={{ color: "#0f172a" }}>Governance &amp; Compliance Teams</h3>
+              <p className="text-sm" style={{ color: "#475569" }}>
+                Navigating AI risk without adequate structure
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Wrench className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="font-semibold mb-2" style={{ color: "#0f172a" }}>Practitioners</h3>
+              <p className="text-sm" style={{ color: "#475569" }}>
+                Tasked with building repeatable AI capability, not just running projects
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Building2 className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="font-semibold mb-2" style={{ color: "#0f172a" }}>Organizations</h3>
+              <p className="text-sm" style={{ color: "#475569" }}>
+                Have deployed AI but aren't producing reliable outcomes from it
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Three-step visual — Assess → Diagnose → Improve */}
       <section className="pt-4 pb-14 px-4">
         <div className="container mx-auto max-w-6xl text-center mb-6">
           <p
@@ -111,18 +168,35 @@ export default function HomePage() {
           >
             <Link href="/sima-probe/assessment">Take the sample assessment in 15 minutes and see where you stand</Link>
           </Button>
-          <p className="text-sm font-semibold tracking-wide" style={{ color: "#64748b" }}>
+          <p className="text-sm font-semibold tracking-wide mb-10" style={{ color: "#64748b" }}>
             SIMA360. Assess. Diagnose. Improve.
           </p>
         </div>
-        <div
-          className="container mx-auto max-w-6xl rounded-lg border-2 bg-white shadow-xl p-6 sm:p-8"
-          style={{ borderColor: "#bfdbfe" }}
-        >
-          <div
-            className="[&_svg]:w-full [&_svg]:h-auto"
-            dangerouslySetInnerHTML={{ __html: diagramSvg }}
-          />
+        <div className="container mx-auto max-w-4xl">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {STEPS.map((step, i) => (
+              <div key={step.title} className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                <div
+                  className="flex-1 sm:flex-none w-full sm:w-48 rounded-lg border-2 bg-white shadow-md p-6 text-center"
+                  style={{ borderColor: "#bfdbfe" }}
+                >
+                  <step.icon className="w-8 h-8 mx-auto mb-3" style={{ color: "#3b82f6" }} />
+                  <h3 className="text-base font-bold mb-2" style={{ color: "#0f172a" }}>
+                    {step.title}
+                  </h3>
+                  <p className="text-sm leading-snug" style={{ color: "#475569" }}>
+                    {step.description}
+                  </p>
+                </div>
+                {i < STEPS.length - 1 && (
+                  <>
+                    <ChevronDown className="w-6 h-6 sm:hidden flex-shrink-0" style={{ color: "#93c5fd" }} />
+                    <ArrowRight className="hidden sm:block w-6 h-6 flex-shrink-0" style={{ color: "#93c5fd" }} />
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

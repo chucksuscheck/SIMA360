@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, Brain, Zap, Target, BookOpen, CheckCircle, BarChart3 } from "lucide-react"
+import { ArrowRight, Brain, Zap, Target, BookOpen, CheckCircle, BarChart3, Users, Shield, Wrench, Building2 } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { FrameworkMap } from "@/components/framework-map"
@@ -108,6 +108,59 @@ export default function OverviewPage() {
                 The Book
               </Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Who It's For — placed right under the hero so visitors self-identify before the framework architecture */}
+      <section className="py-16 px-4 bg-slate-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">Who It's For</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              If any of these describe your organization, SIMA360 was built for you.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-slate-900 mb-2">Leaders</h3>
+              <p className="text-sm text-slate-600">
+                Need to move from AI experimentation to organizational capability
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-slate-900 mb-2">Governance &amp; Compliance Teams</h3>
+              <p className="text-sm text-slate-600">
+                Navigating AI risk without adequate structure
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Wrench className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-slate-900 mb-2">Practitioners</h3>
+              <p className="text-sm text-slate-600">
+                Tasked with building repeatable AI capability, not just running projects
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Building2 className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-slate-900 mb-2">Organizations</h3>
+              <p className="text-sm text-slate-600">
+                Have deployed AI but aren't producing reliable outcomes from it
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -292,47 +345,22 @@ export default function OverviewPage() {
       {/* Built on Research */}
       <section className="py-16 px-4 bg-slate-50">
         <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="grid md:grid-cols-2 gap-10 items-start">
-                <div>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">Built on Research. Designed for Practice.</h2>
-                  <p className="text-slate-700 leading-relaxed mb-4">
-                    SIMA360 is grounded in the research and maturity architecture established in{" "}
-                    <Link href="/the-book" className="text-blue-600 hover:text-blue-800 underline">
-                      <em>The AI Rush — Too Much Too Soon!</em>
-                    </Link>{" "}
-                    by Dr. Charles Suscheck. The framework's five perspectives, six maturity levels, and improvement cycle
-                    design come directly from that foundation — not from consulting convention.
-                  </p>
-                  <p className="text-slate-700 leading-relaxed">
-                    The distinction matters. Most AI adoption frameworks are prescriptive — they tell you what to do.
-                    SIMA360 is diagnostic first: it measures where you actually are, then structures how you advance.
-                    The result is a system that works regardless of industry, technology stack, or current maturity level.
-                  </p>
-                </div>
-                <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
-                  <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Who it's for</p>
-                  <ul className="space-y-3 text-sm text-slate-700">
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
-                      Leaders who need to move from AI experimentation to organizational capability
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
-                      Governance and compliance teams navigating AI risk without adequate structure
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
-                      Practitioners tasked with building repeatable AI capability, not just running projects
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
-                      Organizations that have deployed AI but aren't producing reliable outcomes from it
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Built on Research. Designed for Practice.</h2>
+              <p className="text-slate-700 leading-relaxed mb-4">
+                SIMA360 is grounded in the research and maturity architecture established in{" "}
+                <Link href="/the-book" className="text-blue-600 hover:text-blue-800 underline">
+                  <em>The AI Rush — Too Much Too Soon!</em>
+                </Link>{" "}
+                by Dr. Charles Suscheck. The framework's five perspectives, six maturity levels, and improvement cycle
+                design come directly from that foundation — not from consulting convention.
+              </p>
+              <p className="text-slate-700 leading-relaxed">
+                The distinction matters. Most AI adoption frameworks are prescriptive — they tell you what to do.
+                SIMA360 is diagnostic first: it measures where you actually are, then structures how you advance.
+                The result is a system that works regardless of industry, technology stack, or current maturity level.
+              </p>
             </div>
           </div>
         </div>
