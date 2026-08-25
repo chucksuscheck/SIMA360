@@ -69,7 +69,7 @@ export default function SimaAscendPage() {
             sophisticated AI tools, mature data infrastructure, and formal governance policies and still fail to
             produce reliable outcomes if the people running those systems lack that judgment. SIMA-Ascend exists to
             build it: the skill to ground work in a SIMA-Probe™ assessment rather than aspiration, to run FLAI
-            cycles as disciplined business learning, and to develop that shared understanding across an
+            cycles as disciplined business learning, and to develop that shared understanding across a
             business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

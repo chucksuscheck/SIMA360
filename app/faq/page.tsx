@@ -6,7 +6,7 @@ import { Navigation } from "@/components/navigation"
 export const metadata: Metadata = {
   title: "FAQ | SIMA360™",
   description:
-    "Frequently asked questions about SIMA360 — what it is, how to get started, applying it, cost, and whether it's right for your business.",
+    "Frequently asked questions about SIMA360 — what it is, how to implement AI in your small business, cost, and whether it's right for your business.",
   alternates: {
     canonical: "https://www.sima360.org/faq",
   },
@@ -234,6 +234,24 @@ const CATEGORIES: FaqCategory[] = [
           </>
         ),
       },
+      {
+        question: "How do I implement AI in my small business?",
+        answer: (
+          <>
+            <p>
+              Start by diagnosing where you actually stand, not by picking a tool. Most small businesses trying
+              to figure out how to use AI jump straight to a product decision — which model, which vendor —
+              before knowing whether their strategy, governance, data, people, and technology are ready to
+              support it.
+            </p>
+            <p>
+              SIMA360&rsquo;s free assessment gives you that starting point in about 15 minutes: a clear picture
+              of where your business is strong, where it isn&rsquo;t, and what to fix first — before you commit
+              to any particular AI tool for your small business.
+            </p>
+          </>
+        ),
+      },
     ],
   },
   {
@@ -402,7 +420,11 @@ const CATEGORIES: FaqCategory[] = [
               Businesses that want deeper analysis or assistance can choose paid offerings such as comprehensive
               assessments, training, implementation resources, and consulting services.
             </p>
-            <p>These are optional. You do not need to purchase consulting or training to use the SIMA360 framework.</p>
+            <p>
+              These are optional. You do not need to purchase consulting or training to use the SIMA360
+              framework — SIMA360 gives you the structure to build AI maturity yourself, without an army of
+              consultants.
+            </p>
             <p>
               See the{" "}
               <Link href="/pricing" className="text-blue-600 hover:text-blue-800 underline">
@@ -456,6 +478,11 @@ const CATEGORIES: FaqCategory[] = [
             <p>
               SIMA360 evaluates the capability required for your environment, rather than assuming every
               business should operate the same way.
+            </p>
+            <p>
+              In practice, the ideal fit is a small or mid-size business early in AI adoption. That&rsquo;s
+              exactly the environment where a maturity gap causes the most damage, and
+              where a business is least likely to have a dedicated AI governance team already in place.
             </p>
           </>
         ),

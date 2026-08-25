@@ -61,8 +61,8 @@ export default function OverviewPage() {
           </h1>
           <div className="text-left max-w-3xl mx-auto space-y-5 text-lg text-slate-600 leading-relaxed mb-10">
             <p>
-              AI risk doesn&rsquo;t always announce itself as failure. Sometimes it emerges quietly as drift — and
-              AI gives that drift the ability to scale.
+              AI risk doesn&rsquo;t always appear as a failure. Sometimes AI quietly drifts and amplifies its
+              errors.
             </p>
             <p>
               It can be thousands of reasonable-looking decisions gradually moving the business in the wrong
@@ -96,6 +96,10 @@ export default function OverviewPage() {
               Because when AI participates in decisions that can harm people — or threaten the business itself
               — control isn&rsquo;t optional. It&rsquo;s the responsibility that comes with using the technology.
             </p>
+            <p>
+              SIMA360 is built for small and mid-size businesses early in AI adoption, not just large
+              enterprises with dedicated AI teams.
+            </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
@@ -118,7 +122,8 @@ export default function OverviewPage() {
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-slate-900 mb-3">Who It's For</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              If any of these sound like you, your team, or your business, SIMA360 was built for you.
+              If any of these sound like you, your team, or your business, SIMA360 was built for you —
+              especially small and mid-size businesses early in AI adoption.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -356,10 +361,14 @@ export default function OverviewPage() {
                 by Dr. Charles Suscheck. The framework's five perspectives, six maturity levels, and improvement cycle
                 design come directly from that foundation — not from consulting convention.
               </p>
-              <p className="text-slate-700 leading-relaxed">
+              <p className="text-slate-700 leading-relaxed mb-4">
                 The distinction matters. Most AI adoption frameworks are prescriptive — they tell you what to do.
                 SIMA360 is diagnostic first: it measures where you actually are, then structures how you advance.
                 The result is a system that works regardless of industry, technology stack, or current maturity level.
+              </p>
+              <p className="text-slate-700 leading-relaxed">
+                It also gives you the structure to build that maturity yourself. Help is available if you want
+                it, but you don&rsquo;t need an army of consultants to use SIMA360.
               </p>
             </div>
           </div>

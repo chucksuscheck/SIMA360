@@ -58,7 +58,8 @@ const FoundationPage = () => {
               comparative analysis across nine leading AI maturity frameworks, built to answer the question those
               frameworks left open: not just where a business stands, but what to do next, and why
               business maturity — not tool capability — is what actually determines whether AI produces
-              reliable outcomes.
+              reliable outcomes. It's built especially for small and mid-size businesses early in AI adoption,
+              who need this structure most and have the least of it already in place.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-blue-500 hover:bg-blue-600">
@@ -382,7 +383,7 @@ const FoundationPage = () => {
               maturity trajectory instead of stopping at a diagnosis.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              That distinction matters because capability and maturity are not the same thing. Capability is what an
+              That distinction matters because capability and maturity are not the same thing. Capability is what a
               business's AI can do. Maturity is the harder question — whether the business can handle what
               it's doing without losing its grip as it gets more complicated. A framework that only measures the
               first can certify a business as advanced while the second is quietly missing, and it's the second
@@ -411,7 +412,7 @@ const FoundationPage = () => {
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
               The book's argument is that the technology is rarely what separates businesses with similar AI
               budgets and wildly different outcomes. It's the operating system underneath it — the five
-              perspectives, working together or quietly working against each other — that determines whether an
+              perspectives, working together or quietly working against each other — that determines whether a
               business is mature enough to grow. A system behaves at the level of its least mature perspective,
               not its most advanced one; that weakest-constraint principle is why SIMA360 measures all five
               independently instead of producing a single blended score.

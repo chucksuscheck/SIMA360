@@ -5,7 +5,7 @@ import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 
 const HOMEPAGE_DESCRIPTION =
-  "AI risk doesn't always announce itself as failure. Sometimes it emerges quietly as drift — and AI gives that drift the ability to scale. SIMA360 assesses five critical areas — Strategy, Governance, Data, People, and Technology — to reveal where business maturity is limiting AI results, then turns that diagnosis into practical corrective action."
+  "AI risk doesn't always appear as a failure. Sometimes AI quietly drifts and amplifies its errors. SIMA360 assesses five critical areas — Strategy, Governance, Data, People, and Technology — to reveal where business maturity is limiting AI results, then turns that diagnosis into practical corrective action."
 
 export const metadata: Metadata = {
   title: "SIMA360™ — Structured AI Maturity Accelerator",
@@ -83,12 +83,15 @@ export default function HomePage() {
             SIMA360™ — Structured AI Maturity Accelerator
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight" style={{ color: "#0f172a" }}>
-            AI risk doesn&rsquo;t always announce itself as failure. Sometimes it emerges quietly as drift — and
-            AI gives that drift the ability to scale.
+            AI rarely fails with a bang — it drifts. Small errors go unnoticed, then get repeated and scaled
+            across your business.
           </h1>
           <p className="text-lg leading-snug" style={{ color: "#475569" }}>
-            SIMA360 finds the gaps in your business&rsquo;s readiness for AI — before AI magnifies them —
-            and helps you build the foundation for reliable AI.
+            SIMA360 finds the gaps in your AI readiness before that drift takes hold, and gives you a clear
+            path to build a foundation for reliable AI.
+          </p>
+          <p className="text-sm mt-4" style={{ color: "#64748b" }}>
+            Built for small and mid-size businesses early in their AI adoption journey.
           </p>
         </div>
       </section>
@@ -99,7 +102,8 @@ export default function HomePage() {
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold" style={{ color: "#0f172a" }}>Who It's For</h2>
             <p className="text-lg max-w-2xl mx-auto mt-3" style={{ color: "#475569" }}>
-              If any of these sound like you, your team, or your business, SIMA360 was built for you.
+              If any of these sound like you, your team, or your business, SIMA360 was built for you —
+              especially small and mid-size businesses early in AI adoption.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -197,6 +201,21 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 3.5 Built for lean teams — no army of consultants required */}
+      <section className="py-14 px-4">
+        <div className="container mx-auto max-w-2xl text-center">
+          <h2 className="text-2xl font-bold mb-4" style={{ color: "#0f172a" }}>
+            Built for Growing Businesses, Not Consulting Engagements
+          </h2>
+          <p className="text-base leading-relaxed" style={{ color: "#475569" }}>
+            SIMA360 is designed for small and mid-size businesses who are early in AI adoption and don&rsquo;t
+            have a dedicated AI team. It gives you the structure to mature your AI
+            capability yourselves. Help is available if you want it, but you don&rsquo;t need an army of
+            consultants to use SIMA360.
+          </p>
         </div>
       </section>
 

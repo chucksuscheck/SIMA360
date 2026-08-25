@@ -132,8 +132,8 @@ export default function StartPage() {
               Where Do You Want to Start?
             </h1>
             <p className="text-xl text-slate-600">
-              SIMA360 has multiple entry points depending on where your business is and what you need. Choose the
-              path that fits.
+              SIMA360 has multiple entry points depending on where your business is and what you need — whether
+              you're a small or mid-size business just starting out, or further along. Choose the path that fits.
             </p>
           </div>
         </div>

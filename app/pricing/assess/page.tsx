@@ -74,7 +74,7 @@ const pricingCards = [
     name: "SIMA Business",
     price: "$599",
     period: "/year" as string | null,
-    audience: "Designed for departments and small businesses.",
+    audience: "Designed for departments and small to mid-size businesses.",
     features: [
       "Multiple users",
       "Unlimited reassessments",
