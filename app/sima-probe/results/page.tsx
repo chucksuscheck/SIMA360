@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { ArrowLeft, RotateCcw } from 'lucide-react'
 import { Navigation } from '@/components/navigation'
@@ -76,9 +77,18 @@ export default function ResultsPage() {
       <header className="border-b bg-white sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex flex-col">
-              <span className="text-xl font-bold text-slate-900">SIMA360™</span>
-              <span className="text-xs text-slate-500">Structured AI Maturity Accelerator</span>
+            <Link href="/" className="flex items-center space-x-3">
+              <Image
+                src="/images/SIMA360 Bare Logo.png"
+                alt="SIMA360™"
+                width={1659}
+                height={948}
+                className="h-10 w-auto object-contain"
+              />
+              <span className="flex flex-col">
+                <span className="text-xl font-bold text-slate-900">SIMA360™</span>
+                <span className="text-xs text-slate-500">Structured AI Maturity Accelerator</span>
+              </span>
             </Link>
             <Navigation />
           </div>

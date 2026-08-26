@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { Navigation } from '@/components/navigation'
 import { QUESTIONS } from '@/lib/sima-probe/questions'
@@ -133,9 +134,18 @@ export default function AssessmentPage() {
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex flex-col">
-              <span className="text-xl font-bold text-slate-900">SIMA360™</span>
-              <span className="text-sm text-slate-600">Structured AI Maturity Accelerator</span>
+            <Link href="/" className="flex items-center space-x-3">
+              <Image
+                src="/images/SIMA360 Bare Logo.png"
+                alt="SIMA360™"
+                width={1659}
+                height={948}
+                className="h-10 w-auto object-contain"
+              />
+              <span className="flex flex-col">
+                <span className="text-xl font-bold text-slate-900">SIMA360™</span>
+                <span className="text-sm text-slate-600">Structured AI Maturity Accelerator</span>
+              </span>
             </Link>
             <Navigation />
           </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { BookOpen, ClipboardCheck, Download, Layers, Info, Search, TrendingUp, ArrowRight, ChevronDown, Users, Shield, Wrench, Building2, BarChart3, Brain, Target, Zap, AlertTriangle } from "lucide-react"
+import { BookOpen, ClipboardCheck, Download, Layers, Info, Search, TrendingUp, ArrowRight, ChevronDown, Users, Shield, Wrench, Building2, BarChart3, Brain, Target, Zap } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 
@@ -89,7 +89,7 @@ const PROOF_POINTS = [
   {
     title: "Zillow — $500M in Losses",
     description:
-      "A home-pricing algorithm systematically overvalued properties. The company wrote down over $500 million and cut a quarter of its workforce.",
+      "A home-pricing algorithm systematically overvalued properties. The company wrote down over $500 million and cut a quarter of its workforce — a model's errors became the business's losses.",
     source: "https://gsb.stanford.edu/insights/flip-flop-why-zillows-algorithmic-home-buying-venture-imploded",
   },
   {
@@ -107,7 +107,7 @@ const PROOF_POINTS = [
   {
     title: "McDonald's — AI Drive-Thru, Ended",
     description:
-      "Voice-ordering AI added hundreds of dollars in chicken nuggets to random orders. The multi-year IBM partnership ended after the videos went viral.",
+      "Voice-ordering AI added hundreds of dollars in chicken nuggets to random orders. The multi-year IBM partnership ended after the videos went viral — trust breaks faster than bugs get fixed.",
     source: "https://www.restaurantbusinessonline.com/technology/mcdonalds-ending-its-drive-thru-ai-test",
   },
 ]
@@ -143,12 +143,12 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3">
               <Image
-                src="/images/SIMA360_Logo.png"
+                src="/images/SIMA360 Bare Logo.png"
                 alt="SIMA360™"
-                width={1254}
-                height={1254}
+                width={1659}
+                height={948}
                 priority
-                className="h-12 w-12 object-contain"
+                className="h-10 w-auto object-contain"
               />
               <div>
                 <h1 className="text-xl font-bold" style={{ color: "#0f172a" }}>SIMA360™</h1>
@@ -204,9 +204,6 @@ export default function HomePage() {
                 key={item.title}
                 className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow"
               >
-                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <AlertTriangle className="w-6 h-6 text-amber-600" />
-                </div>
                 <h3 className="font-semibold mb-2" style={{ color: "#0f172a" }}>{item.title}</h3>
                 <p className="text-sm" style={{ color: "#475569" }}>{item.description}</p>
                 <a
