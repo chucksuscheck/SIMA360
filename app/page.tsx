@@ -147,11 +147,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. Who It's For — placed right under the hero so visitors self-identify early */}
+      {/* 2. What We Give You — placed right under the hero, explains the system before who it's for */}
+      <section className="py-14 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-10">
+            <h2 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#3b82f6" }}>What We Give You</h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: "#475569" }}>
+              SIMA360 isn&rsquo;t one tool — it&rsquo;s one system, five components, built for AI maturity. You don&rsquo;t
+              need to use all of it — start with the free evaluation.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {SYSTEM_PARTS.map((part) => (
+              <Link
+                key={part.name}
+                href={part.href}
+                className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow"
+              >
+                <div className={`w-12 h-12 ${part.bg} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <part.icon className={`w-6 h-6 ${part.color}`} />
+                </div>
+                <h3 className="font-semibold mb-1 leading-snug" style={{ color: "#0f172a" }}>{part.role}</h3>
+                <p className={`text-xs font-bold uppercase tracking-wide mb-2 ${part.color}`}>{part.name}</p>
+                <p className="text-sm leading-snug" style={{ color: "#475569" }}>{part.description}</p>
+              </Link>
+            ))}
+          </div>
+          <p className="text-center text-base mt-10 max-w-2xl mx-auto" style={{ color: "#475569" }}>
+            Together, they turn scattered AI use into a managed, improving system.
+          </p>
+        </div>
+      </section>
+
+      {/* 2.5 Who We Help — placed directly below What We Give You so visitors self-identify */}
       <section className="py-14 px-4 bg-slate-50">
         <div className="container mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-xs font-bold uppercase tracking-widest" style={{ color: "#3b82f6" }}>Who This Helps</h2>
+            <h2 className="text-xs font-bold uppercase tracking-widest" style={{ color: "#3b82f6" }}>Who We Help</h2>
             <p className="text-lg max-w-2xl mx-auto mt-3" style={{ color: "#475569" }}>
               If any of these sound like you, your team, or your business, SIMA360 was built for you —
               especially small and mid-size businesses early in AI adoption.
@@ -201,43 +233,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2.5 One System, Five Parts — placed directly below Who It's For */}
-      <section className="py-14 px-4">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-10">
-            <h2 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#3b82f6" }}>What It Is: One System, Five Parts</h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: "#475569" }}>
-              SIMA360 isn&rsquo;t one tool — it&rsquo;s a complete system for building AI maturity. You don&rsquo;t
-              need to use all of it — start with the free evaluation.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {SYSTEM_PARTS.map((part) => (
-              <Link
-                key={part.name}
-                href={part.href}
-                className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow"
-              >
-                <div className={`w-12 h-12 ${part.bg} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <part.icon className={`w-6 h-6 ${part.color}`} />
-                </div>
-                <h3 className="font-semibold mb-1 leading-snug" style={{ color: "#0f172a" }}>{part.role}</h3>
-                <p className={`text-xs font-bold uppercase tracking-wide mb-2 ${part.color}`}>{part.name}</p>
-                <p className="text-sm leading-snug" style={{ color: "#475569" }}>{part.description}</p>
-              </Link>
-            ))}
-          </div>
-          <p className="text-center text-base mt-10 max-w-2xl mx-auto" style={{ color: "#475569" }}>
-            Together, they turn scattered AI use into a managed, improving system.
-          </p>
-        </div>
-      </section>
-
       {/* 3. Three-step visual — Assess → Diagnose → Improve */}
       <section className="pt-4 pb-14 px-4">
         <div className="container mx-auto max-w-6xl text-center mb-6">
           <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#3b82f6" }}>
-            What You Get
+            How We Get You There
           </p>
           <p
             className="text-lg sm:text-xl font-semibold max-w-2xl mx-auto mb-6 leading-snug"
