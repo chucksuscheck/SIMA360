@@ -324,7 +324,7 @@ export function Navigation() {
         </Link>
 
         <Button asChild size="sm">
-          <Link href="/sima-probe/assessment">Free Assessment</Link>
+          <Link href="/sima-probe/assessment">Free Basic Assessment</Link>
         </Button>
 
         <Button asChild variant="outline" size="sm" className="ml-auto">
@@ -559,7 +559,7 @@ export function Navigation() {
               onClick={closeMobile}
               className="block px-4 py-2 text-sm font-medium text-blue-600 hover:bg-slate-50 transition-colors"
             >
-              Free Assessment
+              Free Basic Assessment
             </Link>
 
             <div className="px-4 py-2">
