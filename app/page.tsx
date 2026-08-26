@@ -101,7 +101,7 @@ const PROOF_POINTS = [
   {
     title: "iTutorGroup — First AI Discrimination Settlement",
     description:
-      "Recruiting software auto-rejected applicants by age. The EEOC's first AI bias case cost $365,000 and exposed a total lack of oversight.",
+      "Recruiting software auto-rejected applicants by age. The EEOC's first AI bias case cost $365,000 and exposed a lack of oversight.",
     source: "https://www.eeoc.gov/newsroom/itutorgroup-pay-365000-settle-eeoc-discriminatory-hiring-suit",
   },
   {
