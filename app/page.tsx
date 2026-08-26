@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { BookOpen, ClipboardCheck, Download, Layers, Info, Search, TrendingUp, ArrowRight, ChevronDown, Users, Shield, Wrench, Building2, BarChart3, Brain, Target, Zap } from "lucide-react"
+import { BookOpen, ClipboardCheck, Download, Layers, Info, Search, TrendingUp, ArrowRight, ChevronDown, Users, Shield, Wrench, Building2, BarChart3, Brain, Target, Zap, AlertTriangle } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 
@@ -84,6 +84,33 @@ const SYSTEM_PARTS = [
   },
 ]
 
+const PROOF_POINTS = [
+  {
+    title: "Zillow — $500M in Losses",
+    description:
+      "A home-pricing algorithm systematically overvalued properties. The company wrote down over $500 million and cut a quarter of its workforce.",
+    source: "https://gsb.stanford.edu/insights/flip-flop-why-zillows-algorithmic-home-buying-venture-imploded",
+  },
+  {
+    title: "Air Canada — Held to Its Chatbot's Word",
+    description:
+      "A support chatbot invented a discount policy. A tribunal ruled the airline liable — a business owns what its AI says.",
+    source: "https://www.cbsnews.com/news/aircanada-chatbot-discount-customer/",
+  },
+  {
+    title: "iTutorGroup — First AI Discrimination Settlement",
+    description:
+      "Recruiting software auto-rejected applicants by age. The EEOC's first AI bias case cost $365,000 and exposed a total lack of oversight.",
+    source: "https://www.eeoc.gov/newsroom/itutorgroup-pay-365000-settle-eeoc-discriminatory-hiring-suit",
+  },
+  {
+    title: "McDonald's — AI Drive-Thru, Ended",
+    description:
+      "Voice-ordering AI added hundreds of dollars in chicken nuggets to random orders. The multi-year IBM partnership ended after the videos went viral.",
+    source: "https://www.restaurantbusinessonline.com/technology/mcdonalds-ending-its-drive-thru-ai-test",
+  },
+]
+
 const STEPS = [
   {
     icon: ClipboardCheck,
@@ -144,6 +171,47 @@ export default function HomePage() {
           <p className="text-sm mt-4" style={{ color: "#64748b" }}>
             Built for small and mid-size businesses early in their AI adoption journey.
           </p>
+        </div>
+      </section>
+
+      {/* 1.5 The Proof — real-world AI failure case studies, placed right after the hero */}
+      <section className="py-14 px-4 bg-slate-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#3b82f6" }}>
+              The Proof
+            </p>
+            <h2 className="text-2xl font-bold mb-3" style={{ color: "#0f172a" }}>
+              This Isn&rsquo;t Hypothetical
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: "#475569" }}>
+              AI failures that make headlines rarely come from bad technology — they come from deploying it
+              without the operational maturity to catch mistakes before they scale.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {PROOF_POINTS.map((item) => (
+              <div
+                key={item.title}
+                className="bg-white rounded-lg border border-slate-200 p-6 text-center hover:shadow-lg transition-shadow"
+              >
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <AlertTriangle className="w-6 h-6 text-amber-600" />
+                </div>
+                <h3 className="font-semibold mb-2" style={{ color: "#0f172a" }}>{item.title}</h3>
+                <p className="text-sm" style={{ color: "#475569" }}>{item.description}</p>
+                <a
+                  href={item.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs mt-3 inline-block underline underline-offset-2"
+                  style={{ color: "#94a3b8" }}
+                >
+                  Source
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
