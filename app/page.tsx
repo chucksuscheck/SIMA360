@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { BookOpen, ClipboardCheck, Download, Layers, Info, Search, TrendingUp, ArrowRight, ChevronDown, Users, Shield, Wrench, Building2, BarChart3, Brain, Target, Zap, AlertTriangle } from "lucide-react"
 import { Navigation } from "@/components/navigation"
@@ -140,7 +141,15 @@ export default function HomePage() {
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-3">
+              <Image
+                src="/images/SIMA360_Logo.png"
+                alt="SIMA360™"
+                width={1254}
+                height={1254}
+                priority
+                className="h-12 w-12 object-contain"
+              />
               <div>
                 <h1 className="text-xl font-bold" style={{ color: "#0f172a" }}>SIMA360™</h1>
                 <p className="text-sm" style={{ color: "#475569" }}>Structured AI Maturity Accelerator</p>
